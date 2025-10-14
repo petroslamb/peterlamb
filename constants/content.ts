@@ -18,10 +18,9 @@ export const content: Record<'en' | 'gr', Content> = {
       cta: "Work with me",
       servicesTitle: "Services snapshot",
       services: [
-        { title: "Software Engineering", description: "Scalable back-end systems, APIs, SaaS platforms.", slug: "software-engineering" },
-        { title: "AI & Machine Learning", description: "NLP, model development, and MLOps practices.", slug: "ai-machine-learning" },
-        { title: "Big Data & Analytics", description: "Data pipelines, Spark, cloud-based processing.", slug: "big-data-analytics" },
-        { title: "Consulting & Support", description: "Technical strategy, feasibility studies, and audits.", slug: "consulting-technical-support" },
+        { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
+        { title: "AI MVP Launch", description: "1–3 month build of investor-ready AI SaaS foundations.", slug: "ai-mvp" },
+        { title: "AI Feature Add-On", description: "2–6 week integration of production-ready AI capabilities.", slug: "ai-feature-add-on" },
       ],
       credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
     },
@@ -71,146 +70,169 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "I offer flexible consulting and development services, tailored to your needs:",
+      intro: "Choose the AI engagement that matches your urgency: discovery, MVP build, or feature acceleration.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
       categories: [
-        { 
-          title: "Software Engineering", 
-          slug: "software-engineering",
-          intro: "Building robust, scalable, and maintainable software is at the core of my expertise. My experience spans from building high-performance APIs to architecting entire SaaS platforms. Below are examples of how I've solved key engineering challenges for various companies.",
-          businessProse: `I don't just write code; I build digital assets that drive business growth. My focus is on creating scalable, secure, and maintainable backend systems that form the backbone of modern applications. Whether you're a startup launching an MVP or an established company scaling your platform, I provide the engineering excellence needed to succeed.
+        {
+          title: "AI Discovery Sprint",
+          slug: "ai-discovery",
+          intro: "Co-design a 1–2 week sprint that uncovers the highest-leverage AI opportunities, de-risks delivery, and produces decision-ready next steps.",
+          businessProse: `This sprint gives founders clarity before committing serious budget. Together we align on outcomes, test data readiness, and pressure-test promising use cases with fast prototypes.
 
-### Precise Service Offerings:
-*   **API Development & Integration:** Designing and building high-performance REST APIs to power your applications and connect with third-party services.
-*   **SaaS Platform Architecture:** Architecting multi-tenant, scalable SaaS products from the ground up, ensuring long-term viability.
-*   **Backend System Modernization:** Refactoring legacy codebases to modern frameworks and microservices architectures to improve performance and maintainability.
-*   **Database Design & Optimization:** Structuring and fine-tuning PostgreSQL databases for speed, reliability, and scale.
+### Engagement Flow
+* Kick-off workshop to frame user pains, success metrics, and responsible AI guardrails.
+* Stakeholder conversations and customer interviews to validate desirability and operational fit.
+* Technical spikes across LLMs, retrieval, or automation patterns to prove feasibility and surface constraints.
 
-### Future-Ready Expertise:
-*   **Cloud Infrastructure & DevOps:** I can establish CI/CD pipelines and deploy applications on AWS or Google Cloud using Docker and Kubernetes, automating your path to production.
-*   **Technical Performance Audits:** I can analyze your existing systems to identify and eliminate bottlenecks, enhancing user experience and reducing operational costs.`,
-          items: ["Python development (Flask, Django, FastAPI).", "SaaS platforms and APIs.", "System architecture & integration."],
-          caseStudies: [
-            {
-              company: "Orfium",
-              challenge: "Develop and scale the backend system for a high-traffic platform managing music rights and royalties, ensuring reliability and maintainability.",
-              solution: ["Architected and built robust backend services using Django and Postgres.", "Adhered to twelve-factor app principles to create a scalable and portable application, deployed successfully on Heroku."],
-              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
-            },
-            {
-              company: "ENCODE (Security Analytics)",
-              challenge: "Design and build a near-realtime analytics engine and a high-performance API to serve security threat data from multiple sources like Splunk, Redis, and MySQL.",
-              solution: ["Developed the core backend analytics engine in Python to detect threats from company web traffic logs.", "Built a REST API using Flask and SQLAlchemy to serve analytics results efficiently to user-facing dashboards."],
-              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
-            },
-            {
-              company: "NeuroPublic S.A.",
-              challenge: "Create the backend infrastructure for a new web application aimed at precision agriculture, requiring efficient data processing for fertilizer management.",
-              solution: ["Led the Python backend development for services supporting the new application.", "Successfully worked in an interdisciplinary team to complete the rapid development and deployment of the platform."],
-              technologies: ["Python", "Backend Development", "Web Applications"]
-            }
-          ]
-        },
-        { 
-          title: "AI & Machine Learning", 
-          slug: "ai-machine-learning",
-          intro: "I specialize in the practical application of AI and ML, from traditional NLP to the latest in Generative AI. My focus is on building and deploying models that deliver real business value. Here are some highlights of my work in the AI/ML space.",
-          businessProse: `I help businesses harness the power of AI not as a buzzword, but as a tool to create tangible value. From automating internal processes to building intelligent product features that delight users, I bridge the gap between AI potential and real-world business application. My expertise covers the full lifecycle, from prototyping and model selection to deploying and maintaining models in production.
+### Deliverables
+* Opportunity map ranking AI bets by value, effort, and risk.
+* Technical discovery pack covering data requirements, architecture sketches, and vendor/tooling recommendations.
+* Executive-ready brief outlining go/no-go decision, timeline, and next steps.
 
-### Precise Service Offerings:
-*   **Generative AI & LLM Integration:** Building applications with OpenAI/GPT and LangChain for tasks like advanced search, content generation, and summarization.
-*   **Custom NLP Solutions:** Developing models for text classification, entity recognition, and sentiment analysis tailored to your specific domain.
-*   **MLOps & Productionalization:** Creating robust pipelines for deploying, monitoring, and retraining models to ensure they perform reliably at scale.
-
-### Future-Ready Expertise:
-*   **AI-Powered Chatbot Development:** I can create intelligent, context-aware chatbots for customer support or internal use cases, improving efficiency and user engagement.
-*   **AI Product Strategy:** I provide consulting on how to best leverage AI within your product, identifying high-impact use cases and defining a clear roadmap for implementation.`,
-          items: ["Natural language processing (text classification, search, embeddings).", "Generative AI exploration (OpenAI, LangChain, Pinecone).", "MLOps & production model deployment."],
-          caseStudies: [
-            {
-              company: "Workable",
-              challenge: "Enhance the company's core NLP products with Generative AI capabilities and streamline the machine learning model lifecycle from development to production.",
-              solution: ["Developed and maintained ML model serving microservices, ensuring high availability and performance.", "Applied MLOps best practices to automate deployment, monitoring, and retraining pipelines.", "Led Proof-of-Concept projects on Generative AI using OpenAI, LangChain, and Pinecone to explore new product features."],
-              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
-            },
-            {
-              company: "NannyML",
-              challenge: "Prototype and build a new SaaS product for monitoring machine learning models in production, a critical component of MLOps.",
-              solution: ["Led product prototyping and development in Python for the ML model monitoring platform.", "Managed the deployment and orchestration of the application on Amazon Elastic Kubernetes Service (EKS) using Helm charts."],
-              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
-            }
-          ]
-        },
-        { 
-          title: "Big Data & Analytics", 
-          slug: "big-data-analytics",
-          intro: "I have a demonstrated history of designing and building systems that can process and analyze massive datasets. My experience covers data pipeline architecture, distributed computing, and performance optimization for large-scale analytics.",
-          businessProse: `Data is one of your most valuable assets, but only if you can process and understand it. I build the systems that turn massive, complex datasets into clear, actionable insights. My experience in distributed computing and large-scale analytics platforms ensures your business can make data-driven decisions, no matter the volume or velocity of your data.
-
-### Precise Service Offerings:
-*   **Scalable Data Pipelines (ETL/ELT):** Designing and building robust pipelines using tools like Apache Spark and Airflow on cloud platforms (AWS, GCP).
-*   **Log Analytics & Cybersecurity Platforms:** Creating systems to process and analyze terabytes of log data for security threat detection and operational intelligence.
-*   **Time-Series Forecasting:** Developing predictive models to forecast future trends, such as user demand, sales, or resource needs.
-
-### Future-Ready Expertise:
-*   **Real-time Analytics Dashboards:** I can build systems that feed into live dashboards (e.g., using Elasticsearch/Kibana or custom solutions) for immediate operational insights.
-*   **Data Warehouse Implementation:** I can guide you in choosing and implementing a modern data warehouse (like BigQuery or Snowflake) for centralized business intelligence.`,
-          items: ["Data pipeline design (Spark, Elasticsearch, AWS).", "Large-scale log parsing and analytics.", "Forecasting & time-series modeling."],
-          caseStudies: [
-            {
-              company: "ENCODE (Cybersecurity)",
-              challenge: "Build a new analytics platform from the ground up to process terabytes of network logs for a large-scale intrusion detection system, replacing and outperforming a legacy system.",
-              solution: ["Architected and developed a data processing platform using Apache Spark on AWS for distributed analytics.", "Utilized Elasticsearch as the core analytics engine to enable security analysts to run complex queries on massive datasets with low latency.", "Successfully executed performance and memory optimizations on the legacy platform to handle larger data volumes during the transition period."],
-              technologies: ["Python", "Apache Spark", "Elasticsearch", "AWS", "Cybersecurity"]
-            },
-            {
-              company: "Skyscanner",
-              challenge: "Develop and maintain data acquisition systems to gather fare prices from numerous airlines and third-party sources reliably.",
-              solution: ["Took ownership of core team responsibilities involving the development and maintenance of API scrapers in Python.", "Successfully managed communication with third parties for specification settling and integration."],
-              technologies: ["Python", "API Integration", "Web Scraping", "Data Acquisition"]
-            }
-          ]
-        },
-        { 
-          title: "Consulting & Technical Support", 
-          slug: "consulting-technical-support",
-          intro: "Drawing on over a decade of experience, I provide strategic guidance and technical leadership to help businesses navigate complex software and data challenges. My consulting services cover the entire project lifecycle.",
-          businessProse: `Beyond hands-on development, I offer strategic technical guidance to de-risk your projects and accelerate your roadmap. As a technical partner, I help you make the right architectural decisions, evaluate new technologies, and ensure your engineering efforts are aligned with your business goals from day one.
-
-### Precise Service Offerings:
-*   **Technical Feasibility & Prototyping:** Conducting rapid Proof-of-Concepts (PoCs) to validate ideas and technology choices before committing significant resources.
-*   **System Architecture Design:** Planning the technical blueprint for new products, focusing on scalability, security, and cost-effectiveness.
-*   **Root Cause Analysis & Post-mortems:** Investigating critical system failures or security incidents to provide clear analysis and actionable prevention strategies.
-
-### Future-Ready Expertise:
-*   **Fractional CTO / Tech Lead:** I provide senior technical leadership and team mentorship on a part-time basis for startups and growing teams that need expert guidance without a full-time commitment.
-*   **Technical Due Diligence:** I assist investors or acquirers in evaluating the technical health, scalability, and risks of a software company or potential acquisition.`,
-          items: ["Feasibility analysis and PoCs.", "Requirements gathering & architecture design.", "Ongoing support for specialized applications."],
+### Pricing
+* Fixed fee €2K–€4K depending on scope and number of personas involved.`,
+          items: [
+            "Best for founders validating AI use cases before green-lighting build.",
+            "Timeline: 1–2 week sprint blending research, spikes, and prototype demos.",
+            "Deliverables: opportunity map, technical discovery pack, executive brief.",
+            "Investment: €2K–€4K fixed fee."
+          ],
           caseStudies: [
             {
               company: "Dikaio.ai",
-              challenge: "Launch a Greek-law document automation prototype that could unlock pre-seed funding.",
-              solution: ["Advised the founding team on applying retrieval-augmented generation patterns with OpenAI.", "Partnered with the incoming CTO to ship the first Greek-law document prototype that underpinned their investor pitch."],
+              challenge: "Validate whether retrieval-augmented generation could automate Greek-law document drafting ahead of a pre-seed raise.",
+              solution: [
+                "Mapped founder goals to a shortlist of viable document workflows and responsible AI guardrails.",
+                "Delivered a clickable prototype and RAG reference implementation that informed investor conversations."
+              ],
               technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
             },
             {
-              company: "Brain Metrics Initiative",
-              challenge: "Absorb and mitigate a multi-million-request DDoS surge without losing customer-facing services.",
-              solution: ["Led the incident response effort and delivered custom Cloudflare rules tuned to the attack profile.", "Authored the postmortem and resilience roadmap with costed follow-up work for executives."],
-              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
-            },
-            {
               company: "Langaware",
-              challenge: "Evaluate NLP approaches for applied healthcare use cases such as the Boston Theft Challenge.",
-              solution: ["Built and demonstrated a BERT-based prototype to the CEO, highlighting achievable accuracy and operational workflows."],
+              challenge: "Assess feasibility of applied NLP models for cognitive health screening before committing clinical spend.",
+              solution: [
+                "Ran evaluation spikes across transformer baselines to determine achievable accuracy.",
+                "Packaged findings into a go/no-go narrative with data requirements and compliance considerations."
+              ],
               technologies: ["Python", "BERT", "Applied NLP"]
             },
             {
               company: "Beat",
-              challenge: "Prototype taxi-demand forecasting for the Lima market to engage the AI/Data leadership.",
-              solution: ["Delivered a forecasting prototype and walkthrough that informed next steps for deployment with the AI/Data team."],
+              challenge: "Explore demand-forecasting features for the Lima ride-hailing market without derailing core roadmap.",
+              solution: [
+                "Delivered a forecasting prototype backed by real ridership data to prove value within two weeks.",
+                "Outlined phased rollout options and instrumentation required for ongoing iteration."
+              ],
               technologies: ["Python", "Time-Series Forecasting", "Data Storytelling"]
+            }
+          ]
+        },
+        {
+          title: "AI MVP Launch",
+          slug: "ai-mvp",
+          intro: "Ship an investor-ready AI SaaS MVP in 1–3 months with production-grade backend, data, and generative experiences.",
+          businessProse: `Move from validated concept to a market-ready product without losing momentum. I lead the build, integrate with your existing team, and keep momentum through weekly demos.
+
+### What We Build
+* Secure Python/FastAPI or Django foundations with multi-tenant architecture and clean APIs.
+* Data ingestion, orchestration, and monitoring pipelines sized for early-scale needs.
+* Generative AI or predictive workflows (RAG, summarisation, recommendations) wired into your product UX.
+
+### Delivery Cadence
+* Weekly roadmap reviews and demo sessions with founders and stakeholders.
+* Paired working blocks with your designers, PMs, or fractional specialists.
+* Launch readiness checklist covering QA, observability, and runbook docs.
+
+### Pricing
+* €8K–€20K depending on scope, integrations, and team composition. Phased retainers available.`,
+          items: [
+            "Best for founder-led teams who need an AI SaaS product in market fast.",
+            "Timeline: 1–3 month build with weekly demos and roadmap checkpoints.",
+            "Deliverables: production-grade backend, AI workflows, deployment runbook.",
+            "Investment: €8K–€20K depending on scope and integrations."
+          ],
+          caseStudies: [
+            {
+              company: "NannyML",
+              challenge: "Launch a monitoring SaaS for production ML models while headcount was constrained.",
+              solution: [
+                "Led Python backend and UI integrations that delivered the first investor-ready release.",
+                "Productionised Kubernetes deployment with Helm and observability so the internal team could scale confidently."
+              ],
+              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
+            },
+            {
+              company: "Orfium",
+              challenge: "Stand up a royalty management platform capable of handling high-traffic music data pipelines.",
+              solution: [
+                "Architected Django/Postgres services using twelve-factor patterns for scale and maintainability.",
+                "Implemented licensing workflows and reporting that underpinned the platform’s commercial launch."
+              ],
+              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
+            },
+            {
+              company: "NeuroPublic S.A.",
+              challenge: "Deliver a precision agriculture SaaS with complex agronomy logic inside an aggressive timeline.",
+              solution: [
+                "Led backend services that processed agronomic data and surfaced recommendations for growers.",
+                "Collaborated with agronomists and product leads to ship the platform from zero to launch."
+              ],
+              technologies: ["Python", "Backend Development", "Web Applications"]
+            }
+          ]
+        },
+        {
+          title: "AI Feature Add-On",
+          slug: "ai-feature-add-on",
+          intro: "Add a revenue-driving AI capability to your existing product in 2–6 weeks without disrupting core delivery.",
+          businessProse: `When you already have customers, every new feature must land smoothly. I integrate with your stack, harden the AI workflow, and ensure your team can run it after hand-off.
+
+### Integration Playbook
+* Success metric alignment to tie the feature to activation, retention, or expansion goals.
+* Architecture design that respects your current stack, compliance needs, and data contracts.
+* Experimentation plan plus rollout guardrails (feature flags, observability, fallback strategies).
+
+### Deliverables
+* Production-ready feature implementation with clean interfaces and documentation.
+* Monitoring and alerting hooks so your team can measure quality and intervene quickly.
+* Playbooks for customer success, support, and marketing to communicate the new capability.
+
+### Pricing
+* €4K–€10K depending on integrations, data preparation, and rollout complexity.`,
+          items: [
+            "Best for scale-ups adding AI value to an existing product surface.",
+            "Timeline: 2–6 week integration alongside your in-house team.",
+            "Deliverables: production feature, monitoring plan, go-to-market playbook.",
+            "Investment: €4K–€10K depending on complexity."
+          ],
+          caseStudies: [
+            {
+              company: "Workable",
+              challenge: "Introduce generative AI to hiring workflows without compromising reliability or compliance.",
+              solution: [
+                "Delivered PoCs into hardened microservices that powered new recruiter-facing experiences.",
+                "Established MLOps practices (monitoring, testing, rollout) so the internal ML team could iterate safely."
+              ],
+              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
+            },
+            {
+              company: "ENCODE (Cybersecurity)",
+              challenge: "Expose near real-time threat analytics via a performance-critical API for enterprise customers.",
+              solution: [
+                "Engineered analytics services that blended Spark pipelines with an optimized Flask API.",
+                "Implemented caching and instrumentation to keep latency low while surfacing new intelligence."
+              ],
+              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
+            },
+            {
+              company: "Brain Metrics Initiative",
+              challenge: "Harden resilience tooling during a live DDoS surge while keeping customer dashboards online.",
+              solution: [
+                "Shipped Cloudflare automations and operational runbooks that neutralised the attack path.",
+                "Captured learnings in a resilience roadmap with scoped AI-driven detection enhancements."
+              ],
+              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
             }
           ]
         },
@@ -414,10 +436,9 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       cta: "Συνεργαστείτε μαζί μου",
       servicesTitle: "Υπηρεσίες με μια ματιά",
       services: [
-        { title: "Μηχανική Λογισμικού", description: "Κλιμακούμενα back-end συστήματα, APIs, SaaS πλατφόρμες.", slug: "software-engineering" },
-        { title: "Τεχνητή Νοημοσύνη & Μηχανική Μάθηση", description: "NLP, ανάπτυξη μοντέλων, MLOps πρακτικές.", slug: "ai-machine-learning" },
-        { title: "Big Data & Αναλύσεις", description: "Pipelines δεδομένων, Spark, cloud-based επεξεργασία.", slug: "big-data-analytics" },
-        { title: "Συμβουλευτική & Υποστήριξη", description: "Στρατηγική τεχνολογίας, μελέτες σκοπιμότητας, audits.", slug: "consulting-technical-support" },
+        { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
+        { title: "AI MVP Launch", description: "Κατασκευή 1–3 μηνών για MVP AI SaaS έτοιμο για επενδυτές.", slug: "ai-mvp" },
+        { title: "AI Feature Add-On", description: "Ενσωμάτωση 2–6 εβδομάδων ενός παραγωγικού AI χαρακτηριστικού.", slug: "ai-feature-add-on" },
       ],
       credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
     },
@@ -467,149 +488,172 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Προσφέρω ευέλικτες συμβουλευτικές και αναπτυξιακές υπηρεσίες, προσαρμοσμένες στις ανάγκες σας:",
+      intro: "Διάλεξε το AI engagement που ταιριάζει στην ανάγκη σου: discovery, MVP ή επέκταση χαρακτηριστικών.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
       categories: [
-        { 
-          title: "Μηχανική Λογισμικού", 
-          slug: "software-engineering",
-          intro: "Η δημιουργία στιβαρού, κλιμακούμενου και συντηρήσιμου λογισμικού αποτελεί τον πυρήνα της εξειδίκευσής μου. Η εμπειρία μου εκτείνεται από τη δημιουργία APIs υψηλής απόδοσης έως την αρχιτεκτονική ολόκληρων πλατφορμών SaaS. Παρακάτω είναι παραδείγματα του πώς έχω λύσει βασικές μηχανικές προκλήσεις για διάφορες εταιρείες.",
-          businessProse: `Δεν γράφω απλώς κώδικα, δημιουργώ ψηφιακά περιουσιακά στοιχεία που οδηγούν την επιχειρηματική ανάπτυξη. Επικεντρώνομαι στη δημιουργία κλιμακούμενων, ασφαλών και συντηρήσιμων backend συστημάτων που αποτελούν τη ραχοκοκαλιά των σύγχρονων εφαρμογών. Είτε είστε μια startup που λανσάρει ένα MVP είτε μια καθιερωμένη εταιρεία που κλιμακώνει την πλατφόρμα της, παρέχω την τεχνική αριστεία που απαιτείται για την επιτυχία.
+        {
+          title: "AI Discovery Sprint",
+          slug: "ai-discovery",
+          intro: "Σχεδιάζουμε ένα σπριντ 1–2 εβδομάδων που αναδεικνύει τις πιο αποδοτικές AI ευκαιρίες, μειώνει το ρίσκο και αφήνει ξεκάθαρα επόμενα βήματα.",
+          businessProse: `Το σπριντ προσφέρει στους founders σαφήνεια πριν δεσμεύσουν σημαντικό budget. Μαζί ορίζουμε το επιθυμητό αποτέλεσμα, ελέγχουμε την ετοιμότητα των δεδομένων και δοκιμάζουμε υποσχόμενα use cases με γρήγορα prototypes.
 
-### Συγκεκριμένες Υπηρεσίες:
-*   **Ανάπτυξη & Ενσωμάτωση API:** Σχεδιασμός και κατασκευή REST APIs υψηλής απόδοσης για την τροφοδοσία των εφαρμογών σας και τη σύνδεση με υπηρεσίες τρίτων.
-*   **Αρχιτεκτονική Πλατφόρμας SaaS:** Σχεδιασμός multi-tenant, κλιμακούμενων προϊόντων SaaS από την αρχή, εξασφαλίζοντας μακροπρόθεσμη βιωσιμότητα.
-*   **Εκσυγχρονισμός Backend Συστημάτων:** Αναδιάρθρωση παλαιών συστημάτων (legacy codebases) σε σύγχρονα frameworks και αρχιτεκτονικές microservices για βελτίωση της απόδοσης και της συντηρησιμότητας.
-*   **Σχεδιασμός & Βελτιστοποίηση Βάσεων Δεδομένων:** Δόμηση και βελτιστοποίηση βάσεων δεδομένων PostgreSQL για ταχύτητα, αξιοπιστία και κλίμακα.
+### Ροή Συνεργασίας
+* Kick-off workshop για να χαρτογραφήσουμε pains, στόχους επιτυχίας και responsible AI guardrails.
+* Συζητήσεις με stakeholders και συνεντεύξεις χρηστών για να επιβεβαιώσουμε την επιθυμητότητα και την επιχειρησιακή καταλληλότητα.
+* Τεχνικά spikes σε LLMs, retrieval ή automation patterns ώστε να αποδείξουμε τη βιωσιμότητα και να αναδείξουμε περιορισμούς.
 
-### Τεχνογνωσία για το Μέλλον:
-*   **Υποδομές Cloud & DevOps:** Μπορώ να δημιουργήσω CI/CD pipelines και να αναπτύξω εφαρμογές σε AWS ή Google Cloud χρησιμοποιώντας Docker και Kubernetes, αυτοματοποιώντας την πορεία σας προς την παραγωγή.
-*   **Τεχνικοί Έλεγχοι Απόδοσης:** Μπορώ να αναλύσω τα υπάρχοντα συστήματά σας για τον εντοπισμό και την εξάλειψη σημείων συμφόρησης, βελτιώνοντας την εμπειρία του χρήστη και μειώνοντας το λειτουργικό κόστος.`,
-          items: ["Python development (Flask, Django, FastAPI).", "SaaS πλατφόρμες και APIs.", "Σχεδιασμός & ενοποίηση συστημάτων."],
-          caseStudies: [
-            {
-              company: "Orfium",
-              challenge: "Ανάπτυξη και κλιμάκωση του backend συστήματος για μια πλατφόρμα υψηλής επισκεψιμότητας που διαχειρίζεται μουσικά δικαιώματα και δικαιώματα πνευματικής ιδιοκτησίας, εξασφαλίζοντας αξιοπιστία και συντηρησιμότητα.",
-              solution: ["Σχεδίασα και κατασκεύασα στιβαρές backend υπηρεσίες χρησιμοποιώντας Django και Postgres.", "Ακολούθησα τις αρχές twelve-factor app για να δημιουργήσω μια κλιμακούμενη και φορητή εφαρμογή, η οποία αναπτύχθηκε με επιτυχία στο Heroku."],
-              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
-            },
-            {
-              company: "ENCODE (Ανάλυση Ασφάλειας)",
-              challenge: "Σχεδιασμός και κατασκευή μιας μηχανής ανάλυσης σχεδόν πραγματικού χρόνου και ενός API υψηλής απόδοσης για την παροχή δεδομένων απειλών ασφαλείας από πολλαπλές πηγές όπως Splunk, Redis και MySQL.",
-              solution: ["Ανέπτυξα τον κεντρικό πυρήνα της μηχανής ανάλυσης σε Python για τον εντοπισμό απειλών από τα αρχεία καταγραφής κίνησης του εταιρικού ιστού.", "Δημιούργησα ένα REST API χρησιμοποιώντας Flask και SQLAlchemy για την αποτελεσματική παροχή των αποτελεσμάτων της ανάλυσης σε dashboards για τους χρήστες."],
-              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
-            },
-            {
-              company: "NeuroPublic S.A.",
-              challenge: "Δημιουργία της υποδομής backend για μια νέα διαδικτυακή εφαρμογή με στόχο τη γεωργία ακριβείας, απαιτώντας αποτελεσματική επεξεργασία δεδομένων για τη διαχείριση λιπασμάτων.",
-              solution: ["Ηγήθηκα της ανάπτυξης του backend σε Python για τις υπηρεσίες που υποστήριζαν τη νέα εφαρμογή.", "Εργάστηκα με επιτυχία σε μια διεπιστημονική ομάδα για την ολοκλήρωση της ταχείας ανάπτυξης και διάθεσης της πλατφόρμας."],
-              technologies: ["Python", "Backend Development", "Web Applications"]
-            }
-          ]
-        },
-        { 
-          title: "Τεχνητή Νοημοσύνη & Μηχανική Μάθηση", 
-          slug: "ai-machine-learning",
-          intro: "Εξειδικεύομαι στην πρακτική εφαρμογή της Τεχνητής Νοημοσύνης και της Μηχανικής Μάθησης, από την παραδοσιακή Επεξεργασία Φυσικής Γλώσσας (NLP) έως τις τελευταίες εξελίξεις στο Generative AI. Η εστίασή μου είναι στην κατασκευή και ανάπτυξη μοντέλων που προσφέρουν πραγματική επιχειρηματική αξία. Εδώ είναι μερικά από τα κυριότερα σημεία της δουλειάς μου στον τομέα AI/ML.",
-          businessProse: `Βοηθώ τις επιχειρήσεις να αξιοποιήσουν τη δύναμη της AI όχι ως ένα buzzword, αλλά ως ένα εργαλείο για τη δημιουργία απτής αξίας. Από την αυτοματοποίηση εσωτερικών διαδικασιών έως τη δημιουργία ευφυών χαρακτηριστικών προϊόντων που ενθουσιάζουν τους χρήστες, γεφυρώνω το χάσμα μεταξύ του δυναμικού της AI και της πραγματικής επιχειρηματικής εφαρμογής. Η τεχνογνωσία μου καλύπτει ολόκληρο τον κύκλο ζωής, από τη δημιουργία πρωτοτύπων και την επιλογή μοντέλων έως την ανάπτυξη και συντήρηση μοντέλων σε παραγωγή.
+### Παραδοτέα
+* Opportunity map που κατατάσσει τα AI bets με βάση αξία, προσπάθεια και ρίσκο.
+* Τεχνικό discovery pack με απαιτήσεις δεδομένων, σκίτσα αρχιτεκτονικής και προτάσεις εργαλείων/προμηθευτών.
+* Executive-ready brief με go/no-go απόφαση, χρονοδιάγραμμα και επόμενα βήματα.
 
-### Συγκεκριμένες Υπηρεσίες:
-*   **Ενσωμάτωση Generative AI & LLM:** Δημιουργία εφαρμογών με OpenAI/GPT και LangChain για εργασίες όπως προηγμένη αναζήτηση, δημιουργία περιεχομένου και περίληψη κειμένων.
-*   **Εξειδικευμένες Λύσεις NLP:** Ανάπτυξη μοντέλων για ταξινόμηση κειμένου, αναγνώριση οντοτήτων και ανάλυση συναισθήματος, προσαρμοσμένα στον δικό σας τομέα.
-*   **MLOps & Productionalization:** Δημιουργία ισχυρών pipelines για την ανάπτυξη, παρακολούθηση και επανεκπαίδευση μοντέλων ώστε να διασφαλίζεται η αξιόπιστη απόδοσή τους σε κλίμακα.
-
-### Τεχνογνωσία για το Μέλλον:
-*   **Ανάπτυξη Ευφυών Chatbots:** Μπορώ να δημιουργήσω έξυπνα, context-aware chatbots για την υποστήριξη πελατών ή για εσωτερικές χρήσεις, βελτιώνοντας την αποδοτικότητα και την αλληλεπίδραση με τους χρήστες.
-*   **Στρατηγική Προϊόντων AI:** Παρέχω συμβουλευτικές υπηρεσίες για την καλύτερη αξιοποίηση της AI στο προϊόν σας, εντοπίζοντας περιπτώσεις χρήσης υψηλού αντίκτυπου και ορίζοντας έναν σαφή οδικό χάρτη υλοποίησης.`,
-          items: ["Επεξεργασία φυσικής γλώσσας (ταξινόμηση κειμένων, αναζήτηση, embeddings).", "Generative AI (OpenAI, LangChain, Pinecone).", "MLOps & παραγωγική διάθεση μοντέλων."],
-          caseStudies: [
-            {
-              company: "Workable",
-              challenge: "Βελτίωση των βασικών προϊόντων NLP της εταιρείας με δυνατότητες Generative AI και εξορθολογισμός του κύκλου ζωής των μοντέλων μηχανικής μάθησης από την ανάπτυξη έως την παραγωγή.",
-              solution: ["Ανέπτυξα και συντήρησα microservices για την εξυπηρέτηση μοντέλων ML, εξασφαλίζοντας υψηλή διαθεσιμότητα και απόδοση.", "Εφάρμοσα βέλτιστες πρακτικές MLOps για την αυτοματοποίηση των διαδικασιών ανάπτυξης, παρακολούθησης και επανεκπαίδευσης.", "Ηγήθηκα έργων Proof-of-Concept για Generative AI χρησιμοποιώντας OpenAI, LangChain και Pinecone για τη διερεύνηση νέων δυνατοτήτων προϊόντων."],
-              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
-            },
-            {
-              company: "NannyML",
-              challenge: "Δημιουργία πρωτοτύπου και κατασκευή ενός νέου προϊόντος SaaS για την παρακολούθηση μοντέλων μηχανικής μάθησης σε παραγωγή, ένα κρίσιμο στοιχείο του MLOps.",
-              solution: ["Ηγήθηκα της δημιουργίας πρωτοτύπου και της ανάπτυξης του προϊόντος σε Python για την πλατφόρμα παρακολούθησης μοντέλων ML.", "Διαχειρίστηκα την ανάπτυξη και την ενορχήστρωση της εφαρμογής στο Amazon Elastic Kubernetes Service (EKS) χρησιμοποιώντας Helm charts."],
-              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
-            }
-          ]
-        },
-        { 
-          title: "Big Data & Αναλύσεις", 
-          slug: "big-data-analytics",
-          intro: "Έχω αποδεδειγμένη ιστορία στο σχεδιασμό και την κατασκευή συστημάτων που μπορούν να επεξεργάζονται και να αναλύουν τεράστιους όγκους δεδομένων. Η εμπειρία μου καλύπτει την αρχιτεκτονική data pipeline, τους κατανεμημένους υπολογισμούς και τη βελτιστοποίηση απόδοσης για αναλύσεις μεγάλης κλίμακας.",
-          businessProse: `Τα δεδομένα είναι ένα από τα πιο πολύτιμα περιουσιακά σας στοιχεία, αλλά μόνο αν μπορείτε να τα επεξεργαστείτε και να τα κατανοήσετε. Κατασκευάζω τα συστήματα που μετατρέπουν τεράστια, πολύπλοκα σύνολα δεδομένων σε σαφείς, αξιοποιήσιμες πληροφορίες. Η εμπειρία μου σε κατανεμημένους υπολογισμούς και πλατφόρμες ανάλυσης μεγάλης κλίμακας διασφαλίζει ότι η επιχείρησή σας μπορεί να λαμβάνει αποφάσεις βασισμένες σε δεδομένα, ανεξάρτητα από τον όγκο ή την ταχύτητα των δεδομένων σας.
-
-### Συγκεκριμένες Υπηρεσίες:
-*   **Κλιμακούμενα Data Pipelines (ETL/ELT):** Σχεδιασμός και κατασκευή ανθεκτικών pipelines με εργαλεία όπως το Apache Spark και το Airflow σε πλατφόρμες cloud (AWS, GCP).
-*   **Ανάλυση Logs & Πλατφόρμες Κυβερνοασφάλειας:** Δημιουργία συστημάτων για την επεξεργασία και ανάλυση terabytes δεδομένων log για την ανίχνευση απειλών ασφαλείας και την επιχειρησιακή ευφυΐα.
-*   **Πρόβλεψη Χρονοσειρών:** Ανάπτυξη προγνωστικών μοντέλων για την πρόβλεψη μελλοντικών τάσεων, όπως η ζήτηση από τους χρήστες, οι πωλήσεις ή οι ανάγκες σε πόρους.
-
-### Τεχνογνωσία για το Μέλλον:
-*   **Dashboards Ανάλυσης σε Πραγματικό Χρόνο:** Μπορώ να κατασκευάσω συστήματα που τροφοδοτούν ζωντανά dashboards (π.χ. με Elasticsearch/Kibana ή custom λύσεις) για άμεσες επιχειρησιακές πληροφορίες.
-*   **Υλοποίηση Data Warehouse:** Μπορώ να σας καθοδηγήσω στην επιλογή και υλοποίηση μιας σύγχρονης λύσης data warehouse (όπως BigQuery ή Snowflake) για κεντρική επιχειρηματική ευφυΐα.`,
-          items: ["Σχεδιασμός pipelines δεδομένων (Spark, Elasticsearch, AWS).", "Ανάλυση και επεξεργασία μεγάλων logs.", "Πρόβλεψη & μοντέλα χρονοσειρών."],
-          caseStudies: [
-            {
-              company: "ENCODE (Κυβερνοασφάλεια)",
-              challenge: "Κατασκευή μιας νέας πλατφόρμας ανάλυσης από την αρχή για την επεξεργασία terabytes δεδομένων από logs δικτύου για ένα σύστημα ανίχνευσης εισβολών μεγάλης κλίμακας, αντικαθιστώντας και ξεπερνώντας σε απόδοση ένα παλαιότερο σύστημα.",
-              solution: ["Σχεδίασα και ανέπτυξα μια πλατφόρμα επεξεργασίας δεδομένων χρησιμοποιώντας Apache Spark σε AWS για κατανεμημένη ανάλυση.", "Χρησιμοποίησα το Elasticsearch ως τον πυρήνα της μηχανής ανάλυσης για να επιτρέψω στους αναλυτές ασφαλείας να εκτελούν πολύπλοκα ερωτήματα σε τεράστιους όγκους δεδομένων με χαμηλή καθυστέρηση.", "Πραγματοποίησα με επιτυχία βελτιστοποιήσεις απόδοσης και μνήμης στην παλαιότερη πλατφόρμα για να διαχειριστεί μεγαλύτερους όγκους δεδομένων κατά τη μεταβατική περίοδο."],
-              technologies: ["Python", "Apache Spark", "Elasticsearch", "AWS", "Cybersecurity"]
-            },
-            {
-              company: "Skyscanner",
-              challenge: "Ανάπτυξη και συντήρηση συστημάτων συλλογής δεδομένων για την αξιόπιστη απόκτηση τιμών αεροπορικών εισιτηρίων από πολλές αεροπορικές εταιρείες και τρίτες πηγές.",
-              solution: ["Ανέλαβα την ευθύνη για βασικές αρμοδιότητες της ομάδας που περιλάμβαναν την ανάπτυξη και συντήρηση API scrapers σε Python.", "Διαχειρίστηκα με επιτυχία την επικοινωνία με τρίτους για τον καθορισμό προδιαγραφών και την ενσωμάτωση."],
-              technologies: ["Python", "API Integration", "Web Scraping", "Data Acquisition"]
-            }
-          ]
-        },
-        { 
-          title: "Συμβουλευτική & Τεχνική Υποστήριξη", 
-          slug: "consulting-technical-support",
-          intro: "Αντλώντας από περισσότερο από μια δεκαετία εμπειρίας, παρέχω στρατηγική καθοδήγηση και τεχνική ηγεσία για να βοηθήσω τις επιχειρήσεις να αντιμετωπίσουν πολύπλοκες προκλήσεις λογισμικού και δεδομένων. Οι συμβουλευτικές μου υπηρεσίες καλύπτουν ολόκληρο τον κύκλο ζωής του έργου.",
-          businessProse: `Πέρα από την πρακτική ανάπτυξη, προσφέρω στρατηγική τεχνική καθοδήγηση για να μειώσετε τον κίνδυνο στα έργα σας και να επιταχύνετε τον οδικό σας χάρτη. Ως τεχνικός συνεργάτης, σας βοηθώ να λάβετε τις σωστές αρχιτεκτονικές αποφάσεις, να αξιολογήσετε νέες τεχνολογίες και να διασφαλίσετε ότι οι τεχνικές σας προσπάθειες είναι ευθυγραμμισμένες με τους επιχειρηματικούς σας στόχους από την πρώτη μέρα.
-
-### Συγκεκριμένες Υπηρεσίες:
-*   **Τεχνική Σκοπιμότητα & Δημιουργία Πρωτοτύπων:** Διεξαγωγή γρήγορων Proof-of-Concepts (PoCs) για την επικύρωση ιδεών και τεχνολογικών επιλογών πριν από τη δέσμευση σημαντικών πόρων.
-*   **Σχεδιασμός Αρχιτεκτονικής Συστημάτων:** Σχεδιασμός του τεχνικού σχεδίου για νέα προϊόντα, με έμφαση στην κλιμάκωση, την ασφάλεια και την αποδοτικότητα κόστους.
-*   **Ανάλυση Αιτιών & Post-mortems:** Διερεύνηση κρίσιμων αστοχιών συστήματος ή περιστατικών ασφαλείας για την παροχή σαφούς ανάλυσης και εφαρμόσιμων στρατηγικών πρόληψης.
-
-### Τεχνογνωσία για το Μέλλον:
-*   **Fractional CTO / Tech Lead:** Παρέχω ανώτερη τεχνική ηγεσία και καθοδήγηση ομάδας σε μερική απασχόληση για startups και αναπτυσσόμενες ομάδες που χρειάζονται καθοδήγηση από ειδικούς χωρίς τη δέσμευση πλήρους απασχόλησης.
-*   **Τεχνικός Έλεγχος (Due Diligence):** Βοηθώ επενδυτές ή αγοραστές στην αξιολόγηση της τεχνικής υγείας, της κλιμάκωσης και των κινδύνων μιας εταιρείας λογισμικού ή μιας πιθανής εξαγοράς.`,
-          items: ["Μελέτες σκοπιμότητας & PoCs.", "Ανάλυση απαιτήσεων & αρχιτεκτονικός σχεδιασμός.", "Συνεχής υποστήριξη σε εξειδικευμένες εφαρμογές."],
+### Κόστος
+* Σταθερή αμοιβή €2K–€4K ανάλογα με scope και αριθμό εμπλεκόμενων personae.`,
+          items: [
+            "Ιδανικό για founders που θέλουν να επικυρώσουν AI use cases πριν προχωρήσουν σε ανάπτυξη.",
+            "Χρονοδιάγραμμα: σπριντ 1–2 εβδομάδων με έρευνα, spikes και prototype demos.",
+            "Παραδοτέα: opportunity map, τεχνικό discovery pack, executive brief.",
+            "Επένδυση: €2K–€4K σταθερή αμοιβή."
+          ],
           caseStudies: [
             {
               company: "Dikaio.ai",
-              challenge: "Να λανσάρουν ένα πρωτότυπο αυτοματοποίησης νομικών εγγράφων για το ελληνικό δίκαιο ώστε να εξασφαλίσουν pre-seed χρηματοδότηση.",
-              solution: ["Καθοδήγησα την ιδρυτική ομάδα σε μοτίβα retrieval-augmented generation με OpenAI.", "Συνεργάστηκα με τον μελλοντικό CTO για να παραδώσουμε το πρώτο πρωτότυπο νομικού εγγράφου που στήριξε το investor pitch."],
+              challenge: "Να επιβεβαιωθεί αν η retrieval-augmented generation μπορεί να αυτοματοποιήσει νομικά έγγραφα ελληνικού δικαίου πριν το pre-seed.",
+              solution: [
+                "Χαρτογράφησα τους στόχους των founders σε shortlist βιώσιμων ροών εγγράφων και responsible AI κανόνων.",
+                "Παρέδωσα clickable prototype και RAG reference implementation που τροφοδότησαν τις συζητήσεις με επενδυτές."
+              ],
               technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
             },
             {
-              company: "Brain Metrics Initiative",
-              challenge: "Να απορροφήσουν και να μετριάσουν επίθεση DDoS πολλών εκατομμυρίων αιτημάτων χωρίς διακοπή υπηρεσιών.",
-              solution: ["Ηγήθηκα της απόκρισης στο συμβάν και υλοποίησα custom κανόνες Cloudflare προσαρμοσμένους στο προφίλ της επίθεσης.", "Συνέταξα το postmortem και τον οδικό χάρτη ανθεκτικότητας με κοστολογημένες επόμενες κινήσεις για τα στελέχη."],
-              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
-            },
-            {
               company: "Langaware",
-              challenge: "Να αξιολογήσουν προσεγγίσεις NLP για εφαρμογές υγείας όπως το Boston Theft Challenge.",
-              solution: ["Ανάπτυξα και παρουσίασα πρωτότυπο βασισμένο σε BERT στον CEO, αναδεικνύοντας την επιτευκτή ακρίβεια και τις ροές εργασίας."],
+              challenge: "Αξιολόγηση βιωσιμότητας NLP μοντέλων για έλεγχο γνωστικής υγείας πριν επενδυθούν κλινικοί πόροι.",
+              solution: [
+                "Εκτέλεσα evaluation spikes σε transformer baselines για να μετρήσω επιτεύξιμη ακρίβεια.",
+                "Σύνταξα go/no-go αφήγηση με απαιτήσεις δεδομένων και θέματα συμμόρφωσης."
+              ],
               technologies: ["Python", "BERT", "Applied NLP"]
             },
             {
               company: "Beat",
-              challenge: "Να δημιουργήσουν πρωτότυπο πρόβλεψης ζήτησης ταξί για την αγορά της Λίμα και να εμπλέξουν την ομάδα AI/Data.",
-              solution: ["Παρέδωσα πρωτότυπο πρόβλεψης και walkthrough που ενημέρωσε τα επόμενα βήματα για υλοποίηση με την ομάδα AI/Data."],
-              technologies: ["Python", "Πρόβλεψη Χρονοσειρών", "Data Storytelling"]
+              challenge: "Εξερεύνηση χαρακτηριστικών πρόβλεψης ζήτησης για τη Λίμα χωρίς να εκτροχιαστεί το βασικό roadmap.",
+              solution: [
+                "Παρέδωσα prototype forecasting με πραγματικά δεδομένα επιβατών μέσα σε δύο εβδομάδες για να αποδείξω αξία.",
+                "Πρότεινα phased rollout και instrumentation που απαιτείται για συνεχή βελτίωση."
+              ],
+              technologies: ["Python", "Forecasting", "Data Storytelling"]
             }
           ]
         },
+        {
+          title: "AI MVP Launch",
+          slug: "ai-mvp",
+          intro: "Παραδίδω AI SaaS MVP έτοιμο για επενδυτές μέσα σε 1–3 μήνες με production-grade backend, data και generative εμπειρίες.",
+          businessProse: `Μετατρέπουμε το επικυρωμένο concept σε προϊόν χωρίς να χαθεί ρυθμός. Ηγούμαι της ανάπτυξης, συνεργάζομαι με την ομάδα σου και κρατώ την πορεία διαφανή με εβδομαδιαία demos.
+
+### Τι Χτίζουμε
+* Ασφαλή θεμέλια Python/FastAPI ή Django με multi-tenant αρχιτεκτονική και καθαρά APIs.
+* Pipelines συλλογής, ορχήστρωσης και παρακολούθησης δεδομένων για ανάγκες early-scale.
+* Generative ή predictive workflows (RAG, summarisation, recommendations) ενσωματωμένα στην εμπειρία χρήστη.
+
+### Ρυθμός Παράδοσης
+* Εβδομαδιαία roadmap reviews και demo sessions με founders και stakeholders.
+* Collaborative working sessions με designers, PMs ή fractional ειδικούς.
+* Launch readiness checklist που καλύπτει QA, observability και runbooks.
+
+### Κόστος
+* €8K–€20K ανάλογα με scope, integrations και σύνθεση ομάδας. Διαθέσιμα phased retainers.`,
+          items: [
+            "Ιδανικό για ομάδες founders που χρειάζονται AI SaaS προϊόν στην αγορά γρήγορα.",
+            "Χρονοδιάγραμμα: ανάπτυξη 1–3 μηνών με εβδομαδιαία demos και checkpoints.",
+            "Παραδοτέα: production backend, AI workflows, deployment runbook.",
+            "Επένδυση: €8K–€20K ανάλογα με integrations."
+          ],
+          caseStudies: [
+            {
+              company: "NannyML",
+              challenge: "Λανσάρισμα SaaS παρακολούθησης ML μοντέλων με περιορισμένο headcount.",
+              solution: [
+                "Ηγήθηκα της Python backend ανάπτυξης και των UI integrations που παρέδωσαν την πρώτη έκδοση έτοιμη για επενδυτές.",
+                "Productionάρισα Kubernetes deployment με Helm και observability ώστε η εσωτερική ομάδα να κλιμακώσει με σιγουριά."
+              ],
+              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
+            },
+            {
+              company: "Orfium",
+              challenge: "Στήσιμο πλατφόρμας διαχείρισης δικαιωμάτων ικανής να χειριστεί υψηλούς όγκους μουσικών δεδομένων.",
+              solution: [
+                "Αρχιτεκτόνησα υπηρεσίες Django/Postgres με twelve-factor πρακτικές για κλίμακα και συντήρηση.",
+                "Υλοποίησα workflows αδειοδότησης και reporting που στήριξαν το εμπορικό λανσάρισμα."
+              ],
+              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
+            },
+            {
+              company: "NeuroPublic S.A.",
+              challenge: "Παράδοση SaaS precision agriculture με σύνθετη αγρονομική λογική σε πιεστικό χρονοδιάγραμμα.",
+              solution: [
+                "Ηγήθηκα υπηρεσιών backend που επεξεργάζονταν αγρονομικά δεδομένα και παρείχαν συστάσεις σε παραγωγούς.",
+                "Συνεργάστηκα με αγρονόμους και product leads ώστε η πλατφόρμα να λανσαριστεί από μηδέν σε χρόνο."
+              ],
+              technologies: ["Python", "Backend Development", "Web Applications"]
+            }
+          ]
+        },
+        {
+          title: "AI Feature Add-On",
+          slug: "ai-feature-add-on",
+          intro: "Προσθέτω παραγωγικό AI χαρακτηριστικό στο υπάρχον προϊόν σου μέσα σε 2–6 εβδομάδες χωρίς να διαταράσσω τον βασικό ρυθμό.",
+          businessProse: `Όταν έχεις ήδη χρήστες, κάθε νέο χαρακτηριστικό πρέπει να προσγειώνεται ομαλά. Ενσωματώνομαι στην ομάδα σου, θωρακίζω το AI workflow και παραδίδω τεκμηρίωση για απρόσκοπτο hand-off.
+
+### Playbook Ενσωμάτωσης
+* Ευθυγράμμιση success metrics ώστε το χαρακτηριστικό να συνδέεται με ενεργοποίηση, διατήρηση ή επέκταση εσόδων.
+* Σχεδιασμός αρχιτεκτονικής που σέβεται το υπάρχον stack, τις απαιτήσεις συμμόρφωσης και τα data contracts.
+* Πλάνο πειραματισμού και rollout guardrails (feature flags, observability, fallback στρατηγικές).
+
+### Παραδοτέα
+* Έτοιμη για παραγωγή υλοποίηση με καθαρές διεπαφές και τεκμηρίωση.
+* Hooks για monitoring και alerting ώστε η ομάδα σου να μετρά ποιότητα και να παρεμβαίνει γρήγορα.
+* Playbooks για customer success, support και marketing ώστε να επικοινωνηθεί η νέα δυνατότητα.
+
+### Κόστος
+* €4K–€10K ανάλογα με integrations, προετοιμασία δεδομένων και πολυπλοκότητα rollout.`,
+          items: [
+            "Ιδανικό για scale-ups που θέλουν να προσθέσουν AI αξία σε υπάρχον surface.",
+            "Χρονοδιάγραμμα: ενσωμάτωση 2–6 εβδομάδων δίπλα στην in-house ομάδα.",
+            "Παραδοτέα: παραγωγικό χαρακτηριστικό, monitoring plan, go-to-market playbook.",
+            "Επένδυση: €4K–€10K ανάλογα με την πολυπλοκότητα."
+          ],
+          caseStudies: [
+            {
+              company: "Workable",
+              challenge: "Εισαγωγή generative AI σε hiring workflows χωρίς να θιγεί η αξιοπιστία ή η συμμόρφωση.",
+              solution: [
+                "Μετέτρεψα PoCs σε θωρακισμένες microservices που τροφοδότησαν νέα recruiter-facing experiences.",
+                "Καθιέρωσα MLOps πρακτικές (monitoring, testing, rollout) ώστε η εσωτερική ML ομάδα να επαναλαμβάνει με ασφάλεια."
+              ],
+              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
+            },
+            {
+              company: "ENCODE (Cybersecurity)",
+              challenge: "Παράδοση near real-time analytics μέσω performance-critical API για enterprise πελάτες.",
+              solution: [
+                "Ανάπτυξα υπηρεσίες analytics που συνδύασαν Spark pipelines με βελτιστοποιημένο Flask API.",
+                "Εφάρμοσα caching και instrumentation ώστε η καθυστέρηση να μείνει χαμηλά ενώ παρουσιάζονταν νέες πληροφορίες."
+              ],
+              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
+            },
+            {
+              company: "Brain Metrics Initiative",
+              challenge: "Ενίσχυση εργαλείων ανθεκτικότητας κατά τη διάρκεια ενεργού DDoS επίθεσης διατηρώντας dashboards online.",
+              solution: [
+                "Παρέδωσα Cloudflare automations και operational runbooks που εξουδετέρωσαν το μοτίβο επίθεσης.",
+                "Κατέγραψα learning σε resilience roadmap με scoped AI-driven βελτιώσεις ανίχνευσης."
+              ],
+              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
+            }
+          ]
+        }
       ],
     },
     portfolio: {
