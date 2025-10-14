@@ -12,9 +12,9 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     home: {
       name: "Petros Lambropoulos",
-      title: "Lead Product Software Engineer | AI SaaS Initiatives",
-      subtitle: "I ship production-grade Python, AI/ML, and SaaS platforms for venture-backed startups and scale-ups.",
-      specialties: "Generative AI delivery, high-scale data systems, and resilient product infrastructure.",
+      title: "I help startups launch AI SaaS products in weeks.",
+      subtitle: "Discovery, build, and delivery of production-ready AI features so you can ship faster and win the market.",
+      specialties: "Rapid AI discovery sprints, generative product experiences, and resilient cloud infrastructure.",
       cta: "Work with me",
       servicesTitle: "Services snapshot",
       services: [

@@ -19,8 +19,8 @@ const HomePage: React.FC = () => {
     const { home } = translations;
 
     const metaDescription = language === 'en'
-      ? `Petros Lambropoulos is a lead product software engineer delivering production-grade Python, AI/ML, and AI SaaS platforms for venture-backed teams.`
-      : `Ο Πέτρος Λαμπρόπουλος είναι lead product software engineer που παραδίδει παραγωγικά συστήματα Python, AI/ML και AI SaaS για χρηματοδοτούμενες ομάδες.`;
+      ? `Petros Lambropoulos helps startups launch AI-powered SaaS products in weeks with discovery, build, and production-ready AI features.`
+      : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν AI SaaS προϊόντα μέσα σε εβδομάδες, παραδίδοντας discovery, υλοποίηση και παραγωγικά AI χαρακτηριστικά.`;
 
     const icons = [
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
