@@ -41,6 +41,9 @@ export interface Content {
     languagesTitle: string;
     languages: string;
     resumeButton: string;
+    resumeLabel: string;
+    resumeNote: string;
+    resumeOptions: ResumeOption[];
   };
   services: {
     title: string;
@@ -134,4 +137,9 @@ export interface PortfolioItem {
   technologies: string[];
   liveLink?: string;
   githubLink?: string;
+}
+
+export interface ResumeOption {
+  value: string;
+  label: string;
 }
