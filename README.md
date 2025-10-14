@@ -1,7 +1,7 @@
-# Peter Lamb – Software & AI Engineering Consultant
+# Petros Lambropoulos – Lead Product Software Engineer
 
 ## Overview
-This repository hosts the public-facing site for Peter (Petros) Lamb, implemented with **React 19**, **TypeScript**, and **Vite**. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses hash-based URLs so the site works cleanly on GitHub Pages.
+This repository hosts the public-facing site for Petros (Peter) Lambropoulos, implemented with **React 19**, **TypeScript**, and **Vite**. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses hash-based URLs so the site works cleanly on GitHub Pages.
 
 ## Branch & Remote Strategy
 - `main` is the branch for active development and deployable code. Create commits here when making changes locally.

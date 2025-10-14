@@ -11,8 +11,8 @@ const AboutPage: React.FC = () => {
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
 
     const metaDescription = language === 'en'
-      ? `Learn about Peter Lamb, a senior software engineer with over 10 years of experience in AI, SaaS, and big data. Discover his technical skills, education, and professional background.`
-      : `Μάθετε για τον Peter Lamb, έναν senior software engineer με πάνω από 10 χρόνια εμπειρίας στην AI, το SaaS και τα big data. Ανακαλύψτε τις τεχνικές του δεξιότητες, την εκπαίδευση και το επαγγελματικό του υπόβαθρο.`;
+      ? `Learn about Petros Lambropoulos, a lead product software engineer partnering with venture-backed startups on generative AI, Python microservices, and high-scale data systems.`
+      : `Μάθετε για τον Πέτρο Λαμπρόπουλο, lead product software engineer που συνεργάζεται με χρηματοδοτούμενες startups σε generative AI, Python microservices και πλατφόρμες δεδομένων μεγάλης κλίμακας.`;
 
     const ListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <li className="flex items-start">
@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
     return (
         <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md max-w-4xl mx-auto">
             <MetaTags 
-                title={`${about.title} | Peter Lamb`} 
+                title={`${about.title} | Petros Lambropoulos`} 
                 description={metaDescription}
             />
             <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white mb-6 text-center">{about.title}</h1>

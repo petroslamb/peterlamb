@@ -7,8 +7,8 @@ const ContactPage: React.FC = () => {
     const { contact } = translations;
 
     const metaDescription = language === 'en'
-      ? `Get in touch with Peter Lamb to discuss your software or AI project. Find contact details and a direct message form.`
-      : `Επικοινωνήστε με τον Peter Lamb για να συζητήσετε το έργο λογισμικού ή AI σας. Βρείτε στοιχεία επικοινωνίας και μια φόρμα άμεσου μηνύματος.`;
+      ? `Get in touch with Petros Lambropoulos to discuss your software, AI, or resilience initiative. Find contact details and a direct message form.`
+      : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για να συζητήσετε έργα λογισμικού, AI ή ανθεκτικότητας. Βρείτε στοιχεία επικοινωνίας και μια φόρμα άμεσου μηνύματος.`;
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -23,7 +23,7 @@ const ContactPage: React.FC = () => {
     return (
         <div className="max-w-4xl mx-auto">
              <MetaTags 
-                title={`${contact.title} | Peter Lamb`} 
+                title={`${contact.title} | Petros Lambropoulos`} 
                 description={metaDescription}
             />
             <div className="text-center mb-12">

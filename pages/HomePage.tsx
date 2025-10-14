@@ -19,8 +19,8 @@ const HomePage: React.FC = () => {
     const { home } = translations;
 
     const metaDescription = language === 'en'
-      ? `Peter Lamb is a Software & AI Engineering Consultant specializing in Python, AI/ML, and big data. Helping businesses design, build, and scale reliable software solutions.`
-      : `Ο Peter Lamb είναι Σύμβουλος Μηχανικής Λογισμικού & Τεχνητής Νοημοσύνης με εξειδίκευση σε Python, AI/ML και big data. Βοηθά επιχειρήσεις να σχεδιάσουν και να αναπτύξουν αξιόπιστες λύσεις.`;
+      ? `Petros Lambropoulos is a lead product software engineer delivering production-grade Python, AI/ML, and AI SaaS platforms for venture-backed teams.`
+      : `Ο Πέτρος Λαμπρόπουλος είναι lead product software engineer που παραδίδει παραγωγικά συστήματα Python, AI/ML και AI SaaS για χρηματοδοτούμενες ομάδες.`;
 
     const icons = [
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,

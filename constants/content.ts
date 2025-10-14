@@ -11,10 +11,10 @@ export const content: Record<'en' | 'gr', Content> = {
       blog: "Blog",
     },
     home: {
-      name: "Peter Lamb",
-      title: "Software & AI Engineering Consultant",
-      subtitle: "Helping businesses design, build, and scale reliable software and data solutions.",
-      specialties: "Specialized in Python, AI/ML, SaaS, and big data.",
+      name: "Petros Lambropoulos",
+      title: "Lead Product Software Engineer | AI SaaS Initiatives",
+      subtitle: "I ship production-grade Python, AI/ML, and SaaS platforms for venture-backed startups and scale-ups.",
+      specialties: "Generative AI delivery, high-scale data systems, and resilient product infrastructure.",
       cta: "Work with me",
       servicesTitle: "Services snapshot",
       services: [
@@ -23,30 +23,32 @@ export const content: Record<'en' | 'gr', Content> = {
         { title: "Big Data & Analytics", description: "Data pipelines, Spark, cloud-based processing.", slug: "big-data-analytics" },
         { title: "Consulting & Support", description: "Technical strategy, feasibility studies, and audits.", slug: "consulting-technical-support" },
       ],
-      credibility: "Trusted by companies in AI, SaaS, and cybersecurity, including Workable, NannyML, and Orfium.",
+      credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
     },
     about: {
       title: "About Me",
-      greeting: "Hi, I’m Peter Lamb (Petros Lambropoulos)",
-      intro: "a senior software engineer based in Athens, Greece and Canada. I have over 10 years of experience working in AI, SaaS, and security analytics, with a strong background in:",
+      greeting: "Hi, I’m Petros Lambropoulos (Peter Lamb)",
+      intro: "a lead product software engineer based in Athens, Greece. I ship production-grade Python, AI/ML, and SaaS platforms for venture-backed startups and scale-ups, balancing product instincts with dependable delivery.",
       experienceTitle: "Experience",
       experience: [
-        "Python & backend systems",
-        "Machine learning & natural language processing",
-        "Big data engineering & distributed systems",
-        "Software product development",
+        "Generative AI product discovery and delivery for hiring, legal, and forecasting use cases.",
+        "Production Python microservices and event-driven systems on AWS EKS, Kubernetes, and Kafka.",
+        "High-scale data platforms with Spark, Elasticsearch, and streaming pipelines over a 0.5B-record corpus.",
+        "Cross-functional leadership with product, design, and executive stakeholders.",
       ],
       skillsTitle: "Technical Skills",
       skills: [
-        { title: "Languages", items: ["Python", "SQL", "JavaScript/TypeScript", "Bash"] },
-        { title: "Frameworks & Libraries", items: ["Django", "Flask", "FastAPI", "React", "PySpark", "Scikit-learn", "Pandas", "LangChain"] },
-        { title: "Tools & Platforms", items: ["Docker", "Kubernetes", "Elasticsearch", "PostgreSQL", "Git", "Jenkins", "Nginx"] },
-        { title: "Cloud & MLOps", items: ["AWS (EC2, S3, RDS)", "Google Cloud", "Terraform", "MLflow", "Airflow"] },
+        { title: "Product & Leadership", items: ["Stakeholder alignment", "Product storytelling", "Executive communication", "Mentoring", "Resilience engagements"] },
+        { title: "GenAI & MLOps", items: ["Generative AI delivery", "LangChain", "OpenAI APIs", "Agents", "Pinecone", "MLflow", "NLP evaluations"] },
+        { title: "Data Platforms", items: ["AWS (EKS, EC2, S3, RDS)", "Kubernetes", "Terraform", "Airflow", "Redis", "Elasticsearch", "PostgreSQL", "MySQL"] },
+        { title: "Software Stack", items: ["Python", "FastAPI", "Django", "Flask", "PySpark", "Pandas", "NumPy", "PyTorch", "TypeScript/React"] },
+        { title: "Delivery Excellence", items: ["CI/CD automation", "Microservices architecture", "Scalable data pipelines", "Observability", "Incident response"] },
       ],
       educationTitle: "Education",
       education: [
-        "MSc in Computer Science (University of Edinburgh)",
-        "MSc in Electronic Automation & Information Systems (University of Athens)",
+        "MSc, Computer Science - University of Edinburgh (thesis with distinction on parallel MapReduce operators)",
+        "BSc, Physics - National and Kapodistrian University of Athens (applied CS and physics focus)",
+        "Erasmus Exchange - University of Bonn",
       ],
       languagesTitle: "Languages",
       languages: "English (professional), Greek (native), German (limited working).",
@@ -180,10 +182,28 @@ export const content: Record<'en' | 'gr', Content> = {
           items: ["Feasibility analysis and PoCs.", "Requirements gathering & architecture design.", "Ongoing support for specialized applications."],
           caseStudies: [
             {
-              company: "Various Freelance Clients",
-              challenge: "Clients across different industries required expert guidance on data, machine learning, and backend engineering projects, often from conception to launch.",
-              solution: ["Provided end-to-end consulting services covering requirements analysis, project management, and feasibility analysis.", "Designed system architectures for ML and backend services.", "Conducted post-mortems on system failures and security incidents (e.g., DDoS attacks) to identify root causes and implement preventative measures."],
-              technologies: ["Project Management", "System Architecture", "Feasibility Analysis", "Requirements Gathering"]
+              company: "Dikaio.ai",
+              challenge: "Launch a Greek-law document automation prototype that could unlock pre-seed funding.",
+              solution: ["Advised the founding team on applying retrieval-augmented generation patterns with OpenAI.", "Partnered with the incoming CTO to ship the first Greek-law document prototype that underpinned their investor pitch."],
+              technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
+            },
+            {
+              company: "Brain Metrics Initiative",
+              challenge: "Absorb and mitigate a multi-million-request DDoS surge without losing customer-facing services.",
+              solution: ["Led the incident response effort and delivered custom Cloudflare rules tuned to the attack profile.", "Authored the postmortem and resilience roadmap with costed follow-up work for executives."],
+              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
+            },
+            {
+              company: "Langaware",
+              challenge: "Evaluate NLP approaches for applied healthcare use cases such as the Boston Theft Challenge.",
+              solution: ["Built and demonstrated a BERT-based prototype to the CEO, highlighting achievable accuracy and operational workflows."],
+              technologies: ["Python", "BERT", "Applied NLP"]
+            },
+            {
+              company: "Beat",
+              challenge: "Prototype taxi-demand forecasting for the Lima market to engage the AI/Data leadership.",
+              solution: ["Delivered a forecasting prototype and walkthrough that informed next steps for deployment with the AI/Data team."],
+              technologies: ["Python", "Time-Series Forecasting", "Data Storytelling"]
             }
           ]
         },
@@ -357,7 +377,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       noResults: "No posts found matching your search.",
     },
     footer: {
-      copyright: "© 2025 Peter Lamb. All rights reserved.",
+      copyright: "© 2025 Petros Lambropoulos. All rights reserved.",
       availability: "Available for international consulting & freelance projects.",
     },
     announcements: {
@@ -380,10 +400,10 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       blog: "Blog",
     },
     home: {
-      name: "Peter Lamb",
-      title: "Σύμβουλος Λογισμικού & Τεχνητής Νοημοσύνης",
-      subtitle: "Βοηθώ επιχειρήσεις να σχεδιάσουν, να αναπτύξουν και να επεκτείνουν αξιόπιστες λύσεις λογισμικού και δεδομένων.",
-      specialties: "Εξειδίκευση σε Python, AI/ML, SaaS και Big Data.",
+      name: "Πέτρος Λαμπρόπουλος",
+      title: "Lead Product Software Engineer | Πρωτοβουλίες AI SaaS",
+      subtitle: "Παραδίδω παραγωγικά συστήματα Python, AI/ML και SaaS για χρηματοδοτούμενα startups και scale-ups.",
+      specialties: "Generative AI, πλατφόρμες δεδομένων μεγάλης κλίμακας και ανθεκτικές υποδομές προϊόντων.",
       cta: "Συνεργαστείτε μαζί μου",
       servicesTitle: "Υπηρεσίες με μια ματιά",
       services: [
@@ -392,33 +412,35 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
         { title: "Big Data & Αναλύσεις", description: "Pipelines δεδομένων, Spark, cloud-based επεξεργασία.", slug: "big-data-analytics" },
         { title: "Συμβουλευτική & Υποστήριξη", description: "Στρατηγική τεχνολογίας, μελέτες σκοπιμότητας, audits.", slug: "consulting-technical-support" },
       ],
-      credibility: "Εμπιστεύτηκαν τις υπηρεσίες μου εταιρείες AI, SaaS και κυβερνοασφάλειας, όπως οι Workable, NannyML και Orfium.",
+      credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
     },
     about: {
       title: "Σχετικά με εμένα",
-      greeting: "Γεια σας, είμαι ο Peter Lamb (Πέτρος Λαμπρόπουλος)",
-      intro: "senior software engineer με έδρα την Αθήνα και τον Καναδά. Διαθέτω πάνω από 10 χρόνια εμπειρίας στην AI, SaaS και στην ανάλυση ασφάλειας, με ισχυρό υπόβαθρο σε:",
+      greeting: "Γεια σας, είμαι ο Πέτρος Λαμπρόπουλος (Peter Lamb)",
+      intro: "lead product software engineer με έδρα την Αθήνα, Ελλάδα. Παραδίδω παραγωγικά συστήματα Python, AI/ML και SaaS για χρηματοδοτούμενα startups και scale-ups, συνδυάζοντας ένστικτο προϊόντος και αξιόπιστη υλοποίηση.",
       experienceTitle: "Εμπειρία",
       experience: [
-        "Python & back-end συστήματα",
-        "Machine learning & επεξεργασία φυσικής γλώσσας (NLP)",
-        "Big Data & κατανεμημένα συστήματα",
-        "Ανάπτυξη προϊόντων λογισμικού",
+        "Ανακάλυψη και παράδοση προϊόντων Generative AI για πρόσληψη, νομικές ροές και προβλέψεις.",
+        "Παραγωγικά Python microservices και event-driven συστήματα σε AWS EKS, Kubernetes και Kafka.",
+        "Πλατφόρμες δεδομένων μεγάλης κλίμακας με Spark, Elasticsearch και streaming pipelines πάνω σε corpus 0.5 δισεκατομμυρίων εγγραφών.",
+        "Διαλειτουργική ηγεσία με product, design και διοικητικά στελέχη.",
       ],
       skillsTitle: "Τεχνικές Δεξιότητες",
       skills: [
-        { title: "Γλώσσες Προγραμματισμού", items: ["Python", "SQL", "JavaScript/TypeScript", "Bash"] },
-        { title: "Frameworks & Βιβλιοθήκες", items: ["Django", "Flask", "FastAPI", "React", "PySpark", "Scikit-learn", "Pandas", "LangChain"] },
-        { title: "Εργαλεία & Πλατφόρμες", items: ["Docker", "Kubernetes", "Elasticsearch", "PostgreSQL", "Git", "Jenkins", "Nginx"] },
-        { title: "Cloud & MLOps", items: ["AWS (EC2, S3, RDS)", "Google Cloud", "Terraform", "MLflow", "Airflow"] },
+        { title: "Product & Ηγεσία", items: ["Συντονισμός ενδιαφερόμενων", "Product storytelling", "Επικοινωνία με διοίκηση", "Mentoring", "Εμπλοκές ανθεκτικότητας"] },
+        { title: "GenAI & MLOps", items: ["Generative AI delivery", "LangChain", "OpenAI APIs", "Agents", "Pinecone", "MLflow", "NLP αξιολογήσεις"] },
+        { title: "Data Platforms", items: ["AWS (EKS, EC2, S3, RDS)", "Kubernetes", "Terraform", "Airflow", "Redis", "Elasticsearch", "PostgreSQL", "MySQL"] },
+        { title: "Software Stack", items: ["Python", "FastAPI", "Django", "Flask", "PySpark", "Pandas", "NumPy", "PyTorch", "TypeScript/React"] },
+        { title: "Delivery Excellence", items: ["CI/CD automation", "Αρχιτεκτονική microservices", "Scalable data pipelines", "Observability", "Incident response"] },
       ],
       educationTitle: "Σπουδές",
       education: [
-        "MSc Computer Science (University of Edinburgh)",
-        "MSc Ηλεκτρονικός Αυτοματισμός & Πληροφοριακά Συστήματα (ΕΚΠΑ)",
+        "MSc Computer Science - University of Edinburgh (διπλωματική με διάκριση στους parallel MapReduce operators)",
+        "BSc Φυσικής - ΕΚΠΑ (εστίαση στην εφαρμοσμένη πληροφορική και φυσική)",
+        "Πρόγραμμα Erasmus - University of Bonn",
       ],
       languagesTitle: "Γλώσσες",
-      languages: "Αγγλικά (επαγγελματικά), Ελληνικά (μητρική), Γερμανικά (βασικά επαγγελματικά).",
+      languages: "Αγγλικά (επαγγελματικά), Ελληνικά (μητρική), Γερμανικά (βασική επαγγελματική χρήση).",
       resumeButton: "Λήψη επιλεγμένου βιογραφικού",
       resumeLabel: "Επιλέξτε έκδοση",
       resumeNote: "Προεπιλογή: ισορροπημένο προφίλ.",
@@ -549,10 +571,28 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
           items: ["Μελέτες σκοπιμότητας & PoCs.", "Ανάλυση απαιτήσεων & αρχιτεκτονικός σχεδιασμός.", "Συνεχής υποστήριξη σε εξειδικευμένες εφαρμογές."],
           caseStudies: [
             {
-              company: "Διάφοροι Πελάτες ως Freelancer",
-              challenge: "Πελάτες από διάφορους κλάδους χρειάζονταν εξειδικευμένη καθοδήγηση σε έργα δεδομένων, μηχανικής μάθησης και backend engineering, συχνά από τη σύλληψη της ιδέας έως την υλοποίηση.",
-              solution: ["Παρείχα ολοκληρωμένες συμβουλευτικές υπηρεσίες που κάλυπταν την ανάλυση απαιτήσεων, τη διαχείριση έργων και την ανάλυση σκοπιμότητας.", "Σχεδίασα αρχιτεκτονικές συστημάτων για υπηρεσίες ML και backend.", "Διεξήγαγα post-mortems σε αποτυχίες συστημάτων και περιστατικά ασφαλείας (π.χ. επιθέσεις DDoS) για τον εντοπισμό των βασικών αιτιών και την εφαρμογή προληπτικών μέτρων."],
-              technologies: ["Project Management", "System Architecture", "Feasibility Analysis", "Requirements Gathering"]
+              company: "Dikaio.ai",
+              challenge: "Να λανσάρουν ένα πρωτότυπο αυτοματοποίησης νομικών εγγράφων για το ελληνικό δίκαιο ώστε να εξασφαλίσουν pre-seed χρηματοδότηση.",
+              solution: ["Καθοδήγησα την ιδρυτική ομάδα σε μοτίβα retrieval-augmented generation με OpenAI.", "Συνεργάστηκα με τον μελλοντικό CTO για να παραδώσουμε το πρώτο πρωτότυπο νομικού εγγράφου που στήριξε το investor pitch."],
+              technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
+            },
+            {
+              company: "Brain Metrics Initiative",
+              challenge: "Να απορροφήσουν και να μετριάσουν επίθεση DDoS πολλών εκατομμυρίων αιτημάτων χωρίς διακοπή υπηρεσιών.",
+              solution: ["Ηγήθηκα της απόκρισης στο συμβάν και υλοποίησα custom κανόνες Cloudflare προσαρμοσμένους στο προφίλ της επίθεσης.", "Συνέταξα το postmortem και τον οδικό χάρτη ανθεκτικότητας με κοστολογημένες επόμενες κινήσεις για τα στελέχη."],
+              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
+            },
+            {
+              company: "Langaware",
+              challenge: "Να αξιολογήσουν προσεγγίσεις NLP για εφαρμογές υγείας όπως το Boston Theft Challenge.",
+              solution: ["Ανάπτυξα και παρουσίασα πρωτότυπο βασισμένο σε BERT στον CEO, αναδεικνύοντας την επιτευκτή ακρίβεια και τις ροές εργασίας."],
+              technologies: ["Python", "BERT", "Applied NLP"]
+            },
+            {
+              company: "Beat",
+              challenge: "Να δημιουργήσουν πρωτότυπο πρόβλεψης ζήτησης ταξί για την αγορά της Λίμα και να εμπλέξουν την ομάδα AI/Data.",
+              solution: ["Παρέδωσα πρωτότυπο πρόβλεψης και walkthrough που ενημέρωσε τα επόμενα βήματα για υλοποίηση με την ομάδα AI/Data."],
+              technologies: ["Python", "Πρόβλεψη Χρονοσειρών", "Data Storytelling"]
             }
           ]
         },
@@ -726,7 +766,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       noResults: "Δεν βρέθηκαν άρθρα που να ταιριάζουν με την αναζήτησή σας.",
     },
     footer: {
-      copyright: "© 2025 Peter Lamb. Με την επιφύλαξη παντός δικαιώματος.",
+      copyright: "© 2025 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",
       availability: "Διαθέσιμος για διεθνή projects και συμβουλευτικές συνεργασίες.",
     },
     announcements: {

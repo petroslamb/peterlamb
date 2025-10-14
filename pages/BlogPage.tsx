@@ -41,8 +41,8 @@ const BlogPage: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const metaDescription = language === 'en'
-      ? `Read articles by Peter Lamb on software engineering, AI, MLOps, and consulting. Insights on technology, strategy, and best practices.`
-      : `Διαβάστε άρθρα του Peter Lamb για τη μηχανική λογισμικού, την AI, το MLOps και τη συμβουλευτική. Απόψεις για την τεχνολογία, τη στρατηγική και τις βέλτιστες πρακτικές.`;
+      ? `Read articles by Petros Lambropoulos on software engineering, generative AI, MLOps, and consulting. Insights on technology, strategy, and resilience.`
+      : `Διαβάστε άρθρα του Πέτρου Λαμπρόπουλου για τη μηχανική λογισμικού, το generative AI, το MLOps και τη συμβουλευτική. Απόψεις για την τεχνολογία, τη στρατηγική και την ανθεκτικότητα.`;
     
     const filteredPosts = useMemo(() => {
         if (!searchQuery) {
@@ -109,7 +109,7 @@ const BlogPage: React.FC = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <MetaTags 
-                title={`${blog.title} | Peter Lamb`} 
+                title={`${blog.title} | Petros Lambropoulos`} 
                 description={metaDescription}
             />
             <div className="text-center mb-12">

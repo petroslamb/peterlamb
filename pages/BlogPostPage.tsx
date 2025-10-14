@@ -42,7 +42,7 @@ const BlogPostPage: React.FC = () => {
   return (
     <div className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-lg shadow-md max-w-4xl mx-auto">
       <MetaTags 
-          title={`${post.title} | ${translations.blog.title} | Peter Lamb`} 
+          title={`${post.title} | ${translations.blog.title} | Petros Lambropoulos`} 
           description={post.description}
       />
       <header className="mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">

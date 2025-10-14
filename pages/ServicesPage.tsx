@@ -9,8 +9,8 @@ const ServicesPage: React.FC = () => {
     const { services } = translations;
 
     const metaDescription = language === 'en'
-      ? `Explore the software and AI consulting services offered by Peter Lamb, including Software Engineering, AI & Machine Learning, Big Data & Analytics, and technical support.`
-      : `Εξερευνήστε τις συμβουλευτικές υπηρεσίες λογισμικού και AI που προσφέρει ο Peter Lamb, συμπεριλαμβανομένων των Software Engineering, AI & Machine Learning, Big Data & Analytics, και τεχνικής υποστήριξης.`;
+      ? `Explore the software and AI consulting services offered by Petros Lambropoulos, spanning generative AI delivery, production microservices, and data platforms.`
+      : `Εξερευνήστε τις συμβουλευτικές υπηρεσίες λογισμικού και AI που προσφέρει ο Πέτρος Λαμπρόπουλος, από generative AI μέχρι παραγωγικά microservices και πλατφόρμες δεδομένων.`;
     
     const icons = [
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -22,7 +22,7 @@ const ServicesPage: React.FC = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <MetaTags 
-                title={`${services.title} | Peter Lamb`} 
+                title={`${services.title} | Petros Lambropoulos`} 
                 description={metaDescription}
             />
             <div className="text-center mb-12">

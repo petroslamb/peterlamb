@@ -83,7 +83,7 @@ const ServiceDetailPage: React.FC = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <MetaTags 
-                title={`${serviceData.title} | ${services.title} | Peter Lamb`} 
+                title={`${serviceData.title} | ${services.title} | Petros Lambropoulos`} 
                 description={metaDescription}
             />
             <div className="mb-8">
