@@ -50,7 +50,15 @@ export const content: Record<'en' | 'gr', Content> = {
       ],
       languagesTitle: "Languages",
       languages: "English (professional), Greek (native), German (limited working).",
-      resumeButton: "Download Resume",
+      resumeButton: "Download resume",
+      resumeLabel: "Choose a version",
+      resumeNote: "Default pick: best all-around profile.",
+      resumeOptions: [
+        { value: "resume2025.pdf", label: "2025 Resume — Best all-around" },
+        { value: "resume2025_hyped.pdf", label: "2025 Resume — Hyped" },
+        { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Hyped (Greek)" },
+        { value: "resume2025_conservative.pdf", label: "2025 Resume — Conservative (Spartan)" },
+      ],
     },
     services: {
       title: "Services",
@@ -411,7 +419,15 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       ],
       languagesTitle: "Γλώσσες",
       languages: "Αγγλικά (επαγγελματικά), Ελληνικά (μητρική), Γερμανικά (βασικά επαγγελματικά).",
-      resumeButton: "Λήψη Βιογραφικού",
+      resumeButton: "Λήψη επιλεγμένου βιογραφικού",
+      resumeLabel: "Επιλέξτε έκδοση",
+      resumeNote: "Προεπιλογή: ισορροπημένο προφίλ.",
+      resumeOptions: [
+        { value: "resume2025.pdf", label: "Βιογραφικό 2025 — Ισορροπημένο" },
+        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Δυναμικό" },
+        { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Δυναμικό (Ελληνικά)" },
+        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συντηρητικό (Σπαρτιατικό)" },
+      ],
     },
     services: {
       title: "Υπηρεσίες",
