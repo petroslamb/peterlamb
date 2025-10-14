@@ -11,8 +11,8 @@ const AboutPage: React.FC = () => {
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
 
     const metaDescription = language === 'en'
-      ? `Learn about Petros Lambropoulos, a lead product software engineer partnering with venture-backed startups on generative AI, Python microservices, and high-scale data systems.`
-      : `Μάθετε για τον Πέτρο Λαμπρόπουλο, lead product software engineer που συνεργάζεται με χρηματοδοτούμενες startups σε generative AI, Python microservices και πλατφόρμες δεδομένων μεγάλης κλίμακας.`;
+      ? `Learn how Petros Lambropoulos helps startup founders launch AI-powered SaaS products fast with discovery, MVP builds, and production-ready AI features.`
+      : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν AI SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και παραγωγικά AI χαρακτηριστικά.`;
 
     const ListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <li className="flex items-start">
@@ -38,6 +38,18 @@ const AboutPage: React.FC = () => {
                             <span className="font-bold text-text-primary dark:text-slate-100">{about.greeting}</span>, {about.intro}
                         </p>
                     </div>
+                </section>
+            </AnimatedSection>
+
+            <AnimatedSection delay={150}>
+                <section className="mt-8" aria-labelledby="how-i-help-heading">
+                    <h2 id="how-i-help-heading" className="text-2xl font-bold text-text-primary dark:text-white mb-4 text-center">{about.howIHelpTitle}</h2>
+                    <p className="text-lg text-text-secondary dark:text-slate-300 text-center max-w-2xl mx-auto">
+                        {about.howIHelpIntro}
+                    </p>
+                    <ul className="mt-6 space-y-3 text-text-secondary dark:text-slate-300">
+                        {about.howIHelp.map((item, index) => <ListItem key={index}>{item}</ListItem>)}
+                    </ul>
                 </section>
             </AnimatedSection>
             

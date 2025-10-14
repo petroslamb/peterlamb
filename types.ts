@@ -32,6 +32,9 @@ export interface Content {
     title: string;
     greeting: string;
     intro: string;
+    howIHelpTitle: string;
+    howIHelpIntro: string;
+    howIHelp: string[];
     experienceTitle: string;
     experience: string[];
     skillsTitle: string;

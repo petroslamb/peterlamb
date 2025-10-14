@@ -28,13 +28,20 @@ export const content: Record<'en' | 'gr', Content> = {
     about: {
       title: "About Me",
       greeting: "Hi, I’m Petros Lambropoulos (Peter Lamb)",
-      intro: "a lead product software engineer based in Athens, Greece. I ship production-grade Python, AI/ML, and SaaS platforms for venture-backed startups and scale-ups, balancing product instincts with dependable delivery.",
+      intro: "I partner with founder-led teams to turn AI product ideas into production-ready SaaS in weeks, combining rapid validation with dependable delivery.",
+      howIHelpTitle: "How I help founders",
+      howIHelpIntro: "Choose the engagement that fits your stage—every collaboration stays anchored to measurable outcomes.",
+      howIHelp: [
+        "Map the highest-leverage AI opportunities through focused discovery, user interviews, and technical spikes.",
+        "Ship investor-ready MVPs with production-grade Python backends, data flows, and generative AI features.",
+        "Embed AI capabilities into existing products while equipping your team for monitoring, rollout, and iteration."
+      ],
       experienceTitle: "Experience",
       experience: [
-        "Generative AI product discovery and delivery for hiring, legal, and forecasting use cases.",
-        "Production Python microservices and event-driven systems on AWS EKS, Kubernetes, and Kafka.",
-        "High-scale data platforms with Spark, Elasticsearch, and streaming pipelines over a 0.5B-record corpus.",
-        "Cross-functional leadership with product, design, and executive stakeholders.",
+        "Led generative AI discovery-to-launch cycles at Workable and NannyML, translating prototypes into production features for hiring and ML monitoring products.",
+        "Built and scaled Python microservices and event-driven backends that keep hiring, music-tech, and legal SaaS platforms reliable under growth.",
+        "Designed analytics pipelines and search infrastructure that surface insight from hundreds of millions of events for faster decision-making.",
+        "Coached founders and cross-functional teams so product strategy, engineering execution, and launch readiness stay in lockstep.",
       ],
       skillsTitle: "Technical Skills",
       skills: [
@@ -417,13 +424,20 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     about: {
       title: "Σχετικά με εμένα",
       greeting: "Γεια σας, είμαι ο Πέτρος Λαμπρόπουλος (Peter Lamb)",
-      intro: "lead product software engineer με έδρα την Αθήνα, Ελλάδα. Παραδίδω παραγωγικά συστήματα Python, AI/ML και SaaS για χρηματοδοτούμενα startups και scale-ups, συνδυάζοντας ένστικτο προϊόντος και αξιόπιστη υλοποίηση.",
+      intro: "Συνεργάζομαι με ομάδες ιδρυτών για να μετατρέπω ιδέες AI προϊόντων σε παραγωγικά SaaS μέσα σε εβδομάδες, συνδυάζοντας γρήγορο validation με αξιόπιστη παράδοση.",
+      howIHelpTitle: "Πώς βοηθώ τους founders",
+      howIHelpIntro: "Επιλέγουμε το engagement που ταιριάζει στο στάδιό σας — κάθε συνεργασία έχει σαφή, μετρήσιμα αποτελέσματα.",
+      howIHelp: [
+        "Χαρτογραφούμε τις πιο κρίσιμες ευκαιρίες AI μέσα από στοχευμένα discovery sessions, συνεντεύξεις χρηστών και τεχνικά spikes.",
+        "Παραδίδω MVPs έτοιμα για επενδυτές με production-grade Python backends, data flows και generative AI χαρακτηριστικά.",
+        "Ενσωματώνω AI δυνατότητες σε υπάρχοντα προϊόντα και προετοιμάζω την ομάδα για monitoring, rollout και συνεχή βελτίωση."
+      ],
       experienceTitle: "Εμπειρία",
       experience: [
-        "Ανακάλυψη και παράδοση προϊόντων Generative AI για πρόσληψη, νομικές ροές και προβλέψεις.",
-        "Παραγωγικά Python microservices και event-driven συστήματα σε AWS EKS, Kubernetes και Kafka.",
-        "Πλατφόρμες δεδομένων μεγάλης κλίμακας με Spark, Elasticsearch και streaming pipelines πάνω σε corpus 0.5 δισεκατομμυρίων εγγραφών.",
-        "Διαλειτουργική ηγεσία με product, design και διοικητικά στελέχη.",
+        "Ηγήθηκα κύκλων discovery-to-launch σε Workable και NannyML, μετατρέποντας prototypes σε παραγωγικά χαρακτηριστικά για προϊόντα πρόσληψης και ML monitoring.",
+        "Δόμησα και κλιμάκωσα Python microservices και event-driven backends που κρατούν αξιόπιστες πλατφόρμες SaaS για hiring, music-tech και νομικές εφαρμογές.",
+        "Σχεδίασα pipelines analytics και υποδομές αναζήτησης που εξάγουν γρήγορη γνώση από εκατοντάδες εκατομμύρια events.",
+        "Καθοδηγώ founders και διεπιστημονικές ομάδες ώστε στρατηγική προϊόντος, τεχνική υλοποίηση και readiness για λανσάρισμα να μένουν συγχρονισμένα.",
       ],
       skillsTitle: "Τεχνικές Δεξιότητες",
       skills: [
