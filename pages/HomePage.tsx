@@ -16,7 +16,7 @@ const ServiceCard: React.FC<{ service: Service, icon: React.ReactNode }> = ({ se
 
 const HomePage: React.FC = () => {
     const { language, translations } = useLanguage();
-    const { home } = translations;
+    const { home, actions } = translations;
 
     const metaDescription = language === 'en'
       ? `Petros Lambropoulos helps startups launch AI-powered SaaS products in weeks with discovery, build, and production-ready AI features.`
@@ -64,9 +64,15 @@ const HomePage: React.FC = () => {
                         className="animate-fade-in-up"
                         style={{ animationDelay: '600ms', animationFillMode: 'backwards' }}
                     >
-                        <Link to="/contact" className="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-secondary dark:focus:ring-offset-slate-900 focus:ring-primary shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <a
+                            href={actions.scheduleLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={actions.scheduleAriaLabel}
+                            className="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-secondary dark:focus:ring-offset-slate-900 focus:ring-primary shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        >
                             {home.cta}
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>

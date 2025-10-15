@@ -55,7 +55,7 @@ const CaseStudyCard: React.FC<{ caseStudy: ServiceCaseStudy }> = ({ caseStudy })
 const ServiceDetailPage: React.FC = () => {
     const { translations } = useLanguage();
     const { slug } = useParams<{ slug: string }>();
-    const { services } = translations;
+    const { services, actions } = translations;
     const [proseHtml, setProseHtml] = useState('');
 
     const serviceData = services.categories.find(c => c.slug === slug);
@@ -113,6 +113,41 @@ const ServiceDetailPage: React.FC = () => {
                     </AnimatedSection>
                 ))}
             </div>
+
+            <AnimatedSection>
+                <section className="mt-16 bg-white dark:bg-slate-800 border border-primary/20 dark:border-cyan-500/30 rounded-lg shadow-md p-8 space-y-6">
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-text-primary dark:text-white">{serviceData.engagementTitle}</h2>
+                        <p className="mt-3 text-lg text-text-secondary dark:text-slate-300">{serviceData.engagementDescription}</p>
+                    </div>
+                    <div className="grid md:grid-cols-[2fr,1fr] gap-6">
+                        <div>
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary dark:text-cyan-400">{serviceData.engagementChecklistTitle}</h3>
+                            <ul className="mt-3 space-y-2">
+                                {serviceData.engagementChecklist.map((item, index) => (
+                                    <li key={index} className="flex items-start text-text-secondary dark:text-slate-300">
+                                        <svg className="flex-shrink-0 h-5 w-5 text-primary dark:text-cyan-400 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="flex flex-col justify-center md:items-start">
+                            <a
+                                href={actions.scheduleLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={actions.scheduleAriaLabel}
+                                className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 shadow-md hover:shadow-lg"
+                            >
+                                {serviceData.engagementCtaLabel}
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </AnimatedSection>
         </div>
     );
 };

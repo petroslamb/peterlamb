@@ -6,7 +6,7 @@ import MetaTags from '../components/MetaTags';
 
 const ServicesPage: React.FC = () => {
     const { language, translations } = useLanguage();
-    const { services } = translations;
+    const { services, actions } = translations;
 
     const metaDescription = language === 'en'
       ? `Explore AI consulting tiers from Petros Lambropoulos: Discovery Sprints, AI MVP Launch, and AI Feature Add-Ons with pricing and deliverables.`
@@ -60,6 +60,24 @@ const ServicesPage: React.FC = () => {
                     </AnimatedSection>
                 ))}
             </ul>
+
+            <AnimatedSection>
+                <section className="mt-16 bg-white dark:bg-slate-800 border border-primary/20 dark:border-cyan-500/30 rounded-lg shadow-md p-8 text-center space-y-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-text-primary dark:text-white">{services.ctaTitle}</h2>
+                    <p className="text-lg text-text-secondary dark:text-slate-300 max-w-3xl mx-auto">{services.ctaDescription}</p>
+                    <div>
+                        <a
+                            href={actions.scheduleLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={actions.scheduleAriaLabel}
+                            className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 shadow-md hover:shadow-lg"
+                        >
+                            {services.ctaButton}
+                        </a>
+                    </div>
+                </section>
+            </AnimatedSection>
         </div>
     );
 };

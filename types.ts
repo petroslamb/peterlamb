@@ -54,6 +54,9 @@ export interface Content {
     categories: ServiceCategory[];
     readCaseStudies: string;
     backToServices: string;
+    ctaTitle: string;
+    ctaDescription: string;
+    ctaButton: string;
   };
   portfolio: {
     title: string;
@@ -78,6 +81,9 @@ export interface Content {
     formEmail: string;
     formMessage: string;
     formSubmit: string;
+    scheduleTitle: string;
+    scheduleDescription: string;
+    scheduleButton: string;
   };
   blog: {
     title: string;
@@ -103,6 +109,10 @@ export interface Content {
     switchToEnglish: string;
     switchToGreek: string;
   };
+  actions: {
+    scheduleLink: string;
+    scheduleAriaLabel: string;
+  };
 }
 
 export interface Service {
@@ -125,6 +135,11 @@ export interface ServiceCategory {
   businessProse: string;
   items: string[];
   caseStudies: ServiceCaseStudy[];
+  engagementTitle: string;
+  engagementDescription: string;
+  engagementChecklistTitle: string;
+  engagementChecklist: string[];
+  engagementCtaLabel: string;
 }
 
 export interface SkillCategory {

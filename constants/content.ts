@@ -15,7 +15,7 @@ export const content: Record<'en' | 'gr', Content> = {
       title: "I help startups launch AI SaaS products in weeks.",
       subtitle: "Discovery, build, and delivery of production-ready AI features so you can ship faster and win the market.",
       specialties: "Rapid AI discovery sprints, generative product experiences, and resilient cloud infrastructure.",
-      cta: "Work with me",
+      cta: "Schedule a discovery call",
       servicesTitle: "Services snapshot",
       services: [
         { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
@@ -73,6 +73,9 @@ export const content: Record<'en' | 'gr', Content> = {
       intro: "Choose the AI engagement that matches your urgency: discovery, MVP build, or feature acceleration.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
+      ctaTitle: "Need to choose the right engagement?",
+      ctaDescription: "Book a 30-minute call to map your goals, timelines, and constraints. You'll leave with a recommended tier and a clear next-step checklist.",
+      ctaButton: "Schedule a discovery call",
       categories: [
         {
           title: "AI Discovery Sprint",
@@ -126,7 +129,16 @@ export const content: Record<'en' | 'gr', Content> = {
               ],
               technologies: ["Python", "Time-Series Forecasting", "Data Storytelling"]
             }
-          ]
+          ],
+          engagementTitle: "Plan your Discovery Sprint",
+          engagementDescription: "Book a 30-minute call to confirm fit, align on the sprint outcomes, and lock the agenda within 48 hours.",
+          engagementChecklistTitle: "Bring to the call:",
+          engagementChecklist: [
+            "Top 2–3 product bets or workflows you want to validate.",
+            "Any data sources, customer research, or compliance notes we should review.",
+            "Key team members and availability for the sprint workshops."
+          ],
+          engagementCtaLabel: "Book the Discovery Sprint call"
         },
         {
           title: "AI MVP Launch",
@@ -180,7 +192,16 @@ export const content: Record<'en' | 'gr', Content> = {
               ],
               technologies: ["Python", "Backend Development", "Web Applications"]
             }
-          ]
+          ],
+          engagementTitle: "Kick off your AI MVP build",
+          engagementDescription: "Use a 30-minute call to confirm scope, integrations, and launch timeline so you receive a delivery plan within two business days.",
+          engagementChecklistTitle: "Have ready:",
+          engagementChecklist: [
+            "The launch window or fundraising milestones you're targeting.",
+            "Must-have workflows, integrations, and success metrics.",
+            "An overview of your current stack, repositories, or design assets."
+          ],
+          engagementCtaLabel: "Schedule the MVP scoping call"
         },
         {
           title: "AI Feature Add-On",
@@ -234,7 +255,16 @@ export const content: Record<'en' | 'gr', Content> = {
               ],
               technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
             }
-          ]
+          ],
+          engagementTitle: "Launch your AI feature",
+          engagementDescription: "Grab a 30-minute call to map the rollout, dependencies, and guardrails so you receive a tailored implementation plan within 48 hours.",
+          engagementChecklistTitle: "Before we meet:",
+          engagementChecklist: [
+            "The success metric or KPI this feature must move.",
+            "Relevant repositories, APIs, or schemas we'll integrate with.",
+            "Rollout, compliance, or customer commitments we need to protect."
+          ],
+          engagementCtaLabel: "Book the feature planning call"
         },
       ],
     },
@@ -388,6 +418,9 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      scheduleTitle: "Prefer to jump straight to a call?",
+      scheduleDescription: "Reserve a 30-minute discovery session to align on goals, scope, and timelines. You’ll get follow-up notes and next steps within 48 hours.",
+      scheduleButton: "Schedule a discovery call",
       formIntro: "Or send a message directly through the form below.",
       formName: "Your Name",
       formEmail: "Your Email",
@@ -417,6 +450,10 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       socialNav: "Social media links",
       switchToEnglish: "Switch to English",
       switchToGreek: "Switch to Greek",
+    },
+    actions: {
+      scheduleLink: "https://calendly.com/petroslamb-dev/30min",
+      scheduleAriaLabel: "Opens the scheduling tool in a new tab",
     }
   },
   gr: {
@@ -433,7 +470,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       title: "Lead Product Software Engineer | Πρωτοβουλίες AI SaaS",
       subtitle: "Παραδίδω παραγωγικά συστήματα Python, AI/ML και SaaS για χρηματοδοτούμενα startups και scale-ups.",
       specialties: "Generative AI, πλατφόρμες δεδομένων μεγάλης κλίμακας και ανθεκτικές υποδομές προϊόντων.",
-      cta: "Συνεργαστείτε μαζί μου",
+      cta: "Κλείσε ένα discovery call",
       servicesTitle: "Υπηρεσίες με μια ματιά",
       services: [
         { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
@@ -491,6 +528,9 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       intro: "Διάλεξε το AI engagement που ταιριάζει στην ανάγκη σου: discovery, MVP ή επέκταση χαρακτηριστικών.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
+      ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
+      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε στόχους, χρονοδιάγραμμα και περιορισμούς. Θα φύγεις με προτεινόμενο tier και συγκεκριμένο πλάνο επόμενων ενεργειών.",
+      ctaButton: "Κλείσε discovery call",
       categories: [
         {
           title: "AI Discovery Sprint",
@@ -544,7 +584,16 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
               ],
               technologies: ["Python", "Forecasting", "Data Storytelling"]
             }
-          ]
+          ],
+          engagementTitle: "Οργάνωσε το Discovery Sprint",
+          engagementDescription: "Κλείσε ένα 30λεπτο call για να επιβεβαιώσουμε το fit, να ευθυγραμμίσουμε τα outcomes και να κλειδώσουμε την ατζέντα μέσα σε 48 ώρες.",
+          engagementChecklistTitle: "Για το call:",
+          engagementChecklist: [
+            "Τα 2–3 κορυφαία bets ή workflows που θέλεις να επικυρώσεις.",
+            "Δεδομένα, έρευνες πελατών ή compliance σημειώσεις που πρέπει να δούμε.",
+            "Τα μέλη της ομάδας και η διαθεσιμότητά τους για τα sprint workshops."
+          ],
+          engagementCtaLabel: "Κλείσε το discovery sprint call"
         },
         {
           title: "AI MVP Launch",
@@ -598,7 +647,16 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
               ],
               technologies: ["Python", "Backend Development", "Web Applications"]
             }
-          ]
+          ],
+          engagementTitle: "Ξεκίνα το AI MVP build",
+          engagementDescription: "Κλείσε 30' για να ελέγξουμε scope, integrations και launch timeline ώστε να λάβεις πλάνο παράδοσης μέσα σε δύο εργάσιμες.",
+          engagementChecklistTitle: "Έχε έτοιμα:",
+          engagementChecklist: [
+            "Το launch window ή τα fundraising milestones που στοχεύεις.",
+            "Τα workflows, integrations και KPIs που είναι must-have.",
+            "Σύντομη επισκόπηση του τρέχοντος stack, repos ή design assets."
+          ],
+          engagementCtaLabel: "Κλείσε MVP scoping call"
         },
         {
           title: "AI Feature Add-On",
@@ -652,7 +710,16 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
               ],
               technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
             }
-          ]
+          ],
+          engagementTitle: "Λανσάρισε το AI feature σου",
+          engagementDescription: "Κλείσε 30' για να χαρτογραφήσουμε στόχους, εξαρτήσεις και rollout ώστε να λάβεις προσαρμοσμένο implementation plan μέσα σε 48 ώρες.",
+          engagementChecklistTitle: "Πριν τη συνάντηση:",
+          engagementChecklist: [
+            "Το KPI ή metric που πρέπει να βελτιώσει το feature.",
+            "Τα repos, APIs ή schemas με τα οποία θα ενσωματωθούμε.",
+            "Περιορισμοί rollout, compliance ή commitments προς πελάτες."
+          ],
+          engagementCtaLabel: "Κλείσε feature planning call"
         }
       ],
     },
@@ -806,6 +873,9 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      scheduleTitle: "Θες να προγραμματίσουμε κατευθείαν ένα call;",
+      scheduleDescription: "Κλείσε ένα 30λεπτο discovery call για να ευθυγραμμίσουμε στόχους, scope και χρονοδιάγραμμα. Θα λάβεις σημειώσεις και επόμενα βήματα μέσα σε 48 ώρες.",
+      scheduleButton: "Κλείσε discovery call",
       formIntro: "Ή στείλτε μήνυμα μέσω της φόρμας επικοινωνίας.",
       formName: "Το Όνομά σας",
       formEmail: "Το Email σας",
@@ -835,6 +905,10 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       socialNav: "Σύνδεσμοι κοινωνικών δικτύων",
       switchToEnglish: "Αλλαγή στα Αγγλικά",
       switchToGreek: "Αλλαγή στα Ελληνικά",
+    },
+    actions: {
+      scheduleLink: "https://calendly.com/petroslamb-dev/30min",
+      scheduleAriaLabel: "Ανοίγει το εργαλείο προγραμματισμού σε νέο tab",
     },
   },
 };
