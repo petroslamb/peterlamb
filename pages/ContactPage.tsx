@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import MetaTags from '../components/MetaTags';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const ContactPage: React.FC = () => {
     const { language, translations } = useLanguage();
-    const { contact } = translations;
+    const { contact, actions } = translations;
+
+    const calendlyEmbedUrl = useMemo(() => {
+        try {
+            const url = new URL(actions.scheduleLink);
+            url.searchParams.set('hide_event_type_details', '1');
+            url.searchParams.set('hide_gdpr_banner', '1');
+            return url.toString();
+        } catch {
+            return actions.scheduleLink;
+        }
+    }, [actions.scheduleLink]);
 
     const metaDescription = language === 'en'
       ? `Get in touch with Petros Lambropoulos to discuss your software, AI, or resilience initiative. Find contact details and a direct message form.`
@@ -13,10 +25,12 @@ const ContactPage: React.FC = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        const mailtoLink = `mailto:petroslamb.dev@gmail.com?subject=Contact from ${name} (${email})&body=${encodeURIComponent(message as string)}`;
+        const name = (formData.get('name') ?? '') as string;
+        const email = (formData.get('email') ?? '') as string;
+        const message = (formData.get('message') ?? '') as string;
+        const subject = encodeURIComponent(`Contact from ${name} (${email})`);
+        const body = encodeURIComponent(message);
+        const mailtoLink = `mailto:petroslamb.dev@gmail.com?subject=${subject}&body=${body}`;
         window.location.href = mailtoLink;
     };
 
@@ -31,7 +45,23 @@ const ContactPage: React.FC = () => {
                 <p className="mt-4 text-lg text-text-secondary dark:text-slate-300">{contact.intro}</p>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md">
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md space-y-8">
+                <section aria-labelledby="schedule-heading" className="space-y-4">
+                    <h2 id="schedule-heading" className="text-2xl font-bold text-text-primary dark:text-white">{contact.scheduleTitle}</h2>
+                    <p className="text-lg text-text-secondary dark:text-slate-300 max-w-3xl">{contact.scheduleDescription}</p>
+                    <CalendlyEmbed url={calendlyEmbedUrl} title={contact.scheduleTitle} />
+                    <div>
+                        <a
+                            href={actions.scheduleLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={actions.scheduleAriaLabel}
+                            className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 shadow-md hover:shadow-lg"
+                        >
+                            {contact.scheduleButton}
+                        </a>
+                    </div>
+                </section>
                 <div className="grid md:grid-cols-2 gap-8">
                     <section aria-labelledby="contact-details-heading">
                         <h2 id="contact-details-heading" className="text-2xl font-bold text-text-primary dark:text-white mb-4">{contact.detailsTitle}</h2>
