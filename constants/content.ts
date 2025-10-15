@@ -21,6 +21,7 @@ export const content: Record<'en' | 'gr', Content> = {
         { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
         { title: "AI MVP Launch", description: "1–3 month build of investor-ready AI SaaS foundations.", slug: "ai-mvp" },
         { title: "AI Feature Add-On", description: "2–6 week integration of production-ready AI capabilities.", slug: "ai-feature-add-on" },
+        { title: "Grant-Funded AI & Deep-Tech Sprint", description: "2–4 week partnership to package your roadmap, compliance, and delivery plan for funding calls.", slug: "grant-funded-sprint" },
       ],
       credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
     },
@@ -70,7 +71,7 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "Choose the AI engagement that matches your urgency: discovery, MVP build, or feature acceleration.",
+      intro: "Choose the AI engagement that matches your urgency: discovery, MVP build, feature acceleration, or grant-backed delivery planning.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
       ctaTitle: "Need to choose the right engagement?",
@@ -265,6 +266,76 @@ export const content: Record<'en' | 'gr', Content> = {
             "Rollout, compliance, or customer commitments we need to protect."
           ],
           engagementCtaLabel: "Book the feature planning call"
+        },
+        {
+          title: "Grant-Funded AI & Deep-Tech Sprint",
+          slug: "grant-funded-sprint",
+          intro: "Package your AI and automation roadmap into a fundable plan in 2–4 weeks, aligning proposal criteria, milestones, and delivery confidence.",
+          businessProse: `Funding bodies and ecosystems expect precise impact narratives, compliance readiness, and measurable deliverables. This sprint pairs your grant strategy with actionable technical planning so evaluators see a credible path from award to impact.
+
+The highlights below are composite scenarios drawn from repeated grant-support work so you can see the typical deliverables without disclosing client-confidential details.
+
+### When It Fits
+* You're preparing a grant or accelerator proposal and need a stronger execution plan.
+* You've secured conditional funds and must show the technical roadmap before release.
+* You need to reconcile founder vision, partner obligations, and compliance constraints fast.
+
+### What We Package
+* Milestone-based roadmap with engineering, data, and hiring implications for each phase.
+* Compliance and governance checklist covering security, privacy, and reporting obligations.
+* Prototype or architectural spike that demonstrates feasibility for reviewers and partners.
+
+### Funding Enablement Extras
+* Support on budgeting ranges and vendor selections tied to the delivery plan.
+* Prep materials for committee reviews, including exec summaries and demo scripts.
+* Optional hand-off into MVP or feature delivery once the grant is awarded.
+
+### Pricing
+* €3K–€6K depending on programme complexity, number of stakeholders, and required prototypes.`,
+          items: [
+            "Ideal for founders chasing EU, civic, or crypto grants that require evidence of execution.",
+            "Timeline: 2–4 weeks blending roadmap design, compliance prep, and rapid prototyping.",
+            "Deliverables: milestone plan, governance checklist, reviewer-ready summary pack.",
+            "Investment: €3K–€6K aligned to grant complexity and prototype depth."
+          ],
+          caseStudies: [
+            {
+              company: "Composite EU CivicTech Founder",
+              challenge: "Prepare an NGI Zero Commons application for a privacy-preserving analytics tool with strict data-sovereignty criteria.",
+              solution: [
+                "Co-authored the proposal narrative, work packages, and milestone budget so the submission matched NGI evaluation rubrics.",
+                "Bundled compliance evidence (data residency matrix, DPIA outline, responsible AI commitments) alongside a lightweight prototype demo."
+              ],
+              technologies: ["Grant Proposal Design", "Data Governance", "Privacy Engineering"]
+            },
+        {
+          company: "Composite Web3 Collective",
+          challenge: "Pursue a blockchain ecosystem grant to validate AI-driven contributor tooling for a DAO.",
+          solution: [
+            "Mapped eligibility criteria, scoring rubrics, and milestone expectations across leading foundation programmes to shape a compliant submission.",
+            "Packaged the proposal narrative, technical explainer, UX mockups, and community rollout plan to demonstrate market readiness and governance alignment."
+          ],
+          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
+        },
+            {
+              company: "Composite Resilience Lab",
+              challenge: "Pursue an EU cascade funding call focused on critical infrastructure resilience while balancing regulatory obligations.",
+              solution: [
+                "Translated incident-response learnings into a phased roadmap with measurable MTTR targets and governance milestones.",
+                "Developed supporting artifacts (risk register, stakeholder map, compliance tracker) required for the cascade call submission."
+              ],
+              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+            }
+          ],
+          engagementTitle: "Prep your grant-backed sprint",
+          engagementDescription: "Use a 30-minute working session to align on grant goals, programme constraints, and decision dates so we can scope the engagement within 48 hours.",
+          engagementChecklistTitle: "Bring to the call:",
+          engagementChecklist: [
+            "Grant brief or accelerator outline plus key deadlines.",
+            "Any draft proposal sections, budget assumptions, or reviewer feedback.",
+            "Stakeholder list and compliance requirements we must account for."
+          ],
+          engagementCtaLabel: "Schedule the funding sprint call"
         },
       ],
     },
@@ -476,6 +547,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
         { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
         { title: "AI MVP Launch", description: "Κατασκευή 1–3 μηνών για MVP AI SaaS έτοιμο για επενδυτές.", slug: "ai-mvp" },
         { title: "AI Feature Add-On", description: "Ενσωμάτωση 2–6 εβδομάδων ενός παραγωγικού AI χαρακτηριστικού.", slug: "ai-feature-add-on" },
+        { title: "Grant-Funded AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να ευθυγραμμίσουμε roadmap, συμμόρφωση και παράδοση με grant προκηρύξεις.", slug: "grant-funded-sprint" },
       ],
       credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
     },
@@ -525,7 +597,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Διάλεξε το AI engagement που ταιριάζει στην ανάγκη σου: discovery, MVP ή επέκταση χαρακτηριστικών.",
+      intro: "Διάλεξε το AI engagement που ταιριάζει στην ανάγκη σου: discovery, MVP, επέκταση χαρακτηριστικών ή grant-backed planning.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
       ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
@@ -720,6 +792,76 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
             "Περιορισμοί rollout, compliance ή commitments προς πελάτες."
           ],
           engagementCtaLabel: "Κλείσε feature planning call"
+        },
+        {
+          title: "Grant-Funded AI & Deep-Tech Sprint",
+          slug: "grant-funded-sprint",
+          intro: "Πακετάρουμε το AI/automation roadmap σε πλάνο που περνά grant αξιολογήσεις μέσα σε 2–4 εβδομάδες, συνδέοντας κριτήρια, milestones και παράδοση.",
+          businessProse: `Οι φορείς χρηματοδότησης και τα οικοσυστήματα απαιτούν σαφή αφήγηση επίδρασης, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Το sprint ευθυγραμμίζει τη στρατηγική χρηματοδότησης με πρακτικό τεχνικό πλάνο ώστε οι αξιολογητές να δουν αξιόπιστη πορεία από το award έως την υλοποίηση.
+
+Τα παραδείγματα που ακολουθούν είναι σύνθετα σενάρια από επαναλαμβανόμενη grant υποστήριξη ώστε να δεις τα συνήθη deliverables χωρίς να αποκαλύπτονται εμπιστευτικά στοιχεία πελατών.
+
+### Πότε ταιριάζει
+* Ετοιμάζεις grant ή accelerator πρόταση και χρειάζεσαι ισχυρό execution plan.
+* Έχεις εξασφαλίσει υπό όρους χρηματοδότηση και πρέπει να δείξεις τεχνικό roadmap πριν την εκταμίευση.
+* Πρέπει να φέρεις σε ισορροπία όραμα founder, υποχρεώσεις συνεργατών και κανονιστικές απαιτήσεις άμεσα.
+
+### Τι παραδίδουμε
+* Roadmap ανά milestone με τεχνικές, data και hiring επιπτώσεις για κάθε φάση.
+* Λίστα συμμόρφωσης και διακυβέρνησης για ασφάλεια, ιδιωτικότητα και reporting.
+* Prototype ή architectural spike που αποδεικνύει εφικτότητα σε αξιολογητές και συνεργάτες.
+
+### Extras για χρηματοδότηση
+* Υποστήριξη σε budgeting ranges και επιλογή vendors συνδεδεμένη με το πλάνο υλοποίησης.
+* Υλικό προετοιμασίας για committee reviews, συμπεριλαμβανομένων exec summaries και demo scripts.
+* Προαιρετικό hand-off σε MVP ή feature delivery μόλις εγκριθεί το grant.
+
+### Κόστος
+* €3K–€6K ανάλογα με την πολυπλοκότητα του προγράμματος, τους stakeholders και τα απαιτούμενα prototypes.`,
+          items: [
+            "Ιδανικό για founders που κυνηγούν EU, civic ή crypto grants και χρειάζονται αποδεικτικό εκτελεσιμότητας.",
+            "Χρονοδιάγραμμα: 2–4 εβδομάδες με συνδυασμό roadmap design, compliance prep και γρήγορων prototypes.",
+            "Παραδοτέα: milestone plan, governance checklist, summary pack έτοιμο για αξιολογητές.",
+            "Επένδυση: €3K–€6K ανάλογα με το grant και το βάθος του prototype."
+          ],
+          caseStudies: [
+            {
+              company: "Σύνθετος EU CivicTech Founder",
+              challenge: "Προετοιμασία αίτησης NGI Zero Commons για εργαλείο analytics με αυστηρά κριτήρια προστασίας δεδομένων.",
+              solution: [
+                "Συνδιαμόρφωσα το proposal narrative, τα work packages και το milestone budget ώστε να ευθυγραμμίζονται με τα NGI evaluation rubrics.",
+                "Συγκέντρωσα τεκμήρια συμμόρφωσης (πίνακα data residency, DPIA outline, responsible AI δεσμεύσεις) μαζί με ελαφρύ demo prototype."
+              ],
+              technologies: ["Σχεδιασμός Προτάσεων Grant", "Data Governance", "Privacy Engineering"]
+            },
+        {
+          company: "Σύνθετο Web3 Collective",
+          challenge: "Υποβολή σε grant οικοσυστήματος blockchain για να επικυρωθεί AI tooling για DAO contributors.",
+          solution: [
+            "Χαρτογράφησα κριτήρια επιλεξιμότητας, scoring rubrics και milestone expectations από κορυφαία προγράμματα ώστε η υποβολή να είναι compliant.",
+            "Συσκεύασα proposal narrative, τεχνικό explainer, UX mockups και community rollout plan για να αναδειχθεί το market readiness και η governance ευθυγράμμιση."
+          ],
+          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
+        },
+            {
+              company: "Σύνθετο Resilience Lab",
+              challenge: "Υποβολή σε EU cascade funding για ανθεκτικότητα κρίσιμων υποδομών με παράλληλη κάλυψη ρυθμιστικών απαιτήσεων.",
+              solution: [
+                "Μετέφρασα incident-response learnings σε phased roadmap με μετρήσιμα MTTR targets και governance milestones.",
+                "Ανάπτυξα supporting artifacts (risk register, stakeholder map, compliance tracker) που ζητούσε η προκήρυξη."
+              ],
+              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+            }
+          ],
+          engagementTitle: "Προετοίμασε το grant-backed sprint σου",
+          engagementDescription: "Κλείσε 30' working session για να ευθυγραμμίσουμε στόχους grant, περιορισμούς προγράμματος και deadlines ώστε να κάνουμε scope μέσα σε 48 ώρες.",
+          engagementChecklistTitle: "Φέρε στο call:",
+          engagementChecklist: [
+            "Την προκήρυξη του grant ή το accelerator outline με βασικά deadlines.",
+            "Οποιαδήποτε draft sections, budget assumptions ή feedback αξιολογητών.",
+            "Λίστα stakeholders και απαιτήσεις συμμόρφωσης που πρέπει να καλύψουμε."
+          ],
+          engagementCtaLabel: "Κλείσε funding sprint call"
         }
       ],
     },
