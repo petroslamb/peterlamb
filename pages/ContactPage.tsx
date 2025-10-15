@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
-        const mailtoLink = `mailto:petroslamb@gmail.com?subject=Contact from ${name} (${email})&body=${encodeURIComponent(message as string)}`;
+        const mailtoLink = `mailto:petroslamb.dev@gmail.com?subject=Contact from ${name} (${email})&body=${encodeURIComponent(message as string)}`;
         window.location.href = mailtoLink;
     };
 
@@ -30,13 +30,13 @@ const ContactPage: React.FC = () => {
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{contact.title}</h1>
                 <p className="mt-4 text-lg text-text-secondary dark:text-slate-300">{contact.intro}</p>
             </div>
-            
+
             <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md">
                 <div className="grid md:grid-cols-2 gap-8">
                     <section aria-labelledby="contact-details-heading">
                         <h2 id="contact-details-heading" className="text-2xl font-bold text-text-primary dark:text-white mb-4">{contact.detailsTitle}</h2>
                         <div className="space-y-4 text-text-secondary dark:text-slate-400">
-                            <p><strong className="font-medium text-text-primary dark:text-slate-200">{contact.email}:</strong> <a href="mailto:petroslamb@gmail.com" className="text-primary dark:text-cyan-400 hover:underline rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-800">petroslamb@gmail.com</a></p>
+                            <p><strong className="font-medium text-text-primary dark:text-slate-200">{contact.email}:</strong> <a href="mailto:petroslamb.dev@gmail.com" className="text-primary dark:text-cyan-400 hover:underline rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-800">petroslamb.dev@gmail.com</a></p>
                             <p><strong className="font-medium text-text-primary dark:text-slate-200">{contact.linkedin}:</strong> <a href="https://linkedin.com/in/petroslamb" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-cyan-400 hover:underline rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-800">linkedin.com/in/petroslamb</a></p>
                             <p><strong className="font-medium text-text-primary dark:text-slate-200">{contact.github}:</strong> <a href="https://github.com/petroslamb" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-cyan-400 hover:underline rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-800">github.com/petroslamb</a></p>
                         </div>
