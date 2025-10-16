@@ -130,6 +130,7 @@ export interface Content {
     ctaNote: string;
     embedTitle: string;
     embedUnavailable: string;
+    privacyNote: string;
   };
   footer: {
     copyright: string;

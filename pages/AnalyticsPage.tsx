@@ -42,6 +42,9 @@ const AnalyticsPage: React.FC = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white text-center">{analytics.title}</h1>
         <p className="text-lg text-text-secondary dark:text-slate-300 text-center">{analytics.subtitle}</p>
         <p className="text-base text-text-secondary dark:text-slate-300 text-center max-w-3xl mx-auto">{analytics.description}</p>
+        <div className="max-w-3xl mx-auto rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-300">
+          {analytics.privacyNote}
+        </div>
         <div className="flex flex-col items-center gap-2 pt-4">
           <a
             href={analyticsShareUrl}

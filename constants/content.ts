@@ -518,6 +518,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       ctaNote: "Opens the Umami analytics share page in a new tab.",
       embedTitle: "Umami analytics share view",
       embedUnavailable: "We couldn’t load the analytics dashboard here. Use the button above to open it in a new tab instead.",
+      privacyNote: "This site uses Umami’s cookieless analytics. No personal data or cookies are collected—this dashboard shows exactly what is measured.",
     },
     footer: {
       copyright: "© 2025 Petros Lambropoulos. All rights reserved.",
@@ -1054,6 +1055,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       ctaNote: "Ανοίγει τη σελίδα κοινής χρήσης του Umami σε νέα καρτέλα.",
       embedTitle: "Προβολή Umami analytics",
       embedUnavailable: "Δεν ήταν δυνατή η φόρτωση του πίνακα εδώ. Χρησιμοποίησε το κουμπί παραπάνω για να τον ανοίξεις σε νέα καρτέλα.",
+      privacyNote: "Το site χρησιμοποιεί τα cookieless analytics του Umami. Δεν συλλέγονται προσωπικά δεδομένα ή cookies — αυτός ο πίνακας δείχνει ακριβώς τι παρακολουθείται.",
     },
     footer: {
       copyright: "© 2025 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",
