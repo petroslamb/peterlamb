@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Service } from '../types';
 import MetaTags from '../components/MetaTags';
+import useAnalytics from '../hooks/useAnalytics';
 
 const ServiceCard: React.FC<{ service: Service, icon: React.ReactNode }> = ({ service, icon }) => (
     <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md h-full flex flex-col">
@@ -17,6 +18,7 @@ const ServiceCard: React.FC<{ service: Service, icon: React.ReactNode }> = ({ se
 const HomePage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { home, actions } = translations;
+    const { trackEvent } = useAnalytics();
 
     const metaDescription = language === 'en'
       ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
@@ -78,6 +80,7 @@ const HomePage: React.FC = () => {
                             rel="noopener noreferrer"
                             aria-label={actions.scheduleAriaLabel}
                             className="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-secondary dark:focus:ring-offset-slate-900 focus:ring-primary shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                            onClick={() => trackEvent('cta_click', { area: 'home_hero', action: 'schedule_consultation' })}
                         >
                             {home.cta}
                         </a>
@@ -96,6 +99,7 @@ const HomePage: React.FC = () => {
                                 key={service.slug} 
                                 className="block h-full rounded-lg hover:shadow-xl focus:shadow-xl transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
                                 aria-label={`Learn more about ${service.title}`}
+                                onClick={() => trackEvent('service_card_click', { area: 'home_services_snapshot', slug: service.slug })}
                             >
                                 <ServiceCard service={service} icon={icon} />
                             </Link>

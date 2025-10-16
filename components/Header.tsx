@@ -2,12 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import ThemeSwitcher from './ThemeSwitcher';
+import useAnalytics from '../hooks/useAnalytics';
 
 const LanguageSwitcher: React.FC = () => {
     const { language, setLanguage, translations } = useLanguage();
+    const { trackEvent } = useAnalytics();
 
     const switchLanguage = (lang: 'en' | 'gr') => {
         setLanguage(lang);
+        trackEvent('language_switch', { targetLanguage: lang });
     };
 
     return (
@@ -39,6 +42,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { trackEvent } = useAnalytics();
 
   useEffect(() => {
     if (isMenuOpen && menuRef.current) {
@@ -103,7 +107,12 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label={translations.ariaLabels.mainNav}>
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <NavLink to="/" className={`flex-shrink-0 text-slate-800 dark:text-white font-bold text-lg rounded-md ${focusStyles}`} aria-label="Peter Lamb - Homepage">
+            <NavLink
+              to="/"
+              className={`flex-shrink-0 text-slate-800 dark:text-white font-bold text-lg rounded-md ${focusStyles}`}
+              aria-label="Peter Lamb - Homepage"
+              onClick={() => trackEvent('nav_logo_click', { area: 'header', destination: '/' })}
+            >
                 Peter Lamb
             </NavLink>
           </div>
@@ -113,6 +122,7 @@ const Header: React.FC = () => {
                 <NavLink
                   key={link.path}
                   to={link.path}
+                  onClick={() => trackEvent('nav_click', { area: 'header_desktop', destination: link.path })}
                   className={({ isActive }) => `${linkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`}
                 >
                   {link.label}
@@ -155,7 +165,10 @@ const Header: React.FC = () => {
               <NavLink
                 key={link.path}
                 to={link.path}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  trackEvent('nav_click', { area: 'header_mobile', destination: link.path });
+                  setIsMenuOpen(false);
+                }}
                 className={({ isActive }) => `block px-3 py-2 rounded-md text-base font-medium transition-colors ${focusStyles} ${isActive ? activeLinkClasses : inactiveLinkClasses}`}
               >
                 {link.label}

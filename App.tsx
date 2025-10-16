@@ -4,6 +4,7 @@ import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Analytics from './components/Analytics';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
@@ -48,6 +49,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary dark:bg-slate-900">
+      <Analytics />
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         {announcement}
       </div>

@@ -11,13 +11,14 @@ This repository hosts the public-facing site for Petros (Peter) Lambropoulos, im
 - `index.tsx` – Vite entry point bootstrapping React into `#root`.
 - `App.tsx` – Global layout, routing table, and providers for language and theme.
 - `pages/` – Top-level route components (`HomePage`, `AboutPage`, `ServicesPage`, etc.). They consume translated content and handle page-specific layout.
-- `components/` – Reusable UI primitives such as `Header`, `Footer`, `ThemeSwitcher`, `MetaTags`, and `AnimatedSection`.
+- `components/` – Reusable UI primitives such as `Header`, `Footer`, `ThemeSwitcher`, `MetaTags`, `AnimatedSection`, and `Analytics`.
 - `constants/content.ts` – Source of truth for all English/Greek copy, navigation labels, and per-section metadata. Update this file when modifying textual content across the site.
 - `constants/blogPosts.ts` – Markdown strings and metadata for blog posts surfaced on the `BlogPage`.
 - `context/LanguageContext.tsx` & `context/ThemeContext.tsx` – Providers managing locale switching and dark mode.
 - `hooks/useIntersectionObserver.ts` – Helper for scroll-triggered animations used by `AnimatedSection`.
+- `hooks/useAnalytics.ts` – Safe wrapper around Umami for manual event tracking.
 - `types.ts` – Shared TypeScript interfaces describing the content shape consumed throughout the app.
-- `metadata.json` – SEO and share card metadata synchronized with the UI via `MetaTags`.
+- `metadata.json` – SEO/social metadata and analytics configuration synchronized with the UI.
 - `vite.config.ts` – Vite build configuration (hash-based base path, React plugin, environment variable exposure).
 
 ## Content Architecture & Key Sections
@@ -25,6 +26,7 @@ This repository hosts the public-facing site for Petros (Peter) Lambropoulos, im
 - **About/Services/Portfolio text**: Same `content.ts` structure; pages render arrays directly, so keep ordering consistent with the type definitions.
 - **Blog posts**: `constants/blogPosts.ts` feeds both the listing (`BlogPage`) and detail route (`BlogPostPage`).
 - **Metadata & social previews**: `metadata.json` and `MetaTags` component (per-page overrides via props).
+- **Analytics**: `metadata.json` (`analytics` key) controls privacy-friendly Umami tracking loaded via the `Analytics` component.
 - **Theme & language switching**: `Header` renders toggles wired into the context providers.
 
 When performing site-wide copy updates, change `constants/content.ts` first, confirm TypeScript passes, then adjust page components only if structural tweaks are required.
@@ -40,3 +42,9 @@ When performing site-wide copy updates, change `constants/content.ts` first, con
 5. **Branch discipline**: commit to `main` and push. Leave `sync-from-ai` untouched unless syncing from the external AI Studio repo.
 
 Following this map should let any new AI agent apply codebase-wide updates confidently and keep the deployment pipeline healthy.
+
+## Analytics Setup
+- Update `metadata.json.analytics.websiteId` with the UUID from your Umami dashboard and align `dataDomains`/`hostUrl` to match your deployment.
+- The loader mounts Umami only in production builds, flushes queued events, and manually tracks hash-based route changes, keeping the experience banner-free.
+- Optional overrides: switch `scriptUrl` for self-hosted Umami or remove the `analytics` block to disable tracking entirely.
+- Use `useAnalytics().trackEvent('event_name', { meta: 'value' })` to log additional interactions (e.g., CTA clicks) across the site.

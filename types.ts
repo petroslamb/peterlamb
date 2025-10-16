@@ -1,5 +1,30 @@
 export type Language = 'en' | 'gr';
 
+interface BaseAnalyticsConfig {
+  disableInDev?: boolean;
+}
+
+export interface PlausibleAnalyticsConfig extends BaseAnalyticsConfig {
+  provider: 'plausible';
+  domain: string;
+  scriptUrl?: string;
+  spaMode?: 'auto' | 'hash' | 'history';
+}
+
+export interface UmamiAnalyticsConfig extends BaseAnalyticsConfig {
+  provider: 'umami';
+  websiteId: string;
+  scriptUrl?: string;
+  hostUrl?: string;
+  autoTrack?: boolean;
+  respectDoNotTrack?: boolean;
+  dataDomains?: string;
+}
+
+export type AnalyticsConfig = PlausibleAnalyticsConfig | UmamiAnalyticsConfig;
+
+export type AnalyticsEventPayload = Record<string, string | number | boolean | undefined>;
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -160,4 +185,11 @@ export interface PortfolioItem {
 export interface ResumeOption {
   value: string;
   label: string;
+}
+
+export interface SiteMetadata {
+  name: string;
+  description: string;
+  requestFramePermissions: string[];
+  analytics?: AnalyticsConfig;
 }
