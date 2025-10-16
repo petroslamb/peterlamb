@@ -42,6 +42,7 @@ export interface Content {
     portfolio: string;
     contact: string;
     blog: string;
+    analytics: string;
   };
   home: {
     name: string;
@@ -121,6 +122,15 @@ export interface Content {
     searchPlaceholder: string;
     noResults: string;
   };
+  analytics: {
+    title: string;
+    subtitle: string;
+    description: string;
+    ctaLabel: string;
+    ctaNote: string;
+    embedTitle: string;
+    embedUnavailable: string;
+  };
   footer: {
     copyright: string;
     availability: string;
@@ -192,4 +202,5 @@ export interface SiteMetadata {
   description: string;
   requestFramePermissions: string[];
   analytics?: AnalyticsConfig;
+  analyticsShareUrl?: string;
 }

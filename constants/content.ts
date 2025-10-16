@@ -5,11 +5,12 @@ export const content: Record<'en' | 'gr', Content> = {
     nav: {
       home: "Home",
       about: "About",
-      services: "Services",
-      portfolio: "Portfolio",
-      contact: "Contact",
-      blog: "Blog",
-    },
+    services: "Services",
+    portfolio: "Portfolio",
+    contact: "Contact",
+    blog: "Blog",
+    analytics: "Analytics",
+  },
     home: {
       name: "Petros Lambropoulos",
       title: "I help startups launch SaaS products in weeks.",
@@ -509,6 +510,15 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       searchPlaceholder: "Search posts...",
       noResults: "No posts found matching your search.",
     },
+    analytics: {
+      title: "Analytics Dashboard",
+      subtitle: "Monitor performance without leaving the site.",
+      description: "Use the embedded Umami view below for a quick check or open the full dashboard to explore traffic, referrers, and conversions in detail.",
+      ctaLabel: "Open full analytics",
+      ctaNote: "Opens the Umami analytics share page in a new tab.",
+      embedTitle: "Umami analytics share view",
+      embedUnavailable: "We couldn’t load the analytics dashboard here. Use the button above to open it in a new tab instead.",
+    },
     footer: {
       copyright: "© 2025 Petros Lambropoulos. All rights reserved.",
       availability: "Available for international consulting & freelance projects.",
@@ -535,6 +545,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       portfolio: "Portfolio",
       contact: "Επικοινωνία",
       blog: "Blog",
+      analytics: "Μετρήσεις",
     },
     home: {
       name: "Πέτρος Λαμπρόπουλος",
@@ -1034,6 +1045,15 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       nextPage: "Επόμενη",
       searchPlaceholder: "Αναζήτηση άρθρων...",
       noResults: "Δεν βρέθηκαν άρθρα που να ταιριάζουν με την αναζήτησή σας.",
+    },
+    analytics: {
+      title: "Πίνακας Μετρήσεων",
+      subtitle: "Παρακολούθησε την επισκεψιμότητα χωρίς να φύγεις από το site.",
+      description: "Χρησιμοποίησε την ενσωματωμένη προβολή Umami για μια γρήγορη ματιά ή άνοιξε τον πλήρη πίνακα για αναλυτικά δεδομένα επισκεψιμότητας, πηγών και μετατροπών.",
+      ctaLabel: "Άνοιγμα πλήρους analytics",
+      ctaNote: "Ανοίγει τη σελίδα κοινής χρήσης του Umami σε νέα καρτέλα.",
+      embedTitle: "Προβολή Umami analytics",
+      embedUnavailable: "Δεν ήταν δυνατή η φόρτωση του πίνακα εδώ. Χρησιμοποίησε το κουμπί παραπάνω για να τον ανοίξεις σε νέα καρτέλα.",
     },
     footer: {
       copyright: "© 2025 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",

@@ -94,6 +94,7 @@ const Header: React.FC = () => {
     { path: '/services', label: translations.nav.services },
     { path: '/portfolio', label: translations.nav.portfolio },
     { path: '/blog', label: translations.nav.blog },
+    { path: '/analytics', label: translations.nav.analytics },
     { path: '/contact', label: translations.nav.contact },
   ];
 

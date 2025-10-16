@@ -14,6 +14,7 @@ import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import PortfolioItemPage from './pages/PortfolioItemPage';
+import AnalyticsPage from './pages/AnalyticsPage';
 
 const AppContent: React.FC = () => {
   const { language, translations } = useLanguage();
@@ -65,6 +66,7 @@ const AppContent: React.FC = () => {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
         </Routes>
       </main>
       <Footer />
