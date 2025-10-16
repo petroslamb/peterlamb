@@ -12,29 +12,29 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     home: {
       name: "Petros Lambropoulos",
-      title: "I help startups launch AI SaaS products in weeks.",
-      subtitle: "Discovery, build, and delivery of production-ready AI features so you can ship faster and win the market.",
-      specialties: "Rapid AI discovery sprints, generative product experiences, and resilient cloud infrastructure.",
+      title: "I help startups launch SaaS products in weeks.",
+      subtitle: "Discovery, build, and delivery of production-ready features so you can ship faster and win the market.",
+      specialties: "Rapid discovery sprints, investor-ready SaaS builds, and resilient cloud infrastructure.",
       cta: "Schedule a discovery call",
       servicesTitle: "Services snapshot",
       services: [
         { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
         { title: "AI MVP Launch", description: "1–3 month build of investor-ready AI SaaS foundations.", slug: "ai-mvp" },
         { title: "AI Feature Add-On", description: "2–6 week integration of production-ready AI capabilities.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded AI & Deep-Tech Sprint", description: "2–4 week partnership to package your roadmap, compliance, and delivery plan for funding calls.", slug: "grant-funded-sprint" },
+        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "2–4 week partnership to package your crypto, AI, and deep-tech roadmap plus compliance plan for funding calls.", slug: "grant-funded-sprint" },
       ],
       credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
     },
     about: {
       title: "About Me",
       greeting: "Hi, I’m Petros Lambropoulos (Peter Lamb)",
-      intro: "I partner with founder-led teams to turn AI product ideas into production-ready SaaS in weeks, combining rapid validation with dependable delivery.",
+      intro: "I partner with founder-led teams to turn product ideas into production-ready SaaS in weeks, combining rapid validation with dependable delivery.",
       howIHelpTitle: "How I help founders",
       howIHelpIntro: "Choose the engagement that fits your stage—every collaboration stays anchored to measurable outcomes.",
       howIHelp: [
-        "Map the highest-leverage AI opportunities through focused discovery, user interviews, and technical spikes.",
-        "Ship investor-ready MVPs with production-grade Python backends, data flows, and generative AI features.",
-        "Embed AI capabilities into existing products while equipping your team for monitoring, rollout, and iteration."
+        "Map the highest-leverage product opportunities through focused discovery, user interviews, and technical spikes.",
+        "Ship investor-ready MVPs with production-grade Python backends, data flows, and polished product features.",
+        "Embed new capabilities into existing products while equipping your team for monitoring, rollout, and iteration."
       ],
       experienceTitle: "Experience",
       experience: [
@@ -71,7 +71,7 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "Choose the AI engagement that matches your urgency: discovery, MVP build, feature acceleration, or grant-backed delivery planning.",
+      intro: "Choose the engagement that matches your urgency: discovery, MVP build, feature acceleration, or grant-backed delivery planning.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
       ctaTitle: "Need to choose the right engagement?",
@@ -268,10 +268,10 @@ export const content: Record<'en' | 'gr', Content> = {
           engagementCtaLabel: "Book the feature planning call"
         },
         {
-          title: "Grant-Funded AI & Deep-Tech Sprint",
+          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
           slug: "grant-funded-sprint",
-          intro: "Package your AI and automation roadmap into a fundable plan in 2–4 weeks, aligning proposal criteria, milestones, and delivery confidence.",
-          businessProse: `Funding bodies and ecosystems expect precise impact narratives, compliance readiness, and measurable deliverables. This sprint pairs your grant strategy with actionable technical planning so evaluators see a credible path from award to impact.
+          intro: "Package your crypto, AI, and automation roadmap into a fundable plan in 2–4 weeks, aligning proposal criteria, milestones, and delivery confidence.",
+          businessProse: `Funding bodies and ecosystems expect precise impact narratives, compliance readiness, and measurable deliverables. This sprint pairs your crypto, AI, or deep-tech grant strategy with actionable technical planning so evaluators see a credible path from award to impact.
 
 The highlights below are composite scenarios drawn from repeated grant-support work so you can see the typical deliverables without disclosing client-confidential details.
 
@@ -538,29 +538,29 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     home: {
       name: "Πέτρος Λαμπρόπουλος",
-      title: "Lead Product Software Engineer | Πρωτοβουλίες AI SaaS",
-      subtitle: "Παραδίδω παραγωγικά συστήματα Python, AI/ML και SaaS για χρηματοδοτούμενα startups και scale-ups.",
-      specialties: "Generative AI, πλατφόρμες δεδομένων μεγάλης κλίμακας και ανθεκτικές υποδομές προϊόντων.",
+      title: "Βοηθάω startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες.",
+      subtitle: "Discovery, υλοποίηση και παράδοση λειτουργιών έτοιμων για παραγωγή ώστε να κυκλοφορείτε πιο γρήγορα και να κερδίζετε την αγορά.",
+      specialties: "Γρήγορα discovery sprints, SaaS builds έτοιμα για επενδυτές και ανθεκτική cloud υποδομή.",
       cta: "Κλείσε ένα discovery call",
       servicesTitle: "Υπηρεσίες με μια ματιά",
       services: [
         { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
         { title: "AI MVP Launch", description: "Κατασκευή 1–3 μηνών για MVP AI SaaS έτοιμο για επενδυτές.", slug: "ai-mvp" },
         { title: "AI Feature Add-On", description: "Ενσωμάτωση 2–6 εβδομάδων ενός παραγωγικού AI χαρακτηριστικού.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να ευθυγραμμίσουμε roadmap, συμμόρφωση και παράδοση με grant προκηρύξεις.", slug: "grant-funded-sprint" },
+        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να πακετάρουμε crypto, AI και deep-tech roadmap μαζί με συμμόρφωση για grant προκηρύξεις.", slug: "grant-funded-sprint" },
       ],
       credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
     },
     about: {
       title: "Σχετικά με εμένα",
       greeting: "Γεια σας, είμαι ο Πέτρος Λαμπρόπουλος (Peter Lamb)",
-      intro: "Συνεργάζομαι με ομάδες ιδρυτών για να μετατρέπω ιδέες AI προϊόντων σε παραγωγικά SaaS μέσα σε εβδομάδες, συνδυάζοντας γρήγορο validation με αξιόπιστη παράδοση.",
+      intro: "Συνεργάζομαι με ομάδες ιδρυτών για να μετατρέπω ιδέες προϊόντων σε παραγωγικά SaaS μέσα σε εβδομάδες, συνδυάζοντας γρήγορο validation με αξιόπιστη παράδοση.",
       howIHelpTitle: "Πώς βοηθώ τους founders",
       howIHelpIntro: "Επιλέγουμε το engagement που ταιριάζει στο στάδιό σας — κάθε συνεργασία έχει σαφή, μετρήσιμα αποτελέσματα.",
       howIHelp: [
-        "Χαρτογραφούμε τις πιο κρίσιμες ευκαιρίες AI μέσα από στοχευμένα discovery sessions, συνεντεύξεις χρηστών και τεχνικά spikes.",
-        "Παραδίδω MVPs έτοιμα για επενδυτές με production-grade Python backends, data flows και generative AI χαρακτηριστικά.",
-        "Ενσωματώνω AI δυνατότητες σε υπάρχοντα προϊόντα και προετοιμάζω την ομάδα για monitoring, rollout και συνεχή βελτίωση."
+        "Χαρτογραφούμε τις πιο κρίσιμες ευκαιρίες προϊόντος μέσα από στοχευμένα discovery sessions, συνεντεύξεις χρηστών και τεχνικά spikes.",
+        "Παραδίδω MVPs έτοιμα για επενδυτές με production-grade Python backends, data flows και καλοδουλεμένες λειτουργίες προϊόντος.",
+        "Ενσωματώνω νέες δυνατότητες σε υπάρχοντα προϊόντα και προετοιμάζω την ομάδα για monitoring, rollout και συνεχή βελτίωση."
       ],
       experienceTitle: "Εμπειρία",
       experience: [
@@ -597,7 +597,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Διάλεξε το AI engagement που ταιριάζει στην ανάγκη σου: discovery, MVP, επέκταση χαρακτηριστικών ή grant-backed planning.",
+      intro: "Διάλεξε το engagement που ταιριάζει στην ανάγκη σου: discovery, MVP, επέκταση χαρακτηριστικών ή grant-backed planning.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
       ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
@@ -794,10 +794,10 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
           engagementCtaLabel: "Κλείσε feature planning call"
         },
         {
-          title: "Grant-Funded AI & Deep-Tech Sprint",
+          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
           slug: "grant-funded-sprint",
-          intro: "Πακετάρουμε το AI/automation roadmap σε πλάνο που περνά grant αξιολογήσεις μέσα σε 2–4 εβδομάδες, συνδέοντας κριτήρια, milestones και παράδοση.",
-          businessProse: `Οι φορείς χρηματοδότησης και τα οικοσυστήματα απαιτούν σαφή αφήγηση επίδρασης, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Το sprint ευθυγραμμίζει τη στρατηγική χρηματοδότησης με πρακτικό τεχνικό πλάνο ώστε οι αξιολογητές να δουν αξιόπιστη πορεία από το award έως την υλοποίηση.
+          intro: "Πακετάρουμε το crypto, AI και automation roadmap σε πλάνο που περνά grant αξιολογήσεις μέσα σε 2–4 εβδομάδες, συνδέοντας κριτήρια, milestones και παράδοση.",
+          businessProse: `Οι φορείς χρηματοδότησης και τα οικοσυστήματα απαιτούν σαφή αφήγηση επίδρασης, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Το sprint ευθυγραμμίζει τη στρατηγική χρηματοδότησης crypto, AI ή deep-tech με πρακτικό τεχνικό πλάνο ώστε οι αξιολογητές να δουν αξιόπιστη πορεία από το award έως την υλοποίηση.
 
 Τα παραδείγματα που ακολουθούν είναι σύνθετα σενάρια από επαναλαμβανόμενη grant υποστήριξη ώστε να δεις τα συνήθη deliverables χωρίς να αποκαλύπτονται εμπιστευτικά στοιχεία πελατών.
 

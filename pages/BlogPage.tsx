@@ -41,8 +41,8 @@ const BlogPage: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const metaDescription = language === 'en'
-      ? `Read articles by Petros Lambropoulos on software engineering, generative AI, MLOps, and consulting. Insights on technology, strategy, and resilience.`
-      : `Διαβάστε άρθρα του Πέτρου Λαμπρόπουλου για τη μηχανική λογισμικού, το generative AI, το MLOps και τη συμβουλευτική. Απόψεις για την τεχνολογία, τη στρατηγική και την ανθεκτικότητα.`;
+      ? `Read articles by Petros Lambropoulos on software engineering, SaaS delivery, product strategy, and consulting. Insights on technology, resilience, and leadership.`
+      : `Διαβάστε άρθρα του Πέτρου Λαμπρόπουλου για τη μηχανική λογισμικού, την παράδοση SaaS, τη στρατηγική προϊόντος και τη συμβουλευτική. Απόψεις για την τεχνολογία, την ανθεκτικότητα και την ηγεσία.`;
     
     const filteredPosts = useMemo(() => {
         if (!searchQuery) {

@@ -9,8 +9,8 @@ const PortfolioPage: React.FC = () => {
     const { portfolio } = translations;
 
     const metaDescription = language === 'en'
-      ? `Browse the portfolio of Petros Lambropoulos, featuring case studies in SaaS development, generative AI, taxi demand forecasting, and cybersecurity platforms.`
-      : `Περιηγηθείτε στο portfolio του Πέτρου Λαμπρόπουλου με case studies σε ανάπτυξη SaaS, generative AI, πρόβλεψη ζήτησης ταξί και πλατφόρμες κυβερνοασφάλειας.`;
+      ? `Browse the portfolio of Petros Lambropoulos, featuring case studies in SaaS development, data platforms, forecasting, and cybersecurity products.`
+      : `Περιηγηθείτε στο portfolio του Πέτρου Λαμπρόπουλου με case studies σε ανάπτυξη SaaS, πλατφόρμες δεδομένων, forecasting και προϊόντα κυβερνοασφάλειας.`;
 
     return (
         <div className="max-w-7xl mx-auto">

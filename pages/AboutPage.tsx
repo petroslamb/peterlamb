@@ -11,8 +11,8 @@ const AboutPage: React.FC = () => {
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
 
     const metaDescription = language === 'en'
-      ? `Learn how Petros Lambropoulos helps startup founders launch AI-powered SaaS products fast with discovery, MVP builds, and production-ready AI features.`
-      : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν AI SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και παραγωγικά AI χαρακτηριστικά.`;
+      ? `Learn how Petros Lambropoulos helps startup founders launch SaaS products fast with discovery, MVP builds, and production-ready features.`
+      : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και λειτουργίες έτοιμες για παραγωγή.`;
 
     const ListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <li className="flex items-start">

@@ -9,8 +9,8 @@ const ServicesPage: React.FC = () => {
     const { services, actions } = translations;
 
     const metaDescription = language === 'en'
-      ? `Explore AI consulting tiers from Petros Lambropoulos: Discovery Sprint, AI MVP Launch, AI Feature Add-On, and Grant-Funded AI & Deep-Tech Sprint with pricing and deliverables.`
-      : `Εξερευνήστε τα AI consulting tiers του Πέτρου Λαμπρόπουλου: Discovery Sprint, AI MVP Launch, AI Feature Add-On και Grant-Funded AI & Deep-Tech Sprint με κόστος και παραδοτέα.`;
+      ? `Explore consulting tiers from Petros Lambropoulos: Discovery Sprint, SaaS MVP Launch, Feature Add-On, and Grant-Funded Crypto, AI & Deep-Tech Sprint with pricing and deliverables.`
+      : `Εξερευνήστε τα consulting tiers του Πέτρου Λαμπρόπουλου: Discovery Sprint, SaaS MVP Launch, Feature Add-On και Grant-Funded Crypto, AI & Deep-Tech Sprint με κόστος και παραδοτέα.`;
     
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,

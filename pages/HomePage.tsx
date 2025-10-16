@@ -19,8 +19,8 @@ const HomePage: React.FC = () => {
     const { home, actions } = translations;
 
     const metaDescription = language === 'en'
-      ? `Petros Lambropoulos helps startups launch AI-powered SaaS products in weeks with discovery, build, and production-ready AI features.`
-      : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν AI SaaS προϊόντα μέσα σε εβδομάδες, παραδίδοντας discovery, υλοποίηση και παραγωγικά AI χαρακτηριστικά.`;
+      ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
+      : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες με discovery, υλοποίηση και λειτουργίες έτοιμες για παραγωγή.`;
 
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,

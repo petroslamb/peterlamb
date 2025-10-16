@@ -19,8 +19,8 @@ const ContactPage: React.FC = () => {
     }, [actions.scheduleLink]);
 
     const metaDescription = language === 'en'
-      ? `Get in touch with Petros Lambropoulos to discuss your software, AI, or resilience initiative. Find contact details and a direct message form.`
-      : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για να συζητήσετε έργα λογισμικού, AI ή ανθεκτικότητας. Βρείτε στοιχεία επικοινωνίας και μια φόρμα άμεσου μηνύματος.`;
+      ? `Get in touch with Petros Lambropoulos to discuss your software, SaaS, or resilience initiative. Find contact details and a direct message form.`
+      : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για να συζητήσετε έργα λογισμικού, SaaS ή ανθεκτικότητας. Βρείτε στοιχεία επικοινωνίας και μια φόρμα άμεσου μηνύματος.`;
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
