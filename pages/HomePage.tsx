@@ -1,17 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { Service } from '../types';
+import { HomeSegmentCard } from '../types';
 import MetaTags from '../components/MetaTags';
 import useAnalytics from '../hooks/useAnalytics';
 
-const ServiceCard: React.FC<{ service: Service, icon: React.ReactNode }> = ({ service, icon }) => (
-    <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md h-full flex flex-col">
-        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cyan-100 dark:bg-cyan-900/50 text-primary dark:text-cyan-400 mb-4">
+const SegmentCard: React.FC<{ segment: HomeSegmentCard; icon: React.ReactNode; ctaHref: string; onCtaClick: () => void }> = ({ segment, icon, ctaHref, onCtaClick }) => (
+    <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-md h-full flex flex-col border border-transparent hover:border-primary/30 dark:hover:border-cyan-500/30 transition-colors duration-300">
+        <div className="flex items-center justify-center h-14 w-14 rounded-full bg-cyan-100 dark:bg-cyan-900/50 text-primary dark:text-cyan-400 mb-5">
             {icon}
         </div>
-        <h3 className="text-lg font-bold text-text-primary dark:text-slate-100 mb-2">{service.title}</h3>
-        <p className="text-text-secondary dark:text-slate-400 flex-grow">{service.description}</p>
+        <div className="space-y-3 flex-grow">
+            <h3 className="text-2xl font-bold text-text-primary dark:text-slate-100">{segment.title}</h3>
+            <p className="text-primary dark:text-cyan-400 font-semibold text-sm uppercase tracking-wide">{segment.tagline}</p>
+            <p className="text-text-secondary dark:text-slate-400">{segment.description}</p>
+            <ul className="space-y-2 text-text-secondary dark:text-slate-300">
+                {segment.bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-start">
+                        <svg className="flex-shrink-0 h-5 w-5 text-primary dark:text-cyan-400 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>{bullet}</span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <Link
+            to={ctaHref}
+            onClick={onCtaClick}
+            className="mt-6 inline-flex items-center justify-center bg-secondary text-primary dark:text-cyan-400 dark:bg-slate-900/60 font-semibold py-3 px-5 rounded-lg hover:bg-primary hover:text-white dark:hover:text-slate-900 dark:hover:bg-cyan-400 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
+        >
+            {segment.ctaLabel}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25M2.25 12H21" />
+            </svg>
+        </Link>
     </div>
 );
 
@@ -25,17 +48,15 @@ const HomePage: React.FC = () => {
       : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες με discovery, υλοποίηση και λειτουργίες έτοιμες για παραγωγή.`;
 
     const baseIcons = [
-        <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
-        <svg key="sparkles" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.648l.21-1.423a2.25 2.25 0 00-1.887-1.887l-1.423-.21a2.25 2.25 0 00-2.43 2.43l.21 1.423a2.25 2.25 0 001.887 1.887l1.423.21a2.25 2.25 0 002.43-2.43z" /></svg>,
-        <svg key="database" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" /></svg>,
-        <svg key="document-check" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 3h3m3 6H9a2.25 2.25 0 01-2.25-2.25V5.25A2.25 2.25 0 019 3h4.379c.597 0 1.17.237 1.593.659l3.369 3.369c.422.422.659.996.659 1.593V18.75A2.25 2.25 0 0115 21zM13.5 3v3.75a.75.75 0 00.75.75H18" /></svg>
+        <svg key="rocket" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l3.75-3.75m0 0a15.05 15.05 0 005.377 3.873c.679.27 1.432.102 1.953-.419l3.716-3.716a1.875 1.875 0 00-.419-2.953 15.05 15.05 0 00-3.873-5.377m0 0L19.5 4.5m-4.996 4.996a3.75 3.75 0 11-5.303-5.303 3.75 3.75 0 015.303 5.303z" /></svg>,
+        <svg key="scale" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>,
+        <svg key="shield" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253l7.5 3.222A12.083 12.083 0 0112 20.25a12.083 12.083 0 01-7.5-10.775L12 6.253z" /></svg>,
     ];
 
     const iconMap: Record<string, React.ReactNode> = {
-        'ai-discovery': baseIcons[0],
-        'ai-mvp': baseIcons[1],
-        'ai-feature-add-on': baseIcons[2],
-        'grant-funded-sprint': baseIcons[3],
+        startups: baseIcons[0],
+        'scale-ups': baseIcons[1],
+        enterprises: baseIcons[2],
     };
 
     return (
@@ -88,21 +109,21 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
             
-            <section aria-labelledby="services-snapshot-heading">
-                <h2 id="services-snapshot-heading" className="text-3xl font-bold text-center text-text-primary dark:text-white mb-12">{home.servicesTitle}</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {home.services.map((service, index) => {
-                        const icon = iconMap[service.slug] ?? baseIcons[index % baseIcons.length];
+            <section aria-labelledby="segment-services-heading">
+                <h2 id="segment-services-heading" className="text-3xl font-bold text-center text-text-primary dark:text-white mb-4">{home.segmentsTitle}</h2>
+                <p className="text-center text-text-secondary dark:text-slate-300 max-w-3xl mx-auto mb-12">{home.segmentsSubtitle}</p>
+                <div className="grid gap-8 lg:grid-cols-3">
+                    {home.segments.map((segment, index) => {
+                        const icon = iconMap[segment.slug] ?? baseIcons[index % baseIcons.length];
+                        const href = `/services/segments/${segment.slug}`;
                         return (
-                            <Link 
-                                to={`/services/${service.slug}`} 
-                                key={service.slug} 
-                                className="block h-full rounded-lg hover:shadow-xl focus:shadow-xl transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
-                                aria-label={`Learn more about ${service.title}`}
-                                onClick={() => trackEvent('service_card_click', { area: 'home_services_snapshot', slug: service.slug })}
-                            >
-                                <ServiceCard service={service} icon={icon} />
-                            </Link>
+                            <SegmentCard
+                                key={segment.slug}
+                                segment={segment}
+                                icon={icon}
+                                ctaHref={href}
+                                onCtaClick={() => trackEvent('segment_card_click', { area: 'home_segments', slug: segment.slug })}
+                            />
                         );
                     })}
                 </div>

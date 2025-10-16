@@ -50,8 +50,9 @@ export interface Content {
     subtitle: string;
     specialties: string;
     cta: string;
-    servicesTitle: string;
-    services: Service[];
+    segmentsTitle: string;
+    segmentsSubtitle: string;
+    segments: HomeSegmentCard[];
     credibility: string;
   };
   about: {
@@ -77,8 +78,13 @@ export interface Content {
   services: {
     title: string;
     intro: string;
-    categories: ServiceCategory[];
-    readCaseStudies: string;
+    segmentsHeadline: string;
+    segmentsSubtitle: string;
+    segments: ServiceSegment[];
+    programsHeadline: string;
+    programsIntro: string;
+    readProgramDetails: string;
+    programs: ServiceProgram[];
     backToServices: string;
     ctaTitle: string;
     ctaDescription: string;
@@ -151,10 +157,25 @@ export interface Content {
   };
 }
 
-export interface Service {
+export interface HomeSegmentCard {
   title: string;
-  description: string;
   slug: string;
+  tagline: string;
+  description: string;
+  bullets: string[];
+  ctaLabel: string;
+}
+
+export interface ServiceSegment {
+  title: string;
+  slug: string;
+  tagline: string;
+  description: string;
+  bullets: string[];
+  proofPoints: string[];
+  programOrder: string[];
+  ctaLabel: string;
+  longform: string;
 }
 
 export interface ServiceCaseStudy {
@@ -164,7 +185,8 @@ export interface ServiceCaseStudy {
   technologies: string[];
 }
 
-export interface ServiceCategory {
+export interface ServiceProgram {
+  segmentSlug: string;
   title: string;
   slug: string;
   intro: string;

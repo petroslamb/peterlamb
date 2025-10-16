@@ -17,12 +17,45 @@ export const content: Record<'en' | 'gr', Content> = {
       subtitle: "Discovery, build, and delivery of production-ready features so you can ship faster and win the market.",
       specialties: "Rapid discovery sprints, investor-ready SaaS builds, and resilient cloud infrastructure.",
       cta: "Schedule a discovery call",
-      servicesTitle: "Services snapshot",
-      services: [
-        { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
-        { title: "AI MVP Launch", description: "1–3 month build of investor-ready AI SaaS foundations.", slug: "ai-mvp" },
-        { title: "AI Feature Add-On", description: "2–6 week integration of production-ready AI capabilities.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "2–4 week partnership to package your crypto, AI, and deep-tech roadmap plus compliance plan for funding calls.", slug: "grant-funded-sprint" },
+      segmentsTitle: "Who I partner with",
+      segmentsSubtitle: "Pick the path that matches your current stage—each program blends strategy, architecture, and hands-on delivery so you stay in motion.",
+      segments: [
+        {
+          title: "Startups Launch Partner",
+          slug: "startups",
+          tagline: "Validate, ship, and raise faster",
+          description: "Go from idea to investor-ready SaaS with lean teams, tight budgets, and immovable launch dates.",
+          bullets: [
+            "Rapid AI discovery sprints that de-risk data, compliance, and user value.",
+            "Investor-ready MVP builds across Python backends, React frontends, and cloud ops.",
+            "Launch playbooks, observability, and hand-off so you keep momentum post-release."
+          ],
+          ctaLabel: "View startup programs",
+        },
+        {
+          title: "Scale-Up Acceleration",
+          slug: "scale-ups",
+          tagline: "Ship confident, compound growth",
+          description: "Add AI capabilities and modernize delivery without derailing your roadmap or overloading engineering leadership.",
+          bullets: [
+            "Production-ready AI feature integrations aligned to activation and retention targets.",
+            "Platform modernization for multi-tenant SaaS: data contracts, billing, observability.",
+            "Enablement, runbooks, and paired delivery so your team owns outcomes sustainably."
+          ],
+          ctaLabel: "View scale-up programs",
+        },
+        {
+          title: "Enterprise Transformation",
+          slug: "enterprises",
+          tagline: "Operationalize AI & analytics safely",
+          description: "Blend compliance, data governance, and resilient delivery for regulated, global, or grant-funded teams.",
+          bullets: [
+            "AI and analytics platform hardening with threat-aware architecture.",
+            "Forecasting and data engineering accelerators for operations, mobility, and logistics.",
+            "Grant and consortium execution with governance-ready roadmaps and reviewer packs."
+          ],
+          ctaLabel: "View enterprise programs",
+        },
       ],
       credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
     },
@@ -72,14 +105,86 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "Choose the engagement that matches your urgency: discovery, MVP build, feature acceleration, or grant-backed delivery planning.",
-      readCaseStudies: "Read Case Studies",
-      backToServices: "Back to Services",
-      ctaTitle: "Need to choose the right engagement?",
-      ctaDescription: "Book a 30-minute call to map your goals, timelines, and constraints. You'll leave with a recommended tier and a clear next-step checklist.",
-      ctaButton: "Schedule a discovery call",
-      categories: [
+      intro: "Partner with me across discovery, delivery, and resilience. Each program keeps strategy, execution, and enablement aligned so you can ship fast without surprises.",
+      segmentsHeadline: "Solve the right problems for your stage",
+      segmentsSubtitle: "Start with the segment that sounds like you, then dive into the programs tailored to your funding, ops, and compliance realities.",
+      segments: [
         {
+          title: "Startups Launch Partner",
+          slug: "startups",
+          tagline: "Validate, ship, and raise faster",
+          description: "Go from idea to investor-ready SaaS with lean teams, tight budgets, and immovable launch dates.",
+          bullets: [
+            "Rapid AI discovery sprints that de-risk data, compliance, and user value.",
+            "Investor-ready MVP builds across Python backends, React frontends, and cloud ops.",
+            "Launch playbooks, observability, and hand-off so you keep momentum post-release."
+          ],
+          proofPoints: ["Dikaio.ai discovery sprint", "Langaware feasibility evaluation", "NannyML investor launch"],
+          programOrder: ["ai-discovery", "ai-mvp"],
+          ctaLabel: "Explore startup programs",
+          longform: `### Where it helps
+* You're validating AI-led workflows before committing seed or grant capital.
+* You need investor-ready product evidence in weeks, not quarters.
+* You want a delivery partner who owns the technical path, not just writes a report.
+
+### How we work together
+* We frame the problem, success metrics, and guardrails alongside founders and early customers.
+* I drive the technical spikes, architecture decisions, and backlog so the team stays focused on learning.
+* Every sprint ends with an executive-ready readout, runbooks, and the assets your next milestone demands.`,
+        },
+        {
+          title: "Scale-Up Acceleration",
+          slug: "scale-ups",
+          tagline: "Ship confident, compound growth",
+          description: "Add AI capability and modernize the platform without derailing your roadmap or overloading engineering leadership.",
+          bullets: [
+            "Production-ready AI feature integrations tied to activation and retention targets.",
+            "Platform modernization for multi-tenant SaaS: data contracts, billing, observability.",
+            "Enablement, runbooks, and paired delivery so your team owns outcomes sustainably."
+          ],
+          proofPoints: ["Workable AI launch", "Brain Metrics resilience uplift", "Orfium platform scale"],
+          programOrder: ["ai-feature-add-on", "scaleup-modernization"],
+          ctaLabel: "Explore scale-up programs",
+          longform: `### When to engage
+* Product-led teams must add AI or automation without slowing core delivery.
+* Platform debt or observability gaps are starting to tax growth initiatives.
+* You want outside leadership that co-owns outcomes alongside in-house engineers.
+
+### What to expect
+* Paired delivery with your team across architecture, integration, and rollout.
+* Hardened pipelines, tests, and monitoring so operations stay smooth after launch.
+* Stakeholder demos and docs that keep product, GTM, and ops aligned.`,
+        },
+        {
+          title: "Enterprise Transformation",
+          slug: "enterprises",
+          tagline: "Operationalize AI & analytics safely",
+          description: "Blend compliance, data governance, and resilient delivery for regulated, global, or grant-funded teams.",
+          bullets: [
+            "AI and analytics platform hardening with threat-aware architecture.",
+            "Forecasting and data engineering accelerators for operations, mobility, and logistics.",
+            "Grant and consortium execution with governance-ready roadmaps and reviewer packs."
+          ],
+          proofPoints: ["ENCODE near real-time analytics", "Mobility demand forecasting", "EU civic tech proposal"],
+          programOrder: ["enterprise-analytics", "grant-funded-sprint"],
+          ctaLabel: "Explore enterprise programs",
+          longform: `### Ideal scenarios
+* Security, compliance, or operations leaders need credible AI delivery plans.
+* Grants, boards, or regulators demand technical roadmaps before unlocking funds.
+* Critical analytics platforms must scale without trading off reliability.
+
+### Delivery approach
+* Joint governance workshops to align stakeholders and risk owners.
+* Architecture, data, and tooling choices documented for auditors and partners.
+* Embedded enablement so your internal teams can own the platform post-handoff.`,
+        },
+      ],
+      programsHeadline: "Program catalogue",
+      programsIntro: "Every engagement includes hands-on delivery, documentation, and enablement so your team can keep running after hand-off.",
+      readProgramDetails: "View program details",
+      programs: [
+        {
+          segmentSlug: "startups",
           title: "AI Discovery Sprint",
           slug: "ai-discovery",
           intro: "Co-design a 1–2 week sprint that uncovers the highest-leverage AI opportunities, de-risks delivery, and produces decision-ready next steps.",
@@ -143,6 +248,7 @@ export const content: Record<'en' | 'gr', Content> = {
           engagementCtaLabel: "Book the Discovery Sprint call"
         },
         {
+          segmentSlug: "startups",
           title: "AI MVP Launch",
           slug: "ai-mvp",
           intro: "Ship an investor-ready AI SaaS MVP in 1–3 months with production-grade backend, data, and generative experiences.",
@@ -206,6 +312,7 @@ export const content: Record<'en' | 'gr', Content> = {
           engagementCtaLabel: "Schedule the MVP scoping call"
         },
         {
+          segmentSlug: "scale-ups",
           title: "AI Feature Add-On",
           slug: "ai-feature-add-on",
           intro: "Add a revenue-driving AI capability to your existing product in 2–6 weeks without disrupting core delivery.",
@@ -269,6 +376,125 @@ export const content: Record<'en' | 'gr', Content> = {
           engagementCtaLabel: "Book the feature planning call"
         },
         {
+          segmentSlug: "scale-ups",
+          title: "SaaS Modernization & Observability Runway",
+          slug: "scaleup-modernization",
+          intro: "Stabilize the platform while you keep shipping—address architecture debt, observability, and delivery bottlenecks in 4–12 weeks.",
+          businessProse: `Growth exposes every shortcut. This engagement pairs modernization spikes with continued feature delivery so performance, compliance, and developer experience all improve together.
+
+### What we tackle
+* Architecture and data contract audits to surface the debt blocking velocity.
+* Observability, incident response, and release engineering upgrades that keep customers confident.
+* Paired enablement so in-house engineers absorb new practices while we ship.
+
+### Pricing & cadence
+* Phased retainers €6K–€18K depending on scope, team size, and critical systems involved.`,
+          items: [
+            "Best for scale-ups balancing new feature launches with platform debt.",
+            "Timeline: 4–12 week engagement with embedded tech leadership and weekly demos.",
+            "Deliverables: modernization backlog, instrumented platform, enablement materials.",
+            "Investment: €6K–€18K based on integrations and regulatory demands."
+          ],
+          caseStudies: [
+            {
+              company: "Workable",
+              challenge: "Scale recruiter-facing AI services while improving observability and release cadence.",
+              solution: [
+                "Refined service boundaries and deployment pipelines to support weekly AI feature releases.",
+                "Embedded alerting and SLO reporting so product and ops teams could trust the rollout clock."
+              ],
+              technologies: ["Python", "Kubernetes", "Helm", "Grafana", "Prometheus"]
+            },
+            {
+              company: "Brain Metrics Initiative",
+              challenge: "Rebuild resilience tooling during sustained traffic spikes without service downtime.",
+              solution: [
+                "Introduced automated mitigation workflows and hardened network edge policies.",
+                "Created incident playbooks and measurement loops that reduced MTTR across the team."
+              ],
+              technologies: ["Cloudflare", "Incident Response", "Observability"]
+            },
+            {
+              company: "Orfium",
+              challenge: "Keep a fast-growing music-tech platform performant while onboarding new catalogues and partners.",
+              solution: [
+                "Optimised asynchronous processing and database tuning to support higher ingestion volume.",
+                "Rolled out change-management rituals and dashboards for product, legal, and finance stakeholders."
+              ],
+              technologies: ["PostgreSQL", "Redis", "Django", "CI/CD Automation"]
+            }
+          ],
+          engagementTitle: "Plan your modernization runway",
+          engagementDescription: "Use a 30-minute working session to pinpoint the highest-leverage modernization wins and the mix of delivery support you need.",
+          engagementChecklistTitle: "To discuss on the call:",
+          engagementChecklist: [
+            "Primary failure modes or incident classes you want eliminated.",
+            "Key services, data flows, or customer commitments under strain.",
+            "Internal team capacity, skill gaps, and rollout constraints."
+          ],
+          engagementCtaLabel: "Book the modernization review"
+        },
+        {
+          segmentSlug: "enterprises",
+          title: "Enterprise Analytics & Resilience Accelerator",
+          slug: "enterprise-analytics",
+          intro: "Deliver secure, high-volume analytics or forecasting capabilities without sacrificing compliance or uptime.",
+          businessProse: `Enterprises need proof that AI and analytics initiatives will be governed, observable, and sustainable. This accelerator combines architecture execution with risk management so stakeholders gain confidence fast.
+
+### Focus areas
+* Real-time or near real-time analytics pipelines with clear ownership and guardrails.
+* Forecasting and decision-support tooling for operations, logistics, or financial teams.
+* Governance assets—threat models, data maps, and policy hooks—that satisfy security and compliance.
+
+### Pricing
+* €5K–€15K depending on data volume, integrations, and regulatory overhead.`,
+          items: [
+            "Best for enterprise teams upgrading analytics without compromising reliability.",
+            "Timeline: 3–10 weeks including governance workshops and enablement.",
+            "Deliverables: production pipeline, governance pack, and operational runbooks.",
+            "Investment: €5K–€15K aligned to integrations and reporting obligations."
+          ],
+          caseStudies: [
+            {
+              company: "ENCODE (Cybersecurity)",
+              challenge: "Expose near real-time threat analytics via a performance-critical API for enterprise customers.",
+              solution: [
+                "Engineered analytics services blending Spark pipelines with optimized APIs and caching layers.",
+                "Delivered governance playbooks so SOC analysts and compliance officers trusted the data."
+              ],
+              technologies: ["Spark", "Kafka", "Flask", "Redis", "ElasticSearch"]
+            },
+            {
+              company: "Composite Mobility Operator",
+              challenge: "Forecast city-level demand to improve fleet allocation while respecting data residency rules.",
+              solution: [
+                "Stood up a PySpark forecasting pipeline with MLflow tracking for hundreds of micro-markets.",
+                "Packaged scenario planning dashboards and rollout guidance for operations leadership."
+              ],
+              technologies: ["PySpark", "Prophet", "MLflow", "AWS S3"]
+            },
+            {
+              company: "Composite CivicTech Consortium",
+              challenge: "Prove the resilience and data governance approach for a multi-partner analytics platform ahead of funding release.",
+              solution: [
+                "Authored architecture and compliance dossiers mapped to regulator expectations.",
+                "Delivered a working prototype that demonstrated observability, access controls, and audit trails."
+              ],
+              technologies: ["Data Governance", "Security Architecture", "FastAPI", "Terraform"]
+            }
+          ],
+          engagementTitle: "Book the enterprise readiness review",
+          engagementDescription: "Confirm scope, data sensitivities, and stakeholder goals so you receive a governance-aware delivery plan within two business days.",
+          engagementChecklistTitle: "Have on hand:",
+          engagementChecklist: [
+            "Primary regulatory or customer obligations we must respect.",
+            "Data sources, integrations, or vendors already in scope.",
+            "Stakeholders who must sign off on the delivery plan."
+          ],
+          engagementCtaLabel: "Schedule the readiness review"
+        },
+        {
+          segmentSlug: "enterprises",
           title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
           slug: "grant-funded-sprint",
           intro: "Package your crypto, AI, and automation roadmap into a fundable plan in 2–4 weeks, aligning proposal criteria, milestones, and delivery confidence.",
@@ -309,15 +535,15 @@ The highlights below are composite scenarios drawn from repeated grant-support w
               ],
               technologies: ["Grant Proposal Design", "Data Governance", "Privacy Engineering"]
             },
-        {
-          company: "Composite Web3 Collective",
-          challenge: "Pursue a blockchain ecosystem grant to validate AI-driven contributor tooling for a DAO.",
-          solution: [
-            "Mapped eligibility criteria, scoring rubrics, and milestone expectations across leading foundation programmes to shape a compliant submission.",
-            "Packaged the proposal narrative, technical explainer, UX mockups, and community rollout plan to demonstrate market readiness and governance alignment."
-          ],
-          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
-        },
+            {
+              company: "Composite Web3 Collective",
+              challenge: "Pursue a blockchain ecosystem grant to validate AI-driven contributor tooling for a DAO.",
+              solution: [
+                "Mapped eligibility criteria, scoring rubrics, and milestone expectations across leading foundation programmes to shape a compliant submission.",
+                "Packaged the proposal narrative, technical explainer, UX mockups, and community rollout plan to demonstrate market readiness and governance alignment."
+              ],
+              technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
+            },
             {
               company: "Composite Resilience Lab",
               challenge: "Pursue an EU cascade funding call focused on critical infrastructure resilience while balancing regulatory obligations.",
@@ -325,20 +551,24 @@ The highlights below are composite scenarios drawn from repeated grant-support w
                 "Translated incident-response learnings into a phased roadmap with measurable MTTR targets and governance milestones.",
                 "Developed supporting artifacts (risk register, stakeholder map, compliance tracker) required for the cascade call submission."
               ],
-              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+              technologies: ["Incident Response", "Governance Tooling", "Programme Design"]
             }
           ],
-          engagementTitle: "Prep your grant-backed sprint",
-          engagementDescription: "Use a 30-minute working session to align on grant goals, programme constraints, and decision dates so we can scope the engagement within 48 hours.",
-          engagementChecklistTitle: "Bring to the call:",
+          engagementTitle: "Schedule the funding sprint call",
+          engagementDescription: "Use a 30-minute call to align on grant requirements, stakeholders, and technical proof points so we can lock the sprint agenda in 48 hours.",
+          engagementChecklistTitle: "Bring with you:",
           engagementChecklist: [
-            "Grant brief or accelerator outline plus key deadlines.",
-            "Any draft proposal sections, budget assumptions, or reviewer feedback.",
-            "Stakeholder list and compliance requirements we must account for."
+            "The funding call, scoring rubric, and submission deadlines.",
+            "Existing research, prototypes, or compliance documentation.",
+            "Stakeholder list and governance constraints we need to address."
           ],
-          engagementCtaLabel: "Schedule the funding sprint call"
-        },
+          engagementCtaLabel: "Book the grant readiness review"
+        }
       ],
+      backToServices: "Back to Services",
+      ctaTitle: "Need to choose the right engagement?",
+      ctaDescription: "Book a 30-minute call to map your goals, timelines, and constraints. You'll leave with a recommended tier and a clear next-step checklist.",
+      ctaButton: "Schedule a discovery call",
     },
     portfolio: {
       title: "Portfolio",
@@ -554,12 +784,45 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       subtitle: "Discovery, υλοποίηση και παράδοση λειτουργιών έτοιμων για παραγωγή ώστε να κυκλοφορείτε πιο γρήγορα και να κερδίζετε την αγορά.",
       specialties: "Γρήγορα discovery sprints, SaaS builds έτοιμα για επενδυτές και ανθεκτική cloud υποδομή.",
       cta: "Κλείσε ένα discovery call",
-      servicesTitle: "Υπηρεσίες με μια ματιά",
-      services: [
-        { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
-        { title: "AI MVP Launch", description: "Κατασκευή 1–3 μηνών για MVP AI SaaS έτοιμο για επενδυτές.", slug: "ai-mvp" },
-        { title: "AI Feature Add-On", description: "Ενσωμάτωση 2–6 εβδομάδων ενός παραγωγικού AI χαρακτηριστικού.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να πακετάρουμε crypto, AI και deep-tech roadmap μαζί με συμμόρφωση για grant προκηρύξεις.", slug: "grant-funded-sprint" },
+      segmentsTitle: "Με ποιους συνεργάζομαι",
+      segmentsSubtitle: "Επίλεξε το segment που σε περιγράφει — κάθε πρόγραμμα συνδυάζει στρατηγική, αρχιτεκτονική και hands-on delivery ώστε να μένεις σε τροχιά.",
+      segments: [
+        {
+          title: "Συνεργάτης Εκκίνησης Startups",
+          slug: "startups",
+          tagline: "Validate, ship και κάνε raise πιο γρήγορα",
+          description: "Μετατρέπουμε ιδέες σε SaaS έτοιμο για επενδυτές με μικρές ομάδες και ασφυκτικά deadlines.",
+          bullets: [
+            "Discovery sprints για AI που μειώνουν ρίσκο δεδομένων και συμμόρφωσης.",
+            "MVP builds με Python backends, React εμπειρίες και cloud υποδομή παραγωγής.",
+            "Launch playbooks, observability και hand-off ώστε να συνεχίσεις χωρίς καθυστερήσεις."
+          ],
+          ctaLabel: "Δες τα startup programs",
+        },
+        {
+          title: "Scale-Up Acceleration",
+          slug: "scale-ups",
+          tagline: "Ship με σιγουριά και χτίσε compound growth",
+          description: "Προσθέτουμε AI δυνατότητες και εκσυγχρονίζουμε την πλατφόρμα χωρίς να εκτροχιάσουμε το roadmap ή να υπερφορτώσουμε την ηγεσία.",
+          bullets: [
+            "Ενσωμάτωση AI features με στόχο activation και retention.",
+            "Εκσυγχρονισμός multi-tenant SaaS: data contracts, billing, observability.",
+            "Enablement και runbooks ώστε η ομάδα σου να διατηρεί τα αποτελέσματα."
+          ],
+          ctaLabel: "Δες τα scale-up programs",
+        },
+        {
+          title: "Enterprise Transformation",
+          slug: "enterprises",
+          tagline: "Λειτουργικοποίησε AI & analytics με ασφάλεια",
+          description: "Συνδυάζουμε συμμόρφωση, data governance και ανθεκτική παράδοση για ρυθμιζόμενες ή grant-funded ομάδες.",
+          bullets: [
+            "Σκλήρυνση AI & analytics πλατφορμών με threat-aware αρχιτεκτονική.",
+            "Accelerators για forecasting και data engineering σε operations και logistics.",
+            "Grant και consortium execution με roadmaps συμμόρφωσης και reviewer packs."
+          ],
+          ctaLabel: "Δες τα enterprise programs",
+        },
       ],
       credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
     },
@@ -609,14 +872,86 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Διάλεξε το engagement που ταιριάζει στην ανάγκη σου: discovery, MVP, επέκταση χαρακτηριστικών ή grant-backed planning.",
-      readCaseStudies: "Δείτε τα Case Studies",
-      backToServices: "Επιστροφή στις Υπηρεσίες",
-      ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
-      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε στόχους, χρονοδιάγραμμα και περιορισμούς. Θα φύγεις με προτεινόμενο tier και συγκεκριμένο πλάνο επόμενων ενεργειών.",
-      ctaButton: "Κλείσε discovery call",
-      categories: [
+      intro: "Συνεργαζόμαστε σε discovery, delivery και resilience. Κάθε πρόγραμμα κρατά στρατηγική, υλοποίηση και enablement ευθυγραμμισμένα ώστε να προχωράς χωρίς δυσάρεστες εκπλήξεις.",
+      segmentsHeadline: "Επίλεξε το σωστό segment για το στάδιό σου",
+      segmentsSubtitle: "Ξεκίνα από το segment που σε περιγράφει και μετά δες τα προγράμματα που είναι ραμμένα στις ανάγκες χρηματοδότησης, λειτουργίας και συμμόρφωσής σου.",
+      segments: [
         {
+          title: "Συνεργάτης Εκκίνησης Startups",
+          slug: "startups",
+          tagline: "Validate, ship και κάνε raise πιο γρήγορα",
+          description: "Μετατρέπουμε ιδέες σε SaaS έτοιμο για επενδυτές με μικρές ομάδες και ασφυκτικά deadlines.",
+          bullets: [
+            "Discovery sprints για AI που μειώνουν ρίσκο δεδομένων και συμμόρφωσης.",
+            "MVP builds με Python backends, React εμπειρίες και cloud υποδομή παραγωγής.",
+            "Launch playbooks, observability και hand-off ώστε να συνεχίσεις χωρίς καθυστερήσεις."
+          ],
+          proofPoints: ["Dikaio.ai discovery sprint", "Langaware feasibility", "NannyML launch"],
+          programOrder: ["ai-discovery", "ai-mvp"],
+          ctaLabel: "Δες τα startup programs",
+          longform: `### Πότε ταιριάζει
+* Επικυρώνεις AI flows πριν δεσμεύσεις seed ή grant κεφάλαιο.
+* Χρειάζεσαι αποδεικτικά στοιχεία για επενδυτές μέσα σε εβδομάδες και όχι σε τρίμηνα.
+* Θέλεις συνεργάτη που αναλαμβάνει το τεχνικό μονοπάτι, όχι απλώς να γράψει μια αναφορά.
+
+### Πώς δουλεύουμε
+* Συνδιαμορφώνουμε πρόβλημα, KPIs και guardrails μαζί με founders και early adopters.
+* Ηγούμαι των technical spikes, των αρχιτεκτονικών αποφάσεων και του backlog ώστε η ομάδα να μένει προσηλωμένη στη μάθηση.
+* Κάθε sprint κλείνει με executive-ready σύνοψη, runbooks και assets για το επόμενο milestone.`,
+        },
+        {
+          title: "Scale-Up Acceleration",
+          slug: "scale-ups",
+          tagline: "Ship με σιγουριά και χτίσε compound growth",
+          description: "Προσθέτουμε AI δυνατότητες και εκσυγχρονίζουμε την πλατφόρμα χωρίς να εκτροχιάσουμε το roadmap ή να υπερφορτώσουμε την ηγεσία.",
+          bullets: [
+            "Ενσωμάτωση AI features με στόχο activation και retention.",
+            "Εκσυγχρονισμός multi-tenant SaaS: data contracts, billing, observability.",
+            "Enablement και runbooks ώστε η ομάδα σου να διατηρεί τα αποτελέσματα."
+          ],
+          proofPoints: ["Workable AI launch", "Brain Metrics resilience", "Orfium scale"],
+          programOrder: ["ai-feature-add-on", "scaleup-modernization"],
+          ctaLabel: "Δες τα scale-up programs",
+          longform: `### Πότε έχει νόημα
+* Θέλεις να προσθέσεις AI ή αυτοματοποίηση χωρίς να φρενάρεις το core delivery.
+* Το platform debt ή τα κενά observability αρχίζουν να κοστίζουν χρόνο και χρήμα.
+* Αναζητάς εξωτερική τεχνική ηγεσία που θα μοιραστεί την ευθύνη με την εσωτερική ομάδα.
+
+### Τι να περιμένεις
+* Paired delivery με την ομάδα σου σε αρχιτεκτονική, ενσωμάτωση και rollout.
+* Σκλήρυνση pipelines, tests και monitoring ώστε οι λειτουργίες να μένουν ομαλές μετά το launch.
+* Demo και documentation ροές που κρατούν ευθυγραμμισμένους product, GTM και operations.`,
+        },
+        {
+          title: "Enterprise Transformation",
+          slug: "enterprises",
+          tagline: "Λειτουργικοποίησε AI & analytics με ασφάλεια",
+          description: "Συνδυάζουμε συμμόρφωση, data governance και ανθεκτική παράδοση για ρυθμιζόμενες, διεθνείς ή grant-funded ομάδες.",
+          bullets: [
+            "Σκλήρυνση AI & analytics πλατφορμών με threat-aware αρχιτεκτονική.",
+            "Accelerators για forecasting και data engineering σε operations και logistics.",
+            "Grant και consortium execution με roadmaps συμμόρφωσης και reviewer packs."
+          ],
+          proofPoints: ["ENCODE near real-time analytics", "Mobility demand forecasting", "EU civic tech proposal"],
+          programOrder: ["enterprise-analytics", "grant-funded-sprint"],
+          ctaLabel: "Δες τα enterprise programs",
+          longform: `### Ιδανικά σενάρια
+* Security, compliance ή operations ηγέτες χρειάζονται αξιόπιστο delivery plan για AI.
+* Grants, boards ή ρυθμιστές ζητούν τεχνικό roadmap πριν εγκρίνουν κονδύλια.
+* Κρίσιμα analytics πρέπει να κλιμακωθούν χωρίς να θυσιαστεί η αξιοπιστία.
+
+### Προσέγγιση
+* Workshops διακυβέρνησης για να ευθυγραμμίσουμε stakeholders και risk owners.
+* Τεκμηριωμένες επιλογές αρχιτεκτονικής, δεδομένων και εργαλείων για auditors και partners.
+* Ενσωματωμένο enablement ώστε οι εσωτερικές ομάδες να αναλάβουν το platform μετά το χέρι.`,
+        },
+      ],
+      programsHeadline: "Κατάλογος προγραμμάτων",
+      programsIntro: "Κάθε συνεργασία περιλαμβάνει hands-on παράδοση, τεκμηρίωση και enablement ώστε η ομάδα σου να συνεχίσει αυτόνομα.",
+      readProgramDetails: "Δείτε λεπτομέρειες προγράμματος",
+      programs: [
+        {
+          segmentSlug: "startups",
           title: "AI Discovery Sprint",
           slug: "ai-discovery",
           intro: "Σχεδιάζουμε ένα σπριντ 1–2 εβδομάδων που αναδεικνύει τις πιο αποδοτικές AI ευκαιρίες, μειώνει το ρίσκο και αφήνει ξεκάθαρα επόμενα βήματα.",
@@ -628,254 +963,379 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
 * Τεχνικά spikes σε LLMs, retrieval ή automation patterns ώστε να αποδείξουμε τη βιωσιμότητα και να αναδείξουμε περιορισμούς.
 
 ### Παραδοτέα
-* Opportunity map που κατατάσσει τα AI bets με βάση αξία, προσπάθεια και ρίσκο.
-* Τεχνικό discovery pack με απαιτήσεις δεδομένων, σκίτσα αρχιτεκτονικής και προτάσεις εργαλείων/προμηθευτών.
-* Executive-ready brief με go/no-go απόφαση, χρονοδιάγραμμα και επόμενα βήματα.
+* Opportunity map που ιεραρχεί τα AI bets ανά αξία, προσπάθεια και ρίσκο.
+* Τεχνικό discovery pack με απαιτήσεις δεδομένων, προσχέδια αρχιτεκτονικής και προτάσεις εργαλείων.
+* Executive-ready brief με go/no-go, χρονοδιάγραμμα και επόμενα βήματα.
 
 ### Κόστος
-* Σταθερή αμοιβή €2K–€4K ανάλογα με scope και αριθμό εμπλεκόμενων personae.`,
+* Fixed fee €2K–€4K ανάλογα με scope και personas.`,
           items: [
-            "Ιδανικό για founders που θέλουν να επικυρώσουν AI use cases πριν προχωρήσουν σε ανάπτυξη.",
-            "Χρονοδιάγραμμα: σπριντ 1–2 εβδομάδων με έρευνα, spikes και prototype demos.",
-            "Παραδοτέα: opportunity map, τεχνικό discovery pack, executive brief.",
-            "Επένδυση: €2K–€4K σταθερή αμοιβή."
+            "Ιδανικό για founders που επικυρώνουν AI use cases πριν ανάψουν φως στην υλοποίηση.",
+            "Χρονοδιάγραμμα: 1–2 εβδομάδες με research, spikes και prototype demos.",
+            "Παραδοτέα: opportunity map, technical discovery pack, executive brief.",
+            "Επένδυση: €2K–€4K fixed fee."
           ],
           caseStudies: [
             {
               company: "Dikaio.ai",
-              challenge: "Να επιβεβαιωθεί αν η retrieval-augmented generation μπορεί να αυτοματοποιήσει νομικά έγγραφα ελληνικού δικαίου πριν το pre-seed.",
+              challenge: "Επιβεβαίωση αν το retrieval-augmented generation μπορεί να αυτοματοποιήσει νομικά έγγραφα ελληνικής νομοθεσίας πριν το pre-seed.",
               solution: [
-                "Χαρτογράφησα τους στόχους των founders σε shortlist βιώσιμων ροών εγγράφων και responsible AI κανόνων.",
-                "Παρέδωσα clickable prototype και RAG reference implementation που τροφοδότησαν τις συζητήσεις με επενδυτές."
+                "Χαρτογραφήσαμε τις προτεραιότητες των founders σε shortlist ρεαλιστικών ροών εγγράφων και responsible AI guardrails.",
+                "Παραδώσαμε clickable prototype και RAG reference implementation που τροφοδότησε τις συζητήσεις με επενδυτές."
               ],
               technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
             },
             {
               company: "Langaware",
-              challenge: "Αξιολόγηση βιωσιμότητας NLP μοντέλων για έλεγχο γνωστικής υγείας πριν επενδυθούν κλινικοί πόροι.",
+              challenge: "Αξιολόγηση NLP μοντέλων για screening γνωστικής υγείας πριν επενδυθούν κλινικοί πόροι.",
               solution: [
-                "Εκτέλεσα evaluation spikes σε transformer baselines για να μετρήσω επιτεύξιμη ακρίβεια.",
-                "Σύνταξα go/no-go αφήγηση με απαιτήσεις δεδομένων και θέματα συμμόρφωσης."
+                "Τρέξαμε evaluation spikes σε transformer μοντέλα για να προσδιορίσουμε εφικτή ακρίβεια.",
+                "Πακετάραμε τα ευρήματα σε go/no-go αφήγημα με απαιτήσεις δεδομένων και συμμόρφωσης."
               ],
               technologies: ["Python", "BERT", "Applied NLP"]
             },
             {
               company: "Beat",
-              challenge: "Εξερεύνηση χαρακτηριστικών πρόβλεψης ζήτησης για τη Λίμα χωρίς να εκτροχιαστεί το βασικό roadmap.",
+              challenge: "Διερεύνηση forecasting χαρακτηριστικών για την αγορά της Λίμα χωρίς να ξεφύγει το core roadmap.",
               solution: [
-                "Παρέδωσα prototype forecasting με πραγματικά δεδομένα επιβατών μέσα σε δύο εβδομάδες για να αποδείξω αξία.",
-                "Πρότεινα phased rollout και instrumentation που απαιτείται για συνεχή βελτίωση."
+                "Παραδώσαμε forecasting prototype με πραγματικά δεδομένα διαδρομών σε δύο εβδομάδες.",
+                "Ορίσαμε phased rollout επιλογές και instrumentation για συνεχή βελτίωση."
               ],
-              technologies: ["Python", "Forecasting", "Data Storytelling"]
+              technologies: ["Python", "Time-Series Forecasting", "Data Storytelling"]
             }
           ],
           engagementTitle: "Οργάνωσε το Discovery Sprint",
-          engagementDescription: "Κλείσε ένα 30λεπτο call για να επιβεβαιώσουμε το fit, να ευθυγραμμίσουμε τα outcomes και να κλειδώσουμε την ατζέντα μέσα σε 48 ώρες.",
-          engagementChecklistTitle: "Για το call:",
+          engagementDescription: "Κλείσε 30 λεπτά για να επιβεβαιώσουμε fit, να κλειδώσουμε στόχους και να ορίσουμε agenda μέσα σε 48 ώρες.",
+          engagementChecklistTitle: "Έχε μαζί σου:",
           engagementChecklist: [
-            "Τα 2–3 κορυφαία bets ή workflows που θέλεις να επικυρώσεις.",
-            "Δεδομένα, έρευνες πελατών ή compliance σημειώσεις που πρέπει να δούμε.",
-            "Τα μέλη της ομάδας και η διαθεσιμότητά τους για τα sprint workshops."
+            "Τα 2–3 κύρια bets ή workflows που θέλεις να επικυρώσεις.",
+            "Data sources, έρευνα ή compliance σημειώσεις που πρέπει να δούμε.",
+            "Διαθεσιμότητα βασικών μελών για τα workshops."
           ],
           engagementCtaLabel: "Κλείσε το discovery sprint call"
         },
         {
+          segmentSlug: "startups",
           title: "AI MVP Launch",
           slug: "ai-mvp",
-          intro: "Παραδίδω AI SaaS MVP έτοιμο για επενδυτές μέσα σε 1–3 μήνες με production-grade backend, data και generative εμπειρίες.",
-          businessProse: `Μετατρέπουμε το επικυρωμένο concept σε προϊόν χωρίς να χαθεί ρυθμός. Ηγούμαι της ανάπτυξης, συνεργάζομαι με την ομάδα σου και κρατώ την πορεία διαφανή με εβδομαδιαία demos.
+          intro: "Φέρνουμε στην αγορά ένα AI SaaS MVP μέσα σε 1–3 μήνες με production-grade backend, data flows και εμπειρίες γεννητικής τεχνητής νοημοσύνης.",
+          businessProse: `Προχωράμε από το validated concept σε product-ready λανσάρισμα χωρίς να χαθεί momentum. Ηγούμαι της υλοποίησης, συνεργάζομαι με την ομάδα σου και κρατάω σταθερή πρόοδο μέσω εβδομαδιαίων demos.
 
-### Τι Χτίζουμε
-* Ασφαλή θεμέλια Python/FastAPI ή Django με multi-tenant αρχιτεκτονική και καθαρά APIs.
-* Pipelines συλλογής, ορχήστρωσης και παρακολούθησης δεδομένων για ανάγκες early-scale.
-* Generative ή predictive workflows (RAG, summarisation, recommendations) ενσωματωμένα στην εμπειρία χρήστη.
+### Τι χτίζουμε
+* Ασφαλή Python/FastAPI ή Django θεμέλια με multi-tenant αρχιτεκτονική και καθαρά APIs.
+* Data ingestion, orchestration και monitoring pipelines για early-scale ανάγκες.
+* Generative AI ή predictive workflows (RAG, summarization, recommendations) δεμένα με το UX του προϊόντος.
 
 ### Ρυθμός Παράδοσης
-* Εβδομαδιαία roadmap reviews και demo sessions με founders και stakeholders.
-* Collaborative working sessions με designers, PMs ή fractional ειδικούς.
-* Launch readiness checklist που καλύπτει QA, observability και runbooks.
+* Εβδομαδιαία roadmap reviews και demos με founders και stakeholders.
+* Paired working blocks με designers, PMs ή fractional συνεργάτες.
+* Launch readiness checklist με QA, observability και runbooks.
 
 ### Κόστος
 * €8K–€20K ανάλογα με scope, integrations και σύνθεση ομάδας. Διαθέσιμα phased retainers.`,
           items: [
-            "Ιδανικό για ομάδες founders που χρειάζονται AI SaaS προϊόν στην αγορά γρήγορα.",
-            "Χρονοδιάγραμμα: ανάπτυξη 1–3 μηνών με εβδομαδιαία demos και checkpoints.",
-            "Παραδοτέα: production backend, AI workflows, deployment runbook.",
-            "Επένδυση: €8K–€20K ανάλογα με integrations."
+            "Ιδανικό για founder-led ομάδες που χρειάζονται γρήγορο AI SaaS στην αγορά.",
+            "Χρονοδιάγραμμα: 1–3 μήνες με εβδομαδιαία demos και checkpoints.",
+            "Παραδοτέα: παραγωγικό backend, AI workflows, deployment runbook.",
+            "Επένδυση: €8K–€20K ανάλογα με scope και integrations."
           ],
           caseStudies: [
             {
               company: "NannyML",
-              challenge: "Λανσάρισμα SaaS παρακολούθησης ML μοντέλων με περιορισμένο headcount.",
+              challenge: "Λανσάρισμα monitoring SaaS για production ML μοντέλα με περιορισμένο headcount.",
               solution: [
-                "Ηγήθηκα της Python backend ανάπτυξης και των UI integrations που παρέδωσαν την πρώτη έκδοση έτοιμη για επενδυτές.",
-                "Productionάρισα Kubernetes deployment με Helm και observability ώστε η εσωτερική ομάδα να κλιμακώσει με σιγουριά."
+                "Οδήγησα backend και UI integrations που παρέδωσαν την πρώτη investor-ready έκδοση.",
+                "Productionized Kubernetes deployment με Helm και observability ώστε η εσωτερική ομάδα να κλιμακώσει με σιγουριά."
               ],
               technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
             },
             {
               company: "Orfium",
-              challenge: "Στήσιμο πλατφόρμας διαχείρισης δικαιωμάτων ικανής να χειριστεί υψηλούς όγκους μουσικών δεδομένων.",
+              challenge: "Δημιουργία royalty management πλατφόρμας για υψηλό φόρτο μουσικών δεδομένων.",
               solution: [
-                "Αρχιτεκτόνησα υπηρεσίες Django/Postgres με twelve-factor πρακτικές για κλίμακα και συντήρηση.",
-                "Υλοποίησα workflows αδειοδότησης και reporting που στήριξαν το εμπορικό λανσάρισμα."
+                "Αρχιτεκτόνησα Django/Postgres services με twelve-factor πρακτικές για scalability.",
+                "Υλοποίησα licensing workflows και reporting που στήριξαν το εμπορικό λανσάρισμα."
               ],
               technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
             },
             {
               company: "NeuroPublic S.A.",
-              challenge: "Παράδοση SaaS precision agriculture με σύνθετη αγρονομική λογική σε πιεστικό χρονοδιάγραμμα.",
+              challenge: "Πλατφόρμα precision agriculture με σύνθετη αγρονομική λογική σε επιθετικό χρονοδιάγραμμα.",
               solution: [
-                "Ηγήθηκα υπηρεσιών backend που επεξεργάζονταν αγρονομικά δεδομένα και παρείχαν συστάσεις σε παραγωγούς.",
-                "Συνεργάστηκα με αγρονόμους και product leads ώστε η πλατφόρμα να λανσαριστεί από μηδέν σε χρόνο."
+                "Ηγήθηκα των backend services που επεξεργάζονταν αγρονομικά δεδομένα και παρήγαγαν συστάσεις.",
+                "Συνεργάστηκα με agronomists και product leads για λανσάρισμα από μηδενική βάση."
               ],
               technologies: ["Python", "Backend Development", "Web Applications"]
             }
           ],
-          engagementTitle: "Ξεκίνα το AI MVP build",
-          engagementDescription: "Κλείσε 30' για να ελέγξουμε scope, integrations και launch timeline ώστε να λάβεις πλάνο παράδοσης μέσα σε δύο εργάσιμες.",
-          engagementChecklistTitle: "Έχε έτοιμα:",
+          engagementTitle: "Οργάνωσε το AI MVP build",
+          engagementDescription: "Κλείσε 30 λεπτά για να επιβεβαιώσουμε scope, integrations και launch timeline ώστε να λάβεις delivery plan μέσα σε δύο εργάσιμες.",
+          engagementChecklistTitle: "Να έχεις έτοιμα:",
           engagementChecklist: [
-            "Το launch window ή τα fundraising milestones που στοχεύεις.",
-            "Τα workflows, integrations και KPIs που είναι must-have.",
-            "Σύντομη επισκόπηση του τρέχοντος stack, repos ή design assets."
+            "Το παράθυρο λανσαρίσματος ή τα fundraising milestones.",
+            "Essential workflows, integrations και KPIs.",
+            "Σύνοψη του υπάρχοντος stack, repos ή design assets."
           ],
-          engagementCtaLabel: "Κλείσε MVP scoping call"
+          engagementCtaLabel: "Κλείσε scoping call για το MVP"
         },
         {
+          segmentSlug: "scale-ups",
           title: "AI Feature Add-On",
           slug: "ai-feature-add-on",
-          intro: "Προσθέτω παραγωγικό AI χαρακτηριστικό στο υπάρχον προϊόν σου μέσα σε 2–6 εβδομάδες χωρίς να διαταράσσω τον βασικό ρυθμό.",
-          businessProse: `Όταν έχεις ήδη χρήστες, κάθε νέο χαρακτηριστικό πρέπει να προσγειώνεται ομαλά. Ενσωματώνομαι στην ομάδα σου, θωρακίζω το AI workflow και παραδίδω τεκμηρίωση για απρόσκοπτο hand-off.
+          intro: "Προσθέτουμε ένα AI χαρακτηριστικό που φέρνει έσοδα μέσα σε 2–6 εβδομάδες χωρίς να διαταράξουμε το core delivery.",
+          businessProse: `Όταν έχεις ήδη πελάτες, κάθε νέο feature πρέπει να προσγειωθεί ομαλά. Ενσωματώνομαι στο stack σου, ενισχύω το AI workflow και βεβαιώνομαι ότι η ομάδα μπορεί να το τρέξει μετά το hand-off.
 
 ### Playbook Ενσωμάτωσης
-* Ευθυγράμμιση success metrics ώστε το χαρακτηριστικό να συνδέεται με ενεργοποίηση, διατήρηση ή επέκταση εσόδων.
-* Σχεδιασμός αρχιτεκτονικής που σέβεται το υπάρχον stack, τις απαιτήσεις συμμόρφωσης και τα data contracts.
-* Πλάνο πειραματισμού και rollout guardrails (feature flags, observability, fallback στρατηγικές).
+* Ευθυγράμμιση success metrics με activation, retention ή expansion στόχους.
+* Σχεδιασμός αρχιτεκτονικής που σέβεται το υπάρχον stack, τις ρυθμιστικές ανάγκες και τα data contracts.
+* Πλάνο experiments και rollout guardrails (feature flags, observability, fallback στρατηγικές).
 
 ### Παραδοτέα
-* Έτοιμη για παραγωγή υλοποίηση με καθαρές διεπαφές και τεκμηρίωση.
-* Hooks για monitoring και alerting ώστε η ομάδα σου να μετρά ποιότητα και να παρεμβαίνει γρήγορα.
-* Playbooks για customer success, support και marketing ώστε να επικοινωνηθεί η νέα δυνατότητα.
+* Υλοποίηση παραγωγικού χαρακτηριστικού με καθαρές διεπαφές και documentation.
+* Monitoring και alerting hooks ώστε η ομάδα να μετρά ποιότητα και να επεμβαίνει γρήγορα.
+* Playbooks για customer success, support και marketing.
 
 ### Κόστος
 * €4K–€10K ανάλογα με integrations, προετοιμασία δεδομένων και πολυπλοκότητα rollout.`,
           items: [
-            "Ιδανικό για scale-ups που θέλουν να προσθέσουν AI αξία σε υπάρχον surface.",
-            "Χρονοδιάγραμμα: ενσωμάτωση 2–6 εβδομάδων δίπλα στην in-house ομάδα.",
-            "Παραδοτέα: παραγωγικό χαρακτηριστικό, monitoring plan, go-to-market playbook.",
-            "Επένδυση: €4K–€10K ανάλογα με την πολυπλοκότητα."
+            "Ιδανικό για scale-ups που προσθέτουν AI αξία σε υπάρχον surface.",
+            "Χρονοδιάγραμμα: 2–6 εβδομάδες μαζί με την εσωτερική ομάδα.",
+            "Παραδοτέα: παραγωγικό feature, monitoring plan, go-to-market playbook.",
+            "Επένδυση: €4K–€10K ανάλογα με πολυπλοκότητα."
           ],
           caseStudies: [
             {
               company: "Workable",
-              challenge: "Εισαγωγή generative AI σε hiring workflows χωρίς να θιγεί η αξιοπιστία ή η συμμόρφωση.",
+              challenge: "Εισαγωγή generative AI σε hiring workflows χωρίς να επηρεαστεί η αξιοπιστία ή η συμμόρφωση.",
               solution: [
-                "Μετέτρεψα PoCs σε θωρακισμένες microservices που τροφοδότησαν νέα recruiter-facing experiences.",
-                "Καθιέρωσα MLOps πρακτικές (monitoring, testing, rollout) ώστε η εσωτερική ML ομάδα να επαναλαμβάνει με ασφάλεια."
+                "Μεταφέραμε PoCs σε hardened microservices που τροφοδότησαν νέες εμπειρίες recruiters.",
+                "Θεσμοθετήσαμε MLOps πρακτικές (monitoring, testing, rollout) ώστε η εσωτερική ομάδα να επαναλαμβάνει με ασφάλεια."
               ],
               technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
             },
             {
               company: "ENCODE (Cybersecurity)",
-              challenge: "Παράδοση near real-time analytics μέσω performance-critical API για enterprise πελάτες.",
+              challenge: "Παράδοση near real-time threat analytics μέσω high-performance API για enterprise πελάτες.",
               solution: [
-                "Ανάπτυξα υπηρεσίες analytics που συνδύασαν Spark pipelines με βελτιστοποιημένο Flask API.",
-                "Εφάρμοσα caching και instrumentation ώστε η καθυστέρηση να μείνει χαμηλά ενώ παρουσιάζονταν νέες πληροφορίες."
+                "Υλοποιήσαμε analytics services που συνδύασαν Spark pipelines με βελτιστοποιημένο Flask API.",
+                "Ενσωματώσαμε caching και instrumentation ώστε η καθυστέρηση να μείνει χαμηλή."
               ],
               technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
             },
             {
               company: "Brain Metrics Initiative",
-              challenge: "Ενίσχυση εργαλείων ανθεκτικότητας κατά τη διάρκεια ενεργού DDoS επίθεσης διατηρώντας dashboards online.",
+              challenge: "Σκλήρυνση resilience tooling κατά τη διάρκεια DDoS surge ενώ τα dashboards έπρεπε να μείνουν online.",
               solution: [
-                "Παρέδωσα Cloudflare automations και operational runbooks που εξουδετέρωσαν το μοτίβο επίθεσης.",
-                "Κατέγραψα learning σε resilience roadmap με scoped AI-driven βελτιώσεις ανίχνευσης."
+                "Παραδώσαμε Cloudflare automations και operational runbooks που εξουδετέρωσαν την επίθεση.",
+                "Καταγράψαμε τα μαθήματα σε resilience roadmap με scoped AI-driven detection."
               ],
               technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
             }
           ],
           engagementTitle: "Λανσάρισε το AI feature σου",
-          engagementDescription: "Κλείσε 30' για να χαρτογραφήσουμε στόχους, εξαρτήσεις και rollout ώστε να λάβεις προσαρμοσμένο implementation plan μέσα σε 48 ώρες.",
+          engagementDescription: "Κλείσε 30 λεπτά για να χαρτογραφήσουμε rollout, εξαρτήσεις και guardrails ώστε να λάβεις σχέδιο υλοποίησης μέσα σε 48 ώρες.",
           engagementChecklistTitle: "Πριν τη συνάντηση:",
           engagementChecklist: [
-            "Το KPI ή metric που πρέπει να βελτιώσει το feature.",
-            "Τα repos, APIs ή schemas με τα οποία θα ενσωματωθούμε.",
-            "Περιορισμοί rollout, compliance ή commitments προς πελάτες."
+            "Το KPI που πρέπει να μετακινηθεί.",
+            "Repositories, APIs ή schemas για integration.",
+            "Rollout, συμμόρφωση ή commitments που πρέπει να προστατεύσουμε."
           ],
           engagementCtaLabel: "Κλείσε feature planning call"
         },
         {
-          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
-          slug: "grant-funded-sprint",
-          intro: "Πακετάρουμε το crypto, AI και automation roadmap σε πλάνο που περνά grant αξιολογήσεις μέσα σε 2–4 εβδομάδες, συνδέοντας κριτήρια, milestones και παράδοση.",
-          businessProse: `Οι φορείς χρηματοδότησης και τα οικοσυστήματα απαιτούν σαφή αφήγηση επίδρασης, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Το sprint ευθυγραμμίζει τη στρατηγική χρηματοδότησης crypto, AI ή deep-tech με πρακτικό τεχνικό πλάνο ώστε οι αξιολογητές να δουν αξιόπιστη πορεία από το award έως την υλοποίηση.
+          segmentSlug: "scale-ups",
+          title: "SaaS Modernization & Observability Runway",
+          slug: "scaleup-modernization",
+          intro: "Σταθεροποιούμε την πλατφόρμα ενώ συνεχίζεις να ship-άρεις — αντιμετωπίζουμε αρχιτεκτονικό χρέος, observability και delivery bottlenecks σε 4–12 εβδομάδες.",
+          businessProse: `Η ανάπτυξη αναδεικνύει κάθε shortcut. Το engagement αυτό συνδυάζει modernization spikes με συνεχή παράδοση ώστε απόδοση, συμμόρφωση και developer experience να βελτιωθούν ταυτόχρονα.
 
-Τα παραδείγματα που ακολουθούν είναι σύνθετα σενάρια από επαναλαμβανόμενη grant υποστήριξη ώστε να δεις τα συνήθη deliverables χωρίς να αποκαλύπτονται εμπιστευτικά στοιχεία πελατών.
+### Τι δουλεύουμε
+* Audit αρχιτεκτονικής και data contracts για να εντοπίσουμε χρέος που μπλοκάρει ταχύτητα.
+* Αναβαθμίσεις observability, incident response και release engineering για εμπιστοσύνη πελατών.
+* Paired enablement ώστε οι in-house engineers να υιοθετήσουν τις νέες πρακτικές ενώ ship-άρουμε.
 
-### Πότε ταιριάζει
-* Ετοιμάζεις grant ή accelerator πρόταση και χρειάζεσαι ισχυρό execution plan.
-* Έχεις εξασφαλίσει υπό όρους χρηματοδότηση και πρέπει να δείξεις τεχνικό roadmap πριν την εκταμίευση.
-* Πρέπει να φέρεις σε ισορροπία όραμα founder, υποχρεώσεις συνεργατών και κανονιστικές απαιτήσεις άμεσα.
-
-### Τι παραδίδουμε
-* Roadmap ανά milestone με τεχνικές, data και hiring επιπτώσεις για κάθε φάση.
-* Λίστα συμμόρφωσης και διακυβέρνησης για ασφάλεια, ιδιωτικότητα και reporting.
-* Prototype ή architectural spike που αποδεικνύει εφικτότητα σε αξιολογητές και συνεργάτες.
-
-### Extras για χρηματοδότηση
-* Υποστήριξη σε budgeting ranges και επιλογή vendors συνδεδεμένη με το πλάνο υλοποίησης.
-* Υλικό προετοιμασίας για committee reviews, συμπεριλαμβανομένων exec summaries και demo scripts.
-* Προαιρετικό hand-off σε MVP ή feature delivery μόλις εγκριθεί το grant.
-
-### Κόστος
-* €3K–€6K ανάλογα με την πολυπλοκότητα του προγράμματος, τους stakeholders και τα απαιτούμενα prototypes.`,
+### Κόστος & ρυθμός
+* Phased retainers €6K–€18K ανάλογα με scope, μέγεθος ομάδας και κρίσιμα συστήματα.`,
           items: [
-            "Ιδανικό για founders που κυνηγούν EU, civic ή crypto grants και χρειάζονται αποδεικτικό εκτελεσιμότητας.",
-            "Χρονοδιάγραμμα: 2–4 εβδομάδες με συνδυασμό roadmap design, compliance prep και γρήγορων prototypes.",
-            "Παραδοτέα: milestone plan, governance checklist, summary pack έτοιμο για αξιολογητές.",
-            "Επένδυση: €3K–€6K ανάλογα με το grant και το βάθος του prototype."
+            "Ιδανικό για scale-ups που ισορροπούν νέα features με platform debt.",
+            "Χρονοδιάγραμμα: 4–12 εβδομάδες με embedded τεχνική ηγεσία και εβδομαδιαία demos.",
+            "Παραδοτέα: modernization backlog, instrumented πλατφόρμα, enablement υλικό.",
+            "Επένδυση: €6K–€18K ανάλογα με integrations και ρυθμιστικές απαιτήσεις."
           ],
           caseStudies: [
             {
-              company: "Σύνθετος EU CivicTech Founder",
-              challenge: "Προετοιμασία αίτησης NGI Zero Commons για εργαλείο analytics με αυστηρά κριτήρια προστασίας δεδομένων.",
+              company: "Workable",
+              challenge: "Κλιμάκωση recruiter-facing AI services βελτιώνοντας ταυτόχρονα observability και release cadence.",
               solution: [
-                "Συνδιαμόρφωσα το proposal narrative, τα work packages και το milestone budget ώστε να ευθυγραμμίζονται με τα NGI evaluation rubrics.",
-                "Συγκέντρωσα τεκμήρια συμμόρφωσης (πίνακα data residency, DPIA outline, responsible AI δεσμεύσεις) μαζί με ελαφρύ demo prototype."
+                "Τροποποιήσαμε service boundaries και pipelines ώστε να υποστηρίζουν εβδομαδιαίες AI εκδόσεις.",
+                "Ενσωματώσαμε alerting και SLO reporting ώστε product και ops να εμπιστεύονται τον ρυθμό."
               ],
-              technologies: ["Σχεδιασμός Προτάσεων Grant", "Data Governance", "Privacy Engineering"]
+              technologies: ["Python", "Kubernetes", "Helm", "Grafana", "Prometheus"]
             },
-        {
-          company: "Σύνθετο Web3 Collective",
-          challenge: "Υποβολή σε grant οικοσυστήματος blockchain για να επικυρωθεί AI tooling για DAO contributors.",
-          solution: [
-            "Χαρτογράφησα κριτήρια επιλεξιμότητας, scoring rubrics και milestone expectations από κορυφαία προγράμματα ώστε η υποβολή να είναι compliant.",
-            "Συσκεύασα proposal narrative, τεχνικό explainer, UX mockups και community rollout plan για να αναδειχθεί το market readiness και η governance ευθυγράμμιση."
-          ],
-          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
-        },
             {
-              company: "Σύνθετο Resilience Lab",
-              challenge: "Υποβολή σε EU cascade funding για ανθεκτικότητα κρίσιμων υποδομών με παράλληλη κάλυψη ρυθμιστικών απαιτήσεων.",
+              company: "Brain Metrics Initiative",
+              challenge: "Αναδόμηση resilience tooling με υψηλό traffic χωρίς downtime.",
               solution: [
-                "Μετέφρασα incident-response learnings σε phased roadmap με μετρήσιμα MTTR targets και governance milestones.",
-                "Ανάπτυξα supporting artifacts (risk register, stakeholder map, compliance tracker) που ζητούσε η προκήρυξη."
+                "Εισαγάγαμε αυτοματοποιημένες διαδικασίες mitigation και ενισχύσαμε πολιτικές στο network edge.",
+                "Δημιουργήσαμε incident playbooks και metrics που μείωσαν MTTR."
               ],
-              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+              technologies: ["Cloudflare", "Incident Response", "Observability"]
+            },
+            {
+              company: "Orfium",
+              challenge: "Διατήρηση απόδοσης σε ταχέως αναπτυσσόμενη music-tech πλατφόρμα με νέους καταλόγους.",
+              solution: [
+                "Βελτιστοποιήσαμε asynchronous processing και database tuning για υψηλότερο ingestion volume.",
+                "Εφαρμόσαμε rituals change-management και dashboards για product, legal και finance."
+              ],
+              technologies: ["PostgreSQL", "Redis", "Django", "CI/CD Automation"]
             }
           ],
-          engagementTitle: "Προετοίμασε το grant-backed sprint σου",
-          engagementDescription: "Κλείσε 30' working session για να ευθυγραμμίσουμε στόχους grant, περιορισμούς προγράμματος και deadlines ώστε να κάνουμε scope μέσα σε 48 ώρες.",
-          engagementChecklistTitle: "Φέρε στο call:",
+          engagementTitle: "Οργάνωσε το modernization runway",
+          engagementDescription: "Κλείσε 30 λεπτά εργασίας για να ιεραρχήσουμε modernization wins και το μείγμα υποστήριξης που χρειάζεσαι.",
+          engagementChecklistTitle: "Συζητάμε:",
           engagementChecklist: [
-            "Την προκήρυξη του grant ή το accelerator outline με βασικά deadlines.",
-            "Οποιαδήποτε draft sections, budget assumptions ή feedback αξιολογητών.",
-            "Λίστα stakeholders και απαιτήσεις συμμόρφωσης που πρέπει να καλύψουμε."
+            "Τα βασικά failure modes ή incidents που θες να εξαφανίσεις.",
+            "Κρίσιμες υπηρεσίες, data flows ή commitments που πιέζονται.",
+            "Διαθεσιμότητα, δεξιότητες και περιορισμοί rollout της ομάδας."
           ],
-          engagementCtaLabel: "Κλείσε funding sprint call"
+          engagementCtaLabel: "Κλείσε modernization review"
+        },
+        {
+          segmentSlug: "enterprises",
+          title: "Enterprise Analytics & Resilience Accelerator",
+          slug: "enterprise-analytics",
+          intro: "Παραδίδουμε ασφαλή, υψηλού όγκου analytics ή forecasting χωρίς να θυσιάζουμε συμμόρφωση ή uptime.",
+          businessProse: `Οι μεγάλες οργανώσεις θέλουν διαβεβαίωση ότι τα AI & analytics initiatives θα είναι governed, observable και βιώσιμα. Αυτό το accelerator συνδυάζει εκτέλεση αρχιτεκτονικής με risk management ώστε τα stakeholders να αποκτήσουν γρήγορα εμπιστοσύνη.
+
+### Επικεντρωνόμαστε
+* Real-time ή near real-time analytics pipelines με ξεκάθαρη ιδιοκτησία και guardrails.
+* Forecasting και decision-support εργαλεία για operations, logistics ή οικονομικές ομάδες.
+* Governance assets — threat models, data maps και policy hooks — που ικανοποιούν security και compliance.
+
+### Κόστος
+* €5K–€15K ανάλογα με όγκους δεδομένων, integrations και ρυθμιστικές απαιτήσεις.`,
+          items: [
+            "Ιδανικό για enterprise ομάδες που αναβαθμίζουν analytics χωρίς να διακινδυνεύουν την αξιοπιστία.",
+            "Χρονοδιάγραμμα: 3–10 εβδομάδες με workshops διακυβέρνησης και enablement.",
+            "Παραδοτέα: παραγωγικό pipeline, governance pack, operational runbooks.",
+            "Επένδυση: €5K–€15K ανάλογα με integrations και reporting υποχρεώσεις."
+          ],
+          caseStudies: [
+            {
+              company: "ENCODE (Cybersecurity)",
+              challenge: "Παράδοση near real-time threat analytics μέσω performance-critical API σε enterprise πελάτες.",
+              solution: [
+                "Υλοποιήσαμε analytics services που συνδύασαν Spark pipelines με optimized APIs και caching.",
+                "Παραδώσαμε governance playbooks ώστε SOC και compliance να εμπιστευτούν τα δεδομένα."
+              ],
+              technologies: ["Spark", "Kafka", "Flask", "Redis", "ElasticSearch"]
+            },
+            {
+              company: "Composite Mobility Operator",
+              challenge: "Forecast ζήτησης σε επίπεδο γειτονιάς για καλύτερο fleet allocation με σεβασμό σε data residency.",
+              solution: [
+                "Στήσαμε PySpark forecasting pipeline με MLflow tracking για εκατοντάδες μικρο-αγορές.",
+                "Πακετάραμε dashboards σεναρίων και οδηγίες rollout για το operations leadership."
+              ],
+              technologies: ["PySpark", "Prophet", "MLflow", "AWS S3"]
+            },
+            {
+              company: "Composite CivicTech Consortium",
+              challenge: "Απόδειξη resilience και data governance για πολυ-εταιρική analytics πλατφόρμα πριν την εκταμίευση.",
+              solution: [
+                "Συντάξαμε αρχιτεκτονικά και συμμορφωτικά dossiers χαρτογραφημένα στις απαιτήσεις ρυθμιστών.",
+                "Παραδώσαμε λειτουργικό prototype με observability, access controls και audit trails."
+              ],
+              technologies: ["Data Governance", "Security Architecture", "FastAPI", "Terraform"]
+            }
+          ],
+          engagementTitle: "Κλείσε enterprise readiness review",
+          engagementDescription: "Επιβεβαιώνουμε scope, data sensitivities και στόχους stakeholders ώστε να λάβεις governance-aware delivery plan σε δύο εργάσιμες.",
+          engagementChecklistTitle: "Έχε διαθέσιμα:",
+          engagementChecklist: [
+            "Κύριες ρυθμιστικές ή πελατειακές υποχρεώσεις που πρέπει να τηρήσουμε.",
+            "Data sources, integrations ή vendors που είναι ήδη στο scope.",
+            "Stakeholders που πρέπει να εγκρίνουν το σχέδιο παράδοσης."
+          ],
+          engagementCtaLabel: "Κλείσε readiness review"
+        },
+        {
+          segmentSlug: "enterprises",
+          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
+          slug: "grant-funded-sprint",
+          intro: "Πακετάρουμε crypto, AI και automation roadmap σε fundable plan 2–4 εβδομάδων με ευθυγράμμιση κριτηρίων, milestones και delivery confidence.",
+          businessProse: `Οι οργανισμοί χρηματοδότησης θέλουν ακριβή αφήγηση αντίκτυπου, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Αυτό το sprint παντρεύει grant στρατηγική με τεχνικό πλάνο ώστε οι αξιολογητές να δουν βιώσιμο δρόμο από το award μέχρι το impact.
+
+Οι περιπτώσεις παρακάτω είναι σύνθεση επαναλαμβανόμενων engagements ώστε να φανούν τα παραδοτέα χωρίς να αποκαλυφθούν ευαίσθητα στοιχεία.
+
+### Πότε Ταιριάζει
+* Προετοιμάζεις grant ή accelerator proposal και χρειάζεσαι πιο ισχυρό execution plan.
+* Έχεις conditional funds και πρέπει να παρουσιάσεις τεχνικό roadmap πριν την εκταμίευση.
+* Πρέπει να ευθυγραμμίσεις όραμα founders, υποχρεώσεις συνεργατών και απαιτήσεις συμμόρφωσης άμεσα.
+
+### Τι Πακετάρουμε
+* Roadmap ανά milestone με μηχανική, data και hiring επιπτώσεις.
+* Checklist συμμόρφωσης και governance για ασφάλεια, ιδιωτικότητα και reporting.
+* Prototype ή architectural spike που αποδεικνύει βιωσιμότητα σε evaluators και partners.
+
+### Bonus για Χρηματοδότηση
+* Υποστήριξη σε budgeting ranges και vendor επιλογές.
+* Προετοιμασία υλικού για επιτροπές — executive summaries και demo scripts.
+* Προαιρετικό hand-off σε MVP ή feature delivery μετά την έγκριση.
+
+### Κόστος
+* €3K–€6K ανάλογα με πολυπλοκότητα προγράμματος, stakeholders και απαιτούμενα prototypes.`,
+          items: [
+            "Ιδανικό για founders ή οργανισμούς που διεκδικούν EU, civic ή crypto grants και χρειάζονται απόδειξη υλοποίησης.",
+            "Χρονοδιάγραμμα: 2–4 εβδομάδες με roadmap design, compliance prep και γρήγορα prototypes.",
+            "Παραδοτέα: milestone plan, governance checklist, reviewer-ready summary pack.",
+            "Επένδυση: €3K–€6K ανάλογα με πολυπλοκότητα και βάθος prototype."
+          ],
+          caseStudies: [
+            {
+              company: "Composite EU CivicTech Founder",
+              challenge: "Προετοιμασία NGI Zero Commons proposal για privacy-preserving analytics με αυστηρή data sovereignty.",
+              solution: [
+                "Συν-γράψαμε narrative, work packages και milestone budget βάσει των NGI rubrics.",
+                "Παραδώσαμε compliance evidence (data residency matrix, DPIA outline, responsible AI commitments) μαζί με prototype demo."
+              ],
+              technologies: ["Grant Proposal Design", "Data Governance", "Privacy Engineering"]
+            },
+            {
+              company: "Composite Web3 Collective",
+              challenge: "Διεκδίκηση blockchain grant για AI tooling σε DAO.",
+              solution: [
+                "Χαρτογραφήσαμε eligibility κριτήρια, rubrics και expectations διαφόρων foundations για compliant submission.",
+                "Πακετάραμε narrative, technical explainer, UX mockups και community rollout plan."
+              ],
+              technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
+            },
+            {
+              company: "Composite Resilience Lab",
+              challenge: "Διεκδίκηση EU cascade χρηματοδότησης για critical infrastructure resilience με αυστηρή ρύθμιση.",
+              solution: [
+                "Μεταφράσαμε εμπειρία incident response σε phased roadmap με μετρήσιμους MTTR στόχους.",
+                "Αναπτύξαμε artifacts (risk register, stakeholder map, compliance tracker) για το submission."
+              ],
+              technologies: ["Incident Response", "Governance Tooling", "Programme Design"]
+            }
+          ],
+          engagementTitle: "Κλείσε funding sprint call",
+          engagementDescription: "Κλείσε 30 λεπτά για να ευθυγραμμίσουμε απαιτήσεις grant, stakeholders και τεχνικά αποδεικτικά ώστε να κλειδώσουμε agenda εντός 48 ωρών.",
+          engagementChecklistTitle: "Έχε μαζί σου:",
+          engagementChecklist: [
+            "Προκήρυξη, scoring rubric και deadlines.",
+            "Υπάρχουσα έρευνα, prototypes ή compliance docs.",
+            "Λίστα stakeholders και περιορισμούς διακυβέρνησης."
+          ],
+          engagementCtaLabel: "Κλείσε grant readiness review"
         }
       ],
+      backToServices: "Επιστροφή στις Υπηρεσίες",
+      ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
+      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε στόχους, χρονοδιάγραμμα και περιορισμούς. Θα φύγεις με προτεινόμενο tier και συγκεκριμένο πλάνο επόμενων ενεργειών.",
+      ctaButton: "Κλείσε discovery call",
     },
     portfolio: {
       title: "Portfolio",

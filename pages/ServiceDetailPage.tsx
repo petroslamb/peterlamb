@@ -58,7 +58,7 @@ const ServiceDetailPage: React.FC = () => {
     const { services, actions } = translations;
     const [proseHtml, setProseHtml] = useState('');
 
-    const serviceData = services.categories.find(c => c.slug === slug);
+    const serviceData = services.programs.find(c => c.slug === slug);
 
     useEffect(() => {
         if (serviceData?.businessProse && window.marked && window.DOMPurify) {
