@@ -98,10 +98,6 @@ const Analytics: React.FC = () => {
       return;
     }
 
-    if (typeof window.umami?.trackView !== 'function') {
-      return;
-    }
-
     const hash = window.location.hash;
     const derivedPath = (() => {
       if (hash && hash.startsWith('#')) {
@@ -120,7 +116,27 @@ const Analytics: React.FC = () => {
       return;
     }
 
-    window.umami.trackView(derivedPath);
+    if (typeof window.umami?.trackView === 'function') {
+      window.umami.trackView(derivedPath, document.referrer, document.title);
+    } else if (typeof window.umami?.track === 'function') {
+      window.umami.track('pageview', {
+        url: derivedPath,
+        referrer: document.referrer,
+        title: document.title,
+      });
+    } else {
+      window.__umamiEventQueue = window.__umamiEventQueue ?? [];
+      window.__umamiEventQueue.push({
+        event: 'pageview',
+        payload: {
+          url: derivedPath,
+          referrer: document.referrer,
+          title: document.title,
+        },
+      });
+      return;
+    }
+
     lastTrackedPath.current = derivedPath;
   }, [isEnabled, isReady, location.pathname, location.search, location.hash, analyticsConfig]);
 
