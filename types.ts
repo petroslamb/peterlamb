@@ -46,15 +46,19 @@ export interface Content {
     analytics: string;
   };
   home: {
-    name: string;
-    title: string;
-    subtitle: string;
-    specialties: string;
-    cta: string;
+    heroHeadline: string;
+    heroSubheadline: string;
+    heroContext: string;
+    heroProof: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    ctaSecondaryHref: string;
     segmentsTitle: string;
     segmentsSubtitle: string;
     segments: HomeSegmentCard[];
-    credibility: string;
+    caseSnippetsTitle: string;
+    caseSnippetsSubtitle: string;
+    caseSnippets: HomeCaseSnippet[];
   };
   about: {
     title: string;
@@ -196,6 +200,16 @@ export interface HomeSegmentCard {
   tagline: string;
   description: string;
   bullets: string[];
+  ctaLabel: string;
+}
+
+export interface HomeCaseSnippet {
+  title: string;
+  stage: string;
+  context: string;
+  action: string;
+  result: string;
+  href: string;
   ctaLabel: string;
 }
 

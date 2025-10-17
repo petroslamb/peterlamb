@@ -13,52 +13,84 @@ export const content: Record<'en' | 'gr', Content> = {
       analytics: "Analytics",
     },
     home: {
-      name: "Petros Lambropoulos",
-      title: "I help startups launch SaaS products in weeks.",
-      subtitle: "Discovery, build, and delivery of production-ready features so you can ship faster and win the market.",
-      specialties: "Rapid discovery sprints, investor-ready SaaS builds, and resilient cloud infrastructure.",
-      cta: "Schedule a discovery call",
+      heroHeadline: "From idea to investor-ready SaaS—without burning out your team.",
+      heroSubheadline: "Python, React, and AI delivery trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience missions like Brain Metrics Initiative.",
+      heroContext: "You’re juggling runway, tech debt, and compliance requests while investors still want visible momentum.",
+      heroProof: "I join as a hands-on lead engineer who builds, modernizes, and pairs with your team so every sprint ends with production outcomes.",
+      ctaPrimary: "Book a 20-minute audit",
+      ctaSecondary: "Explore services",
+      ctaSecondaryHref: "/services",
       segmentsTitle: "Who I partner with",
-      segmentsSubtitle: "Pick the path that matches your current stage—each program blends strategy, architecture, and hands-on delivery so you stay in motion.",
+      segmentsSubtitle: "Pick the path that sounds like your current pressure—each engagement blends discovery, build, pairing, and handoff so you keep moving.",
       segments: [
         {
-          title: "Startups Launch Partner",
+          title: "Founder-Led Startups",
           slug: "startups",
           tagline: "Validate, ship, and raise faster",
-          description: "Go from idea to investor-ready SaaS with lean teams, tight budgets, and immovable launch dates.",
+          description: "Go from idea to investor-ready SaaS with lean crews, tight runway, and investor updates breathing down your neck.",
           bullets: [
-            "Rapid AI discovery sprints that de-risk data, compliance, and user value.",
-            "Investor-ready MVP builds across Python backends, React frontends, and cloud ops.",
-            "Launch playbooks, observability, and hand-off so you keep momentum post-release."
+            "Discovery sprints that surface the sharpest bet and the risks leaders care about.",
+            "MVP builds across Python, React, and data foundations ready for investor demos.",
+            "Launch kits with observability, runbooks, and fundraising-friendly artefacts."
           ],
-          ctaLabel: "View startup programs",
+          ctaLabel: "See startup path",
         },
         {
           title: "Scale-Up Acceleration",
           slug: "scale-ups",
           tagline: "Ship confident, compound growth",
-          description: "Add AI capabilities and modernize delivery without derailing your roadmap or overloading engineering leadership.",
+          description: "Add AI features and modernize delivery without overwhelming engineering leadership or slowing the roadmap.",
           bullets: [
-            "Production-ready AI feature integrations aligned to activation and retention targets.",
-            "Platform modernization for multi-tenant SaaS: data contracts, billing, observability.",
-            "Enablement, runbooks, and paired delivery so your team owns outcomes sustainably."
+            "Production-ready AI feature delivery tied to activation and retention metrics.",
+            "Platform modernization for multi-tenant SaaS with billing, data contracts, and observability.",
+            "Paired delivery and enablement so your team owns the outcomes after launch."
           ],
-          ctaLabel: "View scale-up programs",
+          ctaLabel: "See scale-up path",
         },
         {
           title: "Enterprise Transformation",
           slug: "enterprises",
           tagline: "Operationalize AI & analytics safely",
-          description: "Blend compliance, data governance, and resilient delivery for regulated, global, or grant-funded teams.",
+          description: "Blend compliance, governance, and resilient delivery for regulated, global, or grant-funded teams.",
           bullets: [
-            "AI and analytics platform hardening with threat-aware architecture.",
-            "Forecasting and data engineering accelerators for operations, mobility, and logistics.",
-            "Grant and consortium execution with governance-ready roadmaps and reviewer packs."
+            "Threat-aware architecture and AI platform hardening your auditors can sign off.",
+            "Forecasting and analytics programs that respect data residency and privacy guardrails.",
+            "Governance packs, reviewer decks, and enablement so partners trust the rollout."
           ],
-          ctaLabel: "View enterprise programs",
+          ctaLabel: "See enterprise path",
         },
       ],
-      credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
+      caseSnippetsTitle: "Recent outcomes in weeks, not quarters",
+      caseSnippetsSubtitle: "A quick look at how engagements land—context, action, and the measurable result.",
+      caseSnippets: [
+        {
+          title: "Workable shipped AI hiring copilots in a quarter",
+          stage: "Scale-up",
+          context: "Hiring platform needed generative AI features without derailing core delivery.",
+          action: "Led a 2-week discovery sprint, mapped data constraints, and paired on Python services plus evaluation loops.",
+          result: "Executive greenlight and production launch the following quarter with adoption across hiring teams.",
+          href: "/services/segments/scale-ups",
+          ctaLabel: "See scale-up support"
+        },
+        {
+          title: "NannyML cut onboarding time by 50%",
+          stage: "Seed stage",
+          context: "ML monitoring startup needed production-grade services while closing first enterprise deals.",
+          action: "Built containerised Python services on AWS EKS, implemented CI/CD, and paired on delivery cadence.",
+          result: "Halved customer onboarding time and unlocked the team’s first enterprise contracts.",
+          href: "/services/segments/startups",
+          ctaLabel: "Explore startup support"
+        },
+        {
+          title: "Encode S.A. unlocked same-day threat detection",
+          stage: "Enterprise",
+          context: "Security analysts required reliable analytics on 100K-user datasets without manual drudge work.",
+          action: "Architected PySpark + Elasticsearch pipelines with observability and runbooks for the ops team.",
+          result: "10x throughput increase and investigations completed within a business day.",
+          href: "/services/segments/enterprises",
+          ctaLabel: "Review enterprise support"
+        }
+      ],
     },
     about: {
       title: "About Me",
@@ -920,52 +952,84 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       analytics: "Μετρήσεις",
     },
     home: {
-      name: "Πέτρος Λαμπρόπουλος",
-      title: "Βοηθάω startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες.",
-      subtitle: "Discovery, υλοποίηση και παράδοση λειτουργιών έτοιμων για παραγωγή ώστε να κυκλοφορείτε πιο γρήγορα και να κερδίζετε την αγορά.",
-      specialties: "Γρήγορα discovery sprints, SaaS builds έτοιμα για επενδυτές και ανθεκτική cloud υποδομή.",
-      cta: "Κλείσε ένα discovery call",
+      heroHeadline: "Από ιδέα σε SaaS έτοιμο για επενδυτές—χωρίς να εξαντλήσεις την ομάδα.",
+      heroSubheadline: "Παραδόσεις σε Python, React και AI με εμπιστοσύνη από Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
+      heroContext: "Τρέχεις roadmap με πίεση στο runway, τεχνικό χρέος και απαιτήσεις συμμόρφωσης, ενώ οι επενδυτές ζητούν ορατή πρόοδο.",
+      heroProof: "Μπαίνω ως hands-on lead engineer που χτίζει, εκσυγχρονίζει και συν-υλοποιεί ώστε κάθε sprint να κλείνει με παραγωγικά αποτελέσματα.",
+      ctaPrimary: "Κλείσε 20' audit",
+      ctaSecondary: "Δες τις υπηρεσίες",
+      ctaSecondaryHref: "/services",
       segmentsTitle: "Με ποιους συνεργάζομαι",
-      segmentsSubtitle: "Επίλεξε το segment που σε περιγράφει — κάθε πρόγραμμα συνδυάζει στρατηγική, αρχιτεκτονική και hands-on delivery ώστε να μένεις σε τροχιά.",
+      segmentsSubtitle: "Διάλεξε το μονοπάτι που μοιάζει με την πίεση που ζεις — κάθε συνεργασία συνδυάζει discovery, build, pairing και handoff για να μένεις σε τροχιά.",
       segments: [
         {
-          title: "Συνεργάτης Εκκίνησης Startups",
+          title: "Founder-led Startups",
           slug: "startups",
           tagline: "Validate, ship και κάνε raise πιο γρήγορα",
-          description: "Μετατρέπουμε ιδέες σε SaaS έτοιμο για επενδυτές με μικρές ομάδες και ασφυκτικά deadlines.",
+          description: "Μετατρέπεις ιδέα σε SaaS με μικρή ομάδα, στενό runway και investors που περιμένουν updates.",
           bullets: [
-            "Discovery sprints για AI που μειώνουν ρίσκο δεδομένων και συμμόρφωσης.",
-            "MVP builds με Python backends, React εμπειρίες και cloud υποδομή παραγωγής.",
-            "Launch playbooks, observability και hand-off ώστε να συνεχίσεις χωρίς καθυστερήσεις."
+            "Discovery sprints που αναδεικνύουν το bet και τα ρίσκα που καίνε τους decision makers.",
+            "MVP builds σε Python, React και data θεμέλια έτοιμα για demos σε επενδυτές.",
+            "Launch kits με observability, runbooks και υλικό που υποστηρίζει fundraising updates."
           ],
-          ctaLabel: "Δες τα startup programs",
+          ctaLabel: "Δες το startup path",
         },
         {
           title: "Scale-Up Acceleration",
           slug: "scale-ups",
           tagline: "Ship με σιγουριά και χτίσε compound growth",
-          description: "Προσθέτουμε AI δυνατότητες και εκσυγχρονίζουμε την πλατφόρμα χωρίς να εκτροχιάσουμε το roadmap ή να υπερφορτώσουμε την ηγεσία.",
+          description: "Προσθέτεις AI και εκσυγχρονίζεις το delivery χωρίς να υπερφορτώσεις το engineering leadership ή να φρενάρεις το roadmap.",
           bullets: [
-            "Ενσωμάτωση AI features με στόχο activation και retention.",
-            "Εκσυγχρονισμός multi-tenant SaaS: data contracts, billing, observability.",
-            "Enablement και runbooks ώστε η ομάδα σου να διατηρεί τα αποτελέσματα."
+            "Παραδίδουμε AI features με μετρήσιμο impact σε activation και retention.",
+            "Εκσυγχρονίζουμε multi-tenant SaaS με data contracts, billing και observability.",
+            "Παράλληλη υλοποίηση και enablement ώστε η ομάδα σου να κρατήσει το αποτέλεσμα."
           ],
-          ctaLabel: "Δες τα scale-up programs",
+          ctaLabel: "Δες το scale-up path",
         },
         {
           title: "Enterprise Transformation",
           slug: "enterprises",
           tagline: "Λειτουργικοποίησε AI & analytics με ασφάλεια",
-          description: "Συνδυάζουμε συμμόρφωση, data governance και ανθεκτική παράδοση για ρυθμιζόμενες ή grant-funded ομάδες.",
+          description: "Συνδυάζεις συμμόρφωση, governance και ανθεκτική παράδοση για ρυθμιζόμενες ή grant-funded ομάδες.",
           bullets: [
-            "Σκλήρυνση AI & analytics πλατφορμών με threat-aware αρχιτεκτονική.",
-            "Accelerators για forecasting και data engineering σε operations και logistics.",
-            "Grant και consortium execution με roadmaps συμμόρφωσης και reviewer packs."
+            "Threat-aware αρχιτεκτονική και AI hardening που εγκρίνουν auditors.",
+            "Forecasting και analytics με σεβασμό σε data residency και privacy.",
+            "Governance packs, reviewer decks και enablement ώστε οι εταίροι να εμπιστεύονται το rollout."
           ],
-          ctaLabel: "Δες τα enterprise programs",
+          ctaLabel: "Δες το enterprise path",
         },
       ],
-      credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
+      caseSnippetsTitle: "Πρόσφατα αποτελέσματα σε εβδομάδες, όχι μήνες",
+      caseSnippetsSubtitle: "Mini ιστορίες με context, action και result για να δεις πώς κλείνουν οι συνεργασίες.",
+      caseSnippets: [
+        {
+          title: "Workable: AI hiring copilots σε ένα τρίμηνο",
+          stage: "Scale-up",
+          context: "Η πλατφόρμα πρόσληψης ήθελε generative AI features χωρίς να εκτροχιάσει το roadmap.",
+          action: "Τρέξαμε 2-εβδομαδιαίο discovery, χαρτογραφήσαμε constraints και συν-υλοποιήσαμε Python services και evaluation loops.",
+          result: "Executive go-ahead και παραγωγικό launch στο επόμενο τρίμηνο με υιοθέτηση από τις ομάδες hiring.",
+          href: "/services/segments/scale-ups",
+          ctaLabel: "Δες το scale-up support"
+        },
+        {
+          title: "NannyML: -50% στον χρόνο onboarding",
+          stage: "Seed stage",
+          context: "Η ομάδα ML monitoring χρειαζόταν production services ενώ έκλεινε τα πρώτα enterprise deals.",
+          action: "Χτίσαμε containerized Python services στο AWS EKS, βάλαμε CI/CD και συντονίσαμε τον ρυθμό παράδοσης.",
+          result: "Ο χρόνος onboarding μειώθηκε στο μισό και κλείστηκαν τα πρώτα enterprise συμβόλαια.",
+          href: "/services/segments/startups",
+          ctaLabel: "Δες το startup support"
+        },
+        {
+          title: "Encode S.A.: same-day threat detection",
+          stage: "Enterprise",
+          context: "Οι security analysts χρειάζονταν αξιόπιστα analytics σε datasets 100K χρηστών χωρίς manual φόρτο.",
+          action: "Αρχιτεκτονήσαμε PySpark + Elasticsearch pipelines με observability και runbooks για την ops ομάδα.",
+          result: "10x αύξηση throughput και έρευνες που ολοκληρώνονται στην ίδια εργάσιμη.",
+          href: "/services/segments/enterprises",
+          ctaLabel: "Δες το enterprise support"
+        }
+      ],
     },
     about: {
       title: "Σχετικά με εμένα",
