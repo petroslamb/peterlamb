@@ -51,7 +51,9 @@ export const useAnalytics = () => {
 
       if (!isReady || typeof window.umami?.track !== 'function') {
         window.__umamiEventQueue = window.__umamiEventQueue ?? [];
-        window.__umamiEventQueue.push({ event: normalizedEvent, payload });
+        window.__umamiEventQueue.push(() => {
+          window.umami?.track?.(normalizedEvent, payload);
+        });
         return;
       }
 

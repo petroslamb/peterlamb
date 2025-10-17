@@ -5,11 +5,20 @@ import { analyticsConfig, isAnalyticsEnabled, isUmamiConfig } from '../utils/ana
 declare global {
   interface Window {
     umami?: {
-      track?: (event: string, payload?: Record<string, unknown>) => void;
-      trackView?: (url?: string, referrer?: string, title?: string) => void;
+      track?: (
+        eventOrPayload:
+          | string
+          | {
+              url?: string;
+              referrer?: string;
+              title?: string;
+              [key: string]: unknown;
+            },
+        payload?: Record<string, unknown>,
+      ) => void;
     };
     __umamiReady?: boolean;
-    __umamiEventQueue?: Array<{ event: string; payload?: Record<string, unknown> }>;
+    __umamiEventQueue?: Array<() => void>;
   }
 }
 
@@ -34,9 +43,17 @@ const Analytics: React.FC = () => {
       window.__umamiReady = true;
       setIsReady(true);
       const queue = window.__umamiEventQueue;
-      if (queue?.length && typeof window.umami?.track === 'function') {
-        queue.forEach(({ event, payload }) => window.umami?.track?.(event, payload));
-        window.__umamiEventQueue = [];
+      if (queue?.length) {
+        if (typeof window.umami?.track === 'function') {
+          queue.forEach((handler) => {
+            try {
+              handler();
+            } catch {
+              // Swallow individual queue failures to avoid breaking the flush loop
+            }
+          });
+          window.__umamiEventQueue = [];
+        }
       }
       window.dispatchEvent(new Event('umami:ready'));
     };
@@ -116,25 +133,19 @@ const Analytics: React.FC = () => {
       return;
     }
 
-    if (typeof window.umami?.trackView === 'function') {
-      window.umami.trackView(derivedPath, document.referrer, document.title);
-    } else if (typeof window.umami?.track === 'function') {
-      window.umami.track('pageview', {
+    const sendPageview = () => {
+      window.umami?.track?.({
         url: derivedPath,
         referrer: document.referrer,
         title: document.title,
       });
+    };
+
+    if (typeof window.umami?.track === 'function') {
+      sendPageview();
     } else {
       window.__umamiEventQueue = window.__umamiEventQueue ?? [];
-      window.__umamiEventQueue.push({
-        event: 'pageview',
-        payload: {
-          url: derivedPath,
-          referrer: document.referrer,
-          title: document.title,
-        },
-      });
-      return;
+      window.__umamiEventQueue.push(sendPageview);
     }
 
     lastTrackedPath.current = derivedPath;
