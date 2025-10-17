@@ -97,10 +97,11 @@ export const content: Record<'en' | 'gr', Content> = {
       resumeLabel: "Choose a version",
       resumeNote: "Default pick: best all-around profile.",
       resumeOptions: [
-        { value: "resume2025.pdf", label: "2025 Resume — Best all-around" },
-        { value: "resume2025_hyped.pdf", label: "2025 Resume — Hyped" },
+        { value: "resume2025.pdf", label: "2025 Resume — Balanced core" },
+        { value: "resume2025_hyped.pdf", label: "2025 Resume — Hyped (just for fun)" },
         { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Hyped (Greek)" },
-        { value: "resume2025_conservative.pdf", label: "2025 Resume — Conservative (Spartan)" },
+        { value: "resume2025_conservative.pdf", label: "2025 Resume — Spartan" },
+        { value: "resume2025_longform.pdf", label: "2025 Resume — Longform (deep dive)" },
       ],
     },
     services: {
@@ -865,9 +866,10 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       resumeNote: "Προεπιλογή: ισορροπημένο προφίλ.",
       resumeOptions: [
         { value: "resume2025.pdf", label: "Βιογραφικό 2025 — Ισορροπημένο" },
-        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Δυναμικό" },
+        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Δυναμικό (για την πλάκα)" },
         { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Δυναμικό (Ελληνικά)" },
-        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συντηρητικό (Σπαρτιατικό)" },
+        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Σπαρτιατικό" },
+        { value: "resume2025_longform.pdf", label: "Βιογραφικό 2025 — Longform (σε βάθος)" },
       ],
     },
     services: {
