@@ -135,6 +135,7 @@ const Analytics: React.FC = () => {
 
     const sendPageview = () => {
       window.umami?.track?.({
+        type: 'pageview',
         url: derivedPath,
         referrer: document.referrer,
         title: document.title,
