@@ -16,6 +16,7 @@ import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import PortfolioItemPage from './pages/PortfolioItemPage';
 import AnalyticsPage from './pages/AnalyticsPage';
+import TrustPage from './pages/TrustPage';
 
 const AppContent: React.FC = () => {
   const { language, translations } = useLanguage();
@@ -63,6 +64,7 @@ const AppContent: React.FC = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/segments/:segmentSlug" element={<ServiceSegmentPage />} />
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
+          <Route path="/trust" element={<TrustPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/portfolio/:slug" element={<PortfolioItemPage />} />
           <Route path="/blog" element={<BlogPage />} />

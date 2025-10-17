@@ -5,12 +5,13 @@ export const content: Record<'en' | 'gr', Content> = {
     nav: {
       home: "Home",
       about: "About",
-    services: "Services",
-    portfolio: "Portfolio",
-    contact: "Contact",
-    blog: "Blog",
-    analytics: "Analytics",
-  },
+      services: "Services",
+      trust: "Trust",
+      portfolio: "Portfolio",
+      contact: "Contact",
+      blog: "Blog",
+      analytics: "Analytics",
+    },
     home: {
       name: "Petros Lambropoulos",
       title: "I help startups launch SaaS products in weeks.",
@@ -106,78 +107,187 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "Partner with me across discovery, delivery, and resilience. Each program keeps strategy, execution, and enablement aligned so you can ship fast without surprises.",
-      segmentsHeadline: "Solve the right problems for your stage",
-      segmentsSubtitle: "Start with the segment that sounds like you, then dive into the programs tailored to your funding, ops, and compliance realities.",
+      introHook: "You’re carrying a roadmap your team can barely deliver. Runway is tight, infrastructure creaks, and investors still expect visible traction.",
+      introSupport: "I step in as a lead product engineer who can build, modernize, and ship alongside you so the work moves without burning out your crew.",
+      processTitle: "How we go from idea to shipped outcomes",
+      processSubtitle: "Every engagement is hands-on and transparent—we co-own delivery while keeping risk in view.",
+      processSteps: [
+        { title: "Discovery", description: "Frame the bet, surface constraints, and decide what’s worth building.", artifact: "Opportunity brief + risk map" },
+        { title: "Build", description: "Stand up production-ready Python, React, and data systems in small, reviewable increments.", artifact: "Working software + release cadence" },
+        { title: "Pair", description: "Ship with your team so knowledge transfers while velocity stays high.", artifact: "Paired delivery sessions + coaching notes" },
+        { title: "Handoff", description: "Stabilize, document, and measure so the team keeps momentum after launch.", artifact: "Runbooks, observability kit, success metrics" },
+      ],
+      offeringsTitle: "Pick the help you need",
+      offeringsIntro: "Four focused services cover the lifecycle from validation through scale. Each follows the same discovery → build → pair → handoff loop.",
+      offerings: [
+        {
+          id: "ai-discovery-sprint",
+          title: "AI Discovery Sprint",
+          benefit: "Find the AI win worth funding.",
+          context: "You need evidence that an AI feature is feasible before burning runway or pitching investors.",
+          bullets: [
+            "Interview founders, product, and customers to capture the pain and success metrics in plain language.",
+            "Audit data readiness, privacy constraints, and integrations so feasibility and risks are explicit.",
+            "Prototype workflows in Python and TypeScript to show the experience end-to-end."
+          ],
+          result: "The result: a decision-ready narrative, a prioritized backlog, and confidence you can brief to investors within two weeks.",
+          caseStudy: {
+            title: "Workable — generative hiring flows",
+            context: "Hiring platform needed to prove AI-assisted hiring value without derailing roadmap.",
+            action: "Ran a 2-week discovery sprint, mapped data constraints, and demoed GPT-backed prototypes to leadership.",
+            result: "Secured executive backing to ship the features and a roadmap that hit production in the following quarter.",
+            timeframe: "2 weeks to go/no-go"
+          },
+          ctaLabel: "Book an AI validation call"
+        },
+        {
+          id: "product-delivery-pod",
+          title: "Product Delivery Pod",
+          benefit: "Ship investor-ready features without adding headcount.",
+          context: "Your roadmap is bigger than your team, but you still need production-grade delivery every sprint.",
+          bullets: [
+            "Own architecture, implementation, and reviews across Python backends, React frontends, and cloud ops.",
+            "Keep stakeholders aligned with weekly demos, delivery notes, and a live risk radar.",
+            "Build with observability, testing, and incident playbooks so launch doesn’t create new fires."
+          ],
+          result: "The result: production features in weeks, a calm delivery rhythm, and a team ready to maintain the work.",
+          caseStudy: {
+            title: "NannyML — monitoring platform launch",
+            context: "Early-stage ML monitoring team needed production services while raising their seed.",
+            action: "Led delivery of containerised Python services on AWS EKS, established CI/CD, and shipped customer-ready features.",
+            result: "Halved onboarding time for new customers and secured the team’s first enterprise deals.",
+            timeframe: "8-week delivery burst"
+          },
+          ctaLabel: "Request a delivery pod scope"
+        },
+        {
+          id: "platform-modernization",
+          title: "Platform Modernization",
+          benefit: "Tame tech debt before it chokes growth.",
+          context: "Legacy services, scaling pain, or compliance pressure are slowing every new release.",
+          bullets: [
+            "Audit architecture, data flows, and failure modes to pinpoint the blockers holding teams back.",
+            "Refactor or rebuild services with Kubernetes, Terraform, and resilient data pipelines.",
+            "Introduce CI/CD, observability, and runbooks so operations stay predictable."
+          ],
+          result: "The result: a platform that scales to the next funding milestone without constant firefighting.",
+          caseStudy: {
+            title: "Orfium — music licensing systems",
+            context: "Growth-stage music-tech team wrestled with brittle Django services and missing visibility.",
+            action: "Redesigned APIs, introduced observability, and stabilised releases across Heroku and AWS.",
+            result: "Cut support escalations and kept licensing operations reliable under new catalog volume.",
+            timeframe: "3-month modernization"
+          },
+          ctaLabel: "Get a modernization audit"
+        },
+        {
+          id: "data-analytics-enablement",
+          title: "Data & Analytics Enablement",
+          benefit: "Turn noisy data into decisions your execs trust.",
+          context: "Stakeholders want reliable reporting but your stack and governance aren’t ready.",
+          bullets: [
+            "Design data contracts, ingestion flows, and storage tuned for your live use cases.",
+            "Build analytics models, dashboards, and automation with the right guardrails.",
+            "Document governance, privacy, and runbooks so compliance stays comfortable."
+          ],
+          result: "The result: credible insights and automation that accelerate decisions across the business.",
+          caseStudy: {
+            title: "Encode S.A. — security analytics platform",
+            context: "Security analysts needed timely network intelligence without drowning in manual effort.",
+            action: "Architected PySpark and Elasticsearch pipelines that processed 100K-user datasets overnight.",
+            result: "Unlocked same-day investigations and a 10x throughput jump for the analysis team.",
+            timeframe: "6-week rebuild"
+          },
+          ctaLabel: "Schedule a data readiness review"
+        }
+      ],
+      insightsTitle: "What these projects taught us",
+      insightsIntro: "Patterns that keep delivery calm even when the stakes are high.",
+      insights: [
+        "Observability and incident playbooks ship with the feature, not afterwards.",
+        "Pairing founders or tech leads during delivery shortens handoff ramps by weeks.",
+        "Designing for multi-tenant data and analytics early prevents painful migrations later."
+      ],
+      trustTitle: "Security & Reliability commitments",
+      trustItems: [
+        "Data stays on ISO 27001 clouds with least-privilege access and per-client secrets.",
+        "Incident response under one hour with documented playbooks and audit-ready postmortems.",
+        "Nightly backups with 30-day retention and recovery drills each quarter."
+      ],
+      trustCtaLabel: "Read the delivery and security overview",
+      trustCtaHref: "/#/trust",
+      intro: "Partner with me across discovery, delivery, and resilience. Each engagement blends strategy and hands-on engineering so we ship outcomes without surprises.",
+      segmentsHeadline: "Choose the path that sounds like your situation",
+      segmentsSubtitle: "When we know your stage, we can tailor the engagement, cadence, and risk posture that keeps momentum.",
       segments: [
         {
-          title: "Startups Launch Partner",
+          title: "Founder-Led Startups",
           slug: "startups",
           tagline: "Validate, ship, and raise faster",
-          description: "Go from idea to investor-ready SaaS with lean teams, tight budgets, and immovable launch dates.",
+          description: "You’re proving the product while investors watch runway. We co-own the build so you can show traction without adding headcount.",
           bullets: [
-            "Rapid AI discovery sprints that de-risk data, compliance, and user value.",
-            "Investor-ready MVP builds across Python backends, React frontends, and cloud ops.",
-            "Launch playbooks, observability, and hand-off so you keep momentum post-release."
+            "Run AI discovery sprints that surface the sharpest bet and map risks in plain language.",
+            "Build investor-ready MVPs across Python backends, React frontends, and clean data flows.",
+            "Wrap launches with observability, runbooks, and fundraising-friendly artefacts."
           ],
-          proofPoints: ["Dikaio.ai discovery sprint", "Langaware feasibility evaluation", "NannyML investor launch"],
+          proofPoints: ["Dikaio.ai AI sprint", "Langaware NLP validation", "Workable prototyping wins"],
           programOrder: ["ai-discovery", "ai-mvp"],
           ctaLabel: "Explore startup programs",
           longform: `### Where it helps
-* You're validating AI-led workflows before committing seed or grant capital.
-* You need investor-ready product evidence in weeks, not quarters.
-* You want a delivery partner who owns the technical path, not just writes a report.
+* Pre-seed or seed teams must prove AI-led value quickly to unlock the next round.
+* The crew is lean, so you need a lead who can architect, build, and brief investors.
+* Compliance and data readiness still matter, even when timelines are aggressive.
 
 ### How we work together
-* We frame the problem, success metrics, and guardrails alongside founders and early customers.
-* I drive the technical spikes, architecture decisions, and backlog so the team stays focused on learning.
-* Every sprint ends with an executive-ready readout, runbooks, and the assets your next milestone demands.`,
+* Frame success metrics with founders and early customers, keeping scope laser-focused.
+* Drive the technical spikes, delivery cadence, and paired implementation alongside your team.
+* Close every sprint with investor-ready readouts, demos, and the assets you need for traction updates.`,
         },
         {
           title: "Scale-Up Acceleration",
           slug: "scale-ups",
           tagline: "Ship confident, compound growth",
-          description: "Add AI capability and modernize the platform without derailing your roadmap or overloading engineering leadership.",
+          description: "Product-market fit is real, but tech debt and hiring gaps threaten momentum. I pair with your leads to integrate AI and modernize safely.",
           bullets: [
-            "Production-ready AI feature integrations tied to activation and retention targets.",
-            "Platform modernization for multi-tenant SaaS: data contracts, billing, observability.",
-            "Enablement, runbooks, and paired delivery so your team owns outcomes sustainably."
+            "Integrate AI features tied to activation and retention metrics without derailing the roadmap.",
+            "Modernize platform architecture—data contracts, billing, observability—while teams keep shipping.",
+            "Coach engineering leadership with delivery notes, escalation paths, and enablement assets."
           ],
-          proofPoints: ["Workable AI launch", "Brain Metrics resilience uplift", "Orfium platform scale"],
+          proofPoints: ["Workable AI launch", "NannyML delivery pod", "Brain Metrics resilience"],
           programOrder: ["ai-feature-add-on", "scaleup-modernization"],
           ctaLabel: "Explore scale-up programs",
           longform: `### When to engage
-* Product-led teams must add AI or automation without slowing core delivery.
-* Platform debt or observability gaps are starting to tax growth initiatives.
-* You want outside leadership that co-owns outcomes alongside in-house engineers.
+* Feature velocity must increase, yet the platform is straining under growth or compliance demands.
+* You need experienced hands to co-own delivery with staff engineers or staff-level gaps.
+* Leadership expects transparent communication, clear artefacts, and risk mitigation.
 
 ### What to expect
-* Paired delivery with your team across architecture, integration, and rollout.
-* Hardened pipelines, tests, and monitoring so operations stay smooth after launch.
-* Stakeholder demos and docs that keep product, GTM, and ops aligned.`,
+* Paired delivery across architecture, integration, and rollout with weekly executive notes.
+* Hardened pipelines, tests, and monitoring so operations stay calm after launch.
+* Enablement sessions and documentation that embed new practices within your teams.`,
         },
         {
           title: "Enterprise Transformation",
           slug: "enterprises",
           tagline: "Operationalize AI & analytics safely",
-          description: "Blend compliance, data governance, and resilient delivery for regulated, global, or grant-funded teams.",
+          description: "Regulators, boards, or grants expect credible plans. We combine governance with hands-on delivery so stakeholders trust the rollout.",
           bullets: [
-            "AI and analytics platform hardening with threat-aware architecture.",
-            "Forecasting and data engineering accelerators for operations, mobility, and logistics.",
-            "Grant and consortium execution with governance-ready roadmaps and reviewer packs."
+            "Plan and harden AI or analytics platforms with threat-aware architecture and data governance.",
+            "Deliver forecasting and data engineering pipelines that respect compliance boundaries.",
+            "Produce governance packs, reviewer decks, and enablement so teams sustain delivery."
           ],
-          proofPoints: ["ENCODE near real-time analytics", "Mobility demand forecasting", "EU civic tech proposal"],
+          proofPoints: ["ENCODE analytics platform", "Mobility demand forecasting", "EU civic tech proposal"],
           programOrder: ["enterprise-analytics", "grant-funded-sprint"],
           ctaLabel: "Explore enterprise programs",
           longform: `### Ideal scenarios
-* Security, compliance, or operations leaders need credible AI delivery plans.
-* Grants, boards, or regulators demand technical roadmaps before unlocking funds.
-* Critical analytics platforms must scale without trading off reliability.
+* Security, compliance, or operations leaders need evidence the solution is safely deliverable.
+* Grants, boards, or regulators demand detailed technical roadmaps before funding the build.
+* Analytics platforms must scale without trading off reliability or auditability.
 
 ### Delivery approach
-* Joint governance workshops to align stakeholders and risk owners.
-* Architecture, data, and tooling choices documented for auditors and partners.
-* Embedded enablement so your internal teams can own the platform post-handoff.`,
+* Run governance workshops with risk owners to align on controls, SLAs, and reporting cadence.
+* Document architecture, data handling, and operating models so auditors sign off with ease.
+* Embed enablement and coaching so internal teams can run the platform after handoff.`,
         },
       ],
       programsHeadline: "Program catalogue",
@@ -751,6 +861,35 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       embedUnavailable: "We couldn’t load the analytics dashboard here. Use the button above to open it in a new tab instead.",
       privacyNote: "This site uses Umami’s cookieless analytics. No personal data or cookies are collected—this dashboard shows exactly what is measured.",
     },
+    trust: {
+      title: "Delivery, Security & Reliability",
+      intro: "Hands-on engagements mean I handle your production code and data with the same discipline as an in-house staff engineer. Here’s how I keep things calm and auditable.",
+      architectureTitle: "Architecture & Data Handling",
+      architectureDescription: "Builds run on AWS (EKS, EC2, S3, RDS) or your preferred cloud with infrastructure-as-code (Terraform) and least-privilege IAM. Source control lives in private GitHub/GitLab repos with branch protections, code review, and dependency scanning enabled.",
+      artefactsTitle: "Operational artefacts you receive",
+      artefactsIntro: "Each engagement leaves behind the documentation and tooling your team needs to keep running without me.",
+      artefacts: [
+        { title: "Architecture & data maps", description: "Diagrams and write-ups covering environments, integrations, residency, and data classification so legal and compliance teams stay aligned." },
+        { title: "Runbooks & observability packs", description: "Alert routing, SLO dashboards, logging standards, and on-call guides so your team can support production calmly." },
+        { title: "Security & compliance notes", description: "Documented assumptions, vendor choices, and risk mitigations packaged for boards, investors, or auditors." }
+      ],
+      commitmentsTitle: "Operational commitments",
+      commitments: [
+        "Data stays on ISO 27001 clouds with least-privilege access and per-client secrets.",
+        "Incident response under one hour with documented playbooks and audit-ready postmortems.",
+        "Nightly backups with 30-day retention and recovery drills each quarter."
+      ],
+      responseTitle: "Incident response & continuity",
+      responseIntro: "Clear lines of responsibility and rehearsed drills mean surprises get handled quickly.",
+      responseItems: [
+        { timeframe: "≤ 1 hour", detail: "Initial response and triage for P1 production incidents." },
+        { timeframe: "24 hours", detail: "Executive-ready postmortem with action items and owners." },
+        { timeframe: "30 days", detail: "Encrypted backup retention plus quarterly restore tests." }
+      ],
+      contactTitle: "Need a deeper audit?",
+      contactDescription: "Happy to walk your security or compliance team through controls, diagrams, and previous reports. Shared artefacts can be delivered under NDA.",
+      contactCta: "Book a security review call",
+    },
     footer: {
       copyright: "© 2025 Petros Lambropoulos. All rights reserved.",
       availability: "Available for international consulting & freelance projects.",
@@ -774,6 +913,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       home: "Αρχική",
       about: "Σχετικά",
       services: "Υπηρεσίες",
+      trust: "Εμπιστοσύνη",
       portfolio: "Portfolio",
       contact: "Επικοινωνία",
       blog: "Blog",
@@ -874,78 +1014,187 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Συνεργαζόμαστε σε discovery, delivery και resilience. Κάθε πρόγραμμα κρατά στρατηγική, υλοποίηση και enablement ευθυγραμμισμένα ώστε να προχωράς χωρίς δυσάρεστες εκπλήξεις.",
-      segmentsHeadline: "Επίλεξε το σωστό segment για το στάδιό σου",
-      segmentsSubtitle: "Ξεκίνα από το segment που σε περιγράφει και μετά δες τα προγράμματα που είναι ραμμένα στις ανάγκες χρηματοδότησης, λειτουργίας και συμμόρφωσής σου.",
+      introHook: "Κουβαλάς ένα roadmap που η ομάδα μόλις και μετά βίας προλαβαίνει. Το runway στενεύει, η υποδομή τρίζει και οι επενδυτές ζητούν ορατή πρόοδο.",
+      introSupport: "Μπαίνω ως lead product engineer που χτίζει, εκσυγχρονίζει και παραδίδει δίπλα στην ομάδα σου, χωρίς να την εξουθενώνει.",
+      processTitle: "Πώς φτάνουμε από την ιδέα στην παράδοση",
+      processSubtitle: "Κάθε συνεργασία είναι hands-on και διαφανής — μοιραζόμαστε την ευθύνη ενώ κρατάμε το ρίσκο υπό έλεγχο.",
+      processSteps: [
+        { title: "Discovery", description: "Ορίζουμε το στοίχημα, αναδεικνύουμε περιορισμούς και αποφασίζουμε τι αξίζει να χτιστεί.", artifact: "Σύνοψη ευκαιρίας + χάρτης ρίσκων" },
+        { title: "Build", description: "Στήνουμε production-ready Python, React και data συστήματα σε μικρά, ελεγχόμενα βήματα.", artifact: "Λειτουργικό λογισμικό + ρυθμός releases" },
+        { title: "Pair", description: "Παραδίδουμε μαζί με την ομάδα ώστε η γνώση να περνάει χωρίς να πέφτει η ταχύτητα.", artifact: "Sessions συν-υλοποίησης + coaching notes" },
+        { title: "Handoff", description: "Σταθεροποιούμε, τεκμηριώνουμε και μετράμε για να συνεχίσει η ορμή μετά το launch.", artifact: "Runbooks, observability kit, success metrics" },
+      ],
+      offeringsTitle: "Διάλεξε το είδος βοήθειας που χρειάζεσαι",
+      offeringsIntro: "Τέσσερις εστιασμένες υπηρεσίες καλύπτουν όλο τον κύκλο από validation μέχρι scale. Όλες ακολουθούν το βρόχο discovery → build → pair → handoff.",
+      offerings: [
+        {
+          id: "ai-discovery-sprint",
+          title: "AI Discovery Sprint",
+          benefit: "Βρες το AI στοίχημα που αξίζει χρηματοδότηση.",
+          context: "Χρειάζεσαι απόδειξη ότι ένα AI feature είναι υλοποιήσιμο πριν κάψεις runway ή το παρουσιάσεις στους επενδυτές.",
+          bullets: [
+            "Παίρνουμε συνεντεύξεις από founders, προϊόν και πελάτες για να αποτυπώσουμε τον πόνο και τα success metrics με καθαρή γλώσσα.",
+            "Ελέγχουμε ετοιμότητα δεδομένων, περιορισμούς ιδιωτικότητας και integrations ώστε η εφικτότητα και τα ρίσκα να είναι ξεκάθαρα.",
+            "Χτίζουμε workflows σε Python και TypeScript για να δούμε end-to-end την εμπειρία."
+          ],
+          result: "Το αποτέλεσμα: απόφαση στηριγμένη σε δεδομένα, ιεραρχημένο backlog και αυτοπεποίθηση για ενημέρωση επενδυτών μέσα σε δύο εβδομάδες.",
+          caseStudy: {
+            title: "Workable — generative hiring flows",
+            context: "Η πλατφόρμα πρόσληψης έπρεπε να αποδείξει αξία AI χωρίς να εκτροχιάσει το roadmap.",
+            action: "Τρέξαμε 2-εβδομαδιαίο discovery sprint, χαρτογραφήσαμε τα data constraints και δείξαμε GPT prototypes στη διοίκηση.",
+            result: "Κερδίσαμε το executive go-ahead και roadmap που έφτασε παραγωγή στο επόμενο τρίμηνο.",
+            timeframe: "2 εβδομάδες για go/no-go"
+          },
+          ctaLabel: "Κλείσε AI validation call"
+        },
+        {
+          id: "product-delivery-pod",
+          title: "Product Delivery Pod",
+          benefit: "Παράδωσε investor-ready features χωρίς νέο headcount.",
+          context: "Το roadmap είναι μεγαλύτερο από την ομάδα, αλλά χρειάζεσαι production-grade παράδοση κάθε sprint.",
+          bullets: [
+            "Αναλαμβάνω architecture, υλοποίηση και reviews σε Python backends, React frontends και cloud ops.",
+            "Κρατάμε stakeholders ευθυγραμμισμένους με εβδομαδιαία demos, delivery notes και risk radar.",
+            "Χτίζουμε με observability, testing και incident playbooks ώστε το launch να μην ανοίξει νέες φωτιές."
+          ],
+          result: "Το αποτέλεσμα: production features σε εβδομάδες, ήρεμος ρυθμός παράδοσης και ομάδα που συντηρεί το έργο.",
+          caseStudy: {
+            title: "NannyML — monitoring platform launch",
+            context: "Ομάδα ML monitoring σε seed στάδιο χρειαζόταν production υπηρεσίες ενώ έκανε raise.",
+            action: "Ηγήθηκα στην παράδοση containerized Python υπηρεσιών στο AWS EKS, έστησα CI/CD και παραδώσαμε features έτοιμα για πελάτες.",
+            result: "Μειώθηκε στο μισό ο χρόνος onboarding για νέους πελάτες και κλείστηκαν τα πρώτα enterprise deals.",
+            timeframe: "8 εβδομάδες υλοποίησης"
+          },
+          ctaLabel: "Ζήτησε scope για delivery pod"
+        },
+        {
+          id: "platform-modernization",
+          title: "Platform Modernization",
+          benefit: "Τιθάσεψε το tech debt πριν μπλοκάρει την ανάπτυξη.",
+          context: "Legacy υπηρεσίες, κλιμάκωση ή απαιτήσεις συμμόρφωσης καθυστερούν κάθε release.",
+          bullets: [
+            "Κάνουμε audit σε architecture, data flows και failure modes για να εντοπίσουμε τα blockers.",
+            "Refactor ή rebuild υπηρεσιών με Kubernetes, Terraform και ανθεκτικά data pipelines.",
+            "Εισάγουμε CI/CD, observability και runbooks για σταθερή λειτουργία."
+          ],
+          result: "Το αποτέλεσμα: πλατφόρμα που κλιμακώνεται μέχρι το επόμενο funding milestone χωρίς συνεχές firefighting.",
+          caseStudy: {
+            title: "Orfium — music licensing systems",
+            context: "Scale-up στο music-tech πάλευε με εύθραυστα Django services και έλλειψη ορατότητας.",
+            action: "Επανασχεδιάσαμε APIs, φέραμε observability και σταθεροποιήσαμε releases σε Heroku και AWS.",
+            result: "Μειώθηκαν τα support escalations και η λειτουργία έμεινε αξιόπιστη με νέο όγκο καταλόγου.",
+            timeframe: "3 μήνες modernization"
+          },
+          ctaLabel: "Κλείσε modernization audit"
+        },
+        {
+          id: "data-analytics-enablement",
+          title: "Data & Analytics Enablement",
+          benefit: "Μετέτρεψε τον θόρυβο δεδομένων σε αποφάσεις που εμπιστεύονται τα στελέχη.",
+          context: "Οι stakeholders ζητούν αξιόπιστο reporting αλλά το stack και το governance δεν είναι έτοιμα.",
+          bullets: [
+            "Σχεδιάζουμε data contracts, ingestion flows και αποθήκευση για τα ζωντανά use cases σου.",
+            "Χτίζουμε analytics μοντέλα, dashboards και αυτοματοποίηση με τα σωστά guardrails.",
+            "Τεκμηριώνουμε governance, privacy και runbooks ώστε οι compliance ομάδες να μένουν ήρεμες."
+          ],
+          result: "Το αποτέλεσμα: αξιόπιστα insights και αυτοματοποίηση που επιταχύνουν αποφάσεις σε όλο τον οργανισμό.",
+          caseStudy: {
+            title: "Encode S.A. — security analytics platform",
+            context: "Οι security analysts χρειάζονταν έγκαιρη πληροφόρηση χωρίς ατελείωτο manual φόρτο.",
+            action: "Αρχιτεκτονήσαμε PySpark και Elasticsearch pipelines που επεξεργάζονταν datasets 100K χρηστών μέσα σε μία νύχτα.",
+            result: "Ενεργοποιήθηκαν αυθημερόν έρευνες και δεκαπλασιάστηκε η παραγωγικότητα της ομάδας.",
+            timeframe: "6 εβδομάδες ανασχεδιασμού"
+          },
+          ctaLabel: "Κλείσε data readiness review"
+        }
+      ],
+      insightsTitle: "Τι μάθαμε από αυτά τα projects",
+      insightsIntro: "Patterns που κρατούν την παράδοση ήρεμη ακόμη και όταν το διακύβευμα είναι μεγάλο.",
+      insights: [
+        "Observability και incident playbooks παραδίδονται μαζί με το feature, όχι μετά.",
+        "Το pairing με founders ή tech leads μειώνει τον χρόνο handoff κατά εβδομάδες.",
+        "Ο σχεδιασμός για multi-tenant και analytics από νωρίς αποτρέπει επίπονες μελλοντικές μεταναστεύσεις."
+      ],
+      trustTitle: "Δεσμεύσεις για Ασφάλεια & Αξιοπιστία",
+      trustItems: [
+        "Δεδομένα σε ISO 27001 clouds με least-privilege πρόσβαση και μυστικά ανά πελάτη.",
+        "Incident response κάτω από μία ώρα με τεκμηριωμένα playbooks και audit-ready postmortems.",
+        "Νυχτερινά backups με 30 ημέρες διατήρηση και ασκήσεις ανά τρίμηνο."
+      ],
+      trustCtaLabel: "Διάβασε το delivery & security overview",
+      trustCtaHref: "/#/trust",
+      intro: "Συνεργαζόμαστε σε discovery, delivery και resilience. Κάθε engagement συνδυάζει στρατηγική και hands-on engineering ώστε να προχωράς χωρίς εκπλήξεις.",
+      segmentsHeadline: "Διάλεξε το μονοπάτι που μοιάζει με τη δική σου κατάσταση",
+      segmentsSubtitle: "Όταν ξέρουμε το στάδιό σου, ρυθμίζουμε engagement, ρυθμό και ρίσκο για να κρατήσουμε την ορμή.",
       segments: [
         {
-          title: "Συνεργάτης Εκκίνησης Startups",
+          title: "Founder-led Startups",
           slug: "startups",
           tagline: "Validate, ship και κάνε raise πιο γρήγορα",
-          description: "Μετατρέπουμε ιδέες σε SaaS έτοιμο για επενδυτές με μικρές ομάδες και ασφυκτικά deadlines.",
+          description: "Αποδεικνύεις το προϊόν ενώ οι επενδυτές κοιτούν το runway. Συν-υλοποιούμε ώστε να δείξεις traction χωρίς να μεγαλώσεις την ομάδα.",
           bullets: [
-            "Discovery sprints για AI που μειώνουν ρίσκο δεδομένων και συμμόρφωσης.",
-            "MVP builds με Python backends, React εμπειρίες και cloud υποδομή παραγωγής.",
-            "Launch playbooks, observability και hand-off ώστε να συνεχίσεις χωρίς καθυστερήσεις."
+            "Τρέχουμε AI discovery sprints που αναδεικνύουν το πιο δυνατό στοίχημα και τα ρίσκα.",
+            "Χτίζουμε MVPs έτοιμα για επενδυτές με Python backends, React frontends και καθαρές ροές δεδομένων.",
+            "Κλείνουμε launches με observability, runbooks και υλικό που υποστηρίζει fundraising updates."
           ],
-          proofPoints: ["Dikaio.ai discovery sprint", "Langaware feasibility", "NannyML launch"],
+          proofPoints: ["Dikaio.ai AI sprint", "Langaware NLP validation", "Workable prototyping wins"],
           programOrder: ["ai-discovery", "ai-mvp"],
-          ctaLabel: "Δες τα startup programs",
-          longform: `### Πότε ταιριάζει
-* Επικυρώνεις AI flows πριν δεσμεύσεις seed ή grant κεφάλαιο.
-* Χρειάζεσαι αποδεικτικά στοιχεία για επενδυτές μέσα σε εβδομάδες και όχι σε τρίμηνα.
-* Θέλεις συνεργάτη που αναλαμβάνει το τεχνικό μονοπάτι, όχι απλώς να γράψει μια αναφορά.
+          ctaLabel: "Δες τα startup προγράμματα",
+          longform: `### Πότε βοηθάει
+* Pre-seed ή seed ομάδες πρέπει να δείξουν AI-led αξία γρήγορα για να κλείσουν το επόμενο round.
+* Η ομάδα είναι μικρή, άρα χρειάζεσαι lead που αρχιτεκτονεί, υλοποιεί και ενημερώνει επενδυτές.
+* Συμμόρφωση και ετοιμότητα δεδομένων μετράνε, ακόμη και με πιεστικά χρονικά περιθώρια.
 
-### Πώς δουλεύουμε
-* Συνδιαμορφώνουμε πρόβλημα, KPIs και guardrails μαζί με founders και early adopters.
-* Ηγούμαι των technical spikes, των αρχιτεκτονικών αποφάσεων και του backlog ώστε η ομάδα να μένει προσηλωμένη στη μάθηση.
-* Κάθε sprint κλείνει με executive-ready σύνοψη, runbooks και assets για το επόμενο milestone.`,
+### Τι κάνουμε μαζί
+* Ορίζουμε success metrics με founders και πρώτους πελάτες κρατώντας το scope εστιασμένο.
+* Τρέχουμε τεχνικά spikes, ρυθμό παράδοσης και συν-υλοποίηση μαζί με την ομάδα σου.
+* Κλείνουμε κάθε sprint με demos, αναφορές και assets έτοιμα για ενημέρωση επενδυτών.`,
         },
         {
           title: "Scale-Up Acceleration",
           slug: "scale-ups",
           tagline: "Ship με σιγουριά και χτίσε compound growth",
-          description: "Προσθέτουμε AI δυνατότητες και εκσυγχρονίζουμε την πλατφόρμα χωρίς να εκτροχιάσουμε το roadmap ή να υπερφορτώσουμε την ηγεσία.",
+          description: "Το product-market fit είναι εδώ, αλλά το tech debt και τα κενά σε headcount απειλούν την ορμή. Συνεργάζομαι με τα leads σου για ασφαλή AI integration και modernization.",
           bullets: [
-            "Ενσωμάτωση AI features με στόχο activation και retention.",
-            "Εκσυγχρονισμός multi-tenant SaaS: data contracts, billing, observability.",
-            "Enablement και runbooks ώστε η ομάδα σου να διατηρεί τα αποτελέσματα."
+            "Ενσωματώνουμε AI features δεμένα με activation και retention KPIs χωρίς να εκτροχιάζεται το roadmap.",
+            "Εκσυγχρονίζουμε architecture — data contracts, billing, observability — ενώ οι ομάδες συνεχίζουν να ship-άρουν.",
+            "Προπονούμε το engineering leadership με delivery notes, risk radar και enablement assets."
           ],
-          proofPoints: ["Workable AI launch", "Brain Metrics resilience", "Orfium scale"],
+          proofPoints: ["Workable AI launch", "NannyML delivery pod", "Brain Metrics resilience"],
           programOrder: ["ai-feature-add-on", "scaleup-modernization"],
-          ctaLabel: "Δες τα scale-up programs",
-          longform: `### Πότε έχει νόημα
-* Θέλεις να προσθέσεις AI ή αυτοματοποίηση χωρίς να φρενάρεις το core delivery.
-* Το platform debt ή τα κενά observability αρχίζουν να κοστίζουν χρόνο και χρήμα.
-* Αναζητάς εξωτερική τεχνική ηγεσία που θα μοιραστεί την ευθύνη με την εσωτερική ομάδα.
+          ctaLabel: "Δες τα scale-up προγράμματα",
+          longform: `### Πότε μπαίνουμε
+* Πρέπει να αυξηθεί η ταχύτητα features ενώ η πλατφόρμα ζορίζεται από growth ή compliance.
+* Χρειάζεσαι έμπειρο συνοδηγό για να μοιραστεί την ευθύνη με staff engineers ή τα κενά που υπάρχουν.
+* Η διοίκηση θέλει διαφάνεια, artefacts και καθαρή διαχείριση ρίσκου.
 
 ### Τι να περιμένεις
-* Paired delivery με την ομάδα σου σε αρχιτεκτονική, ενσωμάτωση και rollout.
-* Σκλήρυνση pipelines, tests και monitoring ώστε οι λειτουργίες να μένουν ομαλές μετά το launch.
-* Demo και documentation ροές που κρατούν ευθυγραμμισμένους product, GTM και operations.`,
+* Συν-παράδοση σε αρχιτεκτονική, integrations και rollout με εβδομαδιαία executive notes.
+* Ενισχυμένες pipelines, tests και monitoring ώστε οι λειτουργίες να μένουν ήρεμες μετά το launch.
+* Enablement και τεκμηρίωση που ενσωματώνουν τις νέες πρακτικές στην ομάδα.`,
         },
         {
           title: "Enterprise Transformation",
           slug: "enterprises",
           tagline: "Λειτουργικοποίησε AI & analytics με ασφάλεια",
-          description: "Συνδυάζουμε συμμόρφωση, data governance και ανθεκτική παράδοση για ρυθμιζόμενες, διεθνείς ή grant-funded ομάδες.",
+          description: "Ρυθμιστικές αρχές, boards ή grants θέλουν πειστικά σχέδια. Συνδυάζουμε governance με hands-on παράδοση για να εμπιστευτούν το rollout.",
           bullets: [
-            "Σκλήρυνση AI & analytics πλατφορμών με threat-aware αρχιτεκτονική.",
-            "Accelerators για forecasting και data engineering σε operations και logistics.",
-            "Grant και consortium execution με roadmaps συμμόρφωσης και reviewer packs."
+            "Σχεδιάζουμε και ενισχύουμε AI ή analytics πλατφόρμες με threat-aware αρχιτεκτονική και data governance.",
+            "Παραδίδουμε forecasting και data pipelines που σέβονται τα compliance όρια.",
+            "Παράγουμε governance packs, reviewer decks και enablement ώστε οι ομάδες να συνεχίσουν μόνες τους."
           ],
-          proofPoints: ["ENCODE near real-time analytics", "Mobility demand forecasting", "EU civic tech proposal"],
+          proofPoints: ["ENCODE analytics platform", "Mobility demand forecasting", "EU civic tech proposal"],
           programOrder: ["enterprise-analytics", "grant-funded-sprint"],
-          ctaLabel: "Δες τα enterprise programs",
+          ctaLabel: "Δες τα enterprise προγράμματα",
           longform: `### Ιδανικά σενάρια
-* Security, compliance ή operations ηγέτες χρειάζονται αξιόπιστο delivery plan για AI.
-* Grants, boards ή ρυθμιστές ζητούν τεχνικό roadmap πριν εγκρίνουν κονδύλια.
-* Κρίσιμα analytics πρέπει να κλιμακωθούν χωρίς να θυσιαστεί η αξιοπιστία.
+* Leaders σε security, compliance ή operations χρειάζονται απόδειξη ότι η λύση παραδίδεται με ασφάλεια.
+* Grants, boards ή regulators ζητούν λεπτομερή roadmaps πριν εγκρίνουν προϋπολογισμό.
+* Analytics πλατφόρμες πρέπει να κλιμακωθούν χωρίς να χαθεί αξιοπιστία ή auditability.
 
-### Προσέγγιση
-* Workshops διακυβέρνησης για να ευθυγραμμίσουμε stakeholders και risk owners.
-* Τεκμηριωμένες επιλογές αρχιτεκτονικής, δεδομένων και εργαλείων για auditors και partners.
-* Ενσωματωμένο enablement ώστε οι εσωτερικές ομάδες να αναλάβουν το platform μετά το χέρι.`,
+### Τρόπος παράδοσης
+* Workshops governance με risk owners για να ευθυγραμμιστούμε σε controls, SLAs και reporting cadence.
+* Τεκμηρίωση αρχιτεκτονικής, διαχείρισης δεδομένων και λειτουργίας ώστε οι auditors να εγκρίνουν άνετα.
+* Enablement και coaching ώστε οι εσωτερικές ομάδες να τρέχουν την πλατφόρμα μετά το handoff.`,
         },
       ],
       programsHeadline: "Κατάλογος προγραμμάτων",
@@ -1518,6 +1767,35 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       embedTitle: "Προβολή Umami analytics",
       embedUnavailable: "Δεν ήταν δυνατή η φόρτωση του πίνακα εδώ. Χρησιμοποίησε το κουμπί παραπάνω για να τον ανοίξεις σε νέα καρτέλα.",
       privacyNote: "Το site χρησιμοποιεί τα cookieless analytics του Umami. Δεν συλλέγονται προσωπικά δεδομένα ή cookies — αυτός ο πίνακας δείχνει ακριβώς τι παρακολουθείται.",
+    },
+    trust: {
+      title: "Παράδοση, Ασφάλεια & Αξιοπιστία",
+      intro: "Τα hands-on engagements σημαίνουν ότι χειρίζομαι παραγωγικό κώδικα και δεδομένα με την ίδια πειθαρχία που θα είχε ένας in-house staff engineer. Έτσι κρατάμε το project ήρεμο και ελεγχόμενο.",
+      architectureTitle: "Αρχιτεκτονική & Διαχείριση Δεδομένων",
+      architectureDescription: "Τα builds τρέχουν σε AWS (EKS, EC2, S3, RDS) ή στο cloud που προτιμάς, με infrastructure-as-code (Terraform) και least-privilege IAM. Το source control παραμένει σε ιδιωτικά GitHub/GitLab repos με branch protections, code review και dependency scanning ενεργά.",
+      artefactsTitle: "Operational artefacts που λαμβάνεις",
+      artefactsIntro: "Κάθε συνεργασία αφήνει πίσω της την τεκμηρίωση και τα εργαλεία που χρειάζεται η ομάδα σου για να συνεχίσει χωρίς εμένα.",
+      artefacts: [
+        { title: "Χάρτες αρχιτεκτονικής & δεδομένων", description: "Διαγράμματα και σημειώσεις για περιβάλλοντα, integrations, data residency και ταξινόμηση ώστε νομική/συμμόρφωση να μένουν ευθυγραμμισμένες." },
+        { title: "Runbooks & observability packs", description: "Δρομολόγηση alerts, dashboards SLO, πρότυπα logging και οδηγίες on-call ώστε η ομάδα σου να υποστηρίζει την παραγωγή με ψυχραιμία." },
+        { title: "Security & compliance notes", description: "Τεκμηριωμένες υποθέσεις, επιλογές vendors και risk mitigations σε μορφή που μπορείς να δείξεις σε board, επενδυτές ή auditors." }
+      ],
+      commitmentsTitle: "Λειτουργικές δεσμεύσεις",
+      commitments: [
+        "Δεδομένα σε ISO 27001 clouds με least-privilege πρόσβαση και μυστικά ανά πελάτη.",
+        "Incident response κάτω από μία ώρα με τεκμηριωμένα playbooks και audit-ready postmortems.",
+        "Νυχτερινά backups με 30 ημέρες διατήρηση και ασκήσεις αποκατάστασης ανά τρίμηνο."
+      ],
+      responseTitle: "Διαχείριση περιστατικών & συνέχεια λειτουργίας",
+      responseIntro: "Καθαροί ρόλοι και δοκιμασμένα drills σημαίνουν ότι τα απρόοπτα αντιμετωπίζονται γρήγορα.",
+      responseItems: [
+        { timeframe: "≤ 1 ώρα", detail: "Αρχική ανταπόκριση και triage για παραγωγικά περιστατικά P1." },
+        { timeframe: "24 ώρες", detail: "Executive-ready postmortem με action items και owners." },
+        { timeframe: "30 ημέρες", detail: "Κρυπτογραφημένα backups με τριμηνιαία tests αποκατάστασης." }
+      ],
+      contactTitle: "Χρειάζεσαι βαθύτερο audit;",
+      contactDescription: "Μπορώ να ενημερώσω την ομάδα security ή compliance για controls, διαγράμματα και προηγούμενες αναφορές. Τα artefacts μοιράζονται υπό NDA.",
+      contactCta: "Κλείσε security review call",
     },
     footer: {
       copyright: "© 2025 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",

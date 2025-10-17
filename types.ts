@@ -39,6 +39,7 @@ export interface Content {
     home: string;
     about: string;
     services: string;
+    trust: string;
     portfolio: string;
     contact: string;
     blog: string;
@@ -77,6 +78,21 @@ export interface Content {
   };
   services: {
     title: string;
+    introHook: string;
+    introSupport: string;
+    processTitle: string;
+    processSubtitle: string;
+    processSteps: ServiceProcessStep[];
+    offeringsTitle: string;
+    offeringsIntro: string;
+    offerings: ServiceOffering[];
+    insightsTitle: string;
+    insightsIntro: string;
+    insights: string[];
+    trustTitle: string;
+    trustItems: string[];
+    trustCtaLabel: string;
+    trustCtaHref: string;
     intro: string;
     segmentsHeadline: string;
     segmentsSubtitle: string;
@@ -138,6 +154,23 @@ export interface Content {
     embedUnavailable: string;
     privacyNote: string;
   };
+  trust: {
+    title: string;
+    intro: string;
+    architectureTitle: string;
+    architectureDescription: string;
+    artefactsTitle: string;
+    artefactsIntro: string;
+    artefacts: TrustArtefact[];
+    commitmentsTitle: string;
+    commitments: string[];
+    responseTitle: string;
+    responseIntro: string;
+    responseItems: TrustResponseItem[];
+    contactTitle: string;
+    contactDescription: string;
+    contactCta: string;
+  };
   footer: {
     copyright: string;
     availability: string;
@@ -176,6 +209,41 @@ export interface ServiceSegment {
   programOrder: string[];
   ctaLabel: string;
   longform: string;
+}
+
+export interface ServiceProcessStep {
+  title: string;
+  description: string;
+  artifact: string;
+}
+
+export interface ServiceOfferingCase {
+  title: string;
+  context: string;
+  action: string;
+  result: string;
+  timeframe: string;
+}
+
+export interface ServiceOffering {
+  id: string;
+  title: string;
+  benefit: string;
+  context: string;
+  bullets: string[];
+  result: string;
+  caseStudy: ServiceOfferingCase;
+  ctaLabel: string;
+}
+
+export interface TrustArtefact {
+  title: string;
+  description: string;
+}
+
+export interface TrustResponseItem {
+  timeframe: string;
+  detail: string;
 }
 
 export interface ServiceCaseStudy {
