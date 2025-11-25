@@ -19,6 +19,7 @@ const HomePage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { home, actions } = translations;
     const { trackEvent } = useAnalytics();
+    const podcastSrc = `${import.meta.env.BASE_URL}portfolio-podcast.m4a`;
 
     const metaDescription = language === 'en'
       ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
@@ -110,6 +111,23 @@ const HomePage: React.FC = () => {
 
             <section className="text-center py-8 bg-white dark:bg-slate-800 rounded-lg shadow-md" aria-label={home.credibility}>
                  <p className="text-lg text-text-secondary dark:text-slate-300">{home.credibility}</p>
+            </section>
+
+            <section aria-label={home.podcastTitle} className="pb-4">
+                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-primary/10 dark:border-cyan-400/20 p-6 space-y-3">
+                    <p className="text-sm uppercase tracking-wide text-primary dark:text-cyan-400 font-semibold">{home.podcastTitle}</p>
+                    <p className="text-text-secondary dark:text-slate-300">{home.podcastDescription}</p>
+                    <audio
+                        controls
+                        preload="none"
+                        src={podcastSrc}
+                        className="w-full"
+                    >
+                        {language === 'en'
+                          ? 'Your browser does not support the audio element.'
+                          : 'Ο περιηγητής σας δεν υποστηρίζει την αναπαραγωγή ήχου.'}
+                    </audio>
+                </div>
             </section>
         </div>
     );

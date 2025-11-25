@@ -53,6 +53,8 @@ export interface Content {
     servicesTitle: string;
     services: Service[];
     credibility: string;
+    podcastTitle: string;
+    podcastDescription: string;
   };
   about: {
     title: string;
@@ -87,8 +89,6 @@ export interface Content {
   portfolio: {
     title: string;
     intro: string;
-    podcastTitle: string;
-    podcastDescription: string;
     projects: PortfolioItem[];
     githubCta: string;
     readCaseStudy: string;

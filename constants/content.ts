@@ -25,6 +25,8 @@ export const content: Record<'en' | 'gr', Content> = {
         { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "2–4 week partnership to package your crypto, AI, and deep-tech roadmap plus compliance plan for funding calls.", slug: "grant-funded-sprint" },
       ],
       credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
+      podcastTitle: "Podcast: Scaling Generative AI Requires Low-Level Mastery",
+      podcastDescription: "A quick take on why systems fundamentals matter when you ship and scale generative AI.",
     },
     about: {
       title: "About Me",
@@ -343,8 +345,6 @@ The highlights below are composite scenarios drawn from repeated grant-support w
   portfolio: {
     title: "Portfolio",
     intro: "Selected work and case studies:",
-    podcastTitle: "Podcast: Scaling Generative AI Requires Low-Level Mastery",
-    podcastDescription: "Listen to a quick take on why grounding generative AI in systems fundamentals matters when shipping at scale.",
     projects: [
         { 
           slug: "dance-school-saas",
@@ -564,6 +564,8 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
         { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να πακετάρουμε crypto, AI και deep-tech roadmap μαζί με συμμόρφωση για grant προκηρύξεις.", slug: "grant-funded-sprint" },
       ],
       credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
+      podcastTitle: "Podcast: Το Scaling του Generative AI απαιτεί low-level δεξιότητες",
+      podcastDescription: "Σύντομο σχόλιο για το γιατί τα θεμέλια στα συστήματα είναι κρίσιμα όταν κλιμακώνεις γενετικά μοντέλα στην παραγωγή.",
     },
     about: {
       title: "Σχετικά με εμένα",
@@ -882,8 +884,6 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
   portfolio: {
     title: "Portfolio",
     intro: "Επιλεγμένα έργα και case studies:",
-    podcastTitle: "Podcast: Το Scaling του Generative AI απαιτεί low-level δεξιότητες",
-    podcastDescription: "Σύντομο σχόλιο για το γιατί τα θεμέλια στα συστήματα είναι κρίσιμα όταν κλιμακώνεις γενετικά μοντέλα στην παραγωγή.",
     projects: [
         { 
           slug: "dance-school-saas",
