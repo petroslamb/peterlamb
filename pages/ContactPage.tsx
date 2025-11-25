@@ -1,22 +1,13 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import MetaTags from '../components/MetaTags';
-import CalendlyEmbed from '../components/CalendlyEmbed';
+import SchedulingEmbed from '../components/SchedulingEmbed';
 
 const ContactPage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { contact, actions } = translations;
 
-    const calendlyEmbedUrl = useMemo(() => {
-        try {
-            const url = new URL(actions.scheduleLink);
-            url.searchParams.set('hide_event_type_details', '1');
-            url.searchParams.set('hide_gdpr_banner', '1');
-            return url.toString();
-        } catch {
-            return actions.scheduleLink;
-        }
-    }, [actions.scheduleLink]);
+    const schedulingEmbedUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cGdk7wy_kYMcB9CFQ8Lmf45Bqrf64GTCNPg4Mb31jjo9o37ArfE1mZi-h5rETky4j7vtm73Rt?gv=true';
 
     const metaDescription = language === 'en'
       ? `Get in touch with Petros Lambropoulos to discuss your software, SaaS, or resilience initiative. Find contact details and a direct message form.`
@@ -49,7 +40,7 @@ const ContactPage: React.FC = () => {
                 <section aria-labelledby="schedule-heading" className="space-y-4">
                     <h2 id="schedule-heading" className="text-2xl font-bold text-text-primary dark:text-white">{contact.scheduleTitle}</h2>
                     <p className="text-lg text-text-secondary dark:text-slate-300 max-w-3xl">{contact.scheduleDescription}</p>
-                    <CalendlyEmbed url={calendlyEmbedUrl} title={contact.scheduleTitle} />
+                    <SchedulingEmbed url={schedulingEmbedUrl} title={contact.scheduleTitle} />
                     <div>
                         <a
                             href={actions.scheduleLink}

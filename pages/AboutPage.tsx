@@ -9,6 +9,15 @@ const AboutPage: React.FC = () => {
 
     const [selectedResume, setSelectedResume] = React.useState(about.resumeOptions[0]?.value ?? 'resume2025.pdf');
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
+    const resumeDeckHref = `${import.meta.env.BASE_URL}resumes/resume-production-ai-scale.pdf`;
+    const infographicSrc = `${import.meta.env.BASE_URL}about-infographic.png`;
+    const infographicAlt = language === 'en'
+      ? 'Infographic summarizing Petros Lambropoulos consulting focus areas'
+      : 'Infografικό που συνοψίζει τους άξονες συνεργασίας του Πέτρου Λαμπρόπουλου';
+    const videoEmbedSrc = 'https://www.youtube.com/embed/lZW2toXvtro';
+    const videoTitle = language === 'en'
+      ? 'Watch a quick introduction from Petros'
+      : 'Δες μια σύντομη παρουσίαση από τον Πέτρο';
 
     const metaDescription = language === 'en'
       ? `Learn how Petros Lambropoulos helps startup founders launch SaaS products fast with discovery, MVP builds, and production-ready features.`
@@ -37,6 +46,29 @@ const AboutPage: React.FC = () => {
                         <p>
                             <span className="font-bold text-text-primary dark:text-slate-100">{about.greeting}</span>, {about.intro}
                         </p>
+                    </div>
+                </section>
+            </AnimatedSection>
+
+            <AnimatedSection delay={120}>
+                <section className="mt-8" aria-label="Consulting infographic overview">
+                    <div className="bg-secondary dark:bg-slate-700 rounded-lg overflow-hidden shadow-md border border-primary/10 dark:border-cyan-400/20">
+                        <img
+                            src={infographicSrc}
+                            alt={infographicAlt}
+                            className="w-full h-auto"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div className="mt-4 flex justify-center">
+                        <a
+                            href={resumeDeckHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-lg bg-primary py-3 px-6 font-semibold text-white shadow-md transition hover:bg-primary/85 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:bg-cyan-500 dark:hover:bg-cyan-400"
+                        >
+                            {language === 'en' ? 'View resume presentation PDF' : 'Δες το PDF παρουσίασης του βιογραφικού'}
+                        </a>
                     </div>
                 </section>
             </AnimatedSection>
@@ -126,6 +158,23 @@ const AboutPage: React.FC = () => {
                             {about.resumeButton}
                         </a>
                         <p className="text-xs text-slate-500 dark:text-slate-400">{about.resumeNote}</p>
+                    </div>
+                </section>
+            </AnimatedSection>
+
+            <AnimatedSection delay={450}>
+                <section className="mt-12" aria-label="Video introduction">
+                    <div className="rounded-lg overflow-hidden shadow-md border border-primary/10 dark:border-cyan-400/20 bg-black">
+                        <div className="relative pb-[56.25%] h-0">
+                            <iframe
+                                src={videoEmbedSrc}
+                                title={videoTitle}
+                                className="absolute top-0 left-0 h-full w-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
                 </section>
             </AnimatedSection>

@@ -534,7 +534,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       switchToGreek: "Switch to Greek",
     },
     actions: {
-      scheduleLink: "https://calendly.com/petroslamb-dev/30min",
+      scheduleLink: "https://calendar.app.google/GTBgGnw1ziGqNffj6",
       scheduleAriaLabel: "Opens the scheduling tool in a new tab",
     }
   },
@@ -1071,7 +1071,7 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
       switchToGreek: "Αλλαγή στα Ελληνικά",
     },
     actions: {
-      scheduleLink: "https://calendly.com/petroslamb-dev/30min",
+      scheduleLink: "https://calendar.app.google/GTBgGnw1ziGqNffj6",
       scheduleAriaLabel: "Ανοίγει το εργαλείο προγραμματισμού σε νέο tab",
     },
   },
