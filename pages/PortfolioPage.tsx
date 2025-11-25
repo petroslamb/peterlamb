@@ -7,6 +7,7 @@ import MetaTags from '../components/MetaTags';
 const PortfolioPage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { portfolio } = translations;
+    const podcastSrc = `${import.meta.env.BASE_URL}portfolio-podcast.m4a`;
 
     const metaDescription = language === 'en'
       ? `Browse the portfolio of Petros Lambropoulos, featuring case studies in SaaS development, data platforms, forecasting, and cybersecurity products.`
@@ -22,6 +23,27 @@ const PortfolioPage: React.FC = () => {
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{portfolio.title}</h1>
                 <p className="mt-4 text-lg text-text-secondary dark:text-slate-300 max-w-3xl mx-auto">{portfolio.intro}</p>
             </div>
+
+            <AnimatedSection delay={120}>
+                <section className="mb-10" aria-label={portfolio.podcastTitle}>
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-primary/10 dark:border-cyan-400/20 p-6 flex flex-col gap-4">
+                        <div>
+                            <p className="text-sm uppercase tracking-wide text-primary dark:text-cyan-400 font-semibold">{portfolio.podcastTitle}</p>
+                            <p className="mt-2 text-text-secondary dark:text-slate-300">{portfolio.podcastDescription}</p>
+                        </div>
+                        <audio
+                            controls
+                            preload="none"
+                            src={podcastSrc}
+                            className="w-full"
+                        >
+                            {language === 'en'
+                              ? 'Your browser does not support the audio element.'
+                              : 'Ο περιηγητής σας δεν υποστηρίζει την αναπαραγωγή ήχου.'}
+                        </audio>
+                    </div>
+                </section>
+            </AnimatedSection>
 
             <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {portfolio.projects.map((project, index) => (

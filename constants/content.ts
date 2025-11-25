@@ -340,10 +340,12 @@ The highlights below are composite scenarios drawn from repeated grant-support w
         },
       ],
     },
-    portfolio: {
-      title: "Portfolio",
-      intro: "Selected work and case studies:",
-      projects: [
+  portfolio: {
+    title: "Portfolio",
+    intro: "Selected work and case studies:",
+    podcastTitle: "Podcast: Scaling Generative AI Requires Low-Level Mastery",
+    podcastDescription: "Listen to a quick take on why grounding generative AI in systems fundamentals matters when shipping at scale.",
+    projects: [
         { 
           slug: "dance-school-saas",
           title: "Dance School Management SaaS",
@@ -877,10 +879,12 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
         }
       ],
     },
-    portfolio: {
-      title: "Portfolio",
-      intro: "Επιλεγμένα έργα και case studies:",
-      projects: [
+  portfolio: {
+    title: "Portfolio",
+    intro: "Επιλεγμένα έργα και case studies:",
+    podcastTitle: "Podcast: Το Scaling του Generative AI απαιτεί low-level δεξιότητες",
+    podcastDescription: "Σύντομο σχόλιο για το γιατί τα θεμέλια στα συστήματα είναι κρίσιμα όταν κλιμακώνεις γενετικά μοντέλα στην παραγωγή.",
+    projects: [
         { 
           slug: "dance-school-saas",
           title: "SaaS Διαχείρισης Σχολής Χορού",

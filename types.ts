@@ -87,6 +87,8 @@ export interface Content {
   portfolio: {
     title: string;
     intro: string;
+    podcastTitle: string;
+    podcastDescription: string;
     projects: PortfolioItem[];
     githubCta: string;
     readCaseStudy: string;
