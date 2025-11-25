@@ -13,7 +13,8 @@ declare global {
               referrer?: string;
               title?: string;
               [key: string]: unknown;
-            },
+            }
+          | ((defaults: Record<string, unknown>) => Record<string, unknown>),
         payload?: Record<string, unknown>,
       ) => void;
     };
@@ -134,12 +135,14 @@ const Analytics: React.FC = () => {
     }
 
     const sendPageview = () => {
-      window.umami?.track?.({
-        type: 'pageview',
+      const overrideDefaults = (defaults: Record<string, unknown>) => ({
+        ...defaults,
         url: derivedPath,
         referrer: document.referrer,
         title: document.title,
       });
+
+      window.umami?.track?.(overrideDefaults);
     };
 
     if (typeof window.umami?.track === 'function') {
