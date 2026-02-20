@@ -1,7 +1,7 @@
-# Petros Lambropoulos – Lead Product Software Engineer
+# Petros Lambropoulos – AI Systems Consultant
 
 ## Overview
-This repository hosts the public-facing site for Petros (Peter) Lambropoulos, implemented with **React 19**, **TypeScript**, and **Vite**. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses hash-based URLs so the site works cleanly on GitHub Pages.
+This repository hosts the public-facing site for Petros (Peter) Lambropoulos, implemented with **React 19**, **TypeScript**, and **Vite**. The positioning focuses on hardening AI prototypes into production systems through evaluation, agent architecture, and compliance-first infrastructure. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses hash-based URLs so the site works cleanly on GitHub Pages.
 
 ## Branch & Remote Strategy
 - `main` is the branch for active development and deployable code. Create commits here when making changes locally.

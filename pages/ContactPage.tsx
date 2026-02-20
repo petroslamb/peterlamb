@@ -3,26 +3,58 @@ import { useLanguage } from '../context/LanguageContext';
 import MetaTags from '../components/MetaTags';
 import SchedulingEmbed from '../components/SchedulingEmbed';
 
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/petroslamb.dev@gmail.com';
+
 const ContactPage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { contact, actions } = translations;
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
 
     const schedulingEmbedUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cGdk7wy_kYMcB9CFQ8Lmf45Bqrf64GTCNPg4Mb31jjo9o37ArfE1mZi-h5rETky4j7vtm73Rt?gv=true';
 
     const metaDescription = language === 'en'
-      ? `Get in touch with Petros Lambropoulos to discuss your software, SaaS, or resilience initiative. Find contact details and a direct message form.`
-      : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για να συζητήσετε έργα λογισμικού, SaaS ή ανθεκτικότητας. Βρείτε στοιχεία επικοινωνίας και μια φόρμα άμεσου μηνύματος.`;
+      ? `Contact Petros Lambropoulos to discuss AI systems evaluation, production architecture, and reliability-focused consulting.`
+      : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για αξιολόγηση AI συστημάτων, production αρχιτεκτονική και συμβουλευτική με έμφαση στην αξιοπιστία.`;
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const name = (formData.get('name') ?? '') as string;
-        const email = (formData.get('email') ?? '') as string;
-        const message = (formData.get('message') ?? '') as string;
-        const subject = encodeURIComponent(`Contact from ${name} (${email})`);
-        const body = encodeURIComponent(message);
-        const mailtoLink = `mailto:petroslamb.dev@gmail.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+        const payload = {
+            name: ((formData.get('name') ?? '') as string).trim(),
+            email: ((formData.get('email') ?? '') as string).trim(),
+            message: ((formData.get('message') ?? '') as string).trim(),
+            _subject: 'New site contact request',
+            _captcha: 'false',
+            _template: 'table',
+        };
+
+        setIsSubmitting(true);
+        setStatus('idle');
+
+        try {
+            const response = await fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Submission failed with status ${response.status}`);
+            }
+
+            form.reset();
+            setStatus('success');
+        } catch (error) {
+            console.error(error);
+            setStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -30,6 +62,7 @@ const ContactPage: React.FC = () => {
              <MetaTags 
                 title={`${contact.title} | Petros Lambropoulos`} 
                 description={metaDescription}
+                canonicalPath="/#/contact"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{contact.title}</h1>
@@ -65,6 +98,7 @@ const ContactPage: React.FC = () => {
                     <section aria-labelledby="contact-form-heading">
                         <h2 id="contact-form-heading" className="text-2xl font-bold text-text-primary dark:text-white mb-4">{contact.formIntro}</h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
+                            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-slate-300">{contact.formName}</label>
                                 <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400" autoComplete="name" />
@@ -78,10 +112,23 @@ const ContactPage: React.FC = () => {
                                 <textarea name="message" id="message" rows={4} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400"></textarea>
                             </div>
                             <div>
-                                <button type="submit" className="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                                    {contact.formSubmit}
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:cursor-not-allowed disabled:opacity-60"
+                                >
+                                    {isSubmitting ? contact.formSubmitting : contact.formSubmit}
                                 </button>
                             </div>
+                            {status !== 'idle' ? (
+                                <p
+                                    className={`text-sm ${status === 'success' ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
+                                    role="status"
+                                    aria-live="polite"
+                                >
+                                    {status === 'success' ? contact.formSuccess : contact.formError}
+                                </p>
+                            ) : null}
                         </form>
                     </section>
                 </div>

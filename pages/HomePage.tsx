@@ -21,8 +21,8 @@ const HomePage: React.FC = () => {
     const { trackEvent } = useAnalytics();
 
     const metaDescription = language === 'en'
-        ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
-        : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες με discovery, υλοποίηση και λειτουργίες έτοιμες για παραγωγή.`;
+        ? `Petros Lambropoulos helps teams harden AI prototypes into production systems through evaluation pipelines, agent architecture, and compliance-first infrastructure.`
+        : `Ο Πέτρος Λαμπρόπουλος βοηθά ομάδες να μετατρέψουν AI prototypes σε παραγωγικά συστήματα μέσω evaluation pipelines, agent αρχιτεκτονικής και compliance-first υποδομών.`;
 
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -32,10 +32,9 @@ const HomePage: React.FC = () => {
     ];
 
     const iconMap: Record<string, React.ReactNode> = {
-        'ai-discovery': baseIcons[0],
-        'ai-mvp': baseIcons[1],
-        'ai-feature-add-on': baseIcons[2],
-        'grant-funded-sprint': baseIcons[3],
+        'ai-systems-evaluation': baseIcons[0],
+        'production-agentic-architectures': baseIcons[1],
+        'deep-tech-infrastructure': baseIcons[2],
     };
 
     return (
@@ -43,6 +42,7 @@ const HomePage: React.FC = () => {
             <MetaTags
                 title={`${home.name} | ${home.title}`}
                 description={metaDescription}
+                canonicalPath="/#/"
             />
             <section className="text-center -mx-4 sm:-mx-6 lg:-mx-8 -mt-8 md:-mt-12 py-20 md:py-28 bg-gradient-to-b from-white to-secondary dark:from-slate-900 dark:to-slate-800 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,6 +110,47 @@ const HomePage: React.FC = () => {
 
             <section className="text-center py-8 bg-white dark:bg-slate-800 rounded-lg shadow-md" aria-label={home.credibility}>
                 <p className="text-lg text-text-secondary dark:text-slate-300">{home.credibility}</p>
+            </section>
+
+            <section aria-labelledby="proof-heading" className="space-y-6">
+                <div className="text-center max-w-3xl mx-auto space-y-3">
+                    <h2 id="proof-heading" className="text-3xl font-bold text-text-primary dark:text-white">{home.proofTitle}</h2>
+                    <p className="text-text-secondary dark:text-slate-300">{home.proofIntro}</p>
+                </div>
+                <ul className="grid md:grid-cols-2 gap-6">
+                    {home.proofBlocks.map((proof, index) => (
+                        <li key={proof.title} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 space-y-4">
+                            <h3 className="text-xl font-bold text-primary dark:text-cyan-400">{proof.title}</h3>
+                            <div className="space-y-3 text-text-secondary dark:text-slate-300 text-sm">
+                                <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Challenge:' : 'Πρόκληση:'}</span> {proof.challenge}</p>
+                                <div>
+                                    <p className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Contribution:' : 'Συνεισφορά:'}</p>
+                                    <ul className="mt-2 space-y-1 list-disc pl-5">
+                                        {proof.contribution.map((item) => (
+                                            <li key={item}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Outcome:' : 'Αποτέλεσμα:'}</span> {proof.outcome}</p>
+                                {proof.scopeNote ? (
+                                    <p className="text-xs text-slate-500 dark:text-slate-400">{proof.scopeNote}</p>
+                                ) : null}
+                            </div>
+                            <a
+                                href={proof.evidenceUrl}
+                                target={proof.evidenceUrl.startsWith('/') ? undefined : '_blank'}
+                                rel={proof.evidenceUrl.startsWith('/') ? undefined : 'noopener noreferrer'}
+                                className="inline-flex items-center text-primary dark:text-cyan-400 font-semibold hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 rounded-sm"
+                                onClick={() => trackEvent('proof_evidence_click', { area: 'home_proof', title: proof.title, index })}
+                            >
+                                {proof.evidenceLabel}
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </section>
 
             <section aria-label={home.featuredResearch.title} className="pb-4">

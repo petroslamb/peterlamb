@@ -23,7 +23,58 @@ export const content: Record<'en' | 'gr', Content> = {
         { title: "Production Agentic Architectures", description: "Integrating fragile AI prototypes into reliable software systems.", slug: "production-agentic-architectures" },
         { title: "Deep-Tech Infrastructure", description: "Designing distributed backends for ML-monitoring and regulated industries.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Trusted by Workable, NannyML, and dikaio.ai.",
+      credibility: "Experience includes production AI systems at Workable and NannyML, plus independent consulting engagements (including dikaio.ai).",
+      proofTitle: "Proof, Not Promises",
+      proofIntro: "Selected evidence from production work and public artifacts. Where client confidentiality applies, I explicitly mark scope constraints.",
+      proofBlocks: [
+        {
+          title: "Ethereum Protocol Verification (eth-llm-poc)",
+          challenge: "Protocol teams need auditable evidence that specification obligations map to real client implementation logic.",
+          contribution: [
+            "Built an LLM-assisted verification pipeline that extracts obligations from EIPs and traces them against execution-specs and Geth code paths.",
+            "Designed multi-stage checks that surface disagreements between high-level summaries and line-level evidence."
+          ],
+          outcome: "Produced reproducible CI artifacts and reports that make verification disagreements reviewable instead of implicit.",
+          evidenceLabel: "GitHub repo and CI runs",
+          evidenceUrl: "https://github.com/petroslamb/eth-llm-poc",
+          scopeNote: "Created as a PoC for an Ethereum Foundation ESP RFP; grant not awarded."
+        },
+        {
+          title: "Production AI Scaling (Workable)",
+          challenge: "Move generative AI prototypes from experimentation into dependable production flows at hiring-platform scale.",
+          contribution: [
+            "Translated early GenAI prototypes into deployed Python microservices on AWS EKS.",
+            "Integrated event-driven workflows across Kafka/RabbitMQ with strict fallback behavior."
+          ],
+          outcome: "Supported tens of thousands of resume-related requests daily across a 0.5B-record corpus in production workflows.",
+          evidenceLabel: "Resume and case-study summary",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          scopeNote: "Client internals, exact service SLOs, and proprietary implementation details are confidential."
+        },
+        {
+          title: "ML Observability Infrastructure (NannyML)",
+          challenge: "Founding teams needed a reliable MLOps baseline to support enterprise onboarding and early commercial deals.",
+          contribution: [
+            "Piloted monitoring prototypes and shipped containerized Python services on Amazon EKS.",
+            "Helped shape production-grade deployment and runtime reliability patterns."
+          ],
+          outcome: "Improved deployment reliability and accelerated customer onboarding in the early enterprise phase.",
+          evidenceLabel: "Portfolio and resume references",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          scopeNote: "Detailed customer-side metrics and internal architecture records are NDA-restricted."
+        },
+        {
+          title: "Compliance-First Tokenization Architecture (CNO/Hedera)",
+          challenge: "Design regulated tokenization and trading infrastructure that reconciles compliance constraints with distributed-system throughput.",
+          contribution: [
+            "Authored and maintained canonical architecture and operational-flow documentation for Oxygen-first delivery on Hedera.",
+            "Mapped standards and migration paths (ATS/ ERC-1400 baseline toward ERC-3643 alignment)."
+          ],
+          outcome: "Established a clear execution baseline for phased delivery, governance, and architecture decisions.",
+          evidenceLabel: "Public architecture repository",
+          evidenceUrl: "https://github.com/petroslamb/cno-project"
+        }
+      ],
       featuredResearch: {
         title: "Featured Research",
         essayTitle: "The Transformer Attractor",
@@ -83,13 +134,13 @@ export const content: Record<'en' | 'gr', Content> = {
           title: "The Transformer Attractor",
           description: "An analysis of why AI architectures converge on the Transformer and the hardware constraints shaping this evolution.",
           url: "https://lambpetros.substack.com/p/the-transformer-attractor",
-          date: "Feb 2025",
+          date: "Jan 2026",
         },
         {
           title: "The Hardware Friction Map",
           description: "A deep dive into the systems fundamentals and hardware economics that govern AI production scalability.",
           url: "https://lambpetros.substack.com/p/the-hardware-friction-map",
-          date: "Feb 2025",
+          date: "Dec 2025",
         }
       ],
       subscribeCta: "Subscribe to my Research"
@@ -185,13 +236,13 @@ export const content: Record<'en' | 'gr', Content> = {
           ],
           caseStudies: [
             {
-              company: "Google Cloud / ADK",
-              challenge: "Deliver reliable agent systems for code intelligence and automation.",
+              company: "RepoReviver (Independent AI Initiative)",
+              challenge: "Build a reliable agent workflow that can inspect stale repositories, apply fixes safely, and produce reviewable pull requests.",
               solution: [
-                "Architected production-grade agentic workflows.",
-                "Ensured high reliability and strict guardrails for enterprise-level automation."
+                "Designed a codespace-first agent workflow with explicit lifecycle steps (create environment, run fixes, verify, open PR, cleanup).",
+                "Implemented guardrails around execution isolation and reproducible automation runs."
               ],
-              technologies: ["Python", "Agentic Systems", "Code Automation"]
+              technologies: ["Python", "Google ADK", "GitHub Codespaces", "Agentic Systems"]
             },
             {
               company: "Workable",
@@ -362,7 +413,7 @@ Designed and documented the core architecture for a regulated digital asset (RWA
     },
     contact: {
       title: "Contact",
-      intro: "Let’s talk about your project.",
+      intro: "Let’s talk about your AI system and what has to be production-safe.",
       detailsTitle: "Contact Details",
       email: "Email",
       linkedin: "LinkedIn",
@@ -375,6 +426,9 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       formEmail: "Your Email",
       formMessage: "Your Message",
       formSubmit: "Send Message",
+      formSubmitting: "Sending...",
+      formSuccess: "Message sent. I will reply by email within 1-2 business days.",
+      formError: "The form could not be sent right now. Please email me directly at petroslamb.dev@gmail.com.",
     },
     blog: {
       title: "Blog",
@@ -398,8 +452,9 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       privacyNote: "This site uses Umami’s cookieless analytics. No personal data or cookies are collected—this dashboard shows exactly what is measured.",
     },
     footer: {
-      copyright: "© 2025 Petros Lambropoulos. All rights reserved.",
+      copyright: "© 2026 Petros Lambropoulos. All rights reserved.",
       availability: "Available for international consulting & freelance projects.",
+      analyticsLinkLabel: "View public analytics",
     },
     announcements: {
       languageChanged: "Language set to English",
@@ -437,7 +492,58 @@ Designed and documented the core architecture for a regulated digital asset (RWA
         { title: "Παραγωγικές Agentic Αρχιτεκτονικές", description: "Ενσωμάτωση εύθραυστων AI prototypes σε αξιόπιστα συστήματα λογισμικού.", slug: "production-agentic-architectures" },
         { title: "Deep-Tech Υποδομές", description: "Σχεδιασμός κατανεμημένων backends για ML-monitoring και ρυθμιζόμενους κλάδους.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Με έχουν εμπιστευτεί οργανισμοί όπως η Workable, η NannyML και το dikaio.ai.",
+      credibility: "Εμπειρία σε παραγωγικά AI συστήματα στη Workable και τη NannyML, καθώς και σε ανεξάρτητα συμβουλευτικά engagements (συμπεριλαμβανομένου του dikaio.ai).",
+      proofTitle: "Αποδείξεις, Όχι Υποσχέσεις",
+      proofIntro: "Επιλεγμένα παραδείγματα από παραγωγική δουλειά και δημόσια artifacts. Όπου υπάρχει εμπιστευτικότητα πελάτη, το δηλώνω ρητά.",
+      proofBlocks: [
+        {
+          title: "Ethereum Protocol Verification (eth-llm-poc)",
+          challenge: "Οι ομάδες πρωτοκόλλων χρειάζονται ελέγξιμη απόδειξη ότι οι υποχρεώσεις των προδιαγραφών αντιστοιχίζονται σε πραγματική υλοποίηση.",
+          contribution: [
+            "Υλοποίησα LLM-assisted pipeline που εξάγει obligations από EIPs και τα χαρτογραφεί σε execution-specs και Geth code paths.",
+            "Σχεδίασα πολυσταδιακούς ελέγχους που εντοπίζουν αποκλίσεις ανάμεσα σε αφηγηματικές περιλήψεις και line-level evidence."
+          ],
+          outcome: "Παράχθηκαν επαναλήψιμα CI artifacts και αναφορές που κάνουν τις διαφωνίες ελέγξιμες και όχι σιωπηρές.",
+          evidenceLabel: "GitHub repository και CI runs",
+          evidenceUrl: "https://github.com/petroslamb/eth-llm-poc",
+          scopeNote: "Υλοποιήθηκε ως PoC για Ethereum Foundation ESP RFP· η χρηματοδότηση δεν εγκρίθηκε."
+        },
+        {
+          title: "Κλιμάκωση Παραγωγικού AI (Workable)",
+          challenge: "Μετάβαση των generative AI prototypes από το πειραματικό στάδιο σε αξιόπιστες παραγωγικές ροές σε μεγάλη κλίμακα.",
+          contribution: [
+            "Μετέτρεψα πρώιμα GenAI prototypes σε deployed Python microservices στο AWS EKS.",
+            "Ενσωμάτωσα event-driven workflows πάνω σε Kafka/RabbitMQ με αυστηρή συμπεριφορά fallback."
+          ],
+          outcome: "Υποστηρίχθηκαν δεκάδες χιλιάδες αιτήματα ημερησίως σε workflows σχετικών με βιογραφικά, πάνω σε corpus 0.5 δισ. εγγραφών.",
+          evidenceLabel: "Βιογραφικό και συνοπτικό case study",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          scopeNote: "Εσωτερικά SLOs, ακριβή service metrics και proprietary λεπτομέρειες παραμένουν εμπιστευτικά."
+        },
+        {
+          title: "ML Observability Υποδομή (NannyML)",
+          challenge: "Η ιδρυτική ομάδα χρειαζόταν αξιόπιστη MLOps βάση για enterprise onboarding και πρώιμη εμπορική αξιοποίηση.",
+          contribution: [
+            "Υλοποίησα monitoring prototypes και παρέδωσα containerized Python services στο Amazon EKS.",
+            "Συνεισέφερα σε production-grade πρότυπα ανάπτυξης και λειτουργικής αξιοπιστίας."
+          ],
+          outcome: "Βελτιώθηκε η αξιοπιστία deployment και επιταχύνθηκε το onboarding πελατών στο πρώιμο enterprise στάδιο.",
+          evidenceLabel: "Portfolio και αναφορές βιογραφικού",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          scopeNote: "Αναλυτικά customer-side metrics και εσωτερικά αρχιτεκτονικά δεδομένα είναι υπό NDA."
+        },
+        {
+          title: "Compliance-First Tokenization Architecture (CNO/Hedera)",
+          challenge: "Σχεδιασμός ρυθμιζόμενης υποδομής tokenization και trading που ισορροπεί κανονιστική συμμόρφωση και υψηλό throughput.",
+          contribution: [
+            "Συνέγραψα και συντήρησα canonical architecture και operational-flow τεκμηρίωση για Oxygen-first υλοποίηση στο Hedera.",
+            "Χαρτογράφησα standards και migration paths (ATS/ ERC-1400 baseline προς ERC-3643 alignment)."
+          ],
+          outcome: "Καθορίστηκε ξεκάθαρο baseline υλοποίησης για phased delivery, governance και αρχιτεκτονικές αποφάσεις.",
+          evidenceLabel: "Δημόσιο repository αρχιτεκτονικής",
+          evidenceUrl: "https://github.com/petroslamb/cno-project"
+        }
+      ],
       featuredResearch: {
         title: "Προτεινόμενη Έρευνα",
         essayTitle: "The Transformer Attractor",
@@ -497,13 +603,13 @@ Designed and documented the core architecture for a regulated digital asset (RWA
           title: "The Transformer Attractor",
           description: "Μια ανάλυση του γιατί οι αρχιτεκτονικές AI συγκλίνουν στον Transformer και των περιορισμών στο hardware που διαμορφώνουν αυτή την εξέλιξη.",
           url: "https://lambpetros.substack.com/p/the-transformer-attractor",
-          date: "Φεβ 2025",
+          date: "Ιαν 2026",
         },
         {
           title: "The Hardware Friction Map",
           description: "Μια βαθιά βουτιά στα θεμέλια των συστημάτων και στα οικονομικά του hardware που διέπουν την επεκτασιμότητα παραγωγής AI.",
           url: "https://lambpetros.substack.com/p/the-hardware-friction-map",
-          date: "Φεβ 2025",
+          date: "Δεκ 2025",
         }
       ],
       subscribeCta: "Εγγραφείτε στην Έρευνά μου"
@@ -599,13 +705,13 @@ Designed and documented the core architecture for a regulated digital asset (RWA
           ],
           caseStudies: [
             {
-              company: "Google Cloud / ADK",
-              challenge: "Παράδοση αξιόπιστων agent systems για code intelligence και αυτοματισμούς.",
+              company: "RepoReviver (Ανεξάρτητη Πρωτοβουλία AI)",
+              challenge: "Δημιουργία αξιόπιστου agent workflow που ελέγχει παλιά repositories, εφαρμόζει διορθώσεις με ασφάλεια και παράγει ελέγξιμα pull requests.",
               solution: [
-                "Αρχιτεκτόνησα παραγωγικά agentic workflows.",
-                "Εξασφάλισα υψηλή αξιοπιστία και αυστηρά guardrails για enterprise επιπέδου αυτοματισμούς."
+                "Σχεδίασα codespace-first agent workflow με σαφή βήματα κύκλου ζωής (δημιουργία περιβάλλοντος, διορθώσεις, επαλήθευση, PR, καθαρισμός).",
+                "Εφάρμοσα guardrails για isolation της εκτέλεσης και επαναλήψιμα automation runs."
               ],
-              technologies: ["Python", "Agentic Systems", "Code Automation"]
+              technologies: ["Python", "Google ADK", "GitHub Codespaces", "Agentic Systems"]
             },
             {
               company: "Workable",
@@ -776,7 +882,7 @@ Designed and documented the core architecture for a regulated digital asset (RWA
     },
     contact: {
       title: "Επικοινωνία",
-      intro: "Ας συζητήσουμε για το έργο σας.",
+      intro: "Ας συζητήσουμε για το AI σύστημά σας και τι πρέπει να είναι production-safe.",
       detailsTitle: "Στοιχεία Επικοινωνίας",
       email: "Email",
       linkedin: "LinkedIn",
@@ -789,6 +895,9 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       formEmail: "Το Email σας",
       formMessage: "Το Μήνυμά σας",
       formSubmit: "Αποστολή Μηνύματος",
+      formSubmitting: "Αποστολή...",
+      formSuccess: "Το μήνυμα στάλθηκε. Θα σου απαντήσω μέσω email εντός 1-2 εργάσιμων ημερών.",
+      formError: "Η αποστολή της φόρμας απέτυχε προσωρινά. Στείλε μου απευθείας email στο petroslamb.dev@gmail.com.",
     },
     blog: {
       title: "Blog",
@@ -812,8 +921,9 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       privacyNote: "Το site χρησιμοποιεί τα cookieless analytics του Umami. Δεν συλλέγονται προσωπικά δεδομένα ή cookies — αυτός ο πίνακας δείχνει ακριβώς τι παρακολουθείται.",
     },
     footer: {
-      copyright: "© 2025 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",
+      copyright: "© 2026 Πέτρος Λαμπρόπουλος. Με την επιφύλαξη παντός δικαιώματος.",
       availability: "Διαθέσιμος για διεθνή projects και συμβουλευτικές συνεργασίες.",
+      analyticsLinkLabel: "Δημόσια μετρήσεις",
     },
     announcements: {
       languageChanged: "Η γλώσσα άλλαξε σε Ελληνικά",

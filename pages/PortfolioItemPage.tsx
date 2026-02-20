@@ -52,6 +52,8 @@ const PortfolioItemPage: React.FC = () => {
       <MetaTags 
           title={`${project.title} | ${portfolio.title} | Petros Lambropoulos`} 
           description={project.description}
+          type="article"
+          canonicalPath={`/#/portfolio/${project.slug}`}
       />
       <header className="mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
         <Link to="/portfolio" className="text-primary dark:text-cyan-400 hover:underline mb-4 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-800 rounded-sm">

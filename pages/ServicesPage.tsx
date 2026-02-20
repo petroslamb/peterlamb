@@ -9,8 +9,8 @@ const ServicesPage: React.FC = () => {
     const { services, actions } = translations;
 
     const metaDescription = language === 'en'
-      ? `Explore consulting tiers from Petros Lambropoulos: Discovery Sprint, SaaS MVP Launch, Feature Add-On, and Grant-Funded Crypto, AI & Deep-Tech Sprint with pricing and deliverables.`
-      : `Εξερευνήστε τα consulting tiers του Πέτρου Λαμπρόπουλου: Discovery Sprint, SaaS MVP Launch, Feature Add-On και Grant-Funded Crypto, AI & Deep-Tech Sprint με κόστος και παραδοτέα.`;
+      ? `Explore consulting services by Petros Lambropoulos for AI systems evaluation, production agent architecture, and compliance-first infrastructure with clear deliverables and pricing.`
+      : `Εξερευνήστε τις συμβουλευτικές υπηρεσίες του Πέτρου Λαμπρόπουλου για αξιολόγηση AI συστημάτων, production agent αρχιτεκτονικές και compliance-first υποδομές με ξεκάθαρα παραδοτέα και κόστος.`;
     
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -31,6 +31,7 @@ const ServicesPage: React.FC = () => {
             <MetaTags 
                 title={`${services.title} | Petros Lambropoulos`} 
                 description={metaDescription}
+                canonicalPath="/#/services"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{services.title}</h1>

@@ -53,6 +53,9 @@ export interface Content {
     servicesTitle: string;
     services: Service[];
     credibility: string;
+    proofTitle: string;
+    proofIntro: string;
+    proofBlocks: ProofBlock[];
     featuredResearch: {
       title: string;
       essayTitle: string;
@@ -124,6 +127,9 @@ export interface Content {
     formEmail: string;
     formMessage: string;
     formSubmit: string;
+    formSubmitting: string;
+    formSuccess: string;
+    formError: string;
     scheduleTitle: string;
     scheduleDescription: string;
     scheduleButton: string;
@@ -152,6 +158,7 @@ export interface Content {
   footer: {
     copyright: string;
     availability: string;
+    analyticsLinkLabel: string;
   };
   announcements: {
     languageChanged: string;
@@ -172,6 +179,16 @@ export interface Service {
   title: string;
   description: string;
   slug: string;
+}
+
+export interface ProofBlock {
+  title: string;
+  challenge: string;
+  contribution: string[];
+  outcome: string;
+  evidenceLabel: string;
+  evidenceUrl: string;
+  scopeNote?: string;
 }
 
 export interface ServiceCaseStudy {
@@ -218,6 +235,8 @@ export interface ResumeOption {
 export interface SiteMetadata {
   name: string;
   description: string;
+  siteUrl?: string;
+  ogImage?: string;
   requestFramePermissions: string[];
   analytics?: AnalyticsConfig;
   analyticsShareUrl?: string;

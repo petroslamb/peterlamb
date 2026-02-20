@@ -44,6 +44,8 @@ const BlogPostPage: React.FC = () => {
       <MetaTags 
           title={`${post.title} | ${translations.blog.title} | Petros Lambropoulos`} 
           description={post.description}
+          type="article"
+          canonicalPath={`/#/blog/${post.slug}`}
       />
       <header className="mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
         <Link to="/blog" className="text-primary dark:text-cyan-400 hover:underline mb-4 inline-block">

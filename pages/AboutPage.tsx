@@ -12,8 +12,8 @@ const AboutPage: React.FC = () => {
     const resumeDeckHref = `${import.meta.env.BASE_URL}resumes/resume-production-ai-scale.pdf`;
 
     const metaDescription = language === 'en'
-        ? `Learn how Petros Lambropoulos helps startup founders launch SaaS products fast with discovery, MVP builds, and production-ready features.`
-        : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και λειτουργίες έτοιμες για παραγωγή.`;
+        ? `Learn how Petros Lambropoulos helps teams harden AI prototypes into production systems with evaluation rigor, agent architecture, and reliability-first delivery.`
+        : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά ομάδες να μετατρέπουν AI prototypes σε παραγωγικά συστήματα με αυστηρή αξιολόγηση, agent αρχιτεκτονική και reliability-first υλοποίηση.`;
 
     const ListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <li className="flex items-start">
@@ -29,6 +29,7 @@ const AboutPage: React.FC = () => {
             <MetaTags
                 title={`${about.title} | Petros Lambropoulos`}
                 description={metaDescription}
+                canonicalPath="/#/about"
             />
             <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white mb-6 text-center">{about.title}</h1>
 

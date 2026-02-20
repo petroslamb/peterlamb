@@ -41,8 +41,8 @@ const BlogPage: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const metaDescription = language === 'en'
-      ? `Read articles by Petros Lambropoulos on software engineering, SaaS delivery, product strategy, and consulting. Insights on technology, resilience, and leadership.`
-      : `Διαβάστε άρθρα του Πέτρου Λαμπρόπουλου για τη μηχανική λογισμικού, την παράδοση SaaS, τη στρατηγική προϊόντος και τη συμβουλευτική. Απόψεις για την τεχνολογία, την ανθεκτικότητα και την ηγεσία.`;
+      ? `Read essays by Petros Lambropoulos on AI systems engineering, evaluation reliability, agent orchestration, and deep learning infrastructure.`
+      : `Διαβάστε άρθρα του Πέτρου Λαμπρόπουλου για AI systems engineering, αξιολόγηση αξιοπιστίας, agent ορχήστρωση και υποδομές βαθιάς μάθησης.`;
     
     const filteredPosts = useMemo(() => {
         if (!searchQuery) {
@@ -111,6 +111,7 @@ const BlogPage: React.FC = () => {
             <MetaTags 
                 title={`${blog.title} | Petros Lambropoulos`} 
                 description={metaDescription}
+                canonicalPath="/#/blog"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{blog.title}</h1>

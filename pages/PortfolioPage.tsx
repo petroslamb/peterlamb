@@ -9,14 +9,15 @@ const PortfolioPage: React.FC = () => {
     const { portfolio } = translations;
 
     const metaDescription = language === 'en'
-      ? `Browse the portfolio of Petros Lambropoulos, featuring case studies in SaaS development, data platforms, forecasting, and cybersecurity products.`
-      : `Περιηγηθείτε στο portfolio του Πέτρου Λαμπρόπουλου με case studies σε ανάπτυξη SaaS, πλατφόρμες δεδομένων, forecasting και προϊόντα κυβερνοασφάλειας.`;
+      ? `Browse portfolio case studies by Petros Lambropoulos on production AI systems, protocol verification, compliance-first infrastructure, and deep-tech architecture.`
+      : `Περιηγηθείτε στο portfolio του Πέτρου Λαμπρόπουλου με case studies σε παραγωγικά AI συστήματα, protocol verification, compliance-first υποδομές και deep-tech αρχιτεκτονική.`;
 
     return (
         <div className="max-w-7xl mx-auto">
             <MetaTags 
                 title={`${portfolio.title} | Petros Lambropoulos`} 
                 description={metaDescription}
+                canonicalPath="/#/portfolio"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{portfolio.title}</h1>

@@ -85,6 +85,7 @@ const ServiceDetailPage: React.FC = () => {
             <MetaTags 
                 title={`${serviceData.title} | ${services.title} | Petros Lambropoulos`} 
                 description={metaDescription}
+                canonicalPath={`/#/services/${serviceData.slug}`}
             />
             <div className="mb-8">
                 <Link to="/services" className="text-primary dark:text-cyan-400 hover:underline inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 rounded-sm">

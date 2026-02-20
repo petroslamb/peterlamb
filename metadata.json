@@ -1,6 +1,8 @@
 {
-  "name": "Petros Lambropoulos - SaaS Delivery Partner",
-  "description": "Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.",
+  "name": "Petros Lambropoulos - AI Systems Consultant",
+  "description": "Petros Lambropoulos hardens AI prototypes into production systems with evaluation pipelines, production agent architecture, and compliance-first infrastructure.",
+  "siteUrl": "https://petroslamb.github.io/peterlamb",
+  "ogImage": "/about-infographic.png",
   "requestFramePermissions": [],
   "analyticsShareUrl": "https://cloud.umami.is/share/XlFjHh9T4RgIJTE1",
   "analytics": {
