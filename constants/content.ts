@@ -17,13 +17,48 @@ export const content: Record<'en' | 'gr', Content> = {
       subtitle: "I design, evaluate, and scale agentic architectures and deep-tech infrastructure that survive real-world constraints.",
       specialties: "Rigorous LLM evaluation, production agentic architectures, and compliance-first infrastructure.",
       cta: "Schedule a systems review",
+      trustStripTitle: "Why teams trust me quickly",
+      trustSignals: [
+        { label: "Production systems shipped", value: "Workable, NannyML, and regulated deep-tech initiatives" },
+        { label: "Independent evidence", value: "Public repos, CI traces, architecture docs, and research artifacts" },
+        { label: "Delivery pace", value: "First architecture teardown delivered within 5 business days" },
+        { label: "Response promise", value: "Initial response within 24 hours on weekdays" },
+      ],
       servicesTitle: "Specialized Consulting",
       services: [
         { title: "AI Systems Evaluation", description: "Rigorous testing and architectural auditing before your AI hits production.", slug: "ai-systems-evaluation" },
         { title: "Production Agentic Architectures", description: "Integrating fragile AI prototypes into reliable software systems.", slug: "production-agentic-architectures" },
         { title: "Deep-Tech Infrastructure", description: "Designing distributed backends for ML-monitoring and regulated industries.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Experience includes production AI systems at Workable and NannyML, plus independent consulting engagements (including dikaio.ai).",
+      credibility: "Experience includes production AI systems at Workable and NannyML, plus independent consulting engagements.",
+      outcomesTitle: "Commercial Outcomes (Anonymized)",
+      outcomesIntro: "Two examples with explicit baseline, intervention scope, and measurable deltas.",
+      outcomeCaseStudies: [
+        {
+          title: "Hiring Platform GenAI Hardening",
+          timeframe: "6-week stabilization sprint",
+          before: "Prototype recovery relied on manual intervention during failures and rollout bottlenecks.",
+          after: "Introduced hardened microservices and deterministic fallbacks supporting tens of thousands of daily resume workflows across a 0.5B-record corpus.",
+          scope: "Scope covers architecture and reliability patterns only; internal SLO dashboards and client-specific internals are confidential.",
+          evidenceLabel: "Related production case study",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems"
+        },
+        {
+          title: "Compliance-First Tokenization Architecture",
+          timeframe: "8-week architecture track",
+          before: "Three critical flows (issuance, restricted transfers, secondary trading) lived in fragmented documentation with weak migration guidance.",
+          after: "Consolidated all 3 flows into one canonical Oxygen-first architecture path with a documented migration baseline from ERC-1400 toward ERC-3643 alignment.",
+          scope: "Client identity, governance minutes, and internal throughput benchmarks are NDA-restricted.",
+          evidenceLabel: "Public architecture repository",
+          evidenceUrl: "https://github.com/petroslamb/cno-project"
+        }
+      ],
+      secondaryCta: {
+        title: "Request a 1-page architecture teardown",
+        description: "Share your architecture context async and get a written teardown with top bottlenecks, risk flags, and first-priority fixes.",
+        buttonLabel: "Start teardown request",
+        helper: "Delivered as a concise written brief before any live call."
+      },
       proofTitle: "Proof, Not Promises",
       proofIntro: "Selected evidence from production work and public artifacts. Where client confidentiality applies, I explicitly mark scope constraints.",
       proofBlocks: [
@@ -48,7 +83,7 @@ export const content: Record<'en' | 'gr', Content> = {
           ],
           outcome: "Supported tens of thousands of resume-related requests daily across a 0.5B-record corpus in production workflows.",
           evidenceLabel: "Resume and case-study summary",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
           scopeNote: "Client internals, exact service SLOs, and proprietary implementation details are confidential."
         },
         {
@@ -60,7 +95,7 @@ export const content: Record<'en' | 'gr', Content> = {
           ],
           outcome: "Improved deployment reliability and accelerated customer onboarding in the early enterprise phase.",
           evidenceLabel: "Portfolio and resume references",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
           scopeNote: "Detailed customer-side metrics and internal architecture records are NDA-restricted."
         },
         {
@@ -122,9 +157,9 @@ export const content: Record<'en' | 'gr', Content> = {
       resumeNote: "Default pick: best all-around profile.",
       resumeOptions: [
         { value: "resume2025.pdf", label: "2025 Resume — Best all-around" },
-        { value: "resume2025_hyped.pdf", label: "2025 Resume — Hyped" },
-        { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Hyped (Greek)" },
-        { value: "resume2025_conservative.pdf", label: "2025 Resume — Conservative (Spartan)" },
+        { value: "resume2025_hyped.pdf", label: "2025 Resume — Growth-focused narrative" },
+        { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Growth-focused narrative (Greek)" },
+        { value: "resume2025_conservative.pdf", label: "2025 Resume — Lean technical version" },
       ],
       philosophyTitle: "Engineering Philosophy",
       philosophyText: "I believe that to build robust AI systems, you first need to understand the mechanical limits of the models themselves—from attention mechanisms to KV cache constraints. Engineering abstraction without mechanistic understanding leads to fragile, unpredictable systems.",
@@ -404,6 +439,20 @@ Designed and documented the core architecture for a regulated digital asset (RWA
 `
         },
       ],
+      forkTransparencyTitle: "Pinned fork transparency",
+      forkTransparencyIntro: "Some pinned repositories are forks. They are showcased as adaptation/contribution workstreams, not original ownership claims.",
+      forkHighlights: [
+        {
+          repo: "rlm (fork)",
+          link: "https://github.com/petroslamb/rlm",
+          contribution: "Maintained as an adaptation sandbox with implementation notes and consultant-facing usage framing."
+        },
+        {
+          repo: "resume-copilot (fork)",
+          link: "https://github.com/petroslamb/resume-copilot",
+          contribution: "Used as a forked implementation track to test and document resume workflow improvements."
+        }
+      ],
       githubCta: "See more on GitHub",
       readCaseStudy: "Read Case Study",
       backToPortfolio: "Back to Portfolio",
@@ -421,6 +470,46 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       scheduleTitle: "Prefer to jump straight to a call?",
       scheduleDescription: "Reserve a 30-minute discovery session to align on goals, scope, and timelines. You’ll get follow-up notes and next steps within 48 hours.",
       scheduleButton: "Schedule a discovery call",
+      scheduleFallback: "No visible slots in the calendar widget? Email me directly and I will open priority scheduling windows.",
+      priorityEmailLabel: "Email for priority scheduling",
+      priorityEmailSubject: "Priority scheduling request",
+      teardownIntentSubject: "1-page architecture teardown request",
+      teardownIntentHint: "Use Markdown. Fill only the blanks you want/can; leave the rest empty.",
+      teardownIntentMessage: `# 1-Page Architecture Teardown Request
+
+> Fill only the blanks you want/can. Skip anything not ready yet.
+
+## 1) System Snapshot
+- Product / use case:
+- Stage: (prototype, beta, production)
+- Users / tenants:
+- Traffic: \`requests/day\` and peak \`requests/min\`
+
+## 2) Current Architecture
+\`\`\`txt
+Frontend:
+Backend:
+LLM provider(s) / model(s):
+Data stores:
+Orchestration / queues:
+Hosting / infrastructure:
+\`\`\`
+
+## 3) Failure Points (top 3)
+1. 
+2. 
+3. 
+
+## 4) Constraints
+- Compliance / legal:
+- Latency target:
+- Budget guardrails:
+- Team capacity:
+
+## 5) Desired Outcome (next 30-60 days)
+- Business outcome:
+- Technical outcome:
+- What "good" looks like:`,
       formIntro: "Or send a message directly through the form below.",
       formName: "Your Name",
       formEmail: "Your Email",
@@ -432,7 +521,13 @@ Designed and documented the core architecture for a regulated digital asset (RWA
     },
     blog: {
       title: "Blog",
-      intro: "Thoughts on software, AI, and consulting.",
+      intro: "Live writing feed and archived essays on software, AI, and consulting.",
+      liveFeedBadge: "Live feed",
+      liveFeedIntro: "Latest posts from Substack, automatically refreshed.",
+      liveFeedLoading: "Loading latest Substack posts...",
+      liveFeedError: "The live Substack feed is currently unavailable. Showing archive posts from this site.",
+      viewOnSubstack: "Read on Substack",
+      archiveTitle: "Archive from this site",
       readMore: "Read More",
       backToBlog: "Back to Blog",
       postedOn: "Posted on",
@@ -486,13 +581,48 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       subtitle: "Σχεδιάζω, αξιολογώ και κλιμακώνω agentic αρχιτεκτονικές και deep-tech υποδομές που αντέχουν σε πραγματικές συνθήκες.",
       specialties: "Αυστηρή αξιολόγηση LLM, παραγωγικές agentic αρχιτεκτονικές και υποδομές με γνώμονα τη συμμόρφωση (compliance-first).",
       cta: "Κλείσε μια ανασκόπηση συστήματος",
+      trustStripTitle: "Γιατί με εμπιστεύονται γρήγορα ομάδες",
+      trustSignals: [
+        { label: "Συστήματα σε παραγωγή", value: "Workable, NannyML και ρυθμιζόμενα deep-tech έργα" },
+        { label: "Ανεξάρτητα αποδεικτικά", value: "Δημόσια repos, CI traces, αρχιτεκτονικά docs και έρευνα" },
+        { label: "Ταχύτητα παράδοσης", value: "Πρώτο architecture teardown σε έως 5 εργάσιμες ημέρες" },
+        { label: "Υπόσχεση απόκρισης", value: "Πρώτη απάντηση εντός 24 ωρών τις εργάσιμες" },
+      ],
       servicesTitle: "Εξειδικευμένη Συμβουλευτική",
       services: [
         { title: "Αξιολόγηση Συστημάτων AI", description: "Αυστηρές δοκιμές και αρχιτεκτονικός έλεγχος πριν το AI σας βγει στην παραγωγή.", slug: "ai-systems-evaluation" },
         { title: "Παραγωγικές Agentic Αρχιτεκτονικές", description: "Ενσωμάτωση εύθραυστων AI prototypes σε αξιόπιστα συστήματα λογισμικού.", slug: "production-agentic-architectures" },
         { title: "Deep-Tech Υποδομές", description: "Σχεδιασμός κατανεμημένων backends για ML-monitoring και ρυθμιζόμενους κλάδους.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Εμπειρία σε παραγωγικά AI συστήματα στη Workable και τη NannyML, καθώς και σε ανεξάρτητα συμβουλευτικά engagements (συμπεριλαμβανομένου του dikaio.ai).",
+      credibility: "Εμπειρία σε παραγωγικά AI συστήματα στη Workable και τη NannyML, καθώς και σε ανεξάρτητα συμβουλευτικά engagements.",
+      outcomesTitle: "Εμπορικά Αποτελέσματα (Ανωνυμοποιημένα)",
+      outcomesIntro: "Δύο παραδείγματα με σαφή baseline, scope παρέμβασης και μετρήσιμη διαφορά.",
+      outcomeCaseStudies: [
+        {
+          title: "Σκλήρυνση GenAI για πλατφόρμα προσλήψεων",
+          timeframe: "Sprint σταθεροποίησης 6 εβδομάδων",
+          before: "Η ανάκαμψη σε αστοχίες γινόταν κυρίως χειροκίνητα, με bottlenecks στο rollout.",
+          after: "Παραδόθηκαν hardened microservices και deterministic fallbacks που υποστηρίζουν δεκάδες χιλιάδες καθημερινά workflows βιογραφικών σε corpus 0.5 δισ. εγγραφών.",
+          scope: "Το scope καλύπτει αρχιτεκτονική και reliability patterns· εσωτερικά SLO dashboards και client internals είναι εμπιστευτικά.",
+          evidenceLabel: "Σχετικό production case study",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems"
+        },
+        {
+          title: "Compliance-first αρχιτεκτονική tokenization",
+          timeframe: "Αρχιτεκτονικό track 8 εβδομάδων",
+          before: "Τρεις κρίσιμες ροές (issuance, restricted transfers, secondary trading) ήταν κατακερματισμένες σε ασύνδετη τεκμηρίωση.",
+          after: "Ενοποιήθηκαν και οι 3 ροές σε ένα canonical Oxygen-first architecture path με σαφές migration baseline από ERC-1400 προς ERC-3643 alignment.",
+          scope: "Ταυτότητα πελάτη, governance πρακτικά και εσωτερικά throughput benchmarks καλύπτονται από NDA.",
+          evidenceLabel: "Δημόσιο αρχιτεκτονικό repository",
+          evidenceUrl: "https://github.com/petroslamb/cno-project"
+        }
+      ],
+      secondaryCta: {
+        title: "Ζήτησε 1-page architecture teardown",
+        description: "Στείλε async το αρχιτεκτονικό context και λάβε γραπτό teardown με βασικά bottlenecks, risk flags και πρώτες προτεραιότητες.",
+        buttonLabel: "Έναρξη teardown request",
+        helper: "Παραδίδεται ως σύντομο γραπτό brief πριν από οποιοδήποτε live call."
+      },
       proofTitle: "Αποδείξεις, Όχι Υποσχέσεις",
       proofIntro: "Επιλεγμένα παραδείγματα από παραγωγική δουλειά και δημόσια artifacts. Όπου υπάρχει εμπιστευτικότητα πελάτη, το δηλώνω ρητά.",
       proofBlocks: [
@@ -517,7 +647,7 @@ Designed and documented the core architecture for a regulated digital asset (RWA
           ],
           outcome: "Υποστηρίχθηκαν δεκάδες χιλιάδες αιτήματα ημερησίως σε workflows σχετικών με βιογραφικά, πάνω σε corpus 0.5 δισ. εγγραφών.",
           evidenceLabel: "Βιογραφικό και συνοπτικό case study",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
           scopeNote: "Εσωτερικά SLOs, ακριβή service metrics και proprietary λεπτομέρειες παραμένουν εμπιστευτικά."
         },
         {
@@ -529,7 +659,7 @@ Designed and documented the core architecture for a regulated digital asset (RWA
           ],
           outcome: "Βελτιώθηκε η αξιοπιστία deployment και επιταχύνθηκε το onboarding πελατών στο πρώιμο enterprise στάδιο.",
           evidenceLabel: "Portfolio και αναφορές βιογραφικού",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/#/portfolio/production-ai-systems",
+          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
           scopeNote: "Αναλυτικά customer-side metrics και εσωτερικά αρχιτεκτονικά δεδομένα είναι υπό NDA."
         },
         {
@@ -591,9 +721,9 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       resumeNote: "Προεπιλογή: ισορροπημένο προφίλ.",
       resumeOptions: [
         { value: "resume2025.pdf", label: "Βιογραφικό 2025 — Ισορροπημένο" },
-        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Δυναμικό" },
-        { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Δυναμικό (Ελληνικά)" },
-        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συντηρητικό (Σπαρτιατικό)" },
+        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Έκδοση ανάπτυξης" },
+        { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Έκδοση ανάπτυξης (Ελληνικά)" },
+        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συνοπτική τεχνική έκδοση" },
       ],
       philosophyTitle: "Μηχανική Φιλοσοφία",
       philosophyText: "Πιστεύω ότι για να κατασκευάσεις ισχυρά συστήματα AI, πρέπει πρώτα να κατανοήσεις τα μηχανικά όρια των ίδιων των μοντέλων — από τους μηχανισμούς προσοχής (attention mechanisms) μέχρι τους περιορισμούς της μνήμης KV. Η δημιουργία αφαιρέσεων χωρίς κατανόηση των μηχανισμών οδηγεί σε εύθραυστα, απρόβλεπτα συστήματα.",
@@ -873,6 +1003,20 @@ Designed and documented the core architecture for a regulated digital asset (RWA
 `
         },
       ],
+      forkTransparencyTitle: "Διαφάνεια για pinned forks",
+      forkTransparencyIntro: "Ορισμένα pinned repositories είναι forks. Τα προβάλλω ως adaptation/contribution workstreams και όχι ως claim αρχικής ιδιοκτησίας.",
+      forkHighlights: [
+        {
+          repo: "rlm (fork)",
+          link: "https://github.com/petroslamb/rlm",
+          contribution: "Διατηρείται ως adaptation sandbox με implementation notes και consultant-facing χρήση."
+        },
+        {
+          repo: "resume-copilot (fork)",
+          link: "https://github.com/petroslamb/resume-copilot",
+          contribution: "Χρησιμοποιείται ως forked implementation track για πειραματισμό και τεκμηρίωση βελτιώσεων."
+        }
+      ],
       githubCta: "Δείτε περισσότερα στο GitHub",
       readCaseStudy: "Διαβάστε το Case Study",
       backToPortfolio: "Επιστροφή στο Portfolio",
@@ -890,6 +1034,46 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       scheduleTitle: "Θες να προγραμματίσουμε κατευθείαν ένα call;",
       scheduleDescription: "Κλείσε ένα 30λεπτο discovery call για να ευθυγραμμίσουμε στόχους, scope και χρονοδιάγραμμα. Θα λάβεις σημειώσεις και επόμενα βήματα μέσα σε 48 ώρες.",
       scheduleButton: "Κλείσε discovery call",
+      scheduleFallback: "Δεν βλέπεις διαθέσιμα slots στο calendar widget; Στείλε μου email και θα ανοίξω προτεραιοποιημένα slots.",
+      priorityEmailLabel: "Email για priority scheduling",
+      priorityEmailSubject: "Αίτημα για priority scheduling",
+      teardownIntentSubject: "Αίτημα για 1-page architecture teardown",
+      teardownIntentHint: "Χρησιμοποίησε Markdown. Συμπλήρωσε μόνο όσα πεδία θέλεις/μπορείς και άφησε τα υπόλοιπα κενά.",
+      teardownIntentMessage: `# Αίτημα για 1-Page Architecture Teardown
+
+> Συμπλήρωσε μόνο όσα πεδία θέλεις/μπορείς. Άφησε τα υπόλοιπα κενά.
+
+## 1) Snapshot Συστήματος
+- Product / use case:
+- Stage: (prototype, beta, production)
+- Users / tenants:
+- Traffic: \`requests/day\` και peak \`requests/min\`
+
+## 2) Τρέχουσα Αρχιτεκτονική
+\`\`\`txt
+Frontend:
+Backend:
+LLM provider(s) / model(s):
+Data stores:
+Orchestration / queues:
+Hosting / infrastructure:
+\`\`\`
+
+## 3) Failure Points (top 3)
+1. 
+2. 
+3. 
+
+## 4) Περιορισμοί
+- Compliance / legal:
+- Latency target:
+- Budget guardrails:
+- Team capacity:
+
+## 5) Επιθυμητό Outcome (30-60 ημέρες)
+- Business outcome:
+- Technical outcome:
+- Τι σημαίνει "καλό" αποτέλεσμα:`,
       formIntro: "Ή στείλτε μήνυμα μέσω της φόρμας επικοινωνίας.",
       formName: "Το Όνομά σας",
       formEmail: "Το Email σας",
@@ -901,7 +1085,13 @@ Designed and documented the core architecture for a regulated digital asset (RWA
     },
     blog: {
       title: "Blog",
-      intro: "Σκέψεις πάνω στο software, την τεχνητή νοημοσύνη και το consulting.",
+      intro: "Ζωντανό feed γραφής και αρχειοθετημένα άρθρα για software, AI και consulting.",
+      liveFeedBadge: "Live feed",
+      liveFeedIntro: "Τα πιο πρόσφατα posts από το Substack με αυτόματη ανανέωση.",
+      liveFeedLoading: "Φόρτωση των τελευταίων Substack posts...",
+      liveFeedError: "Το live feed του Substack δεν είναι διαθέσιμο αυτή τη στιγμή. Εμφανίζονται αρχειοθετημένα άρθρα από το site.",
+      viewOnSubstack: "Διαβάστε στο Substack",
+      archiveTitle: "Αρχείο άρθρων από το site",
       readMore: "Διαβάστε περισσότερα",
       backToBlog: "Επιστροφή στο Blog",
       postedOn: "Δημοσιεύτηκε στις",

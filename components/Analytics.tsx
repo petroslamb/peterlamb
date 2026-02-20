@@ -116,19 +116,7 @@ const Analytics: React.FC = () => {
       return;
     }
 
-    const hash = window.location.hash;
-    const derivedPath = (() => {
-      if (hash && hash.startsWith('#')) {
-        const cleanedHash = hash.slice(1);
-        if (!cleanedHash) {
-          return '/';
-        }
-        return cleanedHash.startsWith('/') ? cleanedHash : `/${cleanedHash}`;
-      }
-
-      const path = `${location.pathname}${location.search}`;
-      return path || '/';
-    })();
+    const derivedPath = `${location.pathname}${location.search}` || '/';
 
     if (lastTrackedPath.current === derivedPath) {
       return;
@@ -153,7 +141,7 @@ const Analytics: React.FC = () => {
     }
 
     lastTrackedPath.current = derivedPath;
-  }, [isEnabled, isReady, location.pathname, location.search, location.hash, analyticsConfig]);
+  }, [isEnabled, isReady, location.pathname, location.search, analyticsConfig]);
 
   return null;
 };

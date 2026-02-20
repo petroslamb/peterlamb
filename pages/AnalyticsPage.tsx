@@ -37,7 +37,7 @@ const AnalyticsPage: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-800 p-6 md:p-10 rounded-lg shadow-md max-w-5xl mx-auto">
-      <MetaTags title={`${analytics.title} | Petros Lambropoulos`} description={metaDescription} canonicalPath="/#/analytics" noIndex />
+      <MetaTags title={`${analytics.title} | Petros Lambropoulos`} description={metaDescription} canonicalPath="/analytics" noIndex />
       <AnimatedSection as="section" className="space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white text-center">{analytics.title}</h1>
         <p className="text-lg text-text-secondary dark:text-slate-300 text-center">{analytics.subtitle}</p>

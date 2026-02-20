@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
@@ -75,12 +75,24 @@ const AppContent: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const routerBasename = React.useMemo(() => {
+    if (import.meta.env.DEV) {
+      return '/';
+    }
+
+    const basePath = import.meta.env.BASE_URL || '/';
+    if (basePath === '/') {
+      return '/';
+    }
+    return basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
+  }, []);
+
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <HashRouter>
+        <BrowserRouter basename={routerBasename}>
           <AppContent />
-        </HashRouter>
+        </BrowserRouter>
       </LanguageProvider>
     </ThemeProvider>
   );

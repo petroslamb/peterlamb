@@ -5,7 +5,7 @@ import useAnalytics from '../hooks/useAnalytics';
 const Footer: React.FC = () => {
   const { translations } = useLanguage();
   const { trackEvent } = useAnalytics();
-  const analyticsPath = `${import.meta.env.BASE_URL}#/analytics`;
+  const analyticsPath = `${import.meta.env.BASE_URL}analytics`;
   return (
     <footer className="bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
       <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm text-text-secondary dark:text-slate-400">

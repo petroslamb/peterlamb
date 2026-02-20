@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
             <MetaTags
                 title={`${home.name} | ${home.title}`}
                 description={metaDescription}
-                canonicalPath="/#/"
+                canonicalPath="/"
             />
             <section className="text-center -mx-4 sm:-mx-6 lg:-mx-8 -mt-8 md:-mt-12 py-20 md:py-28 bg-gradient-to-b from-white to-secondary dark:from-slate-900 dark:to-slate-800 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,8 +108,33 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            <section className="text-center py-8 bg-white dark:bg-slate-800 rounded-lg shadow-md" aria-label={home.credibility}>
-                <p className="text-lg text-text-secondary dark:text-slate-300">{home.credibility}</p>
+            <section aria-labelledby="trust-strip-heading">
+                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-md p-6 md:p-8">
+                    <h2 id="trust-strip-heading" className="text-xl font-bold text-text-primary dark:text-white text-center">{home.trustStripTitle}</h2>
+                    <dl className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {home.trustSignals.map((signal) => (
+                            <div key={signal.label} className="rounded-lg bg-secondary dark:bg-slate-700/60 p-4 text-left">
+                                <dt className="text-xs uppercase tracking-wide font-semibold text-primary dark:text-cyan-400">{signal.label}</dt>
+                                <dd className="mt-2 text-sm text-text-secondary dark:text-slate-200">{signal.value}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </section>
+
+            <section aria-labelledby="teardown-cta-heading" className="bg-white dark:bg-slate-800 border border-primary/20 dark:border-cyan-400/30 rounded-lg shadow-md p-8 text-center space-y-4">
+                <h2 id="teardown-cta-heading" className="text-2xl font-bold text-text-primary dark:text-white">{home.secondaryCta.title}</h2>
+                <p className="text-text-secondary dark:text-slate-300 max-w-3xl mx-auto">{home.secondaryCta.description}</p>
+                <div className="flex flex-col items-center gap-3">
+                    <Link
+                        to="/contact?intent=teardown"
+                        className="inline-flex items-center justify-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 shadow-md hover:shadow-lg"
+                        onClick={() => trackEvent('cta_click', { area: 'home_secondary_cta', action: 'request_teardown' })}
+                    >
+                        {home.secondaryCta.buttonLabel}
+                    </Link>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{home.secondaryCta.helper}</p>
+                </div>
             </section>
 
             <section aria-labelledby="proof-heading" className="space-y-6">

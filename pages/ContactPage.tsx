@@ -1,21 +1,50 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import MetaTags from '../components/MetaTags';
 import SchedulingEmbed from '../components/SchedulingEmbed';
 
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/petroslamb.dev@gmail.com';
 
+interface FormSubmitResponse {
+    success?: boolean | 'true' | 'false';
+    message?: string;
+}
+
 const ContactPage: React.FC = () => {
+    const location = useLocation();
     const { language, translations } = useLanguage();
     const { contact, actions } = translations;
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+    const [submitError, setSubmitError] = React.useState<string | null>(null);
+    const [messageValue, setMessageValue] = React.useState('');
 
     const schedulingEmbedUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cGdk7wy_kYMcB9CFQ8Lmf45Bqrf64GTCNPg4Mb31jjo9o37ArfE1mZi-h5rETky4j7vtm73Rt?gv=true';
+    const isTeardownIntent = React.useMemo(
+        () => new URLSearchParams(location.search).get('intent') === 'teardown',
+        [location.search],
+    );
+    const priorityEmailHref = React.useMemo(
+        () => `mailto:petroslamb.dev@gmail.com?subject=${encodeURIComponent(contact.priorityEmailSubject)}`,
+        [contact.priorityEmailSubject],
+    );
+
+    React.useEffect(() => {
+        if (isTeardownIntent) {
+            setMessageValue((current) => current || contact.teardownIntentMessage);
+            return;
+        }
+
+        setMessageValue('');
+    }, [isTeardownIntent, contact.teardownIntentMessage]);
 
     const metaDescription = language === 'en'
       ? `Contact Petros Lambropoulos to discuss AI systems evaluation, production architecture, and reliability-focused consulting.`
       : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για αξιολόγηση AI συστημάτων, production αρχιτεκτονική και συμβουλευτική με έμφαση στην αξιοπιστία.`;
+    const activationErrorHelp = language === 'en'
+      ? 'FormSubmit activation is pending. Check petroslamb.dev@gmail.com (Inbox/Spam) for the "Activate Form" email, then submit again.'
+      : 'Εκκρεμεί ενεργοποίηση FormSubmit. Έλεγξε το petroslamb.dev@gmail.com (Inbox/Spam) για email "Activate Form" και ξαναστείλε.';
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -25,13 +54,14 @@ const ContactPage: React.FC = () => {
             name: ((formData.get('name') ?? '') as string).trim(),
             email: ((formData.get('email') ?? '') as string).trim(),
             message: ((formData.get('message') ?? '') as string).trim(),
-            _subject: 'New site contact request',
+            _subject: isTeardownIntent ? contact.teardownIntentSubject : 'New site contact request',
             _captcha: 'false',
             _template: 'table',
         };
 
         setIsSubmitting(true);
         setStatus('idle');
+        setSubmitError(null);
 
         try {
             const response = await fetch(FORM_ENDPOINT, {
@@ -47,10 +77,22 @@ const ContactPage: React.FC = () => {
                 throw new Error(`Submission failed with status ${response.status}`);
             }
 
+            const payloadResponse = (await response.json()) as FormSubmitResponse;
+            const isSuccessful = payloadResponse.success === true || payloadResponse.success === 'true';
+            if (!isSuccessful) {
+                throw new Error(payloadResponse.message || 'FormSubmit rejected the submission.');
+            }
+
             form.reset();
+            setMessageValue(isTeardownIntent ? contact.teardownIntentMessage : '');
             setStatus('success');
         } catch (error) {
             console.error(error);
+            if (error instanceof Error && /activate|activation/i.test(error.message)) {
+                setSubmitError(activationErrorHelp);
+            } else {
+                setSubmitError(error instanceof Error ? error.message : null);
+            }
             setStatus('error');
         } finally {
             setIsSubmitting(false);
@@ -62,7 +104,7 @@ const ContactPage: React.FC = () => {
              <MetaTags 
                 title={`${contact.title} | Petros Lambropoulos`} 
                 description={metaDescription}
-                canonicalPath="/#/contact"
+                canonicalPath="/contact"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{contact.title}</h1>
@@ -84,6 +126,12 @@ const ContactPage: React.FC = () => {
                         >
                             {contact.scheduleButton}
                         </a>
+                        <p className="mt-3 text-sm text-text-secondary dark:text-slate-300">
+                            {contact.scheduleFallback}{' '}
+                            <a href={priorityEmailHref} className="text-primary dark:text-cyan-400 font-medium hover:underline">
+                                {contact.priorityEmailLabel}
+                            </a>
+                        </p>
                     </div>
                 </section>
                 <div className="grid md:grid-cols-2 gap-8">
@@ -109,7 +157,18 @@ const ContactPage: React.FC = () => {
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-slate-300">{contact.formMessage}</label>
-                                <textarea name="message" id="message" rows={4} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400"></textarea>
+                                {isTeardownIntent ? (
+                                    <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{contact.teardownIntentHint}</p>
+                                ) : null}
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    rows={isTeardownIntent ? 16 : 4}
+                                    required
+                                    value={messageValue}
+                                    onChange={(event) => setMessageValue(event.target.value)}
+                                    className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400 ${isTeardownIntent ? 'font-mono min-h-[24rem]' : ''}`}
+                                />
                             </div>
                             <div>
                                 <button
@@ -126,7 +185,7 @@ const ContactPage: React.FC = () => {
                                     role="status"
                                     aria-live="polite"
                                 >
-                                    {status === 'success' ? contact.formSuccess : contact.formError}
+                                    {status === 'success' ? contact.formSuccess : `${contact.formError}${submitError ? ` (${submitError})` : ''}`}
                                 </p>
                             ) : null}
                         </form>

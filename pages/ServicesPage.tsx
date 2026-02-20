@@ -31,7 +31,7 @@ const ServicesPage: React.FC = () => {
             <MetaTags 
                 title={`${services.title} | Petros Lambropoulos`} 
                 description={metaDescription}
-                canonicalPath="/#/services"
+                canonicalPath="/services"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{services.title}</h1>

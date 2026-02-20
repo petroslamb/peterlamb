@@ -34,6 +34,21 @@ export interface BlogPost {
   content: string;
 }
 
+export interface TrustSignal {
+  label: string;
+  value: string;
+}
+
+export interface OutcomeCaseStudy {
+  title: string;
+  timeframe: string;
+  before: string;
+  after: string;
+  scope: string;
+  evidenceLabel: string;
+  evidenceUrl: string;
+}
+
 export interface Content {
   nav: {
     home: string;
@@ -50,9 +65,20 @@ export interface Content {
     subtitle: string;
     specialties: string;
     cta: string;
+    trustStripTitle: string;
+    trustSignals: TrustSignal[];
     servicesTitle: string;
     services: Service[];
     credibility: string;
+    outcomesTitle: string;
+    outcomesIntro: string;
+    outcomeCaseStudies: OutcomeCaseStudy[];
+    secondaryCta: {
+      title: string;
+      description: string;
+      buttonLabel: string;
+      helper: string;
+    };
     proofTitle: string;
     proofIntro: string;
     proofBlocks: ProofBlock[];
@@ -108,6 +134,13 @@ export interface Content {
     title: string;
     intro: string;
     projects: PortfolioItem[];
+    forkTransparencyTitle: string;
+    forkTransparencyIntro: string;
+    forkHighlights: {
+      repo: string;
+      link: string;
+      contribution: string;
+    }[];
     githubCta: string;
     readCaseStudy: string;
     backToPortfolio: string;
@@ -133,10 +166,22 @@ export interface Content {
     scheduleTitle: string;
     scheduleDescription: string;
     scheduleButton: string;
+    scheduleFallback: string;
+    priorityEmailLabel: string;
+    priorityEmailSubject: string;
+    teardownIntentSubject: string;
+    teardownIntentHint: string;
+    teardownIntentMessage: string;
   };
   blog: {
     title: string;
     intro: string;
+    liveFeedBadge: string;
+    liveFeedIntro: string;
+    liveFeedLoading: string;
+    liveFeedError: string;
+    viewOnSubstack: string;
+    archiveTitle: string;
     readMore: string;
     backToBlog: string;
     postedOn: string;

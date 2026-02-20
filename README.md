@@ -1,7 +1,7 @@
 # Petros Lambropoulos – AI Systems Consultant
 
 ## Overview
-This repository hosts the public-facing site for Petros (Peter) Lambropoulos, implemented with **React 19**, **TypeScript**, and **Vite**. The positioning focuses on hardening AI prototypes into production systems through evaluation, agent architecture, and compliance-first infrastructure. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses hash-based URLs so the site works cleanly on GitHub Pages.
+This repository hosts the public-facing site for Petros (Peter) Lambropoulos, implemented with **React 19**, **TypeScript**, and **Vite**. The positioning focuses on hardening AI prototypes into production systems through evaluation, agent architecture, and compliance-first infrastructure. Styling relies on Tailwind CSS served via CDN (see `index.html`). The router uses browser-history URLs with a GitHub Pages SPA fallback (`public/404.html`) for deep links.
 
 ## Branch & Remote Strategy
 - `main` is the branch for active development and deployable code. Create commits here when making changes locally.
@@ -19,7 +19,7 @@ This repository hosts the public-facing site for Petros (Peter) Lambropoulos, im
 - `hooks/useAnalytics.ts` – Safe wrapper around Umami for manual event tracking.
 - `types.ts` – Shared TypeScript interfaces describing the content shape consumed throughout the app.
 - `metadata.json` – SEO/social metadata and analytics configuration synchronized with the UI.
-- `vite.config.ts` – Vite build configuration (hash-based base path, React plugin, environment variable exposure).
+- `vite.config.ts` – Vite build configuration (GitHub Pages base path, React plugin, environment variable exposure).
 
 ## Content Architecture & Key Sections
 - **Navigation + CTA copy**: `constants/content.ts` (`content[language].nav`, `home.cta`, etc.).
@@ -45,6 +45,6 @@ Following this map should let any new AI agent apply codebase-wide updates confi
 
 ## Analytics Setup
 - Update `metadata.json.analytics.websiteId` with the UUID from your Umami dashboard and align `dataDomains`/`hostUrl` to match your deployment.
-- The loader mounts Umami only in production builds, flushes queued events, and manually tracks hash-based route changes, keeping the experience banner-free.
+- The loader mounts Umami only in production builds, flushes queued events, and manually tracks browser-history route changes, keeping the experience banner-free.
 - Optional overrides: switch `scriptUrl` for self-hosted Umami or remove the `analytics` block to disable tracking entirely.
 - Use `useAnalytics().trackEvent('event_name', { meta: 'value' })` to log additional interactions (e.g., CTA clicks) across the site.

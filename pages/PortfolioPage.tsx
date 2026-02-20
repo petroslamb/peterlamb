@@ -17,7 +17,7 @@ const PortfolioPage: React.FC = () => {
             <MetaTags 
                 title={`${portfolio.title} | Petros Lambropoulos`} 
                 description={metaDescription}
-                canonicalPath="/#/portfolio"
+                canonicalPath="/portfolio"
             />
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white">{portfolio.title}</h1>
@@ -47,6 +47,25 @@ const PortfolioPage: React.FC = () => {
                     </AnimatedSection>
                 ))}
             </ul>
+
+            <AnimatedSection delay={150}>
+                <section className="mt-14 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-md p-6 space-y-4">
+                    <h2 className="text-2xl font-bold text-text-primary dark:text-white">{portfolio.forkTransparencyTitle}</h2>
+                    <p className="text-text-secondary dark:text-slate-300">{portfolio.forkTransparencyIntro}</p>
+                    <ul className="space-y-3">
+                        {portfolio.forkHighlights.map((item) => (
+                            <li key={item.repo} className="rounded-md bg-secondary dark:bg-slate-700/50 p-4">
+                                <p className="font-semibold text-text-primary dark:text-slate-100">
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary dark:text-cyan-400 hover:underline">
+                                        {item.repo}
+                                    </a>
+                                </p>
+                                <p className="text-sm text-text-secondary dark:text-slate-300 mt-1">{item.contribution}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            </AnimatedSection>
 
             <AnimatedSection delay={200}>
                 <div className="text-center mt-16">

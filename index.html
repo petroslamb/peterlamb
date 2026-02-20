@@ -3,14 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Restore clean SPA routes redirected through /404.html on GitHub Pages.
+      (function (location) {
+        if (location.search[1] !== '/') return;
+        const decoded = location.search
+          .slice(1)
+          .split('&')
+          .map((segment) => segment.replace(/~and~/g, '&'))
+          .join('?');
+        const basePath = location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
+        window.history.replaceState(null, '', `${basePath}${decoded}${location.hash}`);
+      }(window.location));
+    </script>
     <title>Petros Lambropoulos | Hardening AI prototypes into production systems.</title>
     <meta name="description" content="Petros Lambropoulos hardens AI prototypes into production systems with evaluation pipelines, production agent architecture, and compliance-first infrastructure." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://petroslamb.github.io/peterlamb/#/" />
+    <link rel="canonical" href="https://petroslamb.github.io/peterlamb/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Petros Lambropoulos | Hardening AI prototypes into production systems." />
     <meta property="og:description" content="Petros Lambropoulos hardens AI prototypes into production systems with evaluation pipelines, production agent architecture, and compliance-first infrastructure." />
-    <meta property="og:url" content="https://petroslamb.github.io/peterlamb/#/" />
+    <meta property="og:url" content="https://petroslamb.github.io/peterlamb/" />
     <meta property="og:image" content="https://petroslamb.github.io/peterlamb/about-infographic.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Petros Lambropoulos | Hardening AI prototypes into production systems." />
