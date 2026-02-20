@@ -53,8 +53,13 @@ export interface Content {
     servicesTitle: string;
     services: Service[];
     credibility: string;
-    podcastTitle: string;
-    podcastDescription: string;
+    featuredResearch: {
+      title: string;
+      essayTitle: string;
+      essayDescription: string;
+      readOnLabel: string;
+      link: string;
+    };
   };
   about: {
     title: string;
@@ -75,6 +80,16 @@ export interface Content {
     resumeLabel: string;
     resumeNote: string;
     resumeOptions: ResumeOption[];
+    philosophyTitle: string;
+    philosophyText: string;
+    researchFeedTitle: string;
+    researchFeed: {
+      title: string;
+      description: string;
+      url: string;
+      date: string;
+    }[];
+    subscribeCta: string;
   };
   services: {
     title: string;
@@ -98,7 +113,7 @@ export interface Content {
     viewOnGithub: string;
   };
   contact: {
-    title:string;
+    title: string;
     intro: string;
     detailsTitle: string;
     email: string;

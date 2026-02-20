@@ -19,11 +19,10 @@ const HomePage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { home, actions } = translations;
     const { trackEvent } = useAnalytics();
-    const podcastSrc = `${import.meta.env.BASE_URL}portfolio-podcast.m4a`;
 
     const metaDescription = language === 'en'
-      ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
-      : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες με discovery, υλοποίηση και λειτουργίες έτοιμες για παραγωγή.`;
+        ? `Petros Lambropoulos helps startups launch SaaS products in weeks with discovery, build, and production-ready features.`
+        : `Ο Πέτρος Λαμπρόπουλος βοηθά startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες με discovery, υλοποίηση και λειτουργίες έτοιμες για παραγωγή.`;
 
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -41,37 +40,37 @@ const HomePage: React.FC = () => {
 
     return (
         <div className="space-y-16">
-            <MetaTags 
-                title={`${home.name} | ${home.title}`} 
+            <MetaTags
+                title={`${home.name} | ${home.title}`}
                 description={metaDescription}
             />
             <section className="text-center -mx-4 sm:-mx-6 lg:-mx-8 -mt-8 md:-mt-12 py-20 md:py-28 bg-gradient-to-b from-white to-secondary dark:from-slate-900 dark:to-slate-800 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 
+                    <h1
                         className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight animate-fade-in-up"
                         style={{ animationFillMode: 'backwards' }}
                     >
                         {home.name}
                     </h1>
-                    <h2 
+                    <h2
                         className="mt-3 text-lg md:text-2xl text-primary dark:text-cyan-400 font-medium animate-fade-in-up"
                         style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}
                     >
                         {home.title}
                     </h2>
-                    <p 
+                    <p
                         className="mt-4 max-w-2xl mx-auto text-md md:text-xl text-slate-600 dark:text-slate-300 animate-fade-in-up"
                         style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
                     >
                         {home.subtitle}
                     </p>
-                    <p 
+                    <p
                         className="mt-2 max-w-2xl mx-auto text-md text-slate-500 dark:text-slate-400 animate-fade-in-up"
                         style={{ animationDelay: '500ms', animationFillMode: 'backwards' }}
                     >
                         {home.specialties}
                     </p>
-                    <div 
+                    <div
                         className="animate-fade-in-up"
                         style={{ animationDelay: '600ms', animationFillMode: 'backwards' }}
                     >
@@ -88,16 +87,16 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <section aria-labelledby="services-snapshot-heading">
                 <h2 id="services-snapshot-heading" className="text-3xl font-bold text-center text-text-primary dark:text-white mb-12">{home.servicesTitle}</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {home.services.map((service, index) => {
                         const icon = iconMap[service.slug] ?? baseIcons[index % baseIcons.length];
                         return (
-                            <Link 
-                                to={`/services/${service.slug}`} 
-                                key={service.slug} 
+                            <Link
+                                to={`/services/${service.slug}`}
+                                key={service.slug}
                                 className="block h-full rounded-lg hover:shadow-xl focus:shadow-xl transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
                                 aria-label={`Learn more about ${service.title}`}
                                 onClick={() => trackEvent('service_card_click', { area: 'home_services_snapshot', slug: service.slug })}
@@ -110,23 +109,30 @@ const HomePage: React.FC = () => {
             </section>
 
             <section className="text-center py-8 bg-white dark:bg-slate-800 rounded-lg shadow-md" aria-label={home.credibility}>
-                 <p className="text-lg text-text-secondary dark:text-slate-300">{home.credibility}</p>
+                <p className="text-lg text-text-secondary dark:text-slate-300">{home.credibility}</p>
             </section>
 
-            <section aria-label={home.podcastTitle} className="pb-4">
-                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-primary/10 dark:border-cyan-400/20 p-6 space-y-3">
-                    <p className="text-sm uppercase tracking-wide text-primary dark:text-cyan-400 font-semibold">{home.podcastTitle}</p>
-                    <p className="text-text-secondary dark:text-slate-300">{home.podcastDescription}</p>
-                    <audio
-                        controls
-                        preload="none"
-                        src={podcastSrc}
-                        className="w-full"
-                    >
-                        {language === 'en'
-                          ? 'Your browser does not support the audio element.'
-                          : 'Ο περιηγητής σας δεν υποστηρίζει την αναπαραγωγή ήχου.'}
-                    </audio>
+            <section aria-label={home.featuredResearch.title} className="pb-4">
+                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-primary/10 dark:border-cyan-400/20 p-6 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                    <div className="space-y-2 flex-1">
+                        <p className="text-sm uppercase tracking-wide text-primary dark:text-cyan-400 font-semibold">{home.featuredResearch.title}</p>
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">{home.featuredResearch.essayTitle}</h3>
+                        <p className="text-text-secondary dark:text-slate-300 max-w-2xl">{home.featuredResearch.essayDescription}</p>
+                    </div>
+                    <div className="whitespace-nowrap mt-2 md:mt-0">
+                        <a
+                            href={home.featuredResearch.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-primary text-white font-semibold py-2.5 px-6 rounded-lg text-sm hover:bg-primary/90 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-slate-900"
+                            onClick={() => trackEvent('cta_click', { area: 'home_featured_research', action: 'read_essay' })}
+                        >
+                            <span>{home.featuredResearch.readOnLabel}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>

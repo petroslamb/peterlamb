@@ -5,46 +5,50 @@ export const content: Record<'en' | 'gr', Content> = {
     nav: {
       home: "Home",
       about: "About",
-    services: "Services",
-    portfolio: "Portfolio",
-    contact: "Contact",
-    blog: "Blog",
-    analytics: "Analytics",
-  },
+      services: "Services",
+      portfolio: "Portfolio",
+      contact: "Contact",
+      blog: "Blog",
+      analytics: "Analytics",
+    },
     home: {
       name: "Petros Lambropoulos",
-      title: "I help startups launch SaaS products in weeks.",
-      subtitle: "Discovery, build, and delivery of production-ready features so you can ship faster and win the market.",
-      specialties: "Rapid discovery sprints, investor-ready SaaS builds, and resilient cloud infrastructure.",
-      cta: "Schedule a discovery call",
-      servicesTitle: "Services snapshot",
+      title: "Hardening AI prototypes into production systems.",
+      subtitle: "I design, evaluate, and scale agentic architectures and deep-tech infrastructure that survive real-world constraints.",
+      specialties: "Rigorous LLM evaluation, production agentic architectures, and compliance-first infrastructure.",
+      cta: "Schedule a systems review",
+      servicesTitle: "Specialized Consulting",
       services: [
-        { title: "AI Discovery Sprint", description: "1–2 week validation to reveal the fastest path to value.", slug: "ai-discovery" },
-        { title: "AI MVP Launch", description: "1–3 month build of investor-ready AI SaaS foundations.", slug: "ai-mvp" },
-        { title: "AI Feature Add-On", description: "2–6 week integration of production-ready AI capabilities.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "2–4 week partnership to package your crypto, AI, and deep-tech roadmap plus compliance plan for funding calls.", slug: "grant-funded-sprint" },
+        { title: "AI Systems Evaluation", description: "Rigorous testing and architectural auditing before your AI hits production.", slug: "ai-systems-evaluation" },
+        { title: "Production Agentic Architectures", description: "Integrating fragile AI prototypes into reliable software systems.", slug: "production-agentic-architectures" },
+        { title: "Deep-Tech Infrastructure", description: "Designing distributed backends for ML-monitoring and regulated industries.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Trusted by Workable, NannyML, Orfium, Dikaio.ai, and resilience engagements like Brain Metrics Initiative.",
-      podcastTitle: "Podcast: Scaling Generative AI Requires Low-Level Mastery",
-      podcastDescription: "A quick take on why systems fundamentals matter when you ship and scale generative AI.",
+      credibility: "Trusted by Workable, NannyML, and dikaio.ai.",
+      featuredResearch: {
+        title: "Featured Research",
+        essayTitle: "The Transformer Attractor",
+        essayDescription: "Understanding the theoretical mechanisms scaling Transformers to dominance and how the hardware friction map constrains alternative architectures.",
+        readOnLabel: "Read on Substack",
+        link: "https://lambpetros.substack.com/p/the-transformer-attractor"
+      },
     },
     about: {
       title: "About Me",
       greeting: "Hi, I’m Petros Lambropoulos (Peter Lamb)",
-      intro: "I partner with founder-led teams to turn product ideas into production-ready SaaS in weeks, combining rapid validation with dependable delivery.",
-      howIHelpTitle: "How I help founders",
-      howIHelpIntro: "Choose the engagement that fits your stage—every collaboration stays anchored to measurable outcomes.",
+      intro: "I work on AI systems at the point where abstractions start to fail: production agents, evaluation pipelines, and AI-first platforms that have to survive real-world constraints.",
+      howIHelpTitle: "How I help engineering teams",
+      howIHelpIntro: "I turn fragile prototypes into stable, deployable systems by navigating ambiguous requirements, incomplete metrics, and evolving research goals.",
       howIHelp: [
-        "Map the highest-leverage product opportunities through focused discovery, user interviews, and technical spikes.",
-        "Ship investor-ready MVPs with production-grade Python backends, data flows, and polished product features.",
-        "Embed new capabilities into existing products while equipping your team for monitoring, rollout, and iteration."
+        "Rigorous testing, failure-mode analysis, and architectural auditing for AI systems before they hit production.",
+        "Taking fragile AI prototypes and integrating them into hardened, reliable software systems that survive real-world scale.",
+        "Designing distributed backend systems and compliance-first infrastructure for crypto and highly regulated industries."
       ],
       experienceTitle: "Experience",
       experience: [
-        "Led generative AI discovery-to-launch cycles at Workable and NannyML, translating prototypes into production features for hiring and ML monitoring products.",
-        "Built and scaled Python microservices and event-driven backends that keep hiring, music-tech, and legal SaaS platforms reliable under growth.",
-        "Designed analytics pipelines and search infrastructure that surface insight from hundreds of millions of events for faster decision-making.",
-        "Coached founders and cross-functional teams so product strategy, engineering execution, and launch readiness stay in lockstep.",
+        "Independent Systems Consultant (2024–Present): Partnering with startups and research teams on agentic architectures, evaluating LLMs, and protocol security.",
+        "Led generative AI discovery-to-launch cycles at Workable, translating prototypes into production features processing tens of thousands of resumes daily across a 0.5 billion-record corpus on EKS.",
+        "Piloted ML monitoring prototypes with NannyML's EU founding team, shipping containerized Python microservices on Amazon EKS to secure enterprise B2B sales.",
+        "Architected a PySpark + Elasticsearch platform at Encode S.A. processing 100K-user network datasets within a business day.",
       ],
       skillsTitle: "Technical Skills",
       skills: [
@@ -71,410 +75,281 @@ export const content: Record<'en' | 'gr', Content> = {
         { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Hyped (Greek)" },
         { value: "resume2025_conservative.pdf", label: "2025 Resume — Conservative (Spartan)" },
       ],
+      philosophyTitle: "Engineering Philosophy",
+      philosophyText: "I believe that to build robust AI systems, you first need to understand the mechanical limits of the models themselves—from attention mechanisms to KV cache constraints. Engineering abstraction without mechanistic understanding leads to fragile, unpredictable systems.",
+      researchFeedTitle: "Recent Research & Essays",
+      researchFeed: [
+        {
+          title: "The Transformer Attractor",
+          description: "An analysis of why AI architectures converge on the Transformer and the hardware constraints shaping this evolution.",
+          url: "https://lambpetros.substack.com/p/the-transformer-attractor",
+          date: "Feb 2025",
+        },
+        {
+          title: "The Hardware Friction Map",
+          description: "A deep dive into the systems fundamentals and hardware economics that govern AI production scalability.",
+          url: "https://lambpetros.substack.com/p/the-hardware-friction-map",
+          date: "Feb 2025",
+        }
+      ],
+      subscribeCta: "Subscribe to my Research"
     },
     services: {
       title: "Services",
-      intro: "Choose the engagement that matches your urgency: discovery, MVP build, feature acceleration, or grant-backed delivery planning.",
+      intro: "I design, evaluate, and harden AI architectures that scale. Choose the engagement that matches your engineering hurdles.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
-      ctaTitle: "Need to choose the right engagement?",
-      ctaDescription: "Book a 30-minute call to map your goals, timelines, and constraints. You'll leave with a recommended tier and a clear next-step checklist.",
-      ctaButton: "Schedule a discovery call",
+      ctaTitle: "Need to audit your architecture?",
+      ctaDescription: "Book a 30-minute call to map your system constraints and evaluation gaps. You'll leave with a clear next-step engineering checklist.",
+      ctaButton: "Schedule a systems review",
       categories: [
         {
-          title: "AI Discovery Sprint",
-          slug: "ai-discovery",
-          intro: "Co-design a 1–2 week sprint that uncovers the highest-leverage AI opportunities, de-risks delivery, and produces decision-ready next steps.",
-          businessProse: `This sprint gives founders clarity before committing serious budget. Together we align on outcomes, test data readiness, and pressure-test promising use cases with fast prototypes.
+          title: "AI Systems Evaluation & Auditing",
+          slug: "ai-systems-evaluation",
+          intro: "I don't just build wrappers; I tear models apart. Rigorous testing, failure-mode analysis, and architectural auditing for AI systems before they hit production.",
+          businessProse: `Before you scale an AI feature to millions of users or rely on it for protocol security, you need to know exactly how and when it breaks. 
 
-### Engagement Flow
-* Kick-off workshop to frame user pains, success metrics, and responsible AI guardrails.
-* Stakeholder conversations and customer interviews to validate desirability and operational fit.
-* Technical spikes across LLMs, retrieval, or automation patterns to prove feasibility and surface constraints.
+### Audit Methodology
+*   **Failure-Mode Analysis:** Stress-testing prompts, context windows, and retrieval layers against adversarial or edge-case data.
+*   **Evaluation Pipelines:** Building automated benchmarking systems (like LLM-as-a-judge or semantic similarity) tailored to your specific domain.
+*   **Architecture Review:** Assessing your RAG, agentic loop, or workflow design for bottlenecks, hallucinations risks, and cost-inefficiency.
 
 ### Deliverables
-* Opportunity map ranking AI bets by value, effort, and risk.
-* Technical discovery pack covering data requirements, architecture sketches, and vendor/tooling recommendations.
-* Executive-ready brief outlining go/no-go decision, timeline, and next steps.
+*   Comprehensive audit report detailing vulnerabilities and architectural flaws.
+*   Custom evaluation suite integrated into your CI/CD.
+*   Actionable remediation roadmap outlining specific code and prompt adjustments.
 
-### Pricing
-* Fixed fee €2K–€4K depending on scope and number of personas involved.`,
+### Typical Engagements
+*   Protocol validation for deep-tech grants.
+*   Pre-launch stress testing for enterprise generative AI features.`,
           items: [
-            "Best for founders validating AI use cases before green-lighting build.",
-            "Timeline: 1–2 week sprint blending research, spikes, and prototype demos.",
-            "Deliverables: opportunity map, technical discovery pack, executive brief.",
-            "Investment: €2K–€4K fixed fee."
+            "Best for teams that have a working AI prototype but need to guarantee reliability before launch.",
+            "Timeline: 2–4 weeks depending on system complexity.",
+            "Deliverables: Audit report, custom evaluation pipelines, remediation roadmap.",
+            "Investment: Starting at €4K."
           ],
           caseStudies: [
             {
-              company: "Dikaio.ai",
-              challenge: "Validate whether retrieval-augmented generation could automate Greek-law document drafting ahead of a pre-seed raise.",
+              company: "Ethereum Foundation (RFP PoC)",
+              challenge: "Verify protocol obligations against execution clients using LLMs to enhance protocol security.",
               solution: [
-                "Mapped founder goals to a shortlist of viable document workflows and responsible AI guardrails.",
-                "Delivered a clickable prototype and RAG reference implementation that informed investor conversations."
+                "Built 'eth-llm-poc', an LLM-powered traceability pipeline for a grant proposal.",
+                "Orchestrated multi-stage evaluations validating protocol specifications against go-ethereum implementations."
               ],
-              technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
+              technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
             },
             {
-              company: "Langaware",
-              challenge: "Assess feasibility of applied NLP models for cognitive health screening before committing clinical spend.",
+              company: "Transformer Architecture Research",
+              challenge: "Understand the theoretical scaling factors and mechanisms that make Transformer models dominant.",
               solution: [
-                "Ran evaluation spikes across transformer baselines to determine achievable accuracy.",
-                "Packaged findings into a go/no-go narrative with data requirements and compliance considerations."
+                "Conducted deep-dive research into the Transformer Attractor and the hardware friction map.",
+                "Published findings on why alternative architectures struggle against transformer scale-dependence."
               ],
-              technologies: ["Python", "BERT", "Applied NLP"]
-            },
-            {
-              company: "Beat",
-              challenge: "Explore demand-forecasting features for the Lima ride-hailing market without derailing core roadmap.",
-              solution: [
-                "Delivered a forecasting prototype backed by real ridership data to prove value within two weeks.",
-                "Outlined phased rollout options and instrumentation required for ongoing iteration."
-              ],
-              technologies: ["Python", "Time-Series Forecasting", "Data Storytelling"]
+              technologies: ["Transformers", "Mechanistic Interpretability", "Hardware Co-Evolution"]
             }
           ],
-          engagementTitle: "Plan your Discovery Sprint",
-          engagementDescription: "Book a 30-minute call to confirm fit, align on the sprint outcomes, and lock the agenda within 48 hours.",
+          engagementTitle: "Plan your Systems Audit",
+          engagementDescription: "Book a 30-minute call to discuss your current architecture, known pain points, and evaluation goals.",
           engagementChecklistTitle: "Bring to the call:",
           engagementChecklist: [
-            "Top 2–3 product bets or workflows you want to validate.",
-            "Any data sources, customer research, or compliance notes we should review.",
-            "Key team members and availability for the sprint workshops."
+            "Architecture diagrams or descriptions of your current AI workflows.",
+            "Examples of failures or hallucinations you are currently experiencing.",
+            "Access to sample datasets or current evaluation metrics."
           ],
-          engagementCtaLabel: "Book the Discovery Sprint call"
+          engagementCtaLabel: "Book the audit call"
         },
         {
-          title: "AI MVP Launch",
-          slug: "ai-mvp",
-          intro: "Ship an investor-ready AI SaaS MVP in 1–3 months with production-grade backend, data, and generative experiences.",
-          businessProse: `Move from validated concept to a market-ready product without losing momentum. I lead the build, integrate with your existing team, and keep momentum through weekly demos.
+          title: "Production Agentic Architectures",
+          slug: "production-agentic-architectures",
+          intro: "Taking fragile AI prototypes and integrating them into hardened, reliable software systems that survive real-world scale and compliance.",
+          businessProse: `A Jupyter Notebook proof-of-concept is not a product. I specialize in the difficult engineering work required to turn isolated AI scripts into resilient, scalable, and observable microservices.
 
-### What We Build
-* Secure Python/FastAPI or Django foundations with multi-tenant architecture and clean APIs.
-* Data ingestion, orchestration, and monitoring pipelines sized for early-scale needs.
-* Generative AI or predictive workflows (RAG, summarisation, recommendations) wired into your product UX.
-
-### Delivery Cadence
-* Weekly roadmap reviews and demo sessions with founders and stakeholders.
-* Paired working blocks with your designers, PMs, or fractional specialists.
-* Launch readiness checklist covering QA, observability, and runbook docs.
-
-### Pricing
-* €8K–€20K depending on scope, integrations, and team composition. Phased retainers available.`,
-          items: [
-            "Best for founder-led teams who need an AI SaaS product in market fast.",
-            "Timeline: 1–3 month build with weekly demos and roadmap checkpoints.",
-            "Deliverables: production-grade backend, AI workflows, deployment runbook.",
-            "Investment: €8K–€20K depending on scope and integrations."
-          ],
-          caseStudies: [
-            {
-              company: "NannyML",
-              challenge: "Launch a monitoring SaaS for production ML models while headcount was constrained.",
-              solution: [
-                "Led Python backend and UI integrations that delivered the first investor-ready release.",
-                "Productionised Kubernetes deployment with Helm and observability so the internal team could scale confidently."
-              ],
-              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
-            },
-            {
-              company: "Orfium",
-              challenge: "Stand up a royalty management platform capable of handling high-traffic music data pipelines.",
-              solution: [
-                "Architected Django/Postgres services using twelve-factor patterns for scale and maintainability.",
-                "Implemented licensing workflows and reporting that underpinned the platform’s commercial launch."
-              ],
-              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
-            },
-            {
-              company: "NeuroPublic S.A.",
-              challenge: "Deliver a precision agriculture SaaS with complex agronomy logic inside an aggressive timeline.",
-              solution: [
-                "Led backend services that processed agronomic data and surfaced recommendations for growers.",
-                "Collaborated with agronomists and product leads to ship the platform from zero to launch."
-              ],
-              technologies: ["Python", "Backend Development", "Web Applications"]
-            }
-          ],
-          engagementTitle: "Kick off your AI MVP build",
-          engagementDescription: "Use a 30-minute call to confirm scope, integrations, and launch timeline so you receive a delivery plan within two business days.",
-          engagementChecklistTitle: "Have ready:",
-          engagementChecklist: [
-            "The launch window or fundraising milestones you're targeting.",
-            "Must-have workflows, integrations, and success metrics.",
-            "An overview of your current stack, repositories, or design assets."
-          ],
-          engagementCtaLabel: "Schedule the MVP scoping call"
-        },
-        {
-          title: "AI Feature Add-On",
-          slug: "ai-feature-add-on",
-          intro: "Add a revenue-driving AI capability to your existing product in 2–6 weeks without disrupting core delivery.",
-          businessProse: `When you already have customers, every new feature must land smoothly. I integrate with your stack, harden the AI workflow, and ensure your team can run it after hand-off.
-
-### Integration Playbook
-* Success metric alignment to tie the feature to activation, retention, or expansion goals.
-* Architecture design that respects your current stack, compliance needs, and data contracts.
-* Experimentation plan plus rollout guardrails (feature flags, observability, fallback strategies).
+### Engineering Approach
+*   **Agentic Orchestration:** Designing robust state machines and routing logic for multi-agent systems.
+*   **Data & State Management:** Implementing reliable memory, context retrieval (RAG at scale), and transaction handling.
+*   **Observability & Guardrails:** Wiring in tracing (e.g., LangSmith), fallback mechanisms, and strict output parsing to prevent catastrophic failures.
 
 ### Deliverables
-* Production-ready feature implementation with clean interfaces and documentation.
-* Monitoring and alerting hooks so your team can measure quality and intervene quickly.
-* Playbooks for customer success, support, and marketing to communicate the new capability.
+*   Production-grade, containerized microservices ready for Kubernetes deployment.
+*   Complete observability dashboards and alerting rules.
+*   Runbooks for the engineering team detailing maintenance and deployment procedures.
 
-### Pricing
-* €4K–€10K depending on integrations, data preparation, and rollout complexity.`,
+### Typical Engagements
+*   Transitioning GenAI MVP to enterprise scale.
+*   Building autonomous agents for specific workflow automation.`,
           items: [
-            "Best for scale-ups adding AI value to an existing product surface.",
-            "Timeline: 2–6 week integration alongside your in-house team.",
-            "Deliverables: production feature, monitoring plan, go-to-market playbook.",
-            "Investment: €4K–€10K depending on complexity."
+            "Best for scale-ups and enterprises moving AI from the lab to production.",
+            "Timeline: 1–3 months depending on integration depth.",
+            "Deliverables: Production microservices, observability setup, runbooks.",
+            "Investment: €8K–€20K."
           ],
           caseStudies: [
+            {
+              company: "Google Cloud / ADK",
+              challenge: "Deliver reliable agent systems for code intelligence and automation.",
+              solution: [
+                "Architected production-grade agentic workflows.",
+                "Ensured high reliability and strict guardrails for enterprise-level automation."
+              ],
+              technologies: ["Python", "Agentic Systems", "Code Automation"]
+            },
             {
               company: "Workable",
-              challenge: "Introduce generative AI to hiring workflows without compromising reliability or compliance.",
+              challenge: "Scale generative AI hiring features across a massive, live user base.",
               solution: [
-                "Delivered PoCs into hardened microservices that powered new recruiter-facing experiences.",
-                "Established MLOps practices (monitoring, testing, rollout) so the internal ML team could iterate safely."
+                "Transitioned proofs of concept (resume parsing, job post generation) into hardened microservices.",
+                "Deployed via AWS EKS, handling tens of thousands of requests daily across a 0.5 billion-record corpus."
               ],
-              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
-            },
-            {
-              company: "ENCODE (Cybersecurity)",
-              challenge: "Expose near real-time threat analytics via a performance-critical API for enterprise customers.",
-              solution: [
-                "Engineered analytics services that blended Spark pipelines with an optimized Flask API.",
-                "Implemented caching and instrumentation to keep latency low while surfacing new intelligence."
-              ],
-              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
-            },
-            {
-              company: "Brain Metrics Initiative",
-              challenge: "Harden resilience tooling during a live DDoS surge while keeping customer dashboards online.",
-              solution: [
-                "Shipped Cloudflare automations and operational runbooks that neutralised the attack path.",
-                "Captured learnings in a resilience roadmap with scoped AI-driven detection enhancements."
-              ],
-              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
+              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
             }
           ],
-          engagementTitle: "Launch your AI feature",
-          engagementDescription: "Grab a 30-minute call to map the rollout, dependencies, and guardrails so you receive a tailored implementation plan within 48 hours.",
-          engagementChecklistTitle: "Before we meet:",
+          engagementTitle: "Kick off your Architecture Build",
+          engagementDescription: "Use a 30-minute call to map the integration points, scale requirements, and current prototype status.",
+          engagementChecklistTitle: "Have ready:",
           engagementChecklist: [
-            "The success metric or KPI this feature must move.",
-            "Relevant repositories, APIs, or schemas we'll integrate with.",
-            "Rollout, compliance, or customer commitments we need to protect."
+            "Your existing prototype code or notebooks.",
+            "Expected scale (QPS, data volume) and latency requirements.",
+            "Details on your existing cloud infrastructure (AWS/GCP, K8s, etc.)."
           ],
-          engagementCtaLabel: "Book the feature planning call"
+          engagementCtaLabel: "Schedule the build call"
         },
         {
-          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
-          slug: "grant-funded-sprint",
-          intro: "Package your crypto, AI, and automation roadmap into a fundable plan in 2–4 weeks, aligning proposal criteria, milestones, and delivery confidence.",
-          businessProse: `Funding bodies and ecosystems expect precise impact narratives, compliance readiness, and measurable deliverables. This sprint pairs your crypto, AI, or deep-tech grant strategy with actionable technical planning so evaluators see a credible path from award to impact.
+          title: "Deep-Tech & Compliance Infrastructure",
+          slug: "deep-tech-infrastructure",
+          intro: "Designing distributed backend systems and compliance-first infrastructure for crypto, ML-monitoring, and highly regulated industries.",
+          businessProse: `Highly regulated industries (FinTech, Crypto, Healthcare) require backends that are built fundamentally differently. Security, auditability, and massive data throughput must be designed in from day one.
 
-The highlights below are composite scenarios drawn from repeated grant-support work so you can see the typical deliverables without disclosing client-confidential details.
+### Infrastructure Design
+*   **Distributed Systems:** Architecting event-driven data pipelines capable of ingesting and analyzing terabytes of data.
+*   **Compliance-First:** Embedding regulatory constraints (GDPR, financial regulations) directly into the database architecture and access patterns.
+*   **Resilience Engineering:** Designing systems that degrade gracefully under extreme load or targeted attacks.
 
-### When It Fits
-* You're preparing a grant or accelerator proposal and need a stronger execution plan.
-* You've secured conditional funds and must show the technical roadmap before release.
-* You need to reconcile founder vision, partner obligations, and compliance constraints fast.
+### Deliverables
+*   Scalable backend services (Python, Go, or Rust depending on requirements).
+*   High-throughput data ingestion and processing pipelines (Kafka, Spark).
+*   Infrastructure as Code (Terraform) and deployment automation.
 
-### What We Package
-* Milestone-based roadmap with engineering, data, and hiring implications for each phase.
-* Compliance and governance checklist covering security, privacy, and reporting obligations.
-* Prototype or architectural spike that demonstrates feasibility for reviewers and partners.
-
-### Funding Enablement Extras
-* Support on budgeting ranges and vendor selections tied to the delivery plan.
-* Prep materials for committee reviews, including exec summaries and demo scripts.
-* Optional hand-off into MVP or feature delivery once the grant is awarded.
-
-### Pricing
-* €3K–€6K depending on programme complexity, number of stakeholders, and required prototypes.`,
+### Typical Engagements
+*   Building the data plane for ML observability platforms.
+*   Architecting tokenization and trading platforms.`,
           items: [
-            "Ideal for founders chasing EU, civic, or crypto grants that require evidence of execution.",
-            "Timeline: 2–4 weeks blending roadmap design, compliance prep, and rapid prototyping.",
-            "Deliverables: milestone plan, governance checklist, reviewer-ready summary pack.",
-            "Investment: €3K–€6K aligned to grant complexity and prototype depth."
+            "Best for deep-tech startups handling sensitive data or high-throughput analytics.",
+            "Timeline: 2–4 months minimum for foundational architecture.",
+            "Deliverables: Distributed backend services, data pipelines, IaC.",
+            "Investment: Retainer or project-based starting at €15K."
           ],
           caseStudies: [
             {
-              company: "Composite EU CivicTech Founder",
-              challenge: "Prepare an NGI Zero Commons application for a privacy-preserving analytics tool with strict data-sovereignty criteria.",
+              company: "CNO (Hedera)",
+              challenge: "Architect the core infrastructure for a tokenization and trading platform.",
               solution: [
-                "Co-authored the proposal narrative, work packages, and milestone budget so the submission matched NGI evaluation rubrics.",
-                "Bundled compliance evidence (data residency matrix, DPIA outline, responsible AI commitments) alongside a lightweight prototype demo."
+                "Designed compliance-first infrastructure specifically tailored for the Hedera network.",
+                "Ensured high-throughput, secure transaction processing for cno.zone."
               ],
-              technologies: ["Grant Proposal Design", "Data Governance", "Privacy Engineering"]
+              technologies: ["Distributed Systems", "Crypto Infrastructure", "Hedera"]
             },
-        {
-          company: "Composite Web3 Collective",
-          challenge: "Pursue a blockchain ecosystem grant to validate AI-driven contributor tooling for a DAO.",
-          solution: [
-            "Mapped eligibility criteria, scoring rubrics, and milestone expectations across leading foundation programmes to shape a compliant submission.",
-            "Packaged the proposal narrative, technical explainer, UX mockups, and community rollout plan to demonstrate market readiness and governance alignment."
-          ],
-          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
-        },
             {
-              company: "Composite Resilience Lab",
-              challenge: "Pursue an EU cascade funding call focused on critical infrastructure resilience while balancing regulatory obligations.",
+              company: "NannyML",
+              challenge: "Build the foundational data infrastructure for an enterprise ML monitoring SaaS.",
               solution: [
-                "Translated incident-response learnings into a phased roadmap with measurable MTTR targets and governance milestones.",
-                "Developed supporting artifacts (risk register, stakeholder map, compliance tracker) required for the cascade call submission."
+                "Piloted ML monitoring prototypes with the EU founding team.",
+                "Shipped containerized Python microservices on Amazon EKS, enabling the team to secure their first B2B deals."
               ],
-              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+              technologies: ["Python", "Amazon EKS", "MLOps", "Data Engineering"]
+            },
+            {
+              company: "Encode S.A.",
+              challenge: "Process terabytes of network log data daily for near real-time intrusion detection.",
+              solution: [
+                "Architected a PySpark and Elasticsearch platform.",
+                "Optimized the pipeline to process 100K-user network datasets within a single business day."
+              ],
+              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Analytics"]
             }
           ],
-          engagementTitle: "Prep your grant-backed sprint",
-          engagementDescription: "Use a 30-minute working session to align on grant goals, programme constraints, and decision dates so we can scope the engagement within 48 hours.",
+          engagementTitle: "Discuss your Infrastructure Needs",
+          engagementDescription: "Use a 30-minute session to discuss your throughput, compliance, and deployment requirements.",
           engagementChecklistTitle: "Bring to the call:",
           engagementChecklist: [
-            "Grant brief or accelerator outline plus key deadlines.",
-            "Any draft proposal sections, budget assumptions, or reviewer feedback.",
-            "Stakeholder list and compliance requirements we must account for."
+            "Data volume and velocity estimates.",
+            "Specific regulatory frameworks you must adhere to.",
+            "Current bottlenecks in your existing architecture (if applicable)."
           ],
-          engagementCtaLabel: "Schedule the funding sprint call"
-        },
+          engagementCtaLabel: "Schedule the infrastructure call"
+        }
       ],
     },
-  portfolio: {
-    title: "Portfolio",
-    intro: "Selected work and case studies:",
-    projects: [
-        { 
-          slug: "dance-school-saas",
-          title: "Dance School Management SaaS",
-          description: "Full-stack development of a scheduling and billing tool for performing arts schools.",
-          technologies: ["Django", "React", "PostgreSQL", "Stripe API", "AWS"],
-          githubLink: "https://github.com/petroslamb",
+    portfolio: {
+      title: "Portfolio",
+      intro: "Selected work and case studies:",
+      projects: [
+        {
+          slug: "eip-verify",
+          title: "Ethereum Foundation RFP: eth-llm-poc",
+          description: "LLM-assisted protocol specification auditing and security traceability.",
+          technologies: ["Python", "Claude 3.5 Sonnet", "AST Analysis", "Protocol Security"],
+          githubLink: "https://github.com/petroslamb/eth-llm-poc",
           content: `
 ### Project Overview
-This project is a comprehensive SaaS platform built to serve the specific needs of dance and performing arts schools. The primary goal was to create a centralized system for managing class schedules, student registrations, automated billing, and parent communications.
+Built 'eth-llm-poc', an LLM-assisted traceability pipeline created as a Proof-of-Concept for an Ethereum Foundation Ecosystem Support Program (ESP) Request for Proposal. The objective was to audit the execution layer specification (EELS) against the go-ethereum client, catching potential consensus bugs before they reach production. While the grant was ultimately not awarded, the PoC successfully highlighted the gaps between AI capabilities and protocol rigor.
 
-### Challenges
-The primary challenges were designing a flexible database schema to accommodate complex scheduling rules (e.g., bi-weekly classes, term-based schedules), implementing a secure and reliable recurring payment system with Stripe, and ensuring the user interface was intuitive for non-technical studio owners.
+### Engineering Approach
+*   **AST extraction:** Parsed Python specifications and Go source code into unified intermediate representations.
+*   **LLM Evaluation:** Designed a multi-stage evaluation pipeline using Claude 3.5 Sonnet to map specification clauses to implementation blocks.
+*   **Traceability Matrix:** Generated an auditable matrix that highlighted coverage gaps and potential semantic mismatches between the spec and the code.
 
-### Solutions Implemented
-*   **Database:** I designed a relational database schema using Django's ORM that elegantly handled students, classes, schedules, and enrollments, allowing for complex queries without sacrificing performance.
-*   **Billing:** I integrated the Stripe API, building robust webhooks to handle subscription statuses, failed payments, and automated invoicing. This decoupled the billing logic from the main application, increasing reliability.
-*   **Frontend:** A responsive UI was built with React, featuring an interactive calendar for scheduling and a clear registration portal for parents, which significantly reduced administrative workload for the schools.
-
-### My Role & Technical Contributions
-As the sole full-stack developer, I was responsible for the entire project from conception to deployment. My key contributions included:
-*   Developing the backend REST API with Django Rest Framework.
-*   Designing and implementing the PostgreSQL database schema.
-*   Building the recurring billing and subscription management system with Stripe.
-*   Developing the frontend application using React.
-*   Deploying and managing the application on AWS EC2 with Gunicorn and Nginx.
+### Impact
+Demonstrated the feasibility and friction points of using an automated, LLM-assisted workflow to verify the correctness of Ethereum's execution layer upgrades. [Read the full post-mortem analysis on Substack](https://lambpetros.substack.com/p/measuring-trust-the-gap-between-ai).
 `
         },
-        { 
-          slug: "alzheimers-text-classification",
-          title: "Alzheimer’s Text Classification",
-          description: "NLP prototype for early diagnosis support using linguistic markers.",
-          technologies: ["Python", "Scikit-learn", "Pandas", "NLTK", "Flask"],
-          githubLink: "https://github.com/petroslamb",
+        {
+          slug: "transformer-attractors",
+          title: "The Transformer Attractor",
+          description: "Deep dive research into the theoretical mechanisms that drive Transformer dominance over alternative architectures.",
+          technologies: ["Transformers", "Hardware Friction Map", "Mechanistic Interpretability"],
+          githubLink: "https://github.com/petroslamb/hardware-friction-scorecard-dataset",
           content: `
-### Project Overview & Goals
-This research prototype aimed to explore the potential of Natural Language Processing (NLP) for the early detection of Alzheimer's disease. The goal was to train a machine learning model to analyze transcripts of patient interviews and identify subtle linguistic patterns that correlate with cognitive decline.
+### Research Focus
+Conducted fundamental research on 'The Transformer Attractor' and 'The Hardware Friction Map'. The goal was to move beyond empirical observations of LLM performance and understand the specific architectural and hardware reasons why the Transformer paradigm dominates.
 
-### Challenges
-The main challenges were dealing with the inherent noise in transcribed speech, engineering features that could capture subtle linguistic decay (beyond simple word counts), and selecting a model that was both accurate and interpretable to understand which features were most predictive.
+### Key Contributions
+*   **Scale-Dependence Analysis:** Investigated the theoretical mechanisms behind transformer scale-dependence and the 'Two-Gate Trap'.
+*   **Hardware Co-Evolution:** Published findings on how the hardware friction map constrains architectural alternatives, demonstrating why hybrids remain the most viable path forward for non-transformer models.
 
-### Solutions Implemented & Methodology
-*   **Preprocessing Pipeline:** I built a robust text preprocessing pipeline using NLTK and SpaCy to clean the data, perform part-of-speech tagging, and syntactic parsing.
-*   **Feature Engineering:** Over 50 linguistic features were extracted, including lexical richness (e.g., type-token ratio), syntactic complexity (e.g., average sentence length, clause density), and hesitation markers.
-*   **Modeling:** I trained and evaluated various classifiers (SVM, Logistic Regression, Random Forest) using Scikit-learn. A Logistic Regression model was chosen for its strong performance and interpretability. Feature importance analysis confirmed that syntactic complexity was a key differentiator.
-
-### My Role & Technical Contributions
-I was the sole developer and researcher on this project. My contributions included:
-*   Conducting the literature review to identify relevant linguistic markers.
-*   Developing the entire NLP and feature extraction pipeline in Python.
-*   Training, tuning, and evaluating the machine learning models.
-*   Wrapping the final model in a simple Flask API to serve predictions and demonstrate its capabilities.
+### Value Delivered
+This research directly informs my consulting work, allowing me to audit AI systems based on fundamental architectural realities rather than vendor marketing.
 `
         },
-        { 
-          slug: "taxi-demand-forecasting",
-          title: "Taxi Demand Forecasting",
-          description: "Predictive model using time-series analysis to forecast taxi demand in urban areas.",
-          technologies: ["Python", "PySpark", "Prophet", "MLflow", "AWS S3"],
+        {
+          slug: "production-ai-systems",
+          title: "Production AI Scaling: Workable & NannyML",
+          description: "Transitioning generative AI prototypes into enterprise-grade microservices.",
+          technologies: ["Python", "Kafka", "AWS EKS", "Kubernetes", "LangChain"],
           content: `
-### Project Overview
-The goal of this project was to build a model that could accurately forecast taxi demand in New York City on a hyperlocal level (by neighborhood) for the upcoming week. This information helps taxi companies optimize fleet allocation and reduce passenger wait times.
+### The Challenge
+Both Workable and NannyML needed to move AI features out of the lab and into production environments serving live, enterprise customers. The challenge was building systems that could handle massive scale, ensure data privacy, and maintain high availability.
 
-### Challenges
-The key challenges were the massive scale of the historical trip data (billions of records), the need to generate hundreds of independent forecasts (one for each neighborhood) efficiently, and accurately capturing complex seasonal patterns and holiday effects.
-
-### Solutions Implemented
-*   **Data Processing:** I built a data pipeline using PySpark on AWS to process and aggregate the raw trip data from S3 into time-series format suitable for modeling. This distributed approach was essential for handling the data volume.
-*   **Modeling at Scale:** Instead of one monolithic model, I designed a system to train hundreds of individual time-series models in parallel using Facebook's Prophet library, which excels at capturing multiple seasonalities.
-*   **Reproducibility:** I used MLflow to meticulously track all experiments, including model parameters, performance metrics, and model artifacts. This ensured reproducibility and facilitated easy comparison between different modeling approaches.
-
-### My Role & Technical Contributions
-As the lead data engineer on this project, my responsibilities were:
-*   Designing and implementing the scalable data processing pipeline with PySpark.
-*   Developing the parallelized model training and forecasting framework.
-*   Integrating MLflow for experiment tracking and model management.
-*   Analyzing model performance and identifying key drivers of demand.
+### Engineering Solutions
+*   **Workable (Resume Parsing & Generative Features):** Transitioned isolated proofs-of-concept into hardened microservices deployed on AWS EKS. The system orchestrates generative workflows across a 0.5 billion-record corpus, handling tens of thousands of requests daily with strict fallbacks.
+*   **NannyML (ML Observability):** Piloted ML monitoring algorithms and built the foundational containerized Python infrastructure on Amazon EKS, enabling the founding team to secure their first major B2B contracts.
 `
         },
-        { 
-          slug: "flask-ml-server",
-          title: "Flask ML Server",
-          description: "A lightweight, production-ready server for deploying TensorFlow/Keras models.",
-          technologies: ["Flask", "TensorFlow", "Docker", "Gunicorn", "Nginx"],
-          githubLink: "https://github.com/petroslamb",
-          content: `
-### Project Overview & Goal
-This project provides a boilerplate template for deploying machine learning models as a production-ready REST API. The goal was to create a lightweight, performant, and easily containerizable starting point to bridge the gap between a trained model and a live, scalable service.
-
-### The Problem (Challenge)
-Many data scientists are excellent at building models in notebooks but struggle with the software engineering practices required for production deployment. Setting up a robust web server, managing dependencies, and containerizing the application can be a significant hurdle.
-
-### The Solution & Architecture
-This template provides a clean and minimal solution using a proven stack:
-*   **Flask:** A lightweight web framework to create API endpoints for prediction and health checks.
-*   **Gunicorn:** A production-grade WSGI server to run the Flask application concurrently.
-*   **Nginx:** Used as a reverse proxy for performance and security.
-*   **Docker:** The entire application is containerized with a multi-stage Dockerfile for a small, secure final image.
-
-### Key Technical Contributions
-I created this template from scratch, focusing on best practices. My contributions include:
-*   Writing a clean, well-documented Flask application structure.
-*   Creating an optimized, multi-stage Dockerfile.
-*   Providing clear configuration files for Gunicorn and Nginx.
-*   Writing a comprehensive README to guide users through setup and deployment.
-`
-        },
-        { 
-          slug: "cybersecurity-platforms",
-          title: "Cybersecurity Platforms",
-          description: "Data analytics for large-scale intrusion detection for enterprise clients.",
-          technologies: ["Python", "Elasticsearch", "Spark", "Kafka", "Django"],
+        {
+          slug: "cno-project",
+          title: "Hedera Tokenization: CNO Project",
+          description: "Architecting compliance-first infrastructure for secure tokenization and trading on the Hedera network.",
+          technologies: ["Hedera", "ERC-1400", "ERC-3643", "Distributed Systems"],
+          githubLink: "https://github.com/petroslamb/cno-project",
           content: `
 ### Project Overview
-This represents my work with several enterprise clients (under NDA) in the cybersecurity sector. The primary focus was on building high-throughput data analytics platforms for Network Intrusion Detection Systems (NIDS) and Security Information and Event Management (SIEM).
+Designed and documented the core architecture for a regulated digital asset (RWA) platform on the Hedera network. The project required reconciling complex compliance standards (ERC-1400, ERC-3643) with high-throughput distributed infrastructure.
 
-### Core Challenges
-The platforms had to process terabytes of network log and event data daily in near real-time. The core challenges included designing a system with extremely high data ingestion rates, providing low-latency query capabilities for security analysts, and implementing complex, stateful detection logic at scale.
+### Engineering & Architecture
+*   **Compliance Infrastructure:** Designed the end-to-end flows for token issuance and restricted transfers utilizing complex compliance hooks and KYC verifications.
+*   **Secondary Trading & Settlement:** Expanded the architectural scope to include secondary trading flows, clearing, and administrative operations. 
+*   **Legacy Systems Integration:** Maintained canonical 'Oxygen-first' documentation and bridged legacy architecture (Nitrogen) with the new ATS (Alternative Trading System) monorepo.
 
-### Solutions & Architecture
-*   **Data Ingestion:** We built a real-time data pipeline using Kafka as a distributed message bus to handle massive data streams without data loss.
-*   **Real-time Processing:** Spark Streaming was used to process and enrich the data from Kafka, applying initial filtering and transformation rules.
-*   **Analytics & Storage:** Elasticsearch was the core of the analytics engine. Its powerful indexing and aggregation capabilities allowed analysts to perform complex queries over vast datasets with response times in seconds.
-
-### My Role & Technical Contributions
-As a Senior Backend Engineer, I was a key contributor to the data pipeline and analytics engine. My specific contributions included:
-*   Developing custom Spark Streaming jobs in Python for data enrichment and threat detection.
-*   Designing Elasticsearch mappings and indexing strategies to optimize query performance.
-*   Building REST APIs using Django and FastAPI to expose analytics results to dashboards and to allow analysts to manage detection rules.
-*   Optimizing critical data processing jobs to reduce latency and resource consumption.
+*Note: The portfolio also includes foundational deep-tech engineering for Encode S.A., where I architected PySpark + Elasticsearch pipelines for enterprise cybersecurity logging at the scale of 100,000 users.*
 `
         },
       ],
@@ -552,38 +427,42 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
     },
     home: {
       name: "Πέτρος Λαμπρόπουλος",
-      title: "Βοηθάω startups να λανσάρουν SaaS προϊόντα μέσα σε εβδομάδες.",
-      subtitle: "Discovery, υλοποίηση και παράδοση λειτουργιών έτοιμων για παραγωγή ώστε να κυκλοφορείτε πιο γρήγορα και να κερδίζετε την αγορά.",
-      specialties: "Γρήγορα discovery sprints, SaaS builds έτοιμα για επενδυτές και ανθεκτική cloud υποδομή.",
-      cta: "Κλείσε ένα discovery call",
-      servicesTitle: "Υπηρεσίες με μια ματιά",
+      title: "Μετατρέπω AI prototypes σε παραγωγικά συστήματα.",
+      subtitle: "Σχεδιάζω, αξιολογώ και κλιμακώνω agentic αρχιτεκτονικές και deep-tech υποδομές που αντέχουν σε πραγματικές συνθήκες.",
+      specialties: "Αυστηρή αξιολόγηση LLM, παραγωγικές agentic αρχιτεκτονικές και υποδομές με γνώμονα τη συμμόρφωση (compliance-first).",
+      cta: "Κλείσε μια ανασκόπηση συστήματος",
+      servicesTitle: "Εξειδικευμένη Συμβουλευτική",
       services: [
-        { title: "AI Discovery Sprint", description: "Σπριντ 1–2 εβδομάδων για να χαρτογραφήσουμε τη γρηγορότερη πορεία αξίας.", slug: "ai-discovery" },
-        { title: "AI MVP Launch", description: "Κατασκευή 1–3 μηνών για MVP AI SaaS έτοιμο για επενδυτές.", slug: "ai-mvp" },
-        { title: "AI Feature Add-On", description: "Ενσωμάτωση 2–6 εβδομάδων ενός παραγωγικού AI χαρακτηριστικού.", slug: "ai-feature-add-on" },
-        { title: "Grant-Funded Crypto, AI & Deep-Tech Sprint", description: "Συνεργασία 2–4 εβδομάδων για να πακετάρουμε crypto, AI και deep-tech roadmap μαζί με συμμόρφωση για grant προκηρύξεις.", slug: "grant-funded-sprint" },
+        { title: "Αξιολόγηση Συστημάτων AI", description: "Αυστηρές δοκιμές και αρχιτεκτονικός έλεγχος πριν το AI σας βγει στην παραγωγή.", slug: "ai-systems-evaluation" },
+        { title: "Παραγωγικές Agentic Αρχιτεκτονικές", description: "Ενσωμάτωση εύθραυστων AI prototypes σε αξιόπιστα συστήματα λογισμικού.", slug: "production-agentic-architectures" },
+        { title: "Deep-Tech Υποδομές", description: "Σχεδιασμός κατανεμημένων backends για ML-monitoring και ρυθμιζόμενους κλάδους.", slug: "deep-tech-infrastructure" },
       ],
-      credibility: "Με έχουν εμπιστευτεί οι Workable, NannyML, Orfium, Dikaio.ai και αποστολές ανθεκτικότητας όπως το Brain Metrics Initiative.",
-      podcastTitle: "Podcast: Το Scaling του Generative AI απαιτεί low-level δεξιότητες",
-      podcastDescription: "Σύντομο σχόλιο για το γιατί τα θεμέλια στα συστήματα είναι κρίσιμα όταν κλιμακώνεις γενετικά μοντέλα στην παραγωγή.",
+      credibility: "Με έχουν εμπιστευτεί οργανισμοί όπως η Workable, η NannyML και το dikaio.ai.",
+      featuredResearch: {
+        title: "Προτεινόμενη Έρευνα",
+        essayTitle: "The Transformer Attractor",
+        essayDescription: "Κατανοώντας τους θεωρητικούς μηχανισμούς που οδήγησαν στην κυριαρχία των Transformers και πώς το hardware friction map περιορίζει εναλλακτικές αρχιτεκτονικές.",
+        readOnLabel: "Διαβάστε στο Substack",
+        link: "https://lambpetros.substack.com/p/the-transformer-attractor"
+      },
     },
     about: {
       title: "Σχετικά με εμένα",
       greeting: "Γεια σας, είμαι ο Πέτρος Λαμπρόπουλος (Peter Lamb)",
-      intro: "Συνεργάζομαι με ομάδες ιδρυτών για να μετατρέπω ιδέες προϊόντων σε παραγωγικά SaaS μέσα σε εβδομάδες, συνδυάζοντας γρήγορο validation με αξιόπιστη παράδοση.",
-      howIHelpTitle: "Πώς βοηθώ τους founders",
-      howIHelpIntro: "Επιλέγουμε το engagement που ταιριάζει στο στάδιό σας — κάθε συνεργασία έχει σαφή, μετρήσιμα αποτελέσματα.",
+      intro: "Εργάζομαι σε συστήματα AI στο σημείο όπου οι αφαιρέσεις (abstractions) καταρρέουν: παραγωγικοί agents, pipelines αξιολόγησης και πλατφόρμες AI-first που πρέπει να επιβιώσουν υπό πραγματικούς περιορισμούς.",
+      howIHelpTitle: "Πώς βοηθώ τις ομάδες μηχανικών",
+      howIHelpIntro: "Μετατρέπω εύθραυστα prototypes σε σταθερά, αναπτύξιμα συστήματα, πλοηγούμενος μέσα από ασαφείς απαιτήσεις, ελλιπείς μετρικές και εξελισσόμενους ερευνητικούς στόχους.",
       howIHelp: [
-        "Χαρτογραφούμε τις πιο κρίσιμες ευκαιρίες προϊόντος μέσα από στοχευμένα discovery sessions, συνεντεύξεις χρηστών και τεχνικά spikes.",
-        "Παραδίδω MVPs έτοιμα για επενδυτές με production-grade Python backends, data flows και καλοδουλεμένες λειτουργίες προϊόντος.",
-        "Ενσωματώνω νέες δυνατότητες σε υπάρχοντα προϊόντα και προετοιμάζω την ομάδα για monitoring, rollout και συνεχή βελτίωση."
+        "Αυστηρές δοκιμές, ανάλυση τρόπων αστοχίας (failure-mode) και αρχιτεκτονικός έλεγχος για συστήματα AI πριν βγουν στην παραγωγή.",
+        "Μετατροπή εύθραυστων AI prototypes σε θωρακισμένα, αξιόπιστα συστήματα λογισμικού που αντέχουν σε συνθήκες μεγάλης κλίμακας.",
+        "Σχεδιασμός κατανεμημένων backend συστημάτων και compliance-first υποδομών για crypto και αυστηρά ρυθμιζόμενους κλάδους."
       ],
       experienceTitle: "Εμπειρία",
       experience: [
-        "Ηγήθηκα κύκλων discovery-to-launch σε Workable και NannyML, μετατρέποντας prototypes σε παραγωγικά χαρακτηριστικά για προϊόντα πρόσληψης και ML monitoring.",
-        "Δόμησα και κλιμάκωσα Python microservices και event-driven backends που κρατούν αξιόπιστες πλατφόρμες SaaS για hiring, music-tech και νομικές εφαρμογές.",
-        "Σχεδίασα pipelines analytics και υποδομές αναζήτησης που εξάγουν γρήγορη γνώση από εκατοντάδες εκατομμύρια events.",
-        "Καθοδηγώ founders και διεπιστημονικές ομάδες ώστε στρατηγική προϊόντος, τεχνική υλοποίηση και readiness για λανσάρισμα να μένουν συγχρονισμένα.",
+        "Independent Systems Consultant (2024–Σήμερα): Συνεργασία με startups και ερευνητικές ομάδες σε agentic αρχιτεκτονικές, αξιολόγηση LLMs και ασφάλεια πρωτοκόλλων.",
+        "Ηγήθηκα κύκλων generative AI discovery-to-launch στην Workable, μετατρέποντας prototypes σε παραγωγικά χαρακτηριστικά (επεξεργασία δεκάδων χιλιάδων βιογραφικών ημερησίως) σε corpus 0.5 δισ. εγγραφών στο EKS.",
+        "Υλοποίησα ML monitoring prototypes με την ιδρυτική ομάδα της NannyML στην ΕΕ, παραδίδοντας containerized Python microservices στο Amazon EKS για να κλείσουν τα πρώτα B2B deals.",
+        "Αρχιτεκτόνησα μια PySpark + Elasticsearch πλατφόρμα στην Encode S.A. που επεξεργαζόταν δεδομένα δικτύου 100.000 χρηστών μέσα σε μία εργάσιμη ημέρα.",
       ],
       skillsTitle: "Τεχνικές Δεξιότητες",
       skills: [
@@ -610,410 +489,281 @@ As a Senior Backend Engineer, I was a key contributor to the data pipeline and a
         { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Δυναμικό (Ελληνικά)" },
         { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συντηρητικό (Σπαρτιατικό)" },
       ],
+      philosophyTitle: "Μηχανική Φιλοσοφία",
+      philosophyText: "Πιστεύω ότι για να κατασκευάσεις ισχυρά συστήματα AI, πρέπει πρώτα να κατανοήσεις τα μηχανικά όρια των ίδιων των μοντέλων — από τους μηχανισμούς προσοχής (attention mechanisms) μέχρι τους περιορισμούς της μνήμης KV. Η δημιουργία αφαιρέσεων χωρίς κατανόηση των μηχανισμών οδηγεί σε εύθραυστα, απρόβλεπτα συστήματα.",
+      researchFeedTitle: "Πρόσφατη Έρευνα & Άρθρα",
+      researchFeed: [
+        {
+          title: "The Transformer Attractor",
+          description: "Μια ανάλυση του γιατί οι αρχιτεκτονικές AI συγκλίνουν στον Transformer και των περιορισμών στο hardware που διαμορφώνουν αυτή την εξέλιξη.",
+          url: "https://lambpetros.substack.com/p/the-transformer-attractor",
+          date: "Φεβ 2025",
+        },
+        {
+          title: "The Hardware Friction Map",
+          description: "Μια βαθιά βουτιά στα θεμέλια των συστημάτων και στα οικονομικά του hardware που διέπουν την επεκτασιμότητα παραγωγής AI.",
+          url: "https://lambpetros.substack.com/p/the-hardware-friction-map",
+          date: "Φεβ 2025",
+        }
+      ],
+      subscribeCta: "Εγγραφείτε στην Έρευνά μου"
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Διάλεξε το engagement που ταιριάζει στην ανάγκη σου: discovery, MVP, επέκταση χαρακτηριστικών ή grant-backed planning.",
+      intro: "Σχεδιάζω, αξιολογώ και θωρακίζω AI αρχιτεκτονικές που κλιμακώνονται. Διάλεξε το engagement που ταιριάζει στις τεχνικές σου προκλήσεις.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
-      ctaTitle: "Χρειάζεσαι βοήθεια για να διαλέξεις engagement;",
-      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε στόχους, χρονοδιάγραμμα και περιορισμούς. Θα φύγεις με προτεινόμενο tier και συγκεκριμένο πλάνο επόμενων ενεργειών.",
-      ctaButton: "Κλείσε discovery call",
+      ctaTitle: "Χρειάζεστε έλεγχο της αρχιτεκτονικής σας;",
+      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε τους περιορισμούς του συστήματός σας και τα κενά αξιολόγησης. Θα φύγεις με μια ξεκάθαρη λίστα επόμενων μηχανικών βημάτων.",
+      ctaButton: "Κλείσε μια ανασκόπηση συστήματος",
       categories: [
         {
-          title: "AI Discovery Sprint",
-          slug: "ai-discovery",
-          intro: "Σχεδιάζουμε ένα σπριντ 1–2 εβδομάδων που αναδεικνύει τις πιο αποδοτικές AI ευκαιρίες, μειώνει το ρίσκο και αφήνει ξεκάθαρα επόμενα βήματα.",
-          businessProse: `Το σπριντ προσφέρει στους founders σαφήνεια πριν δεσμεύσουν σημαντικό budget. Μαζί ορίζουμε το επιθυμητό αποτέλεσμα, ελέγχουμε την ετοιμότητα των δεδομένων και δοκιμάζουμε υποσχόμενα use cases με γρήγορα prototypes.
+          title: "Αξιολόγηση και Έλεγχος Συστημάτων AI",
+          slug: "ai-systems-evaluation",
+          intro: "Δεν χτίζω απλά wrappers· αποδομώ τα μοντέλα. Αυστηρές δοκιμές, ανάλυση τρόπων αστοχίας και αρχιτεκτονικός έλεγχος για AI συστήματα πριν βγουν στην παραγωγή.",
+          businessProse: `Πριν κλιμακώσετε ένα χαρακτηριστικό AI σε εκατομμύρια χρήστες ή βασιστείτε σε αυτό για την ασφάλεια ενός πρωτοκόλλου, πρέπει να γνωρίζετε ακριβώς πώς και πότε καταρρέει.
 
-### Ροή Συνεργασίας
-* Kick-off workshop για να χαρτογραφήσουμε pains, στόχους επιτυχίας και responsible AI guardrails.
-* Συζητήσεις με stakeholders και συνεντεύξεις χρηστών για να επιβεβαιώσουμε την επιθυμητότητα και την επιχειρησιακή καταλληλότητα.
-* Τεχνικά spikes σε LLMs, retrieval ή automation patterns ώστε να αποδείξουμε τη βιωσιμότητα και να αναδείξουμε περιορισμούς.
-
-### Παραδοτέα
-* Opportunity map που κατατάσσει τα AI bets με βάση αξία, προσπάθεια και ρίσκο.
-* Τεχνικό discovery pack με απαιτήσεις δεδομένων, σκίτσα αρχιτεκτονικής και προτάσεις εργαλείων/προμηθευτών.
-* Executive-ready brief με go/no-go απόφαση, χρονοδιάγραμμα και επόμενα βήματα.
-
-### Κόστος
-* Σταθερή αμοιβή €2K–€4K ανάλογα με scope και αριθμό εμπλεκόμενων personae.`,
-          items: [
-            "Ιδανικό για founders που θέλουν να επικυρώσουν AI use cases πριν προχωρήσουν σε ανάπτυξη.",
-            "Χρονοδιάγραμμα: σπριντ 1–2 εβδομάδων με έρευνα, spikes και prototype demos.",
-            "Παραδοτέα: opportunity map, τεχνικό discovery pack, executive brief.",
-            "Επένδυση: €2K–€4K σταθερή αμοιβή."
-          ],
-          caseStudies: [
-            {
-              company: "Dikaio.ai",
-              challenge: "Να επιβεβαιωθεί αν η retrieval-augmented generation μπορεί να αυτοματοποιήσει νομικά έγγραφα ελληνικού δικαίου πριν το pre-seed.",
-              solution: [
-                "Χαρτογράφησα τους στόχους των founders σε shortlist βιώσιμων ροών εγγράφων και responsible AI κανόνων.",
-                "Παρέδωσα clickable prototype και RAG reference implementation που τροφοδότησαν τις συζητήσεις με επενδυτές."
-              ],
-              technologies: ["OpenAI", "Retrieval-Augmented Generation", "Product Discovery"]
-            },
-            {
-              company: "Langaware",
-              challenge: "Αξιολόγηση βιωσιμότητας NLP μοντέλων για έλεγχο γνωστικής υγείας πριν επενδυθούν κλινικοί πόροι.",
-              solution: [
-                "Εκτέλεσα evaluation spikes σε transformer baselines για να μετρήσω επιτεύξιμη ακρίβεια.",
-                "Σύνταξα go/no-go αφήγηση με απαιτήσεις δεδομένων και θέματα συμμόρφωσης."
-              ],
-              technologies: ["Python", "BERT", "Applied NLP"]
-            },
-            {
-              company: "Beat",
-              challenge: "Εξερεύνηση χαρακτηριστικών πρόβλεψης ζήτησης για τη Λίμα χωρίς να εκτροχιαστεί το βασικό roadmap.",
-              solution: [
-                "Παρέδωσα prototype forecasting με πραγματικά δεδομένα επιβατών μέσα σε δύο εβδομάδες για να αποδείξω αξία.",
-                "Πρότεινα phased rollout και instrumentation που απαιτείται για συνεχή βελτίωση."
-              ],
-              technologies: ["Python", "Forecasting", "Data Storytelling"]
-            }
-          ],
-          engagementTitle: "Οργάνωσε το Discovery Sprint",
-          engagementDescription: "Κλείσε ένα 30λεπτο call για να επιβεβαιώσουμε το fit, να ευθυγραμμίσουμε τα outcomes και να κλειδώσουμε την ατζέντα μέσα σε 48 ώρες.",
-          engagementChecklistTitle: "Για το call:",
-          engagementChecklist: [
-            "Τα 2–3 κορυφαία bets ή workflows που θέλεις να επικυρώσεις.",
-            "Δεδομένα, έρευνες πελατών ή compliance σημειώσεις που πρέπει να δούμε.",
-            "Τα μέλη της ομάδας και η διαθεσιμότητά τους για τα sprint workshops."
-          ],
-          engagementCtaLabel: "Κλείσε το discovery sprint call"
-        },
-        {
-          title: "AI MVP Launch",
-          slug: "ai-mvp",
-          intro: "Παραδίδω AI SaaS MVP έτοιμο για επενδυτές μέσα σε 1–3 μήνες με production-grade backend, data και generative εμπειρίες.",
-          businessProse: `Μετατρέπουμε το επικυρωμένο concept σε προϊόν χωρίς να χαθεί ρυθμός. Ηγούμαι της ανάπτυξης, συνεργάζομαι με την ομάδα σου και κρατώ την πορεία διαφανή με εβδομαδιαία demos.
-
-### Τι Χτίζουμε
-* Ασφαλή θεμέλια Python/FastAPI ή Django με multi-tenant αρχιτεκτονική και καθαρά APIs.
-* Pipelines συλλογής, ορχήστρωσης και παρακολούθησης δεδομένων για ανάγκες early-scale.
-* Generative ή predictive workflows (RAG, summarisation, recommendations) ενσωματωμένα στην εμπειρία χρήστη.
-
-### Ρυθμός Παράδοσης
-* Εβδομαδιαία roadmap reviews και demo sessions με founders και stakeholders.
-* Collaborative working sessions με designers, PMs ή fractional ειδικούς.
-* Launch readiness checklist που καλύπτει QA, observability και runbooks.
-
-### Κόστος
-* €8K–€20K ανάλογα με scope, integrations και σύνθεση ομάδας. Διαθέσιμα phased retainers.`,
-          items: [
-            "Ιδανικό για ομάδες founders που χρειάζονται AI SaaS προϊόν στην αγορά γρήγορα.",
-            "Χρονοδιάγραμμα: ανάπτυξη 1–3 μηνών με εβδομαδιαία demos και checkpoints.",
-            "Παραδοτέα: production backend, AI workflows, deployment runbook.",
-            "Επένδυση: €8K–€20K ανάλογα με integrations."
-          ],
-          caseStudies: [
-            {
-              company: "NannyML",
-              challenge: "Λανσάρισμα SaaS παρακολούθησης ML μοντέλων με περιορισμένο headcount.",
-              solution: [
-                "Ηγήθηκα της Python backend ανάπτυξης και των UI integrations που παρέδωσαν την πρώτη έκδοση έτοιμη για επενδυτές.",
-                "Productionάρισα Kubernetes deployment με Helm και observability ώστε η εσωτερική ομάδα να κλιμακώσει με σιγουριά."
-              ],
-              technologies: ["Python", "SaaS", "MLOps", "AWS EKS", "Kubernetes", "Helm"]
-            },
-            {
-              company: "Orfium",
-              challenge: "Στήσιμο πλατφόρμας διαχείρισης δικαιωμάτων ικανής να χειριστεί υψηλούς όγκους μουσικών δεδομένων.",
-              solution: [
-                "Αρχιτεκτόνησα υπηρεσίες Django/Postgres με twelve-factor πρακτικές για κλίμακα και συντήρηση.",
-                "Υλοποίησα workflows αδειοδότησης και reporting που στήριξαν το εμπορικό λανσάρισμα."
-              ],
-              technologies: ["Python", "Django", "PostgreSQL", "Heroku"]
-            },
-            {
-              company: "NeuroPublic S.A.",
-              challenge: "Παράδοση SaaS precision agriculture με σύνθετη αγρονομική λογική σε πιεστικό χρονοδιάγραμμα.",
-              solution: [
-                "Ηγήθηκα υπηρεσιών backend που επεξεργάζονταν αγρονομικά δεδομένα και παρείχαν συστάσεις σε παραγωγούς.",
-                "Συνεργάστηκα με αγρονόμους και product leads ώστε η πλατφόρμα να λανσαριστεί από μηδέν σε χρόνο."
-              ],
-              technologies: ["Python", "Backend Development", "Web Applications"]
-            }
-          ],
-          engagementTitle: "Ξεκίνα το AI MVP build",
-          engagementDescription: "Κλείσε 30' για να ελέγξουμε scope, integrations και launch timeline ώστε να λάβεις πλάνο παράδοσης μέσα σε δύο εργάσιμες.",
-          engagementChecklistTitle: "Έχε έτοιμα:",
-          engagementChecklist: [
-            "Το launch window ή τα fundraising milestones που στοχεύεις.",
-            "Τα workflows, integrations και KPIs που είναι must-have.",
-            "Σύντομη επισκόπηση του τρέχοντος stack, repos ή design assets."
-          ],
-          engagementCtaLabel: "Κλείσε MVP scoping call"
-        },
-        {
-          title: "AI Feature Add-On",
-          slug: "ai-feature-add-on",
-          intro: "Προσθέτω παραγωγικό AI χαρακτηριστικό στο υπάρχον προϊόν σου μέσα σε 2–6 εβδομάδες χωρίς να διαταράσσω τον βασικό ρυθμό.",
-          businessProse: `Όταν έχεις ήδη χρήστες, κάθε νέο χαρακτηριστικό πρέπει να προσγειώνεται ομαλά. Ενσωματώνομαι στην ομάδα σου, θωρακίζω το AI workflow και παραδίδω τεκμηρίωση για απρόσκοπτο hand-off.
-
-### Playbook Ενσωμάτωσης
-* Ευθυγράμμιση success metrics ώστε το χαρακτηριστικό να συνδέεται με ενεργοποίηση, διατήρηση ή επέκταση εσόδων.
-* Σχεδιασμός αρχιτεκτονικής που σέβεται το υπάρχον stack, τις απαιτήσεις συμμόρφωσης και τα data contracts.
-* Πλάνο πειραματισμού και rollout guardrails (feature flags, observability, fallback στρατηγικές).
+### Μεθοδολογία Ελέγχου
+*   **Ανάλυση Τρόπων Αστοχίας (Failure-Mode Analysis):** Δοκιμές πίεσης (stress-testing) σε prompts, context windows και επίπεδα ανάκτησης (retrieval) απέναντι σε εχθρικά ή ακραία δεδομένα (edge-cases).
+*   **Πιπελίνες Αξιολόγησης:** Δημιουργία αυτοματοποιημένων συστημάτων συγκριτικής αξιολόγησης (π.χ. LLM-ως-κριτής ή σημασιολογική ομοιότητα) προσαρμοσμένα στον τομέα σας.
+*   **Αρχιτεκτονική Ανασκόπηση:** Αξιολόγηση του RAG, του agentic loop ή του workflow σας για σημεία συμφόρησης, κινδύνους ψευδαισθήσεων (hallucinations) και κόστος.
 
 ### Παραδοτέα
-* Έτοιμη για παραγωγή υλοποίηση με καθαρές διεπαφές και τεκμηρίωση.
-* Hooks για monitoring και alerting ώστε η ομάδα σου να μετρά ποιότητα και να παρεμβαίνει γρήγορα.
-* Playbooks για customer success, support και marketing ώστε να επικοινωνηθεί η νέα δυνατότητα.
+*   Ολοκληρωμένη έκθεση ελέγχου που αναλύει ευπάθειες και αρχιτεκτονικά ελαττώματα.
+*   Προσαρμοσμένη σουίτα αξιολόγησης ενσωματωμένη στο CI/CD σας.
+*   Εφαρμόσιμο σχέδιο αποκατάστασης (remediation roadmap) που περιγράφει συγκεκριμένες προσαρμογές σε κώδικα και prompts.
 
-### Κόστος
-* €4K–€10K ανάλογα με integrations, προετοιμασία δεδομένων και πολυπλοκότητα rollout.`,
+### Τυπικές Συνεργασίες
+*   Επικύρωση πρωτοκόλλων για deep-tech επιχορηγήσεις.
+*   Δοκιμή πίεσης πριν από την κυκλοφορία για εταιρικά χαρακτηριστικά generative AI.`,
           items: [
-            "Ιδανικό για scale-ups που θέλουν να προσθέσουν AI αξία σε υπάρχον surface.",
-            "Χρονοδιάγραμμα: ενσωμάτωση 2–6 εβδομάδων δίπλα στην in-house ομάδα.",
-            "Παραδοτέα: παραγωγικό χαρακτηριστικό, monitoring plan, go-to-market playbook.",
-            "Επένδυση: €4K–€10K ανάλογα με την πολυπλοκότητα."
+            "Ιδανικό για ομάδες που έχουν ένα λειτουργικό AI prototype αλλά χρειάζεται να εγγυηθούν την αξιοπιστία πριν το λανσάρισμα.",
+            "Χρονοδιάγραμμα: 2–4 εβδομάδες ανάλογα με την πολυπλοκότητα του συστήματος.",
+            "Παραδοτέα: Έκθεση ελέγχου, προσαρμοσμένα pipelines αξιολόγησης, roadmap αποκατάστασης.",
+            "Επένδυση: Ξεκινάει από €4K."
           ],
           caseStudies: [
+            {
+              company: "Ethereum Foundation (RFP PoC)",
+              challenge: "Επαλήθευση των υποχρεώσεων του πρωτοκόλλου έναντι των execution clients χρησιμοποιώντας LLMs για ενίσχυση της ασφάλειας.",
+              solution: [
+                "Κατασκεύασα το 'eth-llm-poc', ένα pipeline ιχνηλασιμότητας στο πλαίσιο πρότασης έργου.",
+                "Ορχήστρωσα αξιολογήσεις πολλαπλών σταδίων που επικύρωναν τις προδιαγραφές του πρωτοκόλλου έναντι υλοποιήσεων του go-ethereum."
+              ],
+              technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
+            },
+            {
+              company: "Transformer Architecture Research",
+              challenge: "Κατανόηση των θεωρητικών παραγόντων κλιμάκωσης και των εσωτερικών μηχανισμών που καθιστούν κυρίαρχα τα μοντέλα Transformer.",
+              solution: [
+                "Διεξήγαγα ενδελεχή έρευνα πάνω στο Transformer Attractor και το hardware friction map.",
+                "Δημοσίευσα ευρήματα για το γιατί οι εναλλακτικές αρχιτεκτονικές δυσκολεύονται απέναντι στην κλιμάκωση (scale-dependence) του Transformer."
+              ],
+              technologies: ["Transformers", "Mechanistic Interpretability", "Hardware Co-Evolution"]
+            }
+          ],
+          engagementTitle: "Σχεδιάστε τον Έλεγχο Συστήματος σας",
+          engagementDescription: "Κλείστε ένα 30λεπτο call για να συζητήσουμε την τρέχουσα αρχιτεκτονική σας, τα γνωστά προβλήματα και τους στόχους αξιολόγησης.",
+          engagementChecklistTitle: "Φέρτε στο call:",
+          engagementChecklist: [
+            "Διαγράμματα αρχιτεκτονικής ή περιγραφές των τρεχόντων workflows AI.",
+            "Παραδείγματα αστοχιών ή ψευδαισθήσεων που αντιμετωπίζετε αυτή τη στιγμή.",
+            "Πρόσβαση σε δείγματα δεδομένων ή τρέχουσες μετρικές αξιολόγησης."
+          ],
+          engagementCtaLabel: "Κλείσε το call αξιολόγησης"
+        },
+        {
+          title: "Παραγωγικές Agentic Αρχιτεκτονικές",
+          slug: "production-agentic-architectures",
+          intro: "Μετατροπή εύθραυστων AI prototypes σε θωρακισμένα, αξιόπιστα συστήματα λογισμικού που αντέχουν σε πραγματική κλίμακα και κανονισμούς.",
+          businessProse: `Ενα proof-of-concept σε Jupyter Notebook δεν είναι προϊόν. Εξειδικεύομαι στη δύσκολη μηχανική δουλειά που απαιτείται για να μετατραπούν απομονωμένα AI scripts σε ανθεκτικά, κλιμακώσιμα και παρατηρήσιμα microservices.
+
+### Προσέγγιση Μηχανικής (Engineering Approach)
+*   **Ορχήστρωση Agents:** Σχεδιασμός στιβαρών μηχανών κατάστασης (state machines) και λογικής δρομολόγησης (routing) για multi-agent συστήματα.
+*   **Διαχείριση Δεδομένων & Κατάστασης:** Υλοποίηση αξιόπιστης μνήμης, ανάκτησης πλαισίου (RAG at scale) και διαχείρισης συναλλαγών.
+*   **Παρατηρησιμότητα & Guardrails:** Ενσωμάτωση ιχνηλάτησης (π.χ. LangSmith), μηχανισμών fallback και αυστηρής ανάλυσης εξόδου για την πρόληψη καταστροφικών σφαλμάτων.
+
+### Παραδοτέα
+*   Παραγωγικά, containerized microservices έτοιμα για ανάπτυξη σε Kubernetes.
+*   Πλήρη dashboards παρατηρησιμότητας και κανόνες ειδοποίησης (alerting).
+*   Runbooks για την ομάδα μηχανικών που περιγράφουν λεπτομερώς τις διαδικασίες συντήρησης και ανάπτυξης.
+
+### Τυπικές Συνεργασίες
+*   Μετάβαση ενός GenAI MVP σε enterprise κλίμακα.
+*   Δημιουργία αυτόνομων agents για συγκεκριμένους αυτοματισμούς ροών εργασίας.`,
+          items: [
+            "Ιδανικό για scale-ups και enterprises που μεταφέρουν το AI από το εργαστήριο στην παραγωγή.",
+            "Χρονοδιάγραμμα: 1–3 μήνες ανάλογα με το βάθος ενσωμάτωσης.",
+            "Παραδοτέα: Παραγωγικά microservices, setup παρατηρησιμότητας, runbooks.",
+            "Επένδυση: €8K–€20K."
+          ],
+          caseStudies: [
+            {
+              company: "Google Cloud / ADK",
+              challenge: "Παράδοση αξιόπιστων agent systems για code intelligence και αυτοματισμούς.",
+              solution: [
+                "Αρχιτεκτόνησα παραγωγικά agentic workflows.",
+                "Εξασφάλισα υψηλή αξιοπιστία και αυστηρά guardrails για enterprise επιπέδου αυτοματισμούς."
+              ],
+              technologies: ["Python", "Agentic Systems", "Code Automation"]
+            },
             {
               company: "Workable",
-              challenge: "Εισαγωγή generative AI σε hiring workflows χωρίς να θιγεί η αξιοπιστία ή η συμμόρφωση.",
+              challenge: "Κλιμάκωση χαρακτηριστικών generative AI σε μια τεράστια, ζωντανή βάση χρηστών.",
               solution: [
-                "Μετέτρεψα PoCs σε θωρακισμένες microservices που τροφοδότησαν νέα recruiter-facing experiences.",
-                "Καθιέρωσα MLOps πρακτικές (monitoring, testing, rollout) ώστε η εσωτερική ML ομάδα να επαναλαμβάνει με ασφάλεια."
+                "Μετέφερα proofs of concept (ανάλυση βιογραφικών, δημιουργία αγγελιών) σε θωρακισμένα microservices.",
+                "Ανάπτυξη (deployment) μέσω AWS EKS, διαχειριζόμενος δεκάδες χιλιάδες αιτήματα ημερησίως σε ένα corpus 0.5 δισ. εγγραφών."
               ],
-              technologies: ["Python", "Generative AI", "OpenAI", "LangChain", "Pinecone", "MLOps"]
-            },
-            {
-              company: "ENCODE (Cybersecurity)",
-              challenge: "Παράδοση near real-time analytics μέσω performance-critical API για enterprise πελάτες.",
-              solution: [
-                "Ανάπτυξα υπηρεσίες analytics που συνδύασαν Spark pipelines με βελτιστοποιημένο Flask API.",
-                "Εφάρμοσα caching και instrumentation ώστε η καθυστέρηση να μείνει χαμηλά ενώ παρουσιάζονταν νέες πληροφορίες."
-              ],
-              technologies: ["Python", "Flask", "SQLAlchemy", "Splunk", "Redis", "MySQL"]
-            },
-            {
-              company: "Brain Metrics Initiative",
-              challenge: "Ενίσχυση εργαλείων ανθεκτικότητας κατά τη διάρκεια ενεργού DDoS επίθεσης διατηρώντας dashboards online.",
-              solution: [
-                "Παρέδωσα Cloudflare automations και operational runbooks που εξουδετέρωσαν το μοτίβο επίθεσης.",
-                "Κατέγραψα learning σε resilience roadmap με scoped AI-driven βελτιώσεις ανίχνευσης."
-              ],
-              technologies: ["Cloudflare", "Incident Response", "Resilience Engineering"]
+              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
             }
           ],
-          engagementTitle: "Λανσάρισε το AI feature σου",
-          engagementDescription: "Κλείσε 30' για να χαρτογραφήσουμε στόχους, εξαρτήσεις και rollout ώστε να λάβεις προσαρμοσμένο implementation plan μέσα σε 48 ώρες.",
-          engagementChecklistTitle: "Πριν τη συνάντηση:",
+          engagementTitle: "Ξεκινήστε την Ανάπτυξη του Συστήματος",
+          engagementDescription: "Χρησιμοποιήστε ένα 30λεπτο call για να χαρτογραφήσουμε τα σημεία ενσωμάτωσης, τις απαιτήσεις κλίμακας και την τρέχουσα κατάσταση του prototype σας.",
+          engagementChecklistTitle: "Έχετε έτοιμα:",
           engagementChecklist: [
-            "Το KPI ή metric που πρέπει να βελτιώσει το feature.",
-            "Τα repos, APIs ή schemas με τα οποία θα ενσωματωθούμε.",
-            "Περιορισμοί rollout, compliance ή commitments προς πελάτες."
+            "Τον υπάρχων κώδικα (prototype) ή τα notebooks σας.",
+            "Την αναμενόμενη κλίμακα (QPS, όγκο δεδομένων) και τις απαιτήσεις υστέρησης (latency).",
+            "Λεπτομέρειες για την υπάρχουσα cloud υποδομή σας (AWS/GCP, K8s, κ.λπ.)."
           ],
-          engagementCtaLabel: "Κλείσε feature planning call"
+          engagementCtaLabel: "Κλείσε το build call"
         },
         {
-          title: "Grant-Funded Crypto, AI & Deep-Tech Sprint",
-          slug: "grant-funded-sprint",
-          intro: "Πακετάρουμε το crypto, AI και automation roadmap σε πλάνο που περνά grant αξιολογήσεις μέσα σε 2–4 εβδομάδες, συνδέοντας κριτήρια, milestones και παράδοση.",
-          businessProse: `Οι φορείς χρηματοδότησης και τα οικοσυστήματα απαιτούν σαφή αφήγηση επίδρασης, ετοιμότητα συμμόρφωσης και μετρήσιμα παραδοτέα. Το sprint ευθυγραμμίζει τη στρατηγική χρηματοδότησης crypto, AI ή deep-tech με πρακτικό τεχνικό πλάνο ώστε οι αξιολογητές να δουν αξιόπιστη πορεία από το award έως την υλοποίηση.
+          title: "Deep-Tech και Compliance-First Υποδομές",
+          slug: "deep-tech-infrastructure",
+          intro: "Σχεδιασμός κατανεμημένων backend συστημάτων και compliance-first υποδομών για crypto, ML-monitoring και αυστηρά ρυθμιζόμενους κλάδους.",
+          businessProse: `Οι αυστηρά ρυθμιζόμενοι κλάδοι (FinTech, Crypto, Healthcare) απαιτούν συστήματα backend (backends) που βασίζονται σε ριζικά διαφορετικές αρχές. Η ασφάλεια, η ελεγξιμότητα (auditability) και η τεράστια διακίνηση δεδομένων (throughput) πρέπει να σχεδιάζονται από την πρώτη μέρα.
 
-Τα παραδείγματα που ακολουθούν είναι σύνθετα σενάρια από επαναλαμβανόμενη grant υποστήριξη ώστε να δεις τα συνήθη deliverables χωρίς να αποκαλύπτονται εμπιστευτικά στοιχεία πελατών.
+### Σχεδιασμός Υποδομής
+*   **Κατανεμημένα Συστήματα (Distributed Systems):** Αρχιτεκτονική event-driven ροών δεδομένων ικανών να δεχθούν και να αναλύσουν terabytes δεδομένων.
+*   **Με γνώμονα τη Συμμόρφωση (Compliance-First):** Ενσωμάτωση κανονιστικών περιορισμών (π.χ. GDPR, χρηματοοικονομικοί κανονισμοί) απευθείας στην αρχιτεκτονική της βάσης δεδομένων και στα μοτίβα πρόσβασης.
+*   **Μηχανική Ανθεκτικότητας (Resilience Engineering):** Σχεδιασμός συστημάτων που υποβαθμίζονται ομαλά (degrade gracefully) υπό συνθήκες ακραίου φορτίου ή στοχευμένων επιθέσεων.
 
-### Πότε ταιριάζει
-* Ετοιμάζεις grant ή accelerator πρόταση και χρειάζεσαι ισχυρό execution plan.
-* Έχεις εξασφαλίσει υπό όρους χρηματοδότηση και πρέπει να δείξεις τεχνικό roadmap πριν την εκταμίευση.
-* Πρέπει να φέρεις σε ισορροπία όραμα founder, υποχρεώσεις συνεργατών και κανονιστικές απαιτήσεις άμεσα.
+### Παραδοτέα
+*   Κλιμακώσιμες backend υπηρεσίες (Python, Go, ή Rust ανάλογα με τις απαιτήσεις).
+*   Pipelines δεδομένων για παραλαβή και επεξεργασία υψηλού όγκου (Kafka, Spark).
+*   Infrastructure as Code (Terraform) και αυτοματισμός ανάπτυξης (deployment).
 
-### Τι παραδίδουμε
-* Roadmap ανά milestone με τεχνικές, data και hiring επιπτώσεις για κάθε φάση.
-* Λίστα συμμόρφωσης και διακυβέρνησης για ασφάλεια, ιδιωτικότητα και reporting.
-* Prototype ή architectural spike που αποδεικνύει εφικτότητα σε αξιολογητές και συνεργάτες.
-
-### Extras για χρηματοδότηση
-* Υποστήριξη σε budgeting ranges και επιλογή vendors συνδεδεμένη με το πλάνο υλοποίησης.
-* Υλικό προετοιμασίας για committee reviews, συμπεριλαμβανομένων exec summaries και demo scripts.
-* Προαιρετικό hand-off σε MVP ή feature delivery μόλις εγκριθεί το grant.
-
-### Κόστος
-* €3K–€6K ανάλογα με την πολυπλοκότητα του προγράμματος, τους stakeholders και τα απαιτούμενα prototypes.`,
+### Τυπικές Συνεργασίες
+*   Δημιουργία του επιπέδου δεδομένων (data plane) για πλατφόρμες παρατηρησιμότητας ML.
+*   Αρχιτεκτονική για πλατφόρμες tokenization και trading (συναλλαγών).`,
           items: [
-            "Ιδανικό για founders που κυνηγούν EU, civic ή crypto grants και χρειάζονται αποδεικτικό εκτελεσιμότητας.",
-            "Χρονοδιάγραμμα: 2–4 εβδομάδες με συνδυασμό roadmap design, compliance prep και γρήγορων prototypes.",
-            "Παραδοτέα: milestone plan, governance checklist, summary pack έτοιμο για αξιολογητές.",
-            "Επένδυση: €3K–€6K ανάλογα με το grant και το βάθος του prototype."
+            "Ιδανικό για deep-tech startups που διαχειρίζονται ευαίσθητα δεδομένα ή analytics υψηλού throughput.",
+            "Χρονοδιάγραμμα: Ελάχιστο 2–4 μήνες για βασική αρχιτεκτονική.",
+            "Παραδοτέα: Κατανεμημένες backend υπηρεσίες, data pipelines, IaC.",
+            "Επένδυση: Μηνιαία σταθερή αμοιβή (Retainer) ή project-based ξεκινώντας από €15K."
           ],
           caseStudies: [
             {
-              company: "Σύνθετος EU CivicTech Founder",
-              challenge: "Προετοιμασία αίτησης NGI Zero Commons για εργαλείο analytics με αυστηρά κριτήρια προστασίας δεδομένων.",
+              company: "CNO (Hedera)",
+              challenge: "Αρχιτεκτονική της βασικής υποδομής για πλατφόρμα tokenization και trading.",
               solution: [
-                "Συνδιαμόρφωσα το proposal narrative, τα work packages και το milestone budget ώστε να ευθυγραμμίζονται με τα NGI evaluation rubrics.",
-                "Συγκέντρωσα τεκμήρια συμμόρφωσης (πίνακα data residency, DPIA outline, responsible AI δεσμεύσεις) μαζί με ελαφρύ demo prototype."
+                "Σχεδίασα compliance-first υποδομή ειδικά προσαρμοσμένη για το δίκτυο Hedera.",
+                "Εξασφάλισα ασφαλή επεξεργασία συναλλαγών υψηλού throughput για το cno.zone."
               ],
-              technologies: ["Σχεδιασμός Προτάσεων Grant", "Data Governance", "Privacy Engineering"]
+              technologies: ["Distributed Systems", "Crypto Infrastructure", "Hedera"]
             },
-        {
-          company: "Σύνθετο Web3 Collective",
-          challenge: "Υποβολή σε grant οικοσυστήματος blockchain για να επικυρωθεί AI tooling για DAO contributors.",
-          solution: [
-            "Χαρτογράφησα κριτήρια επιλεξιμότητας, scoring rubrics και milestone expectations από κορυφαία προγράμματα ώστε η υποβολή να είναι compliant.",
-            "Συσκεύασα proposal narrative, τεχνικό explainer, UX mockups και community rollout plan για να αναδειχθεί το market readiness και η governance ευθυγράμμιση."
-          ],
-          technologies: ["Grant Storytelling", "Ecosystem Research", "Product Strategy"]
-        },
             {
-              company: "Σύνθετο Resilience Lab",
-              challenge: "Υποβολή σε EU cascade funding για ανθεκτικότητα κρίσιμων υποδομών με παράλληλη κάλυψη ρυθμιστικών απαιτήσεων.",
+              company: "NannyML",
+              challenge: "Κατασκευή της βασικής υποδομής δεδομένων για ένα enterprise ML monitoring SaaS.",
               solution: [
-                "Μετέφρασα incident-response learnings σε phased roadmap με μετρήσιμα MTTR targets και governance milestones.",
-                "Ανάπτυξα supporting artifacts (risk register, stakeholder map, compliance tracker) που ζητούσε η προκήρυξη."
+                "Υλοποίησα ML monitoring prototypes με την ιδρυτική ομάδα.",
+                "Παρέδωσα containerized Python microservices στο Amazon EKS, επιτρέποντας στην ομάδα να κλείσει τα πρώτα της B2B deals."
               ],
-              technologies: ["Resilience Engineering", "Risk Management", "Compliance Documentation"]
+              technologies: ["Python", "Amazon EKS", "MLOps", "Data Engineering"]
+            },
+            {
+              company: "Encode S.A.",
+              challenge: "Επεξεργασία terabytes δεδομένων δικτύου (logs) καθημερινά για ανίχνευση εισβολών σε σχεδόν πραγματικό χρόνο.",
+              solution: [
+                "Αρχιτεκτόνησα πλατφόρμα βασισμένη σε PySpark και Elasticsearch.",
+                "Βελτιστοποίησα το pipeline για να επεξεργάζεται σύνολα δεδομένων δικτύου 100.000 χρηστών μέσα σε μία εργάσιμη ημέρα."
+              ],
+              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Analytics"]
             }
           ],
-          engagementTitle: "Προετοίμασε το grant-backed sprint σου",
-          engagementDescription: "Κλείσε 30' working session για να ευθυγραμμίσουμε στόχους grant, περιορισμούς προγράμματος και deadlines ώστε να κάνουμε scope μέσα σε 48 ώρες.",
-          engagementChecklistTitle: "Φέρε στο call:",
+          engagementTitle: "Συζητήστε τις Ανάγκες σας για Υποδομές",
+          engagementDescription: "Χρησιμοποιήστε μια συνεδρία 30 λεπτών για να συζητήσετε τις απαιτήσεις σας σε throughput, compliance, και deployment.",
+          engagementChecklistTitle: "Φέρτε στο call:",
           engagementChecklist: [
-            "Την προκήρυξη του grant ή το accelerator outline με βασικά deadlines.",
-            "Οποιαδήποτε draft sections, budget assumptions ή feedback αξιολογητών.",
-            "Λίστα stakeholders και απαιτήσεις συμμόρφωσης που πρέπει να καλύψουμε."
+            "Εκτιμήσεις για τον όγκο και την ταχύτητα των δεδομένων.",
+            "Συγκεκριμένα ρυθμιστικά πλαίσια με τα οποία πρέπει να συμμορφωθείτε.",
+            "Τρέχοντα σημεία συμφόρησης (bottlenecks) στην υπάρχουσα αρχιτεκτονική σας (αν εφαρμόζεται)."
           ],
-          engagementCtaLabel: "Κλείσε funding sprint call"
+          engagementCtaLabel: "Κλείσε το infrastructure call"
         }
       ],
     },
-  portfolio: {
-    title: "Portfolio",
-    intro: "Επιλεγμένα έργα και case studies:",
-    projects: [
-        { 
-          slug: "dance-school-saas",
-          title: "SaaS Διαχείρισης Σχολής Χορού",
-          description: "Full-stack ανάπτυξη εργαλείου προγραμματισμού και χρεώσεων για σχολές παραστατικών τεχνών.",
-          technologies: ["Django", "React", "PostgreSQL", "Stripe API", "AWS"],
-          githubLink: "https://github.com/petroslamb",
+    portfolio: {
+      title: "Portfolio",
+      intro: "Επιλεγμένα έργα και case studies:",
+      projects: [
+        {
+          slug: "eip-verify",
+          title: "Ethereum Foundation RFP: eth-llm-poc",
+          description: "LLM-assisted έλεγχος προδιαγραφών πρωτοκόλλου και ιχνηλασιμότητα ασφάλειας.",
+          technologies: ["Python", "Claude 3.5 Sonnet", "AST Analysis", "Protocol Security"],
+          githubLink: "https://github.com/petroslamb/eth-llm-poc",
           content: `
 ### Επισκόπηση Έργου
-Αυτό το έργο είναι μια ολοκληρωμένη πλατφόρμα SaaS που δημιουργήθηκε για να εξυπηρετήσει τις ειδικές ανάγκες των σχολών χορού και παραστατικών τεχνών. Ο πρωταρχικός στόχος ήταν η δημιουργία ενός κεντρικού συστήματος για τη διαχείριση των ωρολογίων προγραμμάτων, των εγγραφών μαθητών, της αυτοματοποιημένης χρέωσης και της επικοινωνίας με τους γονείς.
+Κατασκεύασα το 'eth-llm-poc', ένα pipeline ιχνηλασιμότητας με τη βοήθεια LLM, ως Proof-of-Concept για ένα Request for Proposal (RFP) του Ethereum Foundation ESP. Ο στόχος ήταν ο έλεγχος των προδιαγραφών του execution layer (EELS) έναντι του go-ethereum client, εντοπίζοντας πιθανά consensus bugs. Αν και το έργο δεν έλαβε τελικά χρηματοδότηση, το PoC ανέδειξε επιτυχώς το χάσμα μεταξύ των δυνατοτήτων της τεχνητής νοημοσύνης και της αυστηρότητας του πρωτοκόλλου.
 
-### Προκλήσεις
-Οι κύριες προκλήσεις ήταν ο σχεδιασμός ενός ευέλικτου σχήματος βάσης δεδομένων για την υποστήριξη πολύπλοκων κανόνων προγραμματισμού (π.χ. μαθήματα ανά δεκαπενθήμερο, τριμηνιαία προγράμματα), η υλοποίηση ενός ασφαλούς και αξιόπιστου συστήματος επαναλαμβανόμενων πληρωμών με το Stripe και η διασφάλιση ότι το περιβάλλον χρήστη ήταν διαισθητικό για ιδιοκτήτες σχολών χωρίς τεχνικές γνώσεις.
+### Προσέγγιση Μηχανικής (Engineering Approach)
+*   **Εξαγωγή AST:** Ανάλυση (parsing) των προδιαγραφών σε Python και του πηγαίου κώδικα σε Go σε ενοποιημένες ενδιάμεσες αναπαραστάσεις (intermediate representations).
+*   **Αξιολόγηση LLM:** Σχεδιασμός ενός pipeline αξιολόγησης πολλαπλών σταδίων χρησιμοποιώντας το Claude 3.5 Sonnet για την αντιστοίχιση των ρητρών των προδιαγραφών με blocks υλοποίησης.
+*   **Traceability Matrix:** Δημιουργία ενός ελέγξιμου πίνακα (matrix) που αναδείκνυε κενά κάλυψης και πιθανές σημασιολογικές αναντιστοιχίες μεταξύ των προδιαγραφών και του κώδικα.
 
-### Υλοποιηθείσες Λύσεις
-*   **Βάση Δεδομένων:** Σχεδίασα ένα σχεσιακό σχήμα βάσης δεδομένων χρησιμοποιώντας το ORM του Django που διαχειριζόταν κομψά μαθητές, μαθήματα, προγράμματα και εγγραφές, επιτρέποντας πολύπλοκα ερωτήματα χωρίς να θυσιάζεται η απόδοση.
-*   **Χρεώσεις:** Ενσωμάτωσα το Stripe API, δημιουργώντας ισχυρά webhooks για τη διαχείριση της κατάστασης των συνδρομών, των αποτυχημένων πληρωμών και της αυτοματοποιημένης τιμολόγησης. Αυτό αποσυνέδεσε τη λογική χρέωσης από την κύρια εφαρμογή, αυξάνοντας την αξιοπιστία.
-*   **Frontend:** Δημιουργήθηκε ένα responsive UI με React, με ένα διαδραστικό ημερολόγιο για τον προγραμματισμό και μια σαφή πύλη εγγραφής για τους γονείς, το οποίο μείωσε σημαντικά τον διοικητικό φόρτο εργασίας για τις σχολές.
-
-### Ο Ρόλος μου & Τεχνικές Συνεισφορές
-Ως ο μοναδικός full-stack developer, ήμουν υπεύθυνος για ολόκληρο το έργο από τη σύλληψη της ιδέας έως την ανάπτυξη. Οι βασικές μου συνεισφορές περιλάμβαναν:
-*   Ανάπτυξη του backend REST API με Django Rest Framework.
-*   Σχεδιασμός και υλοποίηση του σχήματος της βάσης δεδομένων PostgreSQL.
-*   Δημιουργία του συστήματος επαναλαμβανόμενων χρεώσεων και διαχείρισης συνδρομών με το Stripe.
-*   Ανάπτυξη της frontend εφαρμογής με React.
-*   Deployment και διαχείριση της εφαρμογής σε AWS EC2 με Gunicorn και Nginx.
+### Αντίκτυπος
+Απέδειξε τη σκοπιμότητα και τα σημεία τριβής (friction points) της χρήσης ενός αυτοματοποιημένου, υποβοηθούμενου από LLM workflow για τον έλεγχο ορθότητας των αναβαθμίσεων του Ethereum. [Διαβάστε την πλήρη ανάλυση στο Substack](https://lambpetros.substack.com/p/measuring-trust-the-gap-between-ai).
 `
         },
-        { 
-          slug: "alzheimers-text-classification",
-          title: "Ταξινόμηση Κειμένου για Alzheimer",
-          description: "NLP πρωτότυπο για υποστήριξη πρώιμης διάγνωσης με χρήση γλωσσικών δεικτών.",
-          technologies: ["Python", "Scikit-learn", "Pandas", "NLTK", "Flask"],
-          githubLink: "https://github.com/petroslamb",
+        {
+          slug: "transformer-attractors",
+          title: "The Transformer Attractor",
+          description: "Deep dive έρευνα στους θεωρητικούς μηχανισμούς που οδηγούν στην κυριαρχία του Transformer έναντι εναλλακτικών αρχιτεκτονικών.",
+          technologies: ["Transformers", "Hardware Friction Map", "Mechanistic Interpretability"],
+          githubLink: "https://github.com/petroslamb/hardware-friction-scorecard-dataset",
           content: `
-### Επισκόπηση Έργου & Στόχοι
-Αυτό το ερευνητικό πρωτότυπο είχε ως στόχο να διερευνήσει τις δυνατότητες της Επεξεργασίας Φυσικής Γλώσσας (NLP) για την έγκαιρη ανίχνευση της νόσου του Alzheimer. Ο στόχος ήταν η εκπαίδευση ενός μοντέλου μηχανικής μάθησης για την ανάλυση απομαγνητοφωνημένων συνεντεύξεων ασθενών και τον εντοπισμό ανεπαίσθητων γλωσσικών μοτίβων που σχετίζονται με τη γνωστική έκπτωση.
+### Ερευνητική Εστίαση
+Διεξήγαγα θεμελιώδη έρευνα πάνω στο 'The Transformer Attractor' και το 'The Hardware Friction Map'. Στόχος ήταν να αξιολογηθούν οι αρχιτεκτονικοί και hardware λόγοι για τους οποίους το Transformer μοντέλο κυριαρχεί.
 
-### Προκλήσεις
-Οι κύριες προκλήσεις ήταν η διαχείριση του εγγενούς "θορύβου" στην απομαγνητοφωνημένη ομιλία, η δημιουργία χαρακτηριστικών που θα μπορούσαν να συλλάβουν τη λεπτή γλωσσική φθορά (πέρα από την απλή καταμέτρηση λέξεων) και η επιλογή ενός μοντέλου που ήταν ταυτόχρονα ακριβές και ερμηνεύσιμο για να κατανοήσουμε ποια χαρακτηριστικά ήταν τα πιο προγνωστικά.
+### Βασικές Συνεισφορές
+*   **Ανάλυση Scale-Dependence:** Έρευνα στους θεωρητικούς μηχανισμούς πίσω από την εξάρτηση της κλιμάκωσης του Transformer και την 'Παγίδα των Δύο Πυλών' (Two-Gate Trap).
+*   **Συνέλιξη Hardware (Hardware Co-Evolution):** Δημοσίευση ευρημάτων σχετικά με το πώς ο χάρτης τριβής του hardware περιορίζει τις αρχιτεκτονικές εναλλακτικές, καθιστώντας τα transformers/υβρίδια τις πιο βιώσιμες επιλογές.
 
-### Υλοποιηθείσες Λύσεις & Μεθοδολογία
-*   **Pipeline Προεπεξεργασίας:** Δημιούργησα ένα ισχυρό pipeline προεπεξεργασίας κειμένου χρησιμοποιώντας NLTK και SpaCy για τον καθαρισμό των δεδομένων, την επισήμανση των μερών του λόγου (part-of-speech tagging) και τη συντακτική ανάλυση.
-*   **Feature Engineering:** Εξήχθησαν πάνω από 50 γλωσσικά χαρακτηριστικά, συμπεριλαμβανομένου του λεξιλογικού πλούτου (π.χ. type-token ratio), της συντακτικής πολυπλοκότητας (π.χ. μέσο μήκος πρότασης, πυκνότητα προτάσεων) και δεικτών δισταγμού.
-*   **Μοντελοποίηση:** Εκπαίδευσα και αξιολόγησα διάφορους ταξινομητές (SVM, Logistic Regression, Random Forest) χρησιμοποιώντας το Scikit-learn. Επιλέχθηκε ένα μοντέλο Logistic Regression για την ισχυρή του απόδοση και την ερμηνευσιμότητά του. Η ανάλυση της σημασίας των χαρακτηριστικών επιβεβαίωσε ότι η συντακτική πολυπλοκότητα ήταν βασικός διαφοροποιητής.
-
-### Ο Ρόλος μου & Τεχνικές Συνεισφορές
-Ήμουν ο μοναδικός προγραμματιστής και ερευνητής σε αυτό το έργο. Οι συνεισφορές μου περιλάμβαναν:
-*   Διεξαγωγή βιβλιογραφικής έρευνας για τον εντοπισμό σχετικών γλωσσικών δεικτών.
-*   Ανάπτυξη ολόκληρου του pipeline NLP και εξαγωγής χαρακτηριστικών σε Python.
-*   Εκπαίδευση, βελτιστοποίηση και αξιολόγηση των μοντέλων μηχανικής μάθησης.
-*   Ενσωμάτωση του τελικού μοντέλου σε ένα απλό Flask API για την παροχή προβλέψεων και την επίδειξη των δυνατοτήτων του.
+### Αξία (Value Delivered)
+Αυτή η έρευνα ενημερώνει άμεσα τη συμβουλευτική μου εργασία, επιτρέποντάς μου να αξιολογώ συστήματα AI με βάση θεμελιώδεις αρχιτεκτονικές πραγματικότητες αντί για το μάρκετινγκ των παρόχων.
 `
         },
-        { 
-          slug: "taxi-demand-forecasting",
-          title: "Πρόβλεψη Ζήτησης Ταξί",
-          description: "Προγνωστικό μοντέλο με χρήση ανάλυσης χρονοσειρών για την πρόβλεψη της ζήτησης ταξί.",
-          technologies: ["Python", "PySpark", "Prophet", "MLflow", "AWS S3"],
+        {
+          slug: "production-ai-systems",
+          title: "Scaling Παραγωγικού AI: Workable & NannyML",
+          description: "Μετάβαση generative AI prototypes σε enterprise-grade microservices.",
+          technologies: ["Python", "Kafka", "AWS EKS", "Kubernetes", "LangChain"],
           content: `
-### Επισκόπηση Έργου
-Ο στόχος αυτού του έργου ήταν η κατασκευή ενός μοντέλου που θα μπορούσε να προβλέψει με ακρίβεια τη ζήτηση ταξί στη Νέα Υόρκη σε υπερ-τοπικό επίπεδο (ανά γειτονιά) για την επόμενη εβδομάδα. Αυτή η πληροφορία βοηθά τις εταιρείες ταξί να βελτιστοποιήσουν την κατανομή του στόλου και να μειώσουν τους χρόνους αναμονής των επιβατών.
+### Η Πρόκληση
+Τόσο η Workable όσο και η NannyML χρειάζονταν να μεταφέρουν χαρακτηριστικά AI από το εργαστήριο σε περιβάλλοντα παραγωγής (production environments) που εξυπηρετούν ζωντανούς, enterprise πελάτες. Η πρόκληση ήταν η κατασκευή συστημάτων που θα μπορούσαν να διαχειριστούν τεράστια κλίμακα, να διασφαλίσουν την ιδιωτικότητα των δεδομένων και να διατηρήσουν υψηλή διαθεσιμότητα.
 
-### Προκλήσεις
-Οι βασικές προκλήσεις ήταν η τεράστια κλίμακα των ιστορικών δεδομένων διαδρομών (δισεκατομμύρια εγγραφές), η ανάγκη για αποδοτική δημιουργία εκατοντάδων ανεξάρτητων προβλέψεων (μία για κάθε γειτονιά) και η ακριβής αποτύπωση πολύπλοκων εποχιακών μοτίβων και επιδράσεων αργιών.
-
-### Υλοποιηθείσες Λύσεις
-*   **Επεξεργασία Δεδομένων:** Κατασκεύασα ένα data pipeline χρησιμοποιώντας PySpark σε AWS για την επεξεργασία και τη συγκέντρωση των ακατέργαστων δεδομένων διαδρομών από το S3 σε μορφή χρονοσειρών, κατάλληλη για μοντελοποίηση. Αυτή η κατανεμημένη προσέγγιση ήταν απαραίτητη για τη διαχείριση του όγκου των δεδομένων.
-*   **Μοντελοποίηση σε Κλίμακα:** Αντί για ένα μονολιθικό μοντέλο, σχεδίασα ένα σύστημα για την παράλληλη εκπαίδευση εκατοντάδων μεμονωμένων μοντέλων χρονοσειρών χρησιμοποιώντας τη βιβλιοθήκη Prophet του Facebook, η οποία υπερέχει στην αποτύπωση πολλαπλών εποχικοτήτων.
-*   **Αναπαραγωγιμότητα:** Χρησιμοποίησα το MLflow για την σχολαστική παρακολούθηung όλων των πειραμάτων, συμπεριλαμβανομένων των παραμέτρων του μοντέλου, των μετρικών απόδοσης και των artifacts. Αυτό εξασφάλισε την αναπαραγωγιμότητα και διευκόλυνε τη σύγκριση μεταξύ διαφορετικών προσεγγίσεων μοντελοποίησης.
-
-### Ο Ρόλος μου & Τεχνικές Συνεισφορές
-Ως ο επικεφαλής data engineer σε αυτό το έργο, οι αρμοδιότητές μου ήταν:
-*   Σχεδιασμός και υλοποίηση του κλιμακούμενου pipeline επεξεργασίας δεδομένων με PySpark.
-*   Ανάπτυξη του πλαισίου παράλληλης εκπαίδευσης και πρόβλεψης μοντέλων.
-*   Ενσωμάτωση του MLflow για την παρακολούθηung πειραμάτων και τη διαχείριση μοντέλων.
-*   Ανάλυση της απόδοσης του μοντέλου και εντοπισμός των βασικών παραγόντων της ζήτησης.
+### Λύσεις Μηχανικής (Engineering Solutions)
+*   **Workable (Ανάλυση Βιογραφικών & Generative Χαρακτηριστικά):** Μετέφερα απομονωμένα proofs-of-concept σε θωρακισμένα microservices ανεπτυγμένα στο AWS EKS. Το σύστημα ενορχηστρώνει (orchestrates) generative workflows σε ένα corpus 0.5 δισεκατομμυρίων εγγραφών, διαχειριζόμενο δεκάδες χιλιάδες αιτήματα ημερησίως με αυστηρούς μηχανισμούς fallback.
+*   **NannyML (ML Observability):** Δοκίμασα (piloted) αλγορίθμους παρακολούθησης ML (ML monitoring) και κατασκεύασα τη βασική containerized υποδομή Python στο Amazon EKS, επιτρέποντας στην ιδρυτική ομάδα να κλείσει τα πρώτα της μεγάλα B2B συμβόλαια.
 `
         },
-        { 
-          slug: "flask-ml-server",
-          title: "Flask ML Server",
-          description: "Ένας ελαφρύς, production-ready server για την ανάπτυξη μοντέλων TensorFlow/Keras.",
-          technologies: ["Flask", "TensorFlow", "Docker", "Gunicorn", "Nginx"],
-          githubLink: "https://github.com/petroslamb",
-          content: `
-### Επισκόπηση Έργου & Στόχος
-Αυτό το έργο παρέχει ένα boilerplate template για την ανάπτυξη μοντέλων μηχανικής μάθησης ως ένα production-ready REST API. Ο στόχος ήταν η δημιουργία ενός ελαφριού, αποδοτικού και εύκολα containerizable σημείου εκκίνησης για να γεφυρωθεί το χάσμα μεταξύ ενός εκπαιδευμένου μοντέλου και μιας ζωντανής, κλιμακούμενης υπηρεσίας.
-
-### Το Πρόβλημα (Πρόκληση)
-Πολλοί data scientists είναι εξαιρετικοί στη δημιουργία μοντέλων σε notebooks, αλλά δυσκολεύονται με τις πρακτικές μηχανικής λογισμικού που απαιτούνται για την ανάπτυξη σε περιβάλλον παραγωγής. Η δημιουργία ενός στιβαρού web server, η διαχείριση εξαρτήσεων και το containerization της εφαρμογής μπορεί να αποτελέσουν σημαντικό εμπόδιο.
-
-### Η Λύση & Αρχιτεκτονική
-Αυτό το template παρέχει μια καθαρή και μινιμαλιστική λύση χρησιμοποιώντας μια δοκιμασμένη στοίβα τεχνολογιών:
-*   **Flask:** Ένα ελαφρύ web framework για τη δημιουργία API endpoints για πρόβλεψη και ελέγχους υγείας (health checks).
-*   **Gunicorn:** Ένας production-grade WSGI server για την ταυτόχρονη εκτέλεση της εφαρμογής Flask.
-*   **Nginx:** Χρησιμοποιείται ως reverse proxy για απόδοση και ασφάλεια.
-*   **Docker:** Ολόκληρη η εφαρμογή είναι containerized με ένα multi-stage Dockerfile για μια μικρή και ασφαλή τελική εικόνα.
-
-### Βασικές Τεχνικές Συνεισφορές
-Δημιούργησα αυτό το template από το μηδέν, εστιάζοντας στις βέλτιστες πρακτικές. Οι συνεισφορές μου περιλαμβάνουν:
-*   Συγγραφή μιας καθαρής, καλά τεκμηριωμένης δομής εφαρμογής Flask.
-*   Δημιουργία ενός βελτιστοποιημένου, multi-stage Dockerfile.
-*   Παροχή σαφών αρχείων διαμόρφωσης για Gunicorn και Nginx.
-*   Συγγραφή ενός περιεκτικού README για να καθοδηγήσει τους χρήστες στην εγκατάσταση και την ανάπτυξη.
-`
-        },
-        { 
-          slug: "cybersecurity-platforms",
-          title: "Πλατφόρμες Κυβερνοασφάλειας",
-          description: "Ανάλυση δεδομένων για ανίχνευση εισβολών μεγάλης κλίμακας για enterprise πελάτες.",
-          technologies: ["Python", "Elasticsearch", "Spark", "Kafka", "Django"],
+        {
+          slug: "cno-project",
+          title: "Hedera Tokenization: CNO Project",
+          description: "Αρχιτεκτονική compliance-first υποδομών για ασφαλές tokenization και συναλλαγές στο δίκτυο Hedera.",
+          technologies: ["Hedera", "ERC-1400", "ERC-3643", "Distributed Systems"],
+          githubLink: "https://github.com/petroslamb/cno-project",
           content: `
 ### Επισκόπηση Έργου
-Αυτό αντιπροσωπεύει την εργασία μου με αρκετούς enterprise πελάτες (υπό NDA) στον τομέα της κυβερνοασφάλειας. Η κύρια εστίαση ήταν στην κατασκευή πλατφορμών ανάλυσης δεδομένων υψηλής απόδοσης για Συστήματα Ανίχνευσης Εισβολών Δικτύου (NIDS) και Διαχείρισης Πληροφοριών και Γεγονότων Ασφαλείας (SIEM).
+Σχεδίασα και τεκμηρίωσα τη βασική αρχιτεκτονική για μια ρυθμιζόμενη πλατφόρμα ψηφιακών περιουσιακών στοιχείων (RWA) στο δίκτυο Hedera. Το έργο απαιτούσε τον συνδυασμό πολύπλοκων προτύπων συμμόρφωσης (ERC-1400, ERC-3643) με κατανεμημένες υποδομές υψηλής απόδοσης.
 
-### Βασικές Προκλήσεις
-Οι πλατφόρμες έπρεπε να επεξεργάζονται terabytes δεδομένων log και συμβάντων δικτύου καθημερινά σχεδόν σε πραγματικό χρόνο. Οι βασικές προκλήσεις περιλάμβαναν το σχεδιασμό ενός συστήματος με εξαιρετικά υψηλούς ρυθμούς εισαγωγής δεδομένων, την παροχή δυνατοτήτων ερωτημάτων χαμηλής καθυστέρησης για τους αναλυτές ασφαλείας και την υλοποίηση πολύπλοκης, stateful λογικής ανίχνευσης σε κλίμακα.
+### Μηχανική & Αρχιτεκτονική
+*   **Υποδομή Συμμόρφωσης:** Σχεδιασμός end-to-end ροών για έκδοση (issuance) και περιορισμένες μεταφορές (restricted transfers) tokens χρησιμοποιώντας πολύπλοκα compliance hooks και KYC verifications.
+*   **Δευτερογενής Αγορά & Εκκαθάριση (Secondary Trading):** Επέκταση του αρχιτεκτονικού σκοπού για την κάλυψη ροών δευτερογενούς αγοράς, εκκαθάρισης (clearing) και διαχειριστικών λειτουργιών.
+*   **Ενσωμάτωση Παλαιού Συστήματος:** Διατήρηση canonical 'Oxygen-first' τεκμηρίωσης και γεφύρωση της παλαιάς αρχιτεκτονικής (Nitrogen) με το νέο ATS (Alternative Trading System) monorepo.
 
-### Λύσεις & Αρχιτεκτονική
-*   **Εισαγωγή Δεδομένων:** Κατασκευάσαμε ένα real-time data pipeline χρησιμοποιώντας το Kafka ως κατανεμημένο δίαυλο μηνυμάτων για τη διαχείριση τεράστιων ροών δεδομένων χωρίς απώλειες.
-*   **Επεξεργασία σε Πραγματικό Χρόνο:** Το Spark Streaming χρησιμοποιήθηκε για την επεξεργασία και τον εμπλουτισμό των δεδομένων από το Kafka, εφαρμόζοντας αρχικούς κανόνες φιλτραρίσματος και μετασχηματισμού.
-*   **Ανάλυση & Αποθήκευση:** Το Elasticsearch αποτέλεσε τον πυρήνα της μηχανής ανάλυσης. Οι ισχυρές του δυνατότητες ευρετηρίασης και ομαδοποίησης επέτρεπαν στους αναλυτές να εκτελούν πολύπλοκα ερωτήματα σε τεράστια σύνολα δεδομένων με χρόνους απόκρισης δευτερολέπτων.
-
-### Ο Ρόλος μου & Τεχνικές Συνεισφορές
-Ως Senior Backend Engineer, ήμουν βασικός συντελεστής στο data pipeline και στη μηχανή ανάλυσης. Οι συγκεκριμένες μου συνεισφορές περιλάμβαναν:
-*   Ανάπτυξη προσαρμοσμένων Spark Streaming jobs σε Python για εμπλουτισμό δεδομένων και ανίχνευung απειλών.
-*   Σχεδιασμό Elasticsearch mappings και στρατηγικών ευρετηρίασης για τη βελτιστοποίηση της απόδοσης των ερωτημάτων.
-*   Δημιουργία REST APIs με χρήση Django και FastAPI για την έκθεση των αποτελεσμάτων ανάλυσης σε dashboards και για να επιτρέπεται στους αναλυτές να διαχειρίζονται κανόνες ανίχνευσης.
-*   Βελτιστοποίηση κρίσιμων jobs επεξεργασίας δεδομένων για τη μείωση της καθυστέρησης και της κατανάλωσης πόρων.
+*Σημείωση: Το portfolio περιλαμβάνει επίσης θεμελιώδη deep-tech μηχανική για την Encode S.A., όπου αρχιτεκτόνησα PySpark + Elasticsearch pipelines παρακολούθησης (logging) κυβερνοασφάλειας για 100.000 χρήστες.*
 `
         },
       ],

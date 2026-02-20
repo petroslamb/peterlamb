@@ -10,23 +10,15 @@ const AboutPage: React.FC = () => {
     const [selectedResume, setSelectedResume] = React.useState(about.resumeOptions[0]?.value ?? 'resume2025.pdf');
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
     const resumeDeckHref = `${import.meta.env.BASE_URL}resumes/resume-production-ai-scale.pdf`;
-    const infographicSrc = `${import.meta.env.BASE_URL}about-infographic.png`;
-    const infographicAlt = language === 'en'
-      ? 'Infographic summarizing Petros Lambropoulos consulting focus areas'
-      : 'Infografικό που συνοψίζει τους άξονες συνεργασίας του Πέτρου Λαμπρόπουλου';
-    const videoEmbedSrc = 'https://www.youtube.com/embed/lZW2toXvtro';
-    const videoTitle = language === 'en'
-      ? 'Watch a quick introduction from Petros'
-      : 'Δες μια σύντομη παρουσίαση από τον Πέτρο';
 
     const metaDescription = language === 'en'
-      ? `Learn how Petros Lambropoulos helps startup founders launch SaaS products fast with discovery, MVP builds, and production-ready features.`
-      : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και λειτουργίες έτοιμες για παραγωγή.`;
+        ? `Learn how Petros Lambropoulos helps startup founders launch SaaS products fast with discovery, MVP builds, and production-ready features.`
+        : `Μάθετε πώς ο Πέτρος Λαμπρόπουλος βοηθά founders να λανσάρουν SaaS προϊόντα γρήγορα με discovery, ανάπτυξη MVP και λειτουργίες έτοιμες για παραγωγή.`;
 
     const ListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <li className="flex items-start">
             <svg className="flex-shrink-0 h-5 w-5 text-primary dark:text-cyan-400 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span>{children}</span>
         </li>
@@ -34,12 +26,12 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md max-w-4xl mx-auto">
-            <MetaTags 
-                title={`${about.title} | Petros Lambropoulos`} 
+            <MetaTags
+                title={`${about.title} | Petros Lambropoulos`}
                 description={metaDescription}
             />
             <h1 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white mb-6 text-center">{about.title}</h1>
-            
+
             <AnimatedSection>
                 <section aria-label="Introduction">
                     <div className="text-lg text-text-secondary dark:text-slate-300 space-y-4">
@@ -51,23 +43,22 @@ const AboutPage: React.FC = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={120}>
-                <section className="mt-8" aria-label="Consulting infographic overview">
-                    <div className="bg-secondary dark:bg-slate-700 rounded-lg overflow-hidden shadow-md border border-primary/10 dark:border-cyan-400/20">
-                        <img
-                            src={infographicSrc}
-                            alt={infographicAlt}
-                            className="w-full h-auto"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="mt-4 flex justify-center">
+                <section className="mt-12 bg-secondary dark:bg-slate-700/50 p-8 rounded-lg shadow-sm border-l-4 border-primary dark:border-cyan-400" aria-labelledby="philosophy-heading">
+                    <h2 id="philosophy-heading" className="text-sm font-bold text-primary dark:text-cyan-400 mb-4 uppercase tracking-wider">{about.philosophyTitle}</h2>
+                    <p className="text-xl text-slate-800 dark:text-slate-200 italic font-medium leading-relaxed">
+                        "{about.philosophyText}"
+                    </p>
+                    <div className="mt-6">
                         <a
                             href={resumeDeckHref}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg bg-primary py-3 px-6 font-semibold text-white shadow-md transition hover:bg-primary/85 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:bg-cyan-500 dark:hover:bg-cyan-400"
+                            className="inline-flex items-center gap-2 text-primary dark:text-cyan-400 font-semibold hover:underline"
                         >
-                            {language === 'en' ? 'View resume presentation PDF' : 'Δες το PDF παρουσίασης του βιογραφικού'}
+                            {language === 'en' ? 'View resume deck' : 'Δες την παρουσίαση'}
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
                         </a>
                     </div>
                 </section>
@@ -84,7 +75,7 @@ const AboutPage: React.FC = () => {
                     </ul>
                 </section>
             </AnimatedSection>
-            
+
             <div className="mt-8 grid md:grid-cols-2 gap-8">
                 <AnimatedSection delay={200}>
                     <section aria-labelledby="experience-heading">
@@ -130,7 +121,7 @@ const AboutPage: React.FC = () => {
                     <p className="text-text-secondary dark:text-slate-400">{about.languages}</p>
                 </section>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={400}>
                 <section className="mt-12 text-center" aria-labelledby="resume-heading">
                     <h2 id="resume-heading" className="sr-only">{about.resumeButton}</h2>
@@ -163,18 +154,35 @@ const AboutPage: React.FC = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={450}>
-                <section className="mt-12" aria-label="Video introduction">
-                    <div className="rounded-lg overflow-hidden shadow-md border border-primary/10 dark:border-cyan-400/20 bg-black">
-                        <div className="relative pb-[56.25%] h-0">
-                            <iframe
-                                src={videoEmbedSrc}
-                                title={videoTitle}
-                                className="absolute top-0 left-0 h-full w-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                                loading="lazy"
-                            />
-                        </div>
+                <section className="mt-16" aria-labelledby="research-heading">
+                    <h2 id="research-heading" className="text-2xl font-bold text-text-primary dark:text-white mb-6 text-center">{about.researchFeedTitle}</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {about.researchFeed.map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-primary/50 dark:hover:border-cyan-400/50 transition-all group"
+                            >
+                                <span className="text-xs font-semibold text-primary dark:text-cyan-400 uppercase tracking-wider mb-2 block">{item.date}</span>
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors mb-2">{item.title}</h3>
+                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.description}</p>
+                            </a>
+                        ))}
+                    </div>
+                    <div className="mt-10 flex justify-center">
+                        <a
+                            href="https://lambpetros.substack.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#FF6719] py-3 px-8 font-bold text-white shadow-md transition hover:bg-[#E55A12] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6719] dark:focus:ring-offset-slate-900"
+                        >
+                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM22.539 12.086H1.46v9.125l10.539-5.895 10.54 5.895v-9.125zM1.46 1.57h21.08v2.836H1.46V1.57z" />
+                            </svg>
+                            {about.subscribeCta}
+                        </a>
                     </div>
                 </section>
             </AnimatedSection>
