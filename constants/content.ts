@@ -7,6 +7,7 @@ export const content: Record<'en' | 'gr', Content> = {
       about: "About",
       services: "Services",
       portfolio: "Portfolio",
+      trust: "Trust",
       contact: "Contact",
       blog: "Blog",
       analytics: "Analytics",
@@ -23,6 +24,59 @@ export const content: Record<'en' | 'gr', Content> = {
         { label: "Independent evidence", value: "Public repos, CI traces, architecture docs, and research artifacts" },
         { label: "Delivery pace", value: "First architecture teardown delivered within 5 business days" },
         { label: "Response promise", value: "Initial response within 24 hours on weekdays" },
+      ],
+      externalValidationTitle: "Independent Trust Signals",
+      externalValidationIntro: "I do not publish client logos without written approval. Use these third-party channels to verify identity, timeline, and execution history.",
+      externalValidationLinks: [
+        {
+          title: "LinkedIn profile",
+          description: "Role timeline, public profile continuity, and background context.",
+          ctaLabel: "Review LinkedIn",
+          url: "https://www.linkedin.com/in/petroslamb/"
+        },
+        {
+          title: "GitHub activity",
+          description: "Public repositories, commit history, and CI traces across pinned workstreams.",
+          ctaLabel: "Inspect GitHub",
+          url: "https://github.com/petroslamb"
+        },
+        {
+          title: "Substack archive",
+          description: "Timestamped essays and technical post-mortems with a public publication trail.",
+          ctaLabel: "Browse Substack",
+          url: "https://lambpetros.substack.com"
+        },
+        {
+          title: "Public analytics dashboard",
+          description: "Live traffic and conversion telemetry for this site via Umami share view.",
+          ctaLabel: "Open analytics",
+          url: "https://cloud.umami.is/share/XlFjHh9T4RgIJTE1"
+        }
+      ],
+      verifiedOutcomesTitle: "Client Testimonials",
+      verifiedOutcomesIntro: "Short testimonials from collaboration partners, each linked to a relevant public case study.",
+      verifiedOutcomes: [
+        {
+          metric: "Head of AI testimonial: Workable",
+          testimonialQuote: "Petros built our first GenAI proofs of concept and presented them company-wide, which made the value concrete and unlocked stakeholder buy-in for productionization.",
+          testimonialAuthor: "Head of AI, Workable",
+          evidenceLabel: "Open production AI case study",
+          evidenceUrl: "/portfolio/production-ai-systems"
+        },
+        {
+          metric: "CTO testimonial: Encode S.A.",
+          testimonialQuote: "Petros helped us scale the platform to process 100K-user datasets within one business day and turned a recurring bottleneck into a reliable operating baseline.",
+          testimonialAuthor: "CTO, Encode S.A.",
+          evidenceLabel: "Open Encode case study",
+          evidenceUrl: "/portfolio/encode-cybersecurity-pipeline"
+        },
+        {
+          metric: "CTO testimonial: dikaio.ai",
+          testimonialQuote: "Petros gave us a practical RAG blueprint for Greek legal content and helped us ship a working AI lawyer chat demo quickly.",
+          testimonialAuthor: "CTO, dikaio.ai",
+          evidenceLabel: "Open dikaio.ai case study",
+          evidenceUrl: "/portfolio/dikaio-legal-rag"
+        }
       ],
       servicesTitle: "Specialized Consulting",
       services: [
@@ -41,7 +95,7 @@ export const content: Record<'en' | 'gr', Content> = {
           after: "Introduced hardened microservices and deterministic fallbacks supporting tens of thousands of daily resume workflows across a 0.5B-record corpus.",
           scope: "Scope covers architecture and reliability patterns only; internal SLO dashboards and client-specific internals are confidential.",
           evidenceLabel: "Related production case study",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems"
+          evidenceUrl: "/portfolio/production-ai-systems"
         },
         {
           title: "Compliance-First Tokenization Architecture",
@@ -50,7 +104,7 @@ export const content: Record<'en' | 'gr', Content> = {
           after: "Consolidated all 3 flows into one canonical Oxygen-first architecture path with a documented migration baseline from ERC-1400 toward ERC-3643 alignment.",
           scope: "Client identity, governance minutes, and internal throughput benchmarks are NDA-restricted.",
           evidenceLabel: "Public architecture repository",
-          evidenceUrl: "https://github.com/petroslamb/cno-project"
+          evidenceUrl: "/portfolio/cno-project"
         }
       ],
       secondaryCta: {
@@ -63,51 +117,20 @@ export const content: Record<'en' | 'gr', Content> = {
       proofIntro: "Selected evidence from production work and public artifacts. Where client confidentiality applies, I explicitly mark scope constraints.",
       proofBlocks: [
         {
-          title: "Ethereum Protocol Verification (eth-llm-poc)",
+          title: "Ethereum Protocol Verification",
           challenge: "Protocol teams need auditable evidence that specification obligations map to real client implementation logic.",
-          contribution: [
-            "Built an LLM-assisted verification pipeline that extracts obligations from EIPs and traces them against execution-specs and Geth code paths.",
-            "Designed multi-stage checks that surface disagreements between high-level summaries and line-level evidence."
-          ],
           outcome: "Produced reproducible CI artifacts and reports that make verification disagreements reviewable instead of implicit.",
-          evidenceLabel: "GitHub repo and CI runs",
-          evidenceUrl: "https://github.com/petroslamb/eth-llm-poc",
+          evidenceLabel: "Portfolio case study",
+          evidenceUrl: "/portfolio/eip-verify",
           scopeNote: "Created as a PoC for an Ethereum Foundation ESP RFP; grant not awarded."
         },
         {
           title: "Production AI Scaling (Workable)",
           challenge: "Move generative AI prototypes from experimentation into dependable production flows at hiring-platform scale.",
-          contribution: [
-            "Translated early GenAI prototypes into deployed Python microservices on AWS EKS.",
-            "Integrated event-driven workflows across Kafka/RabbitMQ with strict fallback behavior."
-          ],
           outcome: "Supported tens of thousands of resume-related requests daily across a 0.5B-record corpus in production workflows.",
           evidenceLabel: "Resume and case-study summary",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
+          evidenceUrl: "/portfolio/production-ai-systems",
           scopeNote: "Client internals, exact service SLOs, and proprietary implementation details are confidential."
-        },
-        {
-          title: "ML Observability Infrastructure (NannyML)",
-          challenge: "Founding teams needed a reliable MLOps baseline to support enterprise onboarding and early commercial deals.",
-          contribution: [
-            "Piloted monitoring prototypes and shipped containerized Python services on Amazon EKS.",
-            "Helped shape production-grade deployment and runtime reliability patterns."
-          ],
-          outcome: "Improved deployment reliability and accelerated customer onboarding in the early enterprise phase.",
-          evidenceLabel: "Portfolio and resume references",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
-          scopeNote: "Detailed customer-side metrics and internal architecture records are NDA-restricted."
-        },
-        {
-          title: "Compliance-First Tokenization Architecture (CNO/Hedera)",
-          challenge: "Design regulated tokenization and trading infrastructure that reconciles compliance constraints with distributed-system throughput.",
-          contribution: [
-            "Authored and maintained canonical architecture and operational-flow documentation for Oxygen-first delivery on Hedera.",
-            "Mapped standards and migration paths (ATS/ ERC-1400 baseline toward ERC-3643 alignment)."
-          ],
-          outcome: "Established a clear execution baseline for phased delivery, governance, and architecture decisions.",
-          evidenceLabel: "Public architecture repository",
-          evidenceUrl: "https://github.com/petroslamb/cno-project"
         }
       ],
       featuredResearch: {
@@ -156,10 +179,10 @@ export const content: Record<'en' | 'gr', Content> = {
       resumeLabel: "Choose a version",
       resumeNote: "Default pick: best all-around profile.",
       resumeOptions: [
-        { value: "resume2025.pdf", label: "2025 Resume — Best all-around" },
-        { value: "resume2025_hyped.pdf", label: "2025 Resume — Growth-focused narrative" },
-        { value: "resume2025_hyped_gr.pdf", label: "2025 Resume — Growth-focused narrative (Greek)" },
-        { value: "resume2025_conservative.pdf", label: "2025 Resume — Lean technical version" },
+        { value: "resume2026_public.pdf", label: "2026 Resume — Best all-around" },
+        { value: "resume2026_hyped_public.pdf", label: "2026 Resume — Growth-focused narrative" },
+        { value: "resume2026_hyped_gr_public.pdf", label: "2026 Resume — Growth-focused narrative (Greek)" },
+        { value: "resume2026_conservative_public.pdf", label: "2026 Resume — Lean technical version" },
       ],
       philosophyTitle: "Engineering Philosophy",
       philosophyText: "I believe that to build robust AI systems, you first need to understand the mechanical limits of the models themselves—from attention mechanisms to KV cache constraints. Engineering abstraction without mechanistic understanding leads to fragile, unpredictable systems.",
@@ -219,7 +242,7 @@ export const content: Record<'en' | 'gr', Content> = {
               company: "Ethereum Foundation (RFP PoC)",
               challenge: "Verify protocol obligations against execution clients using LLMs to enhance protocol security.",
               solution: [
-                "Built 'eth-llm-poc', an LLM-powered traceability pipeline for a grant proposal.",
+                "Built 'Ethereum Protocol Verification', an LLM-powered traceability pipeline for a grant proposal.",
                 "Orchestrated multi-stage evaluations validating protocol specifications against go-ethereum implementations."
               ],
               technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
@@ -371,13 +394,13 @@ export const content: Record<'en' | 'gr', Content> = {
       projects: [
         {
           slug: "eip-verify",
-          title: "Ethereum Foundation RFP: eth-llm-poc",
+          title: "Ethereum Foundation RFP: Ethereum Protocol Verification",
           description: "LLM-assisted protocol specification auditing and security traceability.",
           technologies: ["Python", "Claude 3.5 Sonnet", "AST Analysis", "Protocol Security"],
-          githubLink: "https://github.com/petroslamb/eth-llm-poc",
+          githubLink: "https://github.com/petroslamb/ethereum-protocol-verification",
           content: `
 ### Project Overview
-Built 'eth-llm-poc', an LLM-assisted traceability pipeline created as a Proof-of-Concept for an Ethereum Foundation Ecosystem Support Program (ESP) Request for Proposal. The objective was to audit the execution layer specification (EELS) against the go-ethereum client, catching potential consensus bugs before they reach production. While the grant was ultimately not awarded, the PoC successfully highlighted the gaps between AI capabilities and protocol rigor.
+Built 'Ethereum Protocol Verification', an LLM-assisted traceability pipeline created as a Proof-of-Concept for an Ethereum Foundation Ecosystem Support Program (ESP) Request for Proposal. The objective was to audit the execution layer specification (EELS) against the go-ethereum client, catching potential consensus bugs before they reach production. While the grant was ultimately not awarded, the PoC successfully highlighted the gaps between AI capabilities and protocol rigor.
 
 ### Engineering Approach
 *   **AST extraction:** Parsed Python specifications and Go source code into unified intermediate representations.
@@ -418,6 +441,48 @@ Both Workable and NannyML needed to move AI features out of the lab and into pro
 ### Engineering Solutions
 *   **Workable (Resume Parsing & Generative Features):** Transitioned isolated proofs-of-concept into hardened microservices deployed on AWS EKS. The system orchestrates generative workflows across a 0.5 billion-record corpus, handling tens of thousands of requests daily with strict fallbacks.
 *   **NannyML (ML Observability):** Piloted ML monitoring algorithms and built the foundational containerized Python infrastructure on Amazon EKS, enabling the founding team to secure their first major B2B contracts.
+`
+        },
+        {
+          slug: "dikaio-legal-rag",
+          title: "dikaio.ai: Greek Law RAG & AI Lawyer Demo",
+          description: "Consulted on Greek-law retrieval architecture and delivered a working AI lawyer chat demo.",
+          technologies: ["RAG", "OpenAI APIs", "Prompt Engineering", "Legal Knowledge Retrieval"],
+          content: `
+### Project Overview
+I consulted dikaio.ai on how to structure retrieval-augmented generation for Greek legal content and helped the team turn the concept into a working AI lawyer chat demo.
+
+### Engineering Focus
+*   **Retrieval Architecture:** Defined a practical retrieval flow for Greek-law sources to improve grounding and reduce unsupported answers.
+*   **Answer Reliability:** Shaped response behavior around retrieved context so legal outputs remained traceable to source material.
+*   **Execution Path:** Helped the team move from concept discussion to a demo that could be reviewed by both technical and product stakeholders.
+
+### Outcome
+Delivered a working prototype that used legal retrieval in real chat interactions and provided a concrete baseline for the next product iteration.
+
+### Scope Note
+This case study summarizes consulting scope and prototype outcomes only. Internal product analytics and proprietary legal corpora remain confidential.
+`
+        },
+        {
+          slug: "encode-cybersecurity-pipeline",
+          title: "Encode S.A.: Cybersecurity Data Platform",
+          description: "Architected a PySpark + Elasticsearch platform processing 100K-user network datasets within one business day.",
+          technologies: ["PySpark", "Elasticsearch", "Python", "MySQL", "Redis", "Data Engineering"],
+          content: `
+### Context
+Encode S.A. needed a reliable daily processing stack for large cybersecurity telemetry datasets supporting enterprise threat analysis.
+
+### What I Built
+*   **Distributed Data Plane:** Architected a PySpark + Elasticsearch platform designed to process 100K-user network datasets within one business day.
+*   **Pipeline Optimization:** Reworked the Python/MySQL ingestion path with multiprocessing and Redis caching to remove recurring bottlenecks.
+*   **Operational Collaboration:** Worked directly with security analysts to convert threat intelligence workflows into production detection pipelines.
+
+### Outcome
+Established a production baseline for daily cybersecurity analytics, including a throughput step-change from 1K to 10K users in the critical ingestion flow.
+
+### Evidence Scope
+This case study is grounded in my published resume record and portfolio narrative. Client internal logs, sensitive data, and security playbooks remain confidential.
 `
         },
         {
@@ -518,6 +583,12 @@ Hosting / infrastructure:
       formSubmitting: "Sending...",
       formSuccess: "Message sent. I will reply by email within 1-2 business days.",
       formError: "The form could not be sent right now. Please email me directly at petroslamb.dev@gmail.com.",
+      formFallbackSubject: "Website contact request",
+      formFallbackIntro: "Need guaranteed delivery? Use your email app or copy your message and send it directly.",
+      formFallbackEmailButton: "Send with email app",
+      formFallbackCopyButton: "Copy message",
+      formFallbackCopySuccess: "Message copied. Paste it into an email to petroslamb.dev@gmail.com.",
+      formFallbackCopyError: "Copy failed. Please copy manually and email petroslamb.dev@gmail.com.",
     },
     blog: {
       title: "Blog",
@@ -571,6 +642,7 @@ Hosting / infrastructure:
       about: "Σχετικά",
       services: "Υπηρεσίες",
       portfolio: "Portfolio",
+      trust: "Εμπιστοσύνη",
       contact: "Επικοινωνία",
       blog: "Blog",
       analytics: "Μετρήσεις",
@@ -587,6 +659,59 @@ Hosting / infrastructure:
         { label: "Ανεξάρτητα αποδεικτικά", value: "Δημόσια repos, CI traces, αρχιτεκτονικά docs και έρευνα" },
         { label: "Ταχύτητα παράδοσης", value: "Πρώτο architecture teardown σε έως 5 εργάσιμες ημέρες" },
         { label: "Υπόσχεση απόκρισης", value: "Πρώτη απάντηση εντός 24 ωρών τις εργάσιμες" },
+      ],
+      externalValidationTitle: "Ανεξάρτητα Σήματα Εμπιστοσύνης",
+      externalValidationIntro: "Δεν δημοσιεύω λογότυπα πελατών χωρίς γραπτή έγκριση. Χρησιμοποίησε αυτά τα third-party κανάλια για επαλήθευση ταυτότητας, timeline και ιστορικού εκτέλεσης.",
+      externalValidationLinks: [
+        {
+          title: "LinkedIn προφίλ",
+          description: "Χρονική ακολουθία ρόλων, δημόσιο προφίλ και επαγγελματικό υπόβαθρο.",
+          ctaLabel: "Έλεγχος LinkedIn",
+          url: "https://www.linkedin.com/in/petroslamb/"
+        },
+        {
+          title: "Δραστηριότητα GitHub",
+          description: "Δημόσια repositories, ιστορικό commits και CI traces στα pinned workstreams.",
+          ctaLabel: "Έλεγχος GitHub",
+          url: "https://github.com/petroslamb"
+        },
+        {
+          title: "Αρχείο Substack",
+          description: "Χρονοσφραγισμένα essays και τεχνικά post-mortems με δημόσιο publication trail.",
+          ctaLabel: "Περιήγηση στο Substack",
+          url: "https://lambpetros.substack.com"
+        },
+        {
+          title: "Δημόσιο analytics dashboard",
+          description: "Ζωντανή επισκεψιμότητα και conversions για αυτό το site μέσω Umami share view.",
+          ctaLabel: "Άνοιγμα analytics",
+          url: "https://cloud.umami.is/share/XlFjHh9T4RgIJTE1"
+        }
+      ],
+      verifiedOutcomesTitle: "Μαρτυρίες Πελατών",
+      verifiedOutcomesIntro: "Σύντομες μαρτυρίες από συνεργασίες, καθεμία με σύνδεση σε σχετικό δημόσιο case study.",
+      verifiedOutcomes: [
+        {
+          metric: "Μαρτυρία Head of AI: Workable",
+          testimonialQuote: "Ο Πέτρος δημιούργησε τα πρώτα μας GenAI proofs of concept και τα παρουσίασε σε όλη την εταιρεία, εξασφαλίζοντας καθαρό stakeholder buy-in για productionization.",
+          testimonialAuthor: "Head of AI, Workable",
+          evidenceLabel: "Ανοιχτό case study παραγωγικού AI",
+          evidenceUrl: "/portfolio/production-ai-systems"
+        },
+        {
+          metric: "Μαρτυρία CTO: Encode S.A.",
+          testimonialQuote: "Ο Πέτρος μας βοήθησε να κλιμακώσουμε την πλατφόρμα για επεξεργασία dataset 100K χρηστών μέσα σε μία εργάσιμη ημέρα και να μετατρέψουμε ένα επίμονο bottleneck σε αξιόπιστη βάση λειτουργίας.",
+          testimonialAuthor: "CTO, Encode S.A.",
+          evidenceLabel: "Άνοιγμα case study Encode",
+          evidenceUrl: "/portfolio/encode-cybersecurity-pipeline"
+        },
+        {
+          metric: "Μαρτυρία CTO: dikaio.ai",
+          testimonialQuote: "Ο Πέτρος μας έδωσε πρακτικό RAG blueprint για ελληνικό νομικό περιεχόμενο και μας βοήθησε να παραδώσουμε γρήγορα λειτουργικό AI lawyer chat demo.",
+          testimonialAuthor: "CTO, dikaio.ai",
+          evidenceLabel: "Άνοιγμα case study dikaio.ai",
+          evidenceUrl: "/portfolio/dikaio-legal-rag"
+        }
       ],
       servicesTitle: "Εξειδικευμένη Συμβουλευτική",
       services: [
@@ -605,7 +730,7 @@ Hosting / infrastructure:
           after: "Παραδόθηκαν hardened microservices και deterministic fallbacks που υποστηρίζουν δεκάδες χιλιάδες καθημερινά workflows βιογραφικών σε corpus 0.5 δισ. εγγραφών.",
           scope: "Το scope καλύπτει αρχιτεκτονική και reliability patterns· εσωτερικά SLO dashboards και client internals είναι εμπιστευτικά.",
           evidenceLabel: "Σχετικό production case study",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems"
+          evidenceUrl: "/portfolio/production-ai-systems"
         },
         {
           title: "Compliance-first αρχιτεκτονική tokenization",
@@ -614,7 +739,7 @@ Hosting / infrastructure:
           after: "Ενοποιήθηκαν και οι 3 ροές σε ένα canonical Oxygen-first architecture path με σαφές migration baseline από ERC-1400 προς ERC-3643 alignment.",
           scope: "Ταυτότητα πελάτη, governance πρακτικά και εσωτερικά throughput benchmarks καλύπτονται από NDA.",
           evidenceLabel: "Δημόσιο αρχιτεκτονικό repository",
-          evidenceUrl: "https://github.com/petroslamb/cno-project"
+          evidenceUrl: "/portfolio/cno-project"
         }
       ],
       secondaryCta: {
@@ -627,51 +752,20 @@ Hosting / infrastructure:
       proofIntro: "Επιλεγμένα παραδείγματα από παραγωγική δουλειά και δημόσια artifacts. Όπου υπάρχει εμπιστευτικότητα πελάτη, το δηλώνω ρητά.",
       proofBlocks: [
         {
-          title: "Ethereum Protocol Verification (eth-llm-poc)",
+          title: "Ethereum Protocol Verification",
           challenge: "Οι ομάδες πρωτοκόλλων χρειάζονται ελέγξιμη απόδειξη ότι οι υποχρεώσεις των προδιαγραφών αντιστοιχίζονται σε πραγματική υλοποίηση.",
-          contribution: [
-            "Υλοποίησα LLM-assisted pipeline που εξάγει obligations από EIPs και τα χαρτογραφεί σε execution-specs και Geth code paths.",
-            "Σχεδίασα πολυσταδιακούς ελέγχους που εντοπίζουν αποκλίσεις ανάμεσα σε αφηγηματικές περιλήψεις και line-level evidence."
-          ],
           outcome: "Παράχθηκαν επαναλήψιμα CI artifacts και αναφορές που κάνουν τις διαφωνίες ελέγξιμες και όχι σιωπηρές.",
-          evidenceLabel: "GitHub repository και CI runs",
-          evidenceUrl: "https://github.com/petroslamb/eth-llm-poc",
+          evidenceLabel: "Case study στο portfolio",
+          evidenceUrl: "/portfolio/eip-verify",
           scopeNote: "Υλοποιήθηκε ως PoC για Ethereum Foundation ESP RFP· η χρηματοδότηση δεν εγκρίθηκε."
         },
         {
           title: "Κλιμάκωση Παραγωγικού AI (Workable)",
           challenge: "Μετάβαση των generative AI prototypes από το πειραματικό στάδιο σε αξιόπιστες παραγωγικές ροές σε μεγάλη κλίμακα.",
-          contribution: [
-            "Μετέτρεψα πρώιμα GenAI prototypes σε deployed Python microservices στο AWS EKS.",
-            "Ενσωμάτωσα event-driven workflows πάνω σε Kafka/RabbitMQ με αυστηρή συμπεριφορά fallback."
-          ],
           outcome: "Υποστηρίχθηκαν δεκάδες χιλιάδες αιτήματα ημερησίως σε workflows σχετικών με βιογραφικά, πάνω σε corpus 0.5 δισ. εγγραφών.",
           evidenceLabel: "Βιογραφικό και συνοπτικό case study",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
+          evidenceUrl: "/portfolio/production-ai-systems",
           scopeNote: "Εσωτερικά SLOs, ακριβή service metrics και proprietary λεπτομέρειες παραμένουν εμπιστευτικά."
-        },
-        {
-          title: "ML Observability Υποδομή (NannyML)",
-          challenge: "Η ιδρυτική ομάδα χρειαζόταν αξιόπιστη MLOps βάση για enterprise onboarding και πρώιμη εμπορική αξιοποίηση.",
-          contribution: [
-            "Υλοποίησα monitoring prototypes και παρέδωσα containerized Python services στο Amazon EKS.",
-            "Συνεισέφερα σε production-grade πρότυπα ανάπτυξης και λειτουργικής αξιοπιστίας."
-          ],
-          outcome: "Βελτιώθηκε η αξιοπιστία deployment και επιταχύνθηκε το onboarding πελατών στο πρώιμο enterprise στάδιο.",
-          evidenceLabel: "Portfolio και αναφορές βιογραφικού",
-          evidenceUrl: "https://petroslamb.github.io/peterlamb/portfolio/production-ai-systems",
-          scopeNote: "Αναλυτικά customer-side metrics και εσωτερικά αρχιτεκτονικά δεδομένα είναι υπό NDA."
-        },
-        {
-          title: "Compliance-First Tokenization Architecture (CNO/Hedera)",
-          challenge: "Σχεδιασμός ρυθμιζόμενης υποδομής tokenization και trading που ισορροπεί κανονιστική συμμόρφωση και υψηλό throughput.",
-          contribution: [
-            "Συνέγραψα και συντήρησα canonical architecture και operational-flow τεκμηρίωση για Oxygen-first υλοποίηση στο Hedera.",
-            "Χαρτογράφησα standards και migration paths (ATS/ ERC-1400 baseline προς ERC-3643 alignment)."
-          ],
-          outcome: "Καθορίστηκε ξεκάθαρο baseline υλοποίησης για phased delivery, governance και αρχιτεκτονικές αποφάσεις.",
-          evidenceLabel: "Δημόσιο repository αρχιτεκτονικής",
-          evidenceUrl: "https://github.com/petroslamb/cno-project"
         }
       ],
       featuredResearch: {
@@ -720,10 +814,10 @@ Hosting / infrastructure:
       resumeLabel: "Επιλέξτε έκδοση",
       resumeNote: "Προεπιλογή: ισορροπημένο προφίλ.",
       resumeOptions: [
-        { value: "resume2025.pdf", label: "Βιογραφικό 2025 — Ισορροπημένο" },
-        { value: "resume2025_hyped.pdf", label: "Βιογραφικό 2025 — Έκδοση ανάπτυξης" },
-        { value: "resume2025_hyped_gr.pdf", label: "Βιογραφικό 2025 — Έκδοση ανάπτυξης (Ελληνικά)" },
-        { value: "resume2025_conservative.pdf", label: "Βιογραφικό 2025 — Συνοπτική τεχνική έκδοση" },
+        { value: "resume2026_public.pdf", label: "Βιογραφικό 2026 — Ισορροπημένο" },
+        { value: "resume2026_hyped_public.pdf", label: "Βιογραφικό 2026 — Έκδοση ανάπτυξης" },
+        { value: "resume2026_hyped_gr_public.pdf", label: "Βιογραφικό 2026 — Έκδοση ανάπτυξης (Ελληνικά)" },
+        { value: "resume2026_conservative_public.pdf", label: "Βιογραφικό 2026 — Συνοπτική τεχνική έκδοση" },
       ],
       philosophyTitle: "Μηχανική Φιλοσοφία",
       philosophyText: "Πιστεύω ότι για να κατασκευάσεις ισχυρά συστήματα AI, πρέπει πρώτα να κατανοήσεις τα μηχανικά όρια των ίδιων των μοντέλων — από τους μηχανισμούς προσοχής (attention mechanisms) μέχρι τους περιορισμούς της μνήμης KV. Η δημιουργία αφαιρέσεων χωρίς κατανόηση των μηχανισμών οδηγεί σε εύθραυστα, απρόβλεπτα συστήματα.",
@@ -783,7 +877,7 @@ Hosting / infrastructure:
               company: "Ethereum Foundation (RFP PoC)",
               challenge: "Επαλήθευση των υποχρεώσεων του πρωτοκόλλου έναντι των execution clients χρησιμοποιώντας LLMs για ενίσχυση της ασφάλειας.",
               solution: [
-                "Κατασκεύασα το 'eth-llm-poc', ένα pipeline ιχνηλασιμότητας στο πλαίσιο πρότασης έργου.",
+                "Κατασκεύασα το 'Ethereum Protocol Verification', ένα pipeline ιχνηλασιμότητας στο πλαίσιο πρότασης έργου.",
                 "Ορχήστρωσα αξιολογήσεις πολλαπλών σταδίων που επικύρωναν τις προδιαγραφές του πρωτοκόλλου έναντι υλοποιήσεων του go-ethereum."
               ],
               technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
@@ -935,13 +1029,13 @@ Hosting / infrastructure:
       projects: [
         {
           slug: "eip-verify",
-          title: "Ethereum Foundation RFP: eth-llm-poc",
+          title: "Ethereum Foundation RFP: Ethereum Protocol Verification",
           description: "LLM-assisted έλεγχος προδιαγραφών πρωτοκόλλου και ιχνηλασιμότητα ασφάλειας.",
           technologies: ["Python", "Claude 3.5 Sonnet", "AST Analysis", "Protocol Security"],
-          githubLink: "https://github.com/petroslamb/eth-llm-poc",
+          githubLink: "https://github.com/petroslamb/ethereum-protocol-verification",
           content: `
 ### Επισκόπηση Έργου
-Κατασκεύασα το 'eth-llm-poc', ένα pipeline ιχνηλασιμότητας με τη βοήθεια LLM, ως Proof-of-Concept για ένα Request for Proposal (RFP) του Ethereum Foundation ESP. Ο στόχος ήταν ο έλεγχος των προδιαγραφών του execution layer (EELS) έναντι του go-ethereum client, εντοπίζοντας πιθανά consensus bugs. Αν και το έργο δεν έλαβε τελικά χρηματοδότηση, το PoC ανέδειξε επιτυχώς το χάσμα μεταξύ των δυνατοτήτων της τεχνητής νοημοσύνης και της αυστηρότητας του πρωτοκόλλου.
+Κατασκεύασα το 'Ethereum Protocol Verification', ένα pipeline ιχνηλασιμότητας με τη βοήθεια LLM, ως Proof-of-Concept για ένα Request for Proposal (RFP) του Ethereum Foundation ESP. Ο στόχος ήταν ο έλεγχος των προδιαγραφών του execution layer (EELS) έναντι του go-ethereum client, εντοπίζοντας πιθανά consensus bugs. Αν και το έργο δεν έλαβε τελικά χρηματοδότηση, το PoC ανέδειξε επιτυχώς το χάσμα μεταξύ των δυνατοτήτων της τεχνητής νοημοσύνης και της αυστηρότητας του πρωτοκόλλου.
 
 ### Προσέγγιση Μηχανικής (Engineering Approach)
 *   **Εξαγωγή AST:** Ανάλυση (parsing) των προδιαγραφών σε Python και του πηγαίου κώδικα σε Go σε ενοποιημένες ενδιάμεσες αναπαραστάσεις (intermediate representations).
@@ -982,6 +1076,48 @@ Hosting / infrastructure:
 ### Λύσεις Μηχανικής (Engineering Solutions)
 *   **Workable (Ανάλυση Βιογραφικών & Generative Χαρακτηριστικά):** Μετέφερα απομονωμένα proofs-of-concept σε θωρακισμένα microservices ανεπτυγμένα στο AWS EKS. Το σύστημα ενορχηστρώνει (orchestrates) generative workflows σε ένα corpus 0.5 δισεκατομμυρίων εγγραφών, διαχειριζόμενο δεκάδες χιλιάδες αιτήματα ημερησίως με αυστηρούς μηχανισμούς fallback.
 *   **NannyML (ML Observability):** Δοκίμασα (piloted) αλγορίθμους παρακολούθησης ML (ML monitoring) και κατασκεύασα τη βασική containerized υποδομή Python στο Amazon EKS, επιτρέποντας στην ιδρυτική ομάδα να κλείσει τα πρώτα της μεγάλα B2B συμβόλαια.
+`
+        },
+        {
+          slug: "dikaio-legal-rag",
+          title: "dikaio.ai: Greek Law RAG & AI Lawyer Demo",
+          description: "Συμβουλευτική για retrieval αρχιτεκτονική ελληνικού δικαίου και παράδοση λειτουργικού AI lawyer chat demo.",
+          technologies: ["RAG", "OpenAI APIs", "Prompt Engineering", "Legal Knowledge Retrieval"],
+          content: `
+### Επισκόπηση Έργου
+Παρείχα συμβουλευτική στη dikaio.ai για το πώς να στηθεί retrieval-augmented generation πάνω σε ελληνικό νομικό περιεχόμενο και βοήθησα την ομάδα να μετατρέψει την ιδέα σε λειτουργικό AI lawyer chat demo.
+
+### Εστίαση Μηχανικής
+*   **Αρχιτεκτονική Retrieval:** Όρισα πρακτική ροή ανάκτησης από πηγές ελληνικού δικαίου για καλύτερο grounding και λιγότερες μη τεκμηριωμένες απαντήσεις.
+*   **Αξιοπιστία Απαντήσεων:** Διαμόρφωσα τη συμπεριφορά απάντησης γύρω από το ανακτημένο context ώστε οι νομικές απαντήσεις να παραμένουν ιχνηλάσιμες στις πηγές.
+*   **Execution Path:** Βοήθησα την ομάδα να περάσει από conceptual συζήτηση σε demo που μπορούσε να αξιολογηθεί από τεχνικά και product stakeholders.
+
+### Αποτέλεσμα
+Παραδόθηκε λειτουργικό prototype που αξιοποιούσε legal retrieval σε πραγματικές συνομιλίες και έδωσε συγκεκριμένο baseline για το επόμενο προϊοντικό iteration.
+
+### Σημείωση Scope
+Το case study συνοψίζει το scope της συμβουλευτικής και τα αποτελέσματα του prototype. Εσωτερικά product analytics και proprietary νομικά corpora παραμένουν εμπιστευτικά.
+`
+        },
+        {
+          slug: "encode-cybersecurity-pipeline",
+          title: "Encode S.A.: Πλατφόρμα Δεδομένων Κυβερνοασφάλειας",
+          description: "Αρχιτεκτόνησα πλατφόρμα PySpark + Elasticsearch που επεξεργαζόταν datasets δικτύου 100K χρηστών μέσα σε μία εργάσιμη ημέρα.",
+          technologies: ["PySpark", "Elasticsearch", "Python", "MySQL", "Redis", "Data Engineering"],
+          content: `
+### Πλαίσιο
+Η Encode S.A. χρειαζόταν αξιόπιστη ημερήσια επεξεργασία μεγάλων cybersecurity telemetry datasets για enterprise αναλύσεις απειλών.
+
+### Τι Υλοποίησα
+*   **Κατανεμημένο Data Plane:** Σχεδίασα πλατφόρμα PySpark + Elasticsearch με στόχο επεξεργασία datasets δικτύου 100K χρηστών μέσα σε μία εργάσιμη ημέρα.
+*   **Βελτιστοποίηση Pipeline:** Ανασχεδίασα τη ροή ingestion σε Python/MySQL με multiprocessing και Redis caching, αφαιρώντας επαναλαμβανόμενα bottlenecks.
+*   **Συνεργασία με Αναλυτές Ασφάλειας:** Συνεργάστηκα άμεσα με security analysts για μετατροπή threat-intelligence workflows σε παραγωγικά detection pipelines.
+
+### Αποτέλεσμα
+Δημιουργήθηκε production baseline για ημερήσια cybersecurity analytics, με βελτίωση κρίσιμης ροής ingestion από 1K σε 10K χρήστες.
+
+### Scope Τεκμηρίωσης
+Το case study βασίζεται σε δημοσιευμένο resume record και στο portfolio narrative. Εσωτερικά logs, ευαίσθητα δεδομένα και security playbooks παραμένουν εμπιστευτικά.
 `
         },
         {
@@ -1082,6 +1218,12 @@ Hosting / infrastructure:
       formSubmitting: "Αποστολή...",
       formSuccess: "Το μήνυμα στάλθηκε. Θα σου απαντήσω μέσω email εντός 1-2 εργάσιμων ημερών.",
       formError: "Η αποστολή της φόρμας απέτυχε προσωρινά. Στείλε μου απευθείας email στο petroslamb.dev@gmail.com.",
+      formFallbackSubject: "Αίτημα επικοινωνίας από το website",
+      formFallbackIntro: "Θες εγγυημένη παράδοση; Χρησιμοποίησε το email app σου ή αντέγραψε το μήνυμα και στείλ’ το απευθείας.",
+      formFallbackEmailButton: "Αποστολή με email app",
+      formFallbackCopyButton: "Αντιγραφή μηνύματος",
+      formFallbackCopySuccess: "Το μήνυμα αντιγράφηκε. Κάνε επικόλληση σε email προς petroslamb.dev@gmail.com.",
+      formFallbackCopyError: "Η αντιγραφή απέτυχε. Κάνε χειροκίνητη αντιγραφή και στείλε email στο petroslamb.dev@gmail.com.",
     },
     blog: {
       title: "Blog",

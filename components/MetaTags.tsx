@@ -36,6 +36,21 @@ const resolveUrl = (baseUrl: string, value: string): string => {
   return `${baseUrl}/${value}`;
 };
 
+const resolveBaseUrl = (): string => {
+  const envSiteUrl = (import.meta.env.VITE_SITE_URL as string | undefined)?.trim();
+  if (envSiteUrl) {
+    return envSiteUrl.replace(/\/$/, '');
+  }
+
+  const metadataSiteUrl = siteMetadata.siteUrl?.trim();
+  if (metadataSiteUrl) {
+    return metadataSiteUrl.replace(/\/$/, '');
+  }
+
+  // Fallback to the current origin + configured app base path.
+  return new URL(import.meta.env.BASE_URL || '/', window.location.origin).toString().replace(/\/$/, '');
+};
+
 const MetaTags: React.FC<MetaTagsProps> = ({
   title,
   description,
@@ -46,7 +61,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
   structuredData,
 }) => {
   useEffect(() => {
-    const baseUrl = (siteMetadata.siteUrl ?? window.location.origin).replace(/\/$/, '');
+    const baseUrl = resolveBaseUrl();
     const canonicalUrl = canonicalPath
       ? resolveUrl(baseUrl, canonicalPath)
       : window.location.href;

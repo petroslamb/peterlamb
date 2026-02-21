@@ -1,21 +1,39 @@
 \begin{center}
 {\LARGE \textbf{Petros Lambropoulos}}\\
 \smallskip
-\textbf{Lead Product Software Engineer | AI SaaS Initiatives}\\
+\textbf{Independent Systems Consultant | Agentic Systems \& Production AI}\\
 \medskip
 \begin{tabular}{@{}lll@{}}
-Athens, Greece \\
+Athens, Greece & +30\,6984\,85xxx & \href{mailto:petroslamb.dev@gmail.com}{petroslamb.dev@gmail.com} \\
 \url{https://petroslamb.github.io/peterlamb/} & \url{https://github.com/petroslamb} & \url{https://uk.linkedin.com/in/petroslamb}\\
 \end{tabular}
 \end{center}
 
 ## Professional Summary
-Lead product software engineer with 10+ years shipping production-grade Python, AI/ML, and SaaS platforms for venture-backed startups and scale-ups. Proven in orchestrating generative AI initiatives and high-scale data systems, balancing product instincts with reliable delivery. Equally comfortable steering architecture, rolling up sleeves for execution, handling incidents under pressure, and translating outcomes for executives and clients. Currently partnering with startups on AI SaaS explorations and resilience engagements.
+I work on AI systems at the point where abstractions start to fail: production agents, evaluation pipelines, and AI-first platforms that have to survive real-world constraints. With 12+ years across software engineering, applied ML, and system design, my focus is on turning fragile prototypes into stable, deployable systems by navigating ambiguous requirements, incomplete metrics, and evolving research goals. Currently operating as an independent consultant partnering with startups and research teams on agentic architectures, reliability, and infrastructure beyond the demo stage.
 
 ## Professional Experience
+### Independent Systems Consultant | September 2024–Present
+Partnering with startups, research teams, and product-driven organisations on production SaaS and AI systems, with a focus on agents, evaluation, and system architecture beyond the prototype stage.
+
+**Scope of work:**
+- Designing and stabilising agentic systems for real-world deployment
+- Architecting SaaS platforms from early design to production readiness
+- Evaluation, reliability, and failure-mode analysis under ambiguous requirements
+- Translating cutting-edge AI research into deployable engineering systems
+
+**Selected engagements:**
+
+- **Hedera / CNO:** Architected compliance-first tokenization and trading infrastructure (\url{https://cno.zone/})
+- **ethereum-protocol-verification:** Built an LLM-powered verification pipeline bridging EIP obligations and execution-specs
+- **Dikaio.ai:** Guided the transition of a legal-tech RAG prototype into a production engine
+- **Rythm Hoppers:** Built domain-specific SaaS platforms integrating Greek regulatory systems—myDATA invoicing and Viva Wallet POS
+- **University of Piraeus:** Conducted applied ML research on credit-risk modelling and feature engineering
+- **Rooted Layers:** Author of a technical publication on AI systems and infrastructure (\url{https://lambpetros.substack.com/})
+
 ### Senior Software Engineer, NLP Team - Workable (Athens) | 2022-2024
-- **Built** Python ML microservices powering AI-driven candidate experiences across the hiring platform; deployed via AWS EKS + Kubernetes/Helm with RabbitMQ/Kafka event workflows supporting 10+ services while processing tens of thousands of resumes daily from a 0.5 billion-record corpus, including large-scale backfill migrations.
 - **Launched** Workable's first generative AI proofs of concept (job-post generation, interview-question drafting, resume parsing), presented company-wide, and secured executive buy-in for productionisation.
+- **Built** Python ML microservices powering AI-driven candidate experiences across the hiring platform; deployed via AWS EKS + Kubernetes/Helm with RabbitMQ/Kafka event workflows supporting 10+ services while processing tens of thousands of resumes daily from a 0.5 billion-record corpus.
 - **Partnered** with product and design to transform prototypes into deliverables while defining evaluation, deployment, and monitoring standards for the ML stack.
 
 ### Senior Software Engineer - NannyML (Remote) | 2021-2022
@@ -27,7 +45,7 @@ Lead product software engineer with 10+ years shipping production-grade Python, 
 - **Led** Django/PostgreSQL services for music-licensing operations, ensuring twelve-factor alignment and reliable Heroku releases.
 - **Introduced** API design and observability improvements that reduced support load and surfaced actionable analytics for business teams.
 
-### Software & Data Engineer - Encode S.A. (Athens) | 2015-2020
+### Team Lead - Big Data Engineer - Encode S.A. (Athens) | 2015-2020
 - **Architected** a PySpark + Elasticsearch platform processing 100K-user network datasets within a business day, including large-scale performance validation.
 - **Optimised** the Python/MySQL pipeline (multiprocessing, Redis caching) to scale throughput from 1K to 10K users while eliminating chronic bottlenecks.
 - **Mentored** junior engineers across long-running coaching engagements and embedded with security analysts to convert threat intelligence into production detection pipelines.
@@ -35,11 +53,10 @@ Lead product software engineer with 10+ years shipping production-grade Python, 
 ### Python Software Developer, Web Applications - Neuropublic (Athens) | 2014-2015
 - **Built** Python services for precision-agriculture products forecasting crop returns from environmental and nutritional data models.
 
-### Intern Software Engineer, Data Acquisition - Skyscanner (Edinburgh) | 2012-2013
+### Intern Software Engineer, Data Acquisition - Skyscanner (Edinburgh) | March 2013 - August 2013
 - **Owned** Python APIs and scraping pipelines that kept BAU ingestion services running while extending core team coverage.
 
-## Consulting & Selected Engagements
-- **Dikaio.ai (Athens legal-tech startup; 2024):** Guided the later CTO on applying RAG with OpenAI to ship their first Greek-law document prototype, securing the pre-seed funding to launch.
+## Independent AI Initiatives & Advising
 - **Brain Metrics Initiative (2022):** Led incident response for a multi-million-request DDoS surge, implemented custom Cloudflare mitigation, and authored the postmortem and resilience roadmap.
 - **Langaware (2021):** Demonstrated a BERT-based solution for the Boston Theft Challenge to the CEO as an exploration of applied NLP.
 - **Beat (ride-hailing scale-up, distinct from Free Now; 2020):** Built a taxi-demand forecasting prototype for Lima for showcasing to the AI/Data team.
@@ -59,8 +76,6 @@ Lead product software engineer with 10+ years shipping production-grade Python, 
 - **Big Data Architecture with Apache Spark** (2018): training on distributed data engineering patterns and performance tuning for Apache Spark.
 
 ## Core Skills
-- **Product & Leadership:** Stakeholder alignment, product storytelling, cross-functional leadership, mentoring, executive communication
-- **GenAI & MLOps:** Generative AI delivery, LangChain, OpenAI APIs, agents, Pinecone, MLflow, NLP
-- **Data Platforms:** AWS (EKS, EC2, S3, RDS), Kubernetes, Terraform, Airflow, Redis, Elasticsearch, PostgreSQL, MySQL
-- **Software Stack:** Python, Django, FastAPI, Flask, PySpark, SQL, Pandas, NumPy, PyTorch, TypeScript/React
-- **Delivery Excellence:** CI/CD automation, microservices architecture, scalable data pipelines, observability, experiment tracking, incident response
+- **GenAI & AI Product:** Generative AI Delivery, RAG, LangChain, OpenAI APIs, Agents, Pinecone, Product Storytelling, NLP, MLflow
+- **Leadership & Delivery:** Stakeholder Alignment, Cross-functional Leadership, Mentoring, Executive Communication, CI/CD Automation, Microservices Architecture, Scalable Data Pipelines, Observability, Incident Response
+- **Core Technology Stack:** Python, PySpark, SQL, AWS (EKS, EC2, S3), Kubernetes, Terraform, PostgreSQL, Elasticsearch, Django, FastAPI, PyTorch, TypeScript/React

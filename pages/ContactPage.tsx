@@ -18,7 +18,10 @@ const ContactPage: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
     const [submitError, setSubmitError] = React.useState<string | null>(null);
+    const [nameValue, setNameValue] = React.useState('');
+    const [emailValue, setEmailValue] = React.useState('');
     const [messageValue, setMessageValue] = React.useState('');
+    const [copyStatus, setCopyStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
 
     const schedulingEmbedUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cGdk7wy_kYMcB9CFQ8Lmf45Bqrf64GTCNPg4Mb31jjo9o37ArfE1mZi-h5rETky4j7vtm73Rt?gv=true';
     const isTeardownIntent = React.useMemo(
@@ -28,6 +31,24 @@ const ContactPage: React.FC = () => {
     const priorityEmailHref = React.useMemo(
         () => `mailto:petroslamb.dev@gmail.com?subject=${encodeURIComponent(contact.priorityEmailSubject)}`,
         [contact.priorityEmailSubject],
+    );
+    const fallbackSubject = React.useMemo(
+        () => (isTeardownIntent ? contact.teardownIntentSubject : contact.formFallbackSubject),
+        [isTeardownIntent, contact.teardownIntentSubject, contact.formFallbackSubject],
+    );
+    const fallbackBody = React.useMemo(
+        () => [
+            `${contact.formName}: ${nameValue || '-'}`,
+            `${contact.formEmail}: ${emailValue || '-'}`,
+            '',
+            `${contact.formMessage}:`,
+            messageValue || '-',
+        ].join('\n'),
+        [contact.formName, contact.formEmail, contact.formMessage, nameValue, emailValue, messageValue],
+    );
+    const fallbackEmailHref = React.useMemo(
+        () => `mailto:petroslamb.dev@gmail.com?subject=${encodeURIComponent(fallbackSubject)}&body=${encodeURIComponent(fallbackBody)}`,
+        [fallbackSubject, fallbackBody],
     );
 
     React.useEffect(() => {
@@ -39,6 +60,10 @@ const ContactPage: React.FC = () => {
         setMessageValue('');
     }, [isTeardownIntent, contact.teardownIntentMessage]);
 
+    React.useEffect(() => {
+        setCopyStatus('idle');
+    }, [nameValue, emailValue, messageValue]);
+
     const metaDescription = language === 'en'
       ? `Contact Petros Lambropoulos to discuss AI systems evaluation, production architecture, and reliability-focused consulting.`
       : `Επικοινωνήστε με τον Πέτρο Λαμπρόπουλο για αξιολόγηση AI συστημάτων, production αρχιτεκτονική και συμβουλευτική με έμφαση στην αξιοπιστία.`;
@@ -48,12 +73,10 @@ const ContactPage: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const form = event.currentTarget;
-        const formData = new FormData(form);
         const payload = {
-            name: ((formData.get('name') ?? '') as string).trim(),
-            email: ((formData.get('email') ?? '') as string).trim(),
-            message: ((formData.get('message') ?? '') as string).trim(),
+            name: nameValue.trim(),
+            email: emailValue.trim(),
+            message: messageValue.trim(),
             _subject: isTeardownIntent ? contact.teardownIntentSubject : 'New site contact request',
             _captcha: 'false',
             _template: 'table',
@@ -83,7 +106,8 @@ const ContactPage: React.FC = () => {
                 throw new Error(payloadResponse.message || 'FormSubmit rejected the submission.');
             }
 
-            form.reset();
+            setNameValue('');
+            setEmailValue('');
             setMessageValue(isTeardownIntent ? contact.teardownIntentMessage : '');
             setStatus('success');
         } catch (error) {
@@ -96,6 +120,21 @@ const ContactPage: React.FC = () => {
             setStatus('error');
         } finally {
             setIsSubmitting(false);
+        }
+    };
+
+    const handleCopyFallback = async () => {
+        if (!navigator.clipboard) {
+            setCopyStatus('error');
+            return;
+        }
+
+        try {
+            await navigator.clipboard.writeText(fallbackBody);
+            setCopyStatus('success');
+        } catch (error) {
+            console.error(error);
+            setCopyStatus('error');
         }
     };
 
@@ -149,11 +188,29 @@ const ContactPage: React.FC = () => {
                             <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-slate-300">{contact.formName}</label>
-                                <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400" autoComplete="name" />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    required
+                                    value={nameValue}
+                                    onChange={(event) => setNameValue(event.target.value)}
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400"
+                                    autoComplete="name"
+                                />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-slate-300">{contact.formEmail}</label>
-                                <input type="email" name="email" id="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400" autoComplete="email" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                    value={emailValue}
+                                    onChange={(event) => setEmailValue(event.target.value)}
+                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400"
+                                    autoComplete="email"
+                                />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-slate-300">{contact.formMessage}</label>
@@ -170,7 +227,8 @@ const ContactPage: React.FC = () => {
                                     className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-slate-700 dark:border-slate-400 dark:text-white dark:placeholder-slate-400 ${isTeardownIntent ? 'font-mono min-h-[24rem]' : ''}`}
                                 />
                             </div>
-                            <div>
+                            <p className="text-xs text-text-secondary dark:text-slate-300">{contact.formFallbackIntro}</p>
+                            <div className="grid sm:grid-cols-2 gap-3">
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
@@ -178,6 +236,30 @@ const ContactPage: React.FC = () => {
                                 >
                                     {isSubmitting ? contact.formSubmitting : contact.formSubmit}
                                 </button>
+                                <a
+                                    href={fallbackEmailHref}
+                                    className="w-full inline-flex items-center justify-center border border-primary text-primary dark:text-cyan-400 dark:border-cyan-400 font-bold py-2 px-4 rounded-lg hover:bg-primary/5 dark:hover:bg-cyan-400/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                                >
+                                    {contact.formFallbackEmailButton}
+                                </a>
+                            </div>
+                            <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                                <button
+                                    type="button"
+                                    onClick={handleCopyFallback}
+                                    className="text-sm font-medium text-primary dark:text-cyan-400 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary rounded-sm"
+                                >
+                                    {contact.formFallbackCopyButton}
+                                </button>
+                                {copyStatus !== 'idle' ? (
+                                    <p
+                                        className={`text-xs ${copyStatus === 'success' ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
+                                        role="status"
+                                        aria-live="polite"
+                                    >
+                                        {copyStatus === 'success' ? contact.formFallbackCopySuccess : contact.formFallbackCopyError}
+                                    </p>
+                                ) : null}
                             </div>
                             {status !== 'idle' ? (
                                 <p

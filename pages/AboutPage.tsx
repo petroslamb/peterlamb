@@ -7,9 +7,10 @@ const AboutPage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { about } = translations;
 
-    const [selectedResume, setSelectedResume] = React.useState(about.resumeOptions[0]?.value ?? 'resume2025.pdf');
+    const [selectedResume, setSelectedResume] = React.useState(about.resumeOptions[0]?.value ?? 'resume2026_public.pdf');
     const resumeHref = React.useMemo(() => `${import.meta.env.BASE_URL}resumes/${selectedResume}`, [selectedResume]);
     const resumeDeckHref = `${import.meta.env.BASE_URL}resumes/resume-production-ai-scale.pdf`;
+    const portraitSrc = `${import.meta.env.BASE_URL}images/profile/petros-portrait.png`;
 
     const metaDescription = language === 'en'
         ? `Learn how Petros Lambropoulos helps teams harden AI prototypes into production systems with evaluation rigor, agent architecture, and reliability-first delivery.`
@@ -35,8 +36,16 @@ const AboutPage: React.FC = () => {
 
             <AnimatedSection>
                 <section aria-label="Introduction">
-                    <div className="text-lg text-text-secondary dark:text-slate-300 space-y-4">
-                        <p>
+                    <div className="grid gap-6 md:grid-cols-[minmax(0,20rem),1fr] md:items-center">
+                        <img
+                            src={portraitSrc}
+                            alt={language === 'en' ? 'Portrait of Petros Lambropoulos' : 'Πορτρέτο του Πέτρου Λαμπρόπουλου'}
+                            width={1248}
+                            height={832}
+                            loading="lazy"
+                            className="w-full max-w-xs mx-auto rounded-2xl object-cover shadow-md ring-1 ring-slate-200 dark:ring-slate-700"
+                        />
+                        <p className="text-lg text-text-secondary dark:text-slate-300">
                             <span className="font-bold text-text-primary dark:text-slate-100">{about.greeting}</span>, {about.intro}
                         </p>
                     </div>

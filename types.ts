@@ -39,6 +39,22 @@ export interface TrustSignal {
   value: string;
 }
 
+export interface ExternalValidationLink {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  url: string;
+}
+
+export interface VerifiedOutcomeSignal {
+  metric: string;
+  context?: string;
+  testimonialQuote?: string;
+  testimonialAuthor?: string;
+  evidenceLabel: string;
+  evidenceUrl: string;
+}
+
 export interface OutcomeCaseStudy {
   title: string;
   timeframe: string;
@@ -55,6 +71,7 @@ export interface Content {
     about: string;
     services: string;
     portfolio: string;
+    trust: string;
     contact: string;
     blog: string;
     analytics: string;
@@ -67,6 +84,12 @@ export interface Content {
     cta: string;
     trustStripTitle: string;
     trustSignals: TrustSignal[];
+    externalValidationTitle: string;
+    externalValidationIntro: string;
+    externalValidationLinks: ExternalValidationLink[];
+    verifiedOutcomesTitle: string;
+    verifiedOutcomesIntro: string;
+    verifiedOutcomes: VerifiedOutcomeSignal[];
     servicesTitle: string;
     services: Service[];
     credibility: string;
@@ -163,6 +186,12 @@ export interface Content {
     formSubmitting: string;
     formSuccess: string;
     formError: string;
+    formFallbackSubject: string;
+    formFallbackIntro: string;
+    formFallbackEmailButton: string;
+    formFallbackCopyButton: string;
+    formFallbackCopySuccess: string;
+    formFallbackCopyError: string;
     scheduleTitle: string;
     scheduleDescription: string;
     scheduleButton: string;
@@ -229,7 +258,6 @@ export interface Service {
 export interface ProofBlock {
   title: string;
   challenge: string;
-  contribution: string[];
   outcome: string;
   evidenceLabel: string;
   evidenceUrl: string;

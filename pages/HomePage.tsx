@@ -19,6 +19,7 @@ const HomePage: React.FC = () => {
     const { language, translations } = useLanguage();
     const { home, actions } = translations;
     const { trackEvent } = useAnalytics();
+    const rootedLayersLogoSrc = `${import.meta.env.BASE_URL}images/branding/rooted-layers-logo.jpg`;
 
     const metaDescription = language === 'en'
         ? `Petros Lambropoulos helps teams harden AI prototypes into production systems through evaluation pipelines, agent architecture, and compliance-first infrastructure.`
@@ -58,6 +59,18 @@ const HomePage: React.FC = () => {
                     >
                         {home.title}
                     </h2>
+                    <div
+                        className="mt-6 flex justify-center animate-fade-in-up"
+                        style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}
+                    >
+                        <img
+                            src={rootedLayersLogoSrc}
+                            alt={language === 'en' ? 'Rooted Layers logo' : 'Λογότυπο Rooted Layers'}
+                            width={1024}
+                            height={1024}
+                            className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover p-1 bg-white/90 dark:bg-slate-800/90 ring-1 ring-slate-200 dark:ring-slate-700 shadow-md"
+                        />
+                    </div>
                     <p
                         className="mt-4 max-w-2xl mx-auto text-md md:text-xl text-slate-600 dark:text-slate-300 animate-fade-in-up"
                         style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
@@ -111,14 +124,20 @@ const HomePage: React.FC = () => {
             <section aria-labelledby="trust-strip-heading">
                 <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-md p-6 md:p-8">
                     <h2 id="trust-strip-heading" className="text-xl font-bold text-text-primary dark:text-white text-center">{home.trustStripTitle}</h2>
-                    <dl className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {home.trustSignals.map((signal) => (
-                            <div key={signal.label} className="rounded-lg bg-secondary dark:bg-slate-700/60 p-4 text-left">
-                                <dt className="text-xs uppercase tracking-wide font-semibold text-primary dark:text-cyan-400">{signal.label}</dt>
-                                <dd className="mt-2 text-sm text-text-secondary dark:text-slate-200">{signal.value}</dd>
-                            </div>
+                    <ul className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {home.trustSignals.map((signal, index) => (
+                            <li key={signal.label}>
+                                <Link
+                                    to="/trust"
+                                    className="block h-full rounded-lg bg-secondary dark:bg-slate-700/60 p-4 text-left transition-colors hover:bg-cyan-50 dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
+                                    onClick={() => trackEvent('trust_strip_click', { area: 'home_trust_strip', label: signal.label, index })}
+                                >
+                                    <p className="text-xs uppercase tracking-wide font-semibold text-primary dark:text-cyan-400">{signal.label}</p>
+                                    <p className="mt-2 text-sm text-text-secondary dark:text-slate-200">{signal.value}</p>
+                                </Link>
+                            </li>
                         ))}
-                    </dl>
+                    </ul>
                 </div>
             </section>
 
@@ -144,63 +163,51 @@ const HomePage: React.FC = () => {
                 </div>
                 <ul className="grid md:grid-cols-2 gap-6">
                     {home.proofBlocks.map((proof, index) => (
-                        <li key={proof.title} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 space-y-4">
-                            <h3 className="text-xl font-bold text-primary dark:text-cyan-400">{proof.title}</h3>
-                            <div className="space-y-3 text-text-secondary dark:text-slate-300 text-sm">
-                                <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Challenge:' : 'Πρόκληση:'}</span> {proof.challenge}</p>
-                                <div>
-                                    <p className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Contribution:' : 'Συνεισφορά:'}</p>
-                                    <ul className="mt-2 space-y-1 list-disc pl-5">
-                                        {proof.contribution.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Outcome:' : 'Αποτέλεσμα:'}</span> {proof.outcome}</p>
-                                {proof.scopeNote ? (
-                                    <p className="text-xs text-slate-500 dark:text-slate-400">{proof.scopeNote}</p>
-                                ) : null}
-                            </div>
-                            <a
-                                href={proof.evidenceUrl}
-                                target={proof.evidenceUrl.startsWith('/') ? undefined : '_blank'}
-                                rel={proof.evidenceUrl.startsWith('/') ? undefined : 'noopener noreferrer'}
-                                className="inline-flex items-center text-primary dark:text-cyan-400 font-semibold hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900 rounded-sm"
-                                onClick={() => trackEvent('proof_evidence_click', { area: 'home_proof', title: proof.title, index })}
-                            >
-                                {proof.evidenceLabel}
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </a>
+                        <li key={proof.title}>
+                            {proof.evidenceUrl.startsWith('/') ? (
+                                <Link
+                                    to={proof.evidenceUrl}
+                                    aria-label={`${proof.title}: ${proof.evidenceLabel}`}
+                                    className="group block h-full rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
+                                    onClick={() => trackEvent('proof_evidence_click', { area: 'home_proof', title: proof.title, index })}
+                                >
+                                    <article className="h-full bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 space-y-4 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:border-cyan-200 dark:group-hover:border-cyan-500/40">
+                                        <h3 className="text-xl font-bold text-primary dark:text-cyan-400">{proof.title}</h3>
+                                        <div className="space-y-3 text-text-secondary dark:text-slate-300 text-sm">
+                                            <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Challenge:' : 'Πρόκληση:'}</span> {proof.challenge}</p>
+                                            <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Outcome:' : 'Αποτέλεσμα:'}</span> {proof.outcome}</p>
+                                            {proof.scopeNote ? (
+                                                <p className="text-xs text-slate-500 dark:text-slate-400">{proof.scopeNote}</p>
+                                            ) : null}
+                                        </div>
+                                    </article>
+                                </Link>
+                            ) : (
+                                <a
+                                    href={proof.evidenceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${proof.title}: ${proof.evidenceLabel}`}
+                                    className="group block h-full rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
+                                    onClick={() => trackEvent('proof_evidence_click', { area: 'home_proof', title: proof.title, index })}
+                                >
+                                    <article className="h-full bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 space-y-4 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:border-cyan-200 dark:group-hover:border-cyan-500/40">
+                                        <h3 className="text-xl font-bold text-primary dark:text-cyan-400">{proof.title}</h3>
+                                        <div className="space-y-3 text-text-secondary dark:text-slate-300 text-sm">
+                                            <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Challenge:' : 'Πρόκληση:'}</span> {proof.challenge}</p>
+                                            <p><span className="font-semibold text-text-primary dark:text-slate-100">{language === 'en' ? 'Outcome:' : 'Αποτέλεσμα:'}</span> {proof.outcome}</p>
+                                            {proof.scopeNote ? (
+                                                <p className="text-xs text-slate-500 dark:text-slate-400">{proof.scopeNote}</p>
+                                            ) : null}
+                                        </div>
+                                    </article>
+                                </a>
+                            )}
                         </li>
                     ))}
                 </ul>
             </section>
 
-            <section aria-label={home.featuredResearch.title} className="pb-4">
-                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-primary/10 dark:border-cyan-400/20 p-6 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-                    <div className="space-y-2 flex-1">
-                        <p className="text-sm uppercase tracking-wide text-primary dark:text-cyan-400 font-semibold">{home.featuredResearch.title}</p>
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">{home.featuredResearch.essayTitle}</h3>
-                        <p className="text-text-secondary dark:text-slate-300 max-w-2xl">{home.featuredResearch.essayDescription}</p>
-                    </div>
-                    <div className="whitespace-nowrap mt-2 md:mt-0">
-                        <a
-                            href={home.featuredResearch.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-primary text-white font-semibold py-2.5 px-6 rounded-lg text-sm hover:bg-primary/90 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-slate-900"
-                            onClick={() => trackEvent('cta_click', { area: 'home_featured_research', action: 'read_essay' })}
-                        >
-                            <span>{home.featuredResearch.readOnLabel}</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 };

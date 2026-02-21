@@ -15,6 +15,7 @@ import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import PortfolioItemPage from './pages/PortfolioItemPage';
 import AnalyticsPage from './pages/AnalyticsPage';
+import TrustPage from './pages/TrustPage';
 
 const AppContent: React.FC = () => {
   const { language, translations } = useLanguage();
@@ -63,6 +64,7 @@ const AppContent: React.FC = () => {
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/portfolio/:slug" element={<PortfolioItemPage />} />
+          <Route path="/trust" element={<TrustPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
@@ -76,15 +78,17 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   const routerBasename = React.useMemo(() => {
-    if (import.meta.env.DEV) {
-      return '/';
-    }
-
     const basePath = import.meta.env.BASE_URL || '/';
     if (basePath === '/') {
       return '/';
     }
-    return basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
+
+    const normalizedBase = basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
+    const currentPath = window.location.pathname;
+    const isBasePathActive = currentPath === normalizedBase || currentPath.startsWith(`${normalizedBase}/`);
+
+    // Support both project-path hosting (e.g. /peterlamb/) and domain-root hosting (/).
+    return isBasePathActive ? normalizedBase : '/';
   }, []);
 
   return (
