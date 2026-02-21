@@ -15,15 +15,15 @@ export const content: Record<'en' | 'gr', Content> = {
     home: {
       name: "Petros Lambropoulos",
       title: "Hardening AI prototypes into production systems.",
-      subtitle: "I design, evaluate, and scale agentic architectures and deep-tech infrastructure that survive real-world constraints.",
-      specialties: "Rigorous LLM evaluation, production agentic architectures, and compliance-first infrastructure.",
-      cta: "Schedule a systems review",
+      subtitle: "I help B2B product teams with AI features in beta or production make those systems reliable, measurable, and scalable.",
+      specialties: "AI strategy diagnostics, productionization sprints, and reliability systems for long-term scale.",
+      cta: "Book a discovery call",
       trustStripTitle: "Why teams trust me quickly",
       trustSignals: [
-        { label: "Production systems shipped", value: "Workable, NannyML, and regulated deep-tech initiatives" },
+        { label: "Production systems shipped", value: "Workable, NannyML, and enterprise AI/data platforms" },
         { label: "Independent evidence", value: "Public repos, CI traces, architecture docs, and research artifacts" },
         { label: "Delivery pace", value: "First architecture teardown delivered within 5 business days" },
-        { label: "Response promise", value: "Initial response within 24 hours on weekdays" },
+        { label: "Response promise", value: "Reply within 1-2 business days" },
       ],
       externalValidationTitle: "Independent Trust Signals",
       externalValidationIntro: "I do not publish client logos without written approval. Use these third-party channels to verify identity, timeline, and execution history.",
@@ -80,9 +80,9 @@ export const content: Record<'en' | 'gr', Content> = {
       ],
       servicesTitle: "Specialized Consulting",
       services: [
-        { title: "AI Systems Evaluation", description: "Rigorous testing and architectural auditing before your AI hits production.", slug: "ai-systems-evaluation" },
-        { title: "Production Agentic Architectures", description: "Integrating fragile AI prototypes into reliable software systems.", slug: "production-agentic-architectures" },
-        { title: "Deep-Tech Infrastructure", description: "Designing distributed backends for ML-monitoring and regulated industries.", slug: "deep-tech-infrastructure" },
+        { title: "AI Strategy & Risk Diagnostic", description: "Clarify where AI should create value, what can fail, and what to build in the next 90 days.", slug: "ai-strategy-risk-diagnostic" },
+        { title: "AI Productionization Sprint", description: "Turn promising prototypes into production workflows with guardrails, observability, and runbooks.", slug: "ai-productionization-sprint" },
+        { title: "AI Reliability & Scale", description: "Establish evaluation gates, monitoring, and incident playbooks that keep AI systems stable in production.", slug: "ai-reliability-scale" },
       ],
       credibility: "Experience includes production AI systems at Workable and NannyML, plus independent consulting engagements.",
       outcomesTitle: "Commercial Outcomes (Anonymized)",
@@ -150,7 +150,7 @@ export const content: Record<'en' | 'gr', Content> = {
       howIHelp: [
         "Rigorous testing, failure-mode analysis, and architectural auditing for AI systems before they hit production.",
         "Taking fragile AI prototypes and integrating them into hardened, reliable software systems that survive real-world scale.",
-        "Designing distributed backend systems and compliance-first infrastructure for crypto and highly regulated industries."
+        "Building reliability programs (evaluation gates, monitoring, incident playbooks) so AI systems stay dependable after launch."
       ],
       experienceTitle: "Experience",
       experience: [
@@ -158,6 +158,9 @@ export const content: Record<'en' | 'gr', Content> = {
         "Led generative AI discovery-to-launch cycles at Workable, translating prototypes into production features processing tens of thousands of resumes daily across a 0.5 billion-record corpus on EKS.",
         "Piloted ML monitoring prototypes with NannyML's EU founding team, shipping containerized Python microservices on Amazon EKS to secure enterprise B2B sales.",
         "Architected a PySpark + Elasticsearch platform at Encode S.A. processing 100K-user network datasets within a business day.",
+        "Senior Backend Engineer, Orfium (2020–2021): Led Django/PostgreSQL services for music-licensing operations and improved API observability.",
+        "Python Software Developer, Neuropublic (2014–2015): Built precision-agriculture Python services forecasting crop returns from environmental and nutritional data.",
+        "Intern Software Engineer, Skyscanner (2013): Maintained Python APIs and ingestion/scraping pipelines for travel data acquisition.",
       ],
       skillsTitle: "Technical Skills",
       skills: [
@@ -205,186 +208,177 @@ export const content: Record<'en' | 'gr', Content> = {
     },
     services: {
       title: "Services",
-      intro: "I design, evaluate, and harden AI architectures that scale. Choose the engagement that matches your engineering hurdles.",
+      intro: "I help B2B product teams with AI features in beta or production make better decisions, ship safely, and stay reliable at scale.",
       readCaseStudies: "Read Case Studies",
       backToServices: "Back to Services",
-      ctaTitle: "Need to audit your architecture?",
-      ctaDescription: "Book a 30-minute call to map your system constraints and evaluation gaps. You'll leave with a clear next-step engineering checklist.",
-      ctaButton: "Schedule a systems review",
+      ctaTitle: "Need clarity before your next AI release?",
+      ctaDescription: "Book a 30-minute discovery call to identify your highest-risk assumptions, select the right engagement, and define concrete next steps.",
+      ctaButton: "Book a discovery call",
       categories: [
         {
-          title: "AI Systems Evaluation & Auditing",
-          slug: "ai-systems-evaluation",
-          intro: "I don't just build wrappers; I tear models apart. Rigorous testing, failure-mode analysis, and architectural auditing for AI systems before they hit production.",
-          businessProse: `Before you scale an AI feature to millions of users or rely on it for protocol security, you need to know exactly how and when it breaks. 
+          title: "AI Strategy & Risk Diagnostic",
+          slug: "ai-strategy-risk-diagnostic",
+          intro: "A short strategy-first engagement for teams deciding what to build, what to delay, and where technical risk is hiding.",
+          businessProse: `Before you scale an AI feature, align product priorities with engineering reality.
 
-### Audit Methodology
-*   **Failure-Mode Analysis:** Stress-testing prompts, context windows, and retrieval layers against adversarial or edge-case data.
-*   **Evaluation Pipelines:** Building automated benchmarking systems (like LLM-as-a-judge or semantic similarity) tailored to your specific domain.
-*   **Architecture Review:** Assessing your RAG, agentic loop, or workflow design for bottlenecks, hallucinations risks, and cost-inefficiency.
-
-### Deliverables
-*   Comprehensive audit report detailing vulnerabilities and architectural flaws.
-*   Custom evaluation suite integrated into your CI/CD.
-*   Actionable remediation roadmap outlining specific code and prompt adjustments.
-
-### Typical Engagements
-*   Protocol validation for deep-tech grants.
-*   Pre-launch stress testing for enterprise generative AI features.`,
-          items: [
-            "Best for teams that have a working AI prototype but need to guarantee reliability before launch.",
-            "Timeline: 2–4 weeks depending on system complexity.",
-            "Deliverables: Audit report, custom evaluation pipelines, remediation roadmap.",
-            "Investment: Starting at €4K."
-          ],
-          caseStudies: [
-            {
-              company: "Ethereum Foundation (RFP PoC)",
-              challenge: "Verify protocol obligations against execution clients using LLMs to enhance protocol security.",
-              solution: [
-                "Built 'Ethereum Protocol Verification', an LLM-powered traceability pipeline for a grant proposal.",
-                "Orchestrated multi-stage evaluations validating protocol specifications against go-ethereum implementations."
-              ],
-              technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
-            },
-            {
-              company: "Transformer Architecture Research",
-              challenge: "Understand the theoretical scaling factors and mechanisms that make Transformer models dominant.",
-              solution: [
-                "Conducted deep-dive research into the Transformer Attractor and the hardware friction map.",
-                "Published findings on why alternative architectures struggle against transformer scale-dependence."
-              ],
-              technologies: ["Transformers", "Mechanistic Interpretability", "Hardware Co-Evolution"]
-            }
-          ],
-          engagementTitle: "Plan your Systems Audit",
-          engagementDescription: "Book a 30-minute call to discuss your current architecture, known pain points, and evaluation goals.",
-          engagementChecklistTitle: "Bring to the call:",
-          engagementChecklist: [
-            "Architecture diagrams or descriptions of your current AI workflows.",
-            "Examples of failures or hallucinations you are currently experiencing.",
-            "Access to sample datasets or current evaluation metrics."
-          ],
-          engagementCtaLabel: "Book the audit call"
-        },
-        {
-          title: "Production Agentic Architectures",
-          slug: "production-agentic-architectures",
-          intro: "Taking fragile AI prototypes and integrating them into hardened, reliable software systems that survive real-world scale and compliance.",
-          businessProse: `A Jupyter Notebook proof-of-concept is not a product. I specialize in the difficult engineering work required to turn isolated AI scripts into resilient, scalable, and observable microservices.
-
-### Engineering Approach
-*   **Agentic Orchestration:** Designing robust state machines and routing logic for multi-agent systems.
-*   **Data & State Management:** Implementing reliable memory, context retrieval (RAG at scale), and transaction handling.
-*   **Observability & Guardrails:** Wiring in tracing (e.g., LangSmith), fallback mechanisms, and strict output parsing to prevent catastrophic failures.
+### What I do
+*   **Use-Case Prioritization:** Rank opportunities by business value, implementation complexity, and operational risk.
+*   **Risk Mapping:** Identify failure modes across prompts, retrieval, integrations, and human handoff points.
+*   **Architecture Direction:** Define a practical target architecture with explicit trade-offs for speed, quality, and cost.
 
 ### Deliverables
-*   Production-grade, containerized microservices ready for Kubernetes deployment.
-*   Complete observability dashboards and alerting rules.
-*   Runbooks for the engineering team detailing maintenance and deployment procedures.
+*   1-page executive brief with prioritized opportunities and risks.
+*   Technical risk map with mitigation options.
+*   90-day execution plan with milestones and ownership guidance.
 
 ### Typical Engagements
-*   Transitioning GenAI MVP to enterprise scale.
-*   Building autonomous agents for specific workflow automation.`,
+*   Teams preparing their first production AI release.
+*   Teams with multiple AI initiatives but limited engineering capacity.`,
           items: [
-            "Best for scale-ups and enterprises moving AI from the lab to production.",
-            "Timeline: 1–3 months depending on integration depth.",
-            "Deliverables: Production microservices, observability setup, runbooks.",
-            "Investment: €8K–€20K."
+            "Best for B2B teams with AI features in planning, beta, or early production.",
+            "Timeline: 1-2 weeks.",
+            "Deliverables: Prioritized use-case map, risk diagnostic, 90-day execution plan.",
+            "Investment: Starting at €2.5K."
           ],
           caseStudies: [
-            {
-              company: "RepoReviver (Independent AI Initiative)",
-              challenge: "Build a reliable agent workflow that can inspect stale repositories, apply fixes safely, and produce reviewable pull requests.",
-              solution: [
-                "Designed a codespace-first agent workflow with explicit lifecycle steps (create environment, run fixes, verify, open PR, cleanup).",
-                "Implemented guardrails around execution isolation and reproducible automation runs."
-              ],
-              technologies: ["Python", "Google ADK", "GitHub Codespaces", "Agentic Systems"]
-            },
             {
               company: "Workable",
-              challenge: "Scale generative AI hiring features across a massive, live user base.",
+              challenge: "Decide which generative AI workflows should move from PoC to production without creating delivery risk.",
               solution: [
-                "Transitioned proofs of concept (resume parsing, job post generation) into hardened microservices.",
-                "Deployed via AWS EKS, handling tens of thousands of requests daily across a 0.5 billion-record corpus."
+                "Launched first-wave GenAI proofs of concept and presented trade-offs company-wide to secure executive alignment.",
+                "Defined a practical path from experimentation to production features with explicit evaluation expectations."
               ],
-              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
+              technologies: ["Product Discovery", "LLM Evaluation", "Stakeholder Alignment"]
+            },
+            {
+              company: "dikaio.ai",
+              challenge: "Shape a legal-tech AI direction that balanced speed-to-demo with answer reliability.",
+              solution: [
+                "Defined a practical RAG blueprint for Greek legal content with traceability and grounding constraints.",
+                "Helped the team ship a working AI lawyer demo as the baseline for product iteration."
+              ],
+              technologies: ["RAG Strategy", "OpenAI APIs", "Product Scoping"]
             }
           ],
-          engagementTitle: "Kick off your Architecture Build",
-          engagementDescription: "Use a 30-minute call to map the integration points, scale requirements, and current prototype status.",
-          engagementChecklistTitle: "Have ready:",
+          engagementTitle: "Start with a Strategy Diagnostic",
+          engagementDescription: "Use a 30-minute discovery call to align on business goals, risk tolerance, and the next 90 days.",
+          engagementChecklistTitle: "Bring to the call:",
           engagementChecklist: [
-            "Your existing prototype code or notebooks.",
-            "Expected scale (QPS, data volume) and latency requirements.",
-            "Details on your existing cloud infrastructure (AWS/GCP, K8s, etc.)."
+            "Your current product roadmap and top business KPIs.",
+            "Existing AI use cases (live or planned) and known blockers.",
+            "Hard constraints such as latency, legal requirements, budget, or staffing."
           ],
-          engagementCtaLabel: "Schedule the build call"
+          engagementCtaLabel: "Book a discovery call"
         },
         {
-          title: "Deep-Tech & Compliance Infrastructure",
-          slug: "deep-tech-infrastructure",
-          intro: "Designing distributed backend systems and compliance-first infrastructure for crypto, ML-monitoring, and highly regulated industries.",
-          businessProse: `Highly regulated industries (FinTech, Crypto, Healthcare) require backends that are built fundamentally differently. Security, auditability, and massive data throughput must be designed in from day one.
+          title: "AI Productionization Sprint",
+          slug: "ai-productionization-sprint",
+          intro: "Turn fragile prototypes into production-ready AI workflows with guardrails, observability, and clear ownership.",
+          businessProse: `A notebook demo rarely survives real traffic. This sprint focuses on making AI workflows reliable under production pressure.
 
-### Infrastructure Design
-*   **Distributed Systems:** Architecting event-driven data pipelines capable of ingesting and analyzing terabytes of data.
-*   **Compliance-First:** Embedding regulatory constraints (GDPR, financial regulations) directly into the database architecture and access patterns.
-*   **Resilience Engineering:** Designing systems that degrade gracefully under extreme load or targeted attacks.
+### What I do
+*   **Workflow Hardening:** Refactor prototypes into production services and deterministic orchestration paths.
+*   **Guardrails & Fallbacks:** Add output validation, retry/fallback logic, and safe degradation patterns.
+*   **Operational Readiness:** Instrument tracing, alerts, and runbooks so your team can operate confidently.
 
 ### Deliverables
-*   Scalable backend services (Python, Go, or Rust depending on requirements).
-*   High-throughput data ingestion and processing pipelines (Kafka, Spark).
-*   Infrastructure as Code (Terraform) and deployment automation.
+*   Production-ready service architecture and rollout plan.
+*   Observability setup for key AI workflow health metrics.
+*   Operating runbooks for incident response and maintenance.
 
 ### Typical Engagements
-*   Building the data plane for ML observability platforms.
-*   Architecting tokenization and trading platforms.`,
+*   MVP-to-production transitions for user-facing AI features.
+*   Teams that need structured hardening before wider rollout.`,
           items: [
-            "Best for deep-tech startups handling sensitive data or high-throughput analytics.",
-            "Timeline: 2–4 months minimum for foundational architecture.",
-            "Deliverables: Distributed backend services, data pipelines, IaC.",
-            "Investment: Retainer or project-based starting at €15K."
+            "Best for teams with an AI prototype already delivering partial value.",
+            "Timeline: 6-12 weeks depending on integration depth.",
+            "Deliverables: Productionization plan, hardened workflows, observability, runbooks.",
+            "Investment: €8K-€25K."
           ],
           caseStudies: [
             {
-              company: "CNO (Hedera)",
-              challenge: "Architect the core infrastructure for a tokenization and trading platform.",
+              company: "Workable",
+              challenge: "Scale generative AI hiring features across a large, live product with reliability constraints.",
               solution: [
-                "Designed compliance-first infrastructure specifically tailored for the Hedera network.",
-                "Ensured high-throughput, secure transaction processing for cno.zone."
+                "Transitioned PoCs (resume parsing, job post generation) into hardened microservices.",
+                "Deployed on AWS EKS to support tens of thousands of daily requests across a 0.5 billion-record corpus."
               ],
-              technologies: ["Distributed Systems", "Crypto Infrastructure", "Hedera"]
+              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
             },
             {
               company: "NannyML",
-              challenge: "Build the foundational data infrastructure for an enterprise ML monitoring SaaS.",
+              challenge: "Operationalize ML monitoring workflows for enterprise customers while the product matured.",
               solution: [
-                "Piloted ML monitoring prototypes with the EU founding team.",
-                "Shipped containerized Python microservices on Amazon EKS, enabling the team to secure their first B2B deals."
+                "Shipped containerized Python microservices on Amazon EKS for production deployment reliability.",
+                "Helped establish delivery practices that supported early enterprise B2B wins."
               ],
               technologies: ["Python", "Amazon EKS", "MLOps", "Data Engineering"]
+            }
+          ],
+          engagementTitle: "Plan your Productionization Sprint",
+          engagementDescription: "Use a discovery call to map integration points, reliability targets, and rollout scope.",
+          engagementChecklistTitle: "Have ready:",
+          engagementChecklist: [
+            "Prototype architecture (or code/notebook overview).",
+            "Expected usage, latency targets, and failure impact.",
+            "Current infrastructure constraints and engineering ownership."
+          ],
+          engagementCtaLabel: "Book a discovery call"
+        },
+        {
+          title: "AI Reliability & Scale",
+          slug: "ai-reliability-scale",
+          intro: "Build the operating system around your AI: evaluation gates, monitoring, and incident playbooks that protect production.",
+          businessProse: `Shipping once is not enough. Reliable AI products need a repeatable system for quality control and incident response.
+
+### What I do
+*   **Evaluation Operations:** Design continuous evaluation workflows tied to business KPIs and risk thresholds.
+*   **Monitoring & Alerting:** Track output quality, drift signals, and operational health in one operating view.
+*   **Reliability Process:** Define incident response, rollback criteria, and post-incident learning loops.
+
+### Deliverables
+*   CI/CD evaluation gates with release criteria.
+*   Monitoring dashboards and alert rules for critical AI paths.
+*   Reliability playbook covering triage, escalation, and recovery.
+
+### Typical Engagements
+*   Teams with AI already in production and recurring quality incidents.
+*   Organizations moving from ad-hoc fixes to repeatable operational discipline.`,
+          items: [
+            "Best for teams with production AI features and recurring quality/reliability incidents.",
+            "Timeline: Initial setup in 4-8 weeks, then optional monthly support.",
+            "Deliverables: Eval gates, monitoring, incident playbooks, reliability KPIs.",
+            "Investment: Project-based starting at €6K or monthly retainer."
+          ],
+          caseStudies: [
+            {
+              company: "NannyML",
+              challenge: "Build a dependable monitoring foundation that product and engineering could operate continuously.",
+              solution: [
+                "Piloted monitoring prototypes and translated research workflows into operable product paths.",
+                "Delivered containerized services and deployment patterns that improved reliability for enterprise onboarding."
+              ],
+              technologies: ["Python", "Amazon EKS", "Monitoring", "Reliability Engineering"]
             },
             {
               company: "Encode S.A.",
-              challenge: "Process terabytes of network log data daily for near real-time intrusion detection.",
+              challenge: "Keep high-volume security data processing dependable under daily operational pressure.",
               solution: [
-                "Architected a PySpark and Elasticsearch platform.",
-                "Optimized the pipeline to process 100K-user network datasets within a single business day."
+                "Architected a PySpark + Elasticsearch platform for 100K-user network datasets within one business day.",
+                "Optimized ingestion throughput from 1K to 10K users while reducing recurring bottlenecks."
               ],
-              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Analytics"]
+              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Engineering"]
             }
           ],
-          engagementTitle: "Discuss your Infrastructure Needs",
-          engagementDescription: "Use a 30-minute session to discuss your throughput, compliance, and deployment requirements.",
+          engagementTitle: "Strengthen Reliability & Scale",
+          engagementDescription: "Use a discovery call to identify recurring failures and design the reliability system your team needs next.",
           engagementChecklistTitle: "Bring to the call:",
           engagementChecklist: [
-            "Data volume and velocity estimates.",
-            "Specific regulatory frameworks you must adhere to.",
-            "Current bottlenecks in your existing architecture (if applicable)."
+            "Recent incidents or recurring failure patterns.",
+            "Current metrics and dashboards (if any).",
+            "Target service levels, response expectations, and team ownership."
           ],
-          engagementCtaLabel: "Schedule the infrastructure call"
+          engagementCtaLabel: "Book a discovery call"
         }
       ],
     },
@@ -533,7 +527,7 @@ Designed and documented the core architecture for a regulated digital asset (RWA
       linkedin: "LinkedIn",
       github: "GitHub",
       scheduleTitle: "Prefer to jump straight to a call?",
-      scheduleDescription: "Reserve a 30-minute discovery session to align on goals, scope, and timelines. You’ll get follow-up notes and next steps within 48 hours.",
+      scheduleDescription: "Reserve a 30-minute discovery session to align on goals, scope, and timelines. You’ll get follow-up notes and next steps within 1-2 business days.",
       scheduleButton: "Schedule a discovery call",
       scheduleFallback: "No visible slots in the calendar widget? Email me directly and I will open priority scheduling windows.",
       priorityEmailLabel: "Email for priority scheduling",
@@ -650,15 +644,15 @@ Hosting / infrastructure:
     home: {
       name: "Πέτρος Λαμπρόπουλος",
       title: "Μετατρέπω AI prototypes σε παραγωγικά συστήματα.",
-      subtitle: "Σχεδιάζω, αξιολογώ και κλιμακώνω agentic αρχιτεκτονικές και deep-tech υποδομές που αντέχουν σε πραγματικές συνθήκες.",
-      specialties: "Αυστηρή αξιολόγηση LLM, παραγωγικές agentic αρχιτεκτονικές και υποδομές με γνώμονα τη συμμόρφωση (compliance-first).",
-      cta: "Κλείσε μια ανασκόπηση συστήματος",
+      subtitle: "Βοηθώ B2B product ομάδες με AI features σε beta ή production να τα κάνουν αξιόπιστα, μετρήσιμα και κλιμακώσιμα.",
+      specialties: "AI strategy diagnostics, productionization sprints και reliability συστήματα για μακροχρόνια κλίμακα.",
+      cta: "Κλείσε discovery call",
       trustStripTitle: "Γιατί με εμπιστεύονται γρήγορα ομάδες",
       trustSignals: [
-        { label: "Συστήματα σε παραγωγή", value: "Workable, NannyML και ρυθμιζόμενα deep-tech έργα" },
+        { label: "Συστήματα σε παραγωγή", value: "Workable, NannyML και enterprise AI/data πλατφόρμες" },
         { label: "Ανεξάρτητα αποδεικτικά", value: "Δημόσια repos, CI traces, αρχιτεκτονικά docs και έρευνα" },
         { label: "Ταχύτητα παράδοσης", value: "Πρώτο architecture teardown σε έως 5 εργάσιμες ημέρες" },
-        { label: "Υπόσχεση απόκρισης", value: "Πρώτη απάντηση εντός 24 ωρών τις εργάσιμες" },
+        { label: "Υπόσχεση απόκρισης", value: "Απάντηση εντός 1-2 εργάσιμων ημερών" },
       ],
       externalValidationTitle: "Ανεξάρτητα Σήματα Εμπιστοσύνης",
       externalValidationIntro: "Δεν δημοσιεύω λογότυπα πελατών χωρίς γραπτή έγκριση. Χρησιμοποίησε αυτά τα third-party κανάλια για επαλήθευση ταυτότητας, timeline και ιστορικού εκτέλεσης.",
@@ -715,9 +709,9 @@ Hosting / infrastructure:
       ],
       servicesTitle: "Εξειδικευμένη Συμβουλευτική",
       services: [
-        { title: "Αξιολόγηση Συστημάτων AI", description: "Αυστηρές δοκιμές και αρχιτεκτονικός έλεγχος πριν το AI σας βγει στην παραγωγή.", slug: "ai-systems-evaluation" },
-        { title: "Παραγωγικές Agentic Αρχιτεκτονικές", description: "Ενσωμάτωση εύθραυστων AI prototypes σε αξιόπιστα συστήματα λογισμικού.", slug: "production-agentic-architectures" },
-        { title: "Deep-Tech Υποδομές", description: "Σχεδιασμός κατανεμημένων backends για ML-monitoring και ρυθμιζόμενους κλάδους.", slug: "deep-tech-infrastructure" },
+        { title: "AI Strategy & Risk Diagnostic", description: "Ξεκαθαρίζει πού πρέπει να δώσει αξία το AI, ποιοι είναι οι βασικοί κίνδυνοι και τι να υλοποιήσετε στις επόμενες 90 ημέρες.", slug: "ai-strategy-risk-diagnostic" },
+        { title: "AI Productionization Sprint", description: "Μετατρέπει υποσχόμενα prototypes σε production workflows με guardrails, observability και runbooks.", slug: "ai-productionization-sprint" },
+        { title: "AI Reliability & Scale", description: "Θέτει evaluation gates, monitoring και incident playbooks ώστε τα AI συστήματα να παραμένουν σταθερά στην παραγωγή.", slug: "ai-reliability-scale" },
       ],
       credibility: "Εμπειρία σε παραγωγικά AI συστήματα στη Workable και τη NannyML, καθώς και σε ανεξάρτητα συμβουλευτικά engagements.",
       outcomesTitle: "Εμπορικά Αποτελέσματα (Ανωνυμοποιημένα)",
@@ -785,7 +779,7 @@ Hosting / infrastructure:
       howIHelp: [
         "Αυστηρές δοκιμές, ανάλυση τρόπων αστοχίας (failure-mode) και αρχιτεκτονικός έλεγχος για συστήματα AI πριν βγουν στην παραγωγή.",
         "Μετατροπή εύθραυστων AI prototypes σε θωρακισμένα, αξιόπιστα συστήματα λογισμικού που αντέχουν σε συνθήκες μεγάλης κλίμακας.",
-        "Σχεδιασμός κατανεμημένων backend συστημάτων και compliance-first υποδομών για crypto και αυστηρά ρυθμιζόμενους κλάδους."
+        "Σχεδιασμός reliability προγραμμάτων (evaluation gates, monitoring, incident playbooks) ώστε τα AI συστήματα να παραμένουν αξιόπιστα μετά το launch."
       ],
       experienceTitle: "Εμπειρία",
       experience: [
@@ -793,6 +787,9 @@ Hosting / infrastructure:
         "Ηγήθηκα κύκλων generative AI discovery-to-launch στην Workable, μετατρέποντας prototypes σε παραγωγικά χαρακτηριστικά (επεξεργασία δεκάδων χιλιάδων βιογραφικών ημερησίως) σε corpus 0.5 δισ. εγγραφών στο EKS.",
         "Υλοποίησα ML monitoring prototypes με την ιδρυτική ομάδα της NannyML στην ΕΕ, παραδίδοντας containerized Python microservices στο Amazon EKS για να κλείσουν τα πρώτα B2B deals.",
         "Αρχιτεκτόνησα μια PySpark + Elasticsearch πλατφόρμα στην Encode S.A. που επεξεργαζόταν δεδομένα δικτύου 100.000 χρηστών μέσα σε μία εργάσιμη ημέρα.",
+        "Senior Backend Engineer, Orfium (2020–2021): Ηγήθηκα Django/PostgreSQL υπηρεσιών για music-licensing λειτουργίες και βελτίωσα API observability.",
+        "Python Software Developer, Neuropublic (2014–2015): Ανέπτυξα Python υπηρεσίες precision-agriculture για πρόβλεψη αποδόσεων καλλιεργειών από περιβαλλοντικά δεδομένα.",
+        "Intern Software Engineer, Skyscanner (2013): Συντήρησα Python APIs και pipelines συλλογής/ingestion δεδομένων ταξιδιών.",
       ],
       skillsTitle: "Τεχνικές Δεξιότητες",
       skills: [
@@ -840,186 +837,177 @@ Hosting / infrastructure:
     },
     services: {
       title: "Υπηρεσίες",
-      intro: "Σχεδιάζω, αξιολογώ και θωρακίζω AI αρχιτεκτονικές που κλιμακώνονται. Διάλεξε το engagement που ταιριάζει στις τεχνικές σου προκλήσεις.",
+      intro: "Βοηθώ B2B product ομάδες με AI features σε beta ή production να παίρνουν καλύτερες αποφάσεις, να κάνουν ασφαλές shipping και να διατηρούν αξιοπιστία σε κλίμακα.",
       readCaseStudies: "Δείτε τα Case Studies",
       backToServices: "Επιστροφή στις Υπηρεσίες",
-      ctaTitle: "Χρειάζεστε έλεγχο της αρχιτεκτονικής σας;",
-      ctaDescription: "Κλείσε ένα 30λεπτο call για να χαρτογραφήσουμε τους περιορισμούς του συστήματός σας και τα κενά αξιολόγησης. Θα φύγεις με μια ξεκάθαρη λίστα επόμενων μηχανικών βημάτων.",
-      ctaButton: "Κλείσε μια ανασκόπηση συστήματος",
+      ctaTitle: "Χρειάζεστε καθαρό πλάνο πριν το επόμενο AI release;",
+      ctaDescription: "Κλείσε ένα 30λεπτο discovery call για να εντοπίσουμε τις πιο κρίσιμες υποθέσεις ρίσκου, το σωστό engagement και τα επόμενα πρακτικά βήματα.",
+      ctaButton: "Κλείσε discovery call",
       categories: [
         {
-          title: "Αξιολόγηση και Έλεγχος Συστημάτων AI",
-          slug: "ai-systems-evaluation",
-          intro: "Δεν χτίζω απλά wrappers· αποδομώ τα μοντέλα. Αυστηρές δοκιμές, ανάλυση τρόπων αστοχίας και αρχιτεκτονικός έλεγχος για AI συστήματα πριν βγουν στην παραγωγή.",
-          businessProse: `Πριν κλιμακώσετε ένα χαρακτηριστικό AI σε εκατομμύρια χρήστες ή βασιστείτε σε αυτό για την ασφάλεια ενός πρωτοκόλλου, πρέπει να γνωρίζετε ακριβώς πώς και πότε καταρρέει.
+          title: "AI Strategy & Risk Diagnostic",
+          slug: "ai-strategy-risk-diagnostic",
+          intro: "Σύντομο strategy-first engagement για ομάδες που πρέπει να αποφασίσουν τι να υλοποιήσουν τώρα, τι να καθυστερήσουν και πού κρύβεται τεχνικό ρίσκο.",
+          businessProse: `Πριν κλιμακώσετε ένα AI feature, χρειάζεται ευθυγράμμιση product προτεραιοτήτων με μηχανική πραγματικότητα.
 
-### Μεθοδολογία Ελέγχου
-*   **Ανάλυση Τρόπων Αστοχίας (Failure-Mode Analysis):** Δοκιμές πίεσης (stress-testing) σε prompts, context windows και επίπεδα ανάκτησης (retrieval) απέναντι σε εχθρικά ή ακραία δεδομένα (edge-cases).
-*   **Πιπελίνες Αξιολόγησης:** Δημιουργία αυτοματοποιημένων συστημάτων συγκριτικής αξιολόγησης (π.χ. LLM-ως-κριτής ή σημασιολογική ομοιότητα) προσαρμοσμένα στον τομέα σας.
-*   **Αρχιτεκτονική Ανασκόπηση:** Αξιολόγηση του RAG, του agentic loop ή του workflow σας για σημεία συμφόρησης, κινδύνους ψευδαισθήσεων (hallucinations) και κόστος.
-
-### Παραδοτέα
-*   Ολοκληρωμένη έκθεση ελέγχου που αναλύει ευπάθειες και αρχιτεκτονικά ελαττώματα.
-*   Προσαρμοσμένη σουίτα αξιολόγησης ενσωματωμένη στο CI/CD σας.
-*   Εφαρμόσιμο σχέδιο αποκατάστασης (remediation roadmap) που περιγράφει συγκεκριμένες προσαρμογές σε κώδικα και prompts.
-
-### Τυπικές Συνεργασίες
-*   Επικύρωση πρωτοκόλλων για deep-tech επιχορηγήσεις.
-*   Δοκιμή πίεσης πριν από την κυκλοφορία για εταιρικά χαρακτηριστικά generative AI.`,
-          items: [
-            "Ιδανικό για ομάδες που έχουν ένα λειτουργικό AI prototype αλλά χρειάζεται να εγγυηθούν την αξιοπιστία πριν το λανσάρισμα.",
-            "Χρονοδιάγραμμα: 2–4 εβδομάδες ανάλογα με την πολυπλοκότητα του συστήματος.",
-            "Παραδοτέα: Έκθεση ελέγχου, προσαρμοσμένα pipelines αξιολόγησης, roadmap αποκατάστασης.",
-            "Επένδυση: Ξεκινάει από €4K."
-          ],
-          caseStudies: [
-            {
-              company: "Ethereum Foundation (RFP PoC)",
-              challenge: "Επαλήθευση των υποχρεώσεων του πρωτοκόλλου έναντι των execution clients χρησιμοποιώντας LLMs για ενίσχυση της ασφάλειας.",
-              solution: [
-                "Κατασκεύασα το 'Ethereum Protocol Verification', ένα pipeline ιχνηλασιμότητας στο πλαίσιο πρότασης έργου.",
-                "Ορχήστρωσα αξιολογήσεις πολλαπλών σταδίων που επικύρωναν τις προδιαγραφές του πρωτοκόλλου έναντι υλοποιήσεων του go-ethereum."
-              ],
-              technologies: ["Python", "Claude 3.5 Sonnet", "LLM Evaluation", "Protocol Security"]
-            },
-            {
-              company: "Transformer Architecture Research",
-              challenge: "Κατανόηση των θεωρητικών παραγόντων κλιμάκωσης και των εσωτερικών μηχανισμών που καθιστούν κυρίαρχα τα μοντέλα Transformer.",
-              solution: [
-                "Διεξήγαγα ενδελεχή έρευνα πάνω στο Transformer Attractor και το hardware friction map.",
-                "Δημοσίευσα ευρήματα για το γιατί οι εναλλακτικές αρχιτεκτονικές δυσκολεύονται απέναντι στην κλιμάκωση (scale-dependence) του Transformer."
-              ],
-              technologies: ["Transformers", "Mechanistic Interpretability", "Hardware Co-Evolution"]
-            }
-          ],
-          engagementTitle: "Σχεδιάστε τον Έλεγχο Συστήματος σας",
-          engagementDescription: "Κλείστε ένα 30λεπτο call για να συζητήσουμε την τρέχουσα αρχιτεκτονική σας, τα γνωστά προβλήματα και τους στόχους αξιολόγησης.",
-          engagementChecklistTitle: "Φέρτε στο call:",
-          engagementChecklist: [
-            "Διαγράμματα αρχιτεκτονικής ή περιγραφές των τρεχόντων workflows AI.",
-            "Παραδείγματα αστοχιών ή ψευδαισθήσεων που αντιμετωπίζετε αυτή τη στιγμή.",
-            "Πρόσβαση σε δείγματα δεδομένων ή τρέχουσες μετρικές αξιολόγησης."
-          ],
-          engagementCtaLabel: "Κλείσε το call αξιολόγησης"
-        },
-        {
-          title: "Παραγωγικές Agentic Αρχιτεκτονικές",
-          slug: "production-agentic-architectures",
-          intro: "Μετατροπή εύθραυστων AI prototypes σε θωρακισμένα, αξιόπιστα συστήματα λογισμικού που αντέχουν σε πραγματική κλίμακα και κανονισμούς.",
-          businessProse: `Ενα proof-of-concept σε Jupyter Notebook δεν είναι προϊόν. Εξειδικεύομαι στη δύσκολη μηχανική δουλειά που απαιτείται για να μετατραπούν απομονωμένα AI scripts σε ανθεκτικά, κλιμακώσιμα και παρατηρήσιμα microservices.
-
-### Προσέγγιση Μηχανικής (Engineering Approach)
-*   **Ορχήστρωση Agents:** Σχεδιασμός στιβαρών μηχανών κατάστασης (state machines) και λογικής δρομολόγησης (routing) για multi-agent συστήματα.
-*   **Διαχείριση Δεδομένων & Κατάστασης:** Υλοποίηση αξιόπιστης μνήμης, ανάκτησης πλαισίου (RAG at scale) και διαχείρισης συναλλαγών.
-*   **Παρατηρησιμότητα & Guardrails:** Ενσωμάτωση ιχνηλάτησης (π.χ. LangSmith), μηχανισμών fallback και αυστηρής ανάλυσης εξόδου για την πρόληψη καταστροφικών σφαλμάτων.
+### Τι κάνω
+*   **Προτεραιοποίηση Use Cases:** Κατάταξη ευκαιριών με βάση επιχειρηματική αξία, πολυπλοκότητα υλοποίησης και λειτουργικό ρίσκο.
+*   **Χαρτογράφηση Ρίσκου:** Εντοπισμός failure modes σε prompts, retrieval, integrations και human handoff σημεία.
+*   **Κατεύθυνση Αρχιτεκτονικής:** Ορισμός πρακτικής target αρχιτεκτονικής με σαφή trade-offs σε ταχύτητα, ποιότητα και κόστος.
 
 ### Παραδοτέα
-*   Παραγωγικά, containerized microservices έτοιμα για ανάπτυξη σε Kubernetes.
-*   Πλήρη dashboards παρατηρησιμότητας και κανόνες ειδοποίησης (alerting).
-*   Runbooks για την ομάδα μηχανικών που περιγράφουν λεπτομερώς τις διαδικασίες συντήρησης και ανάπτυξης.
+*   1-page executive brief με προτεραιοποιημένες ευκαιρίες και ρίσκα.
+*   Τεχνικός χάρτης ρίσκου με επιλογές mitigation.
+*   Πλάνο 90 ημερών με milestones και προτεινόμενη ιδιοκτησία.
 
 ### Τυπικές Συνεργασίες
-*   Μετάβαση ενός GenAI MVP σε enterprise κλίμακα.
-*   Δημιουργία αυτόνομων agents για συγκεκριμένους αυτοματισμούς ροών εργασίας.`,
+*   Ομάδες που ετοιμάζουν το πρώτο production AI release.
+*   Ομάδες με πολλά AI initiatives αλλά περιορισμένη engineering χωρητικότητα.`,
           items: [
-            "Ιδανικό για scale-ups και enterprises που μεταφέρουν το AI από το εργαστήριο στην παραγωγή.",
-            "Χρονοδιάγραμμα: 1–3 μήνες ανάλογα με το βάθος ενσωμάτωσης.",
-            "Παραδοτέα: Παραγωγικά microservices, setup παρατηρησιμότητας, runbooks.",
-            "Επένδυση: €8K–€20K."
+            "Ιδανικό για B2B ομάδες με AI features σε planning, beta ή early production.",
+            "Χρονοδιάγραμμα: 1-2 εβδομάδες.",
+            "Παραδοτέα: Προτεραιοποίηση use cases, risk diagnostic, πλάνο εκτέλεσης 90 ημερών.",
+            "Επένδυση: Ξεκινάει από €2.5K."
           ],
           caseStudies: [
-            {
-              company: "RepoReviver (Ανεξάρτητη Πρωτοβουλία AI)",
-              challenge: "Δημιουργία αξιόπιστου agent workflow που ελέγχει παλιά repositories, εφαρμόζει διορθώσεις με ασφάλεια και παράγει ελέγξιμα pull requests.",
-              solution: [
-                "Σχεδίασα codespace-first agent workflow με σαφή βήματα κύκλου ζωής (δημιουργία περιβάλλοντος, διορθώσεις, επαλήθευση, PR, καθαρισμός).",
-                "Εφάρμοσα guardrails για isolation της εκτέλεσης και επαναλήψιμα automation runs."
-              ],
-              technologies: ["Python", "Google ADK", "GitHub Codespaces", "Agentic Systems"]
-            },
             {
               company: "Workable",
-              challenge: "Κλιμάκωση χαρακτηριστικών generative AI σε μια τεράστια, ζωντανή βάση χρηστών.",
+              challenge: "Να αποφασιστεί ποια generative AI workflows πρέπει να περάσουν από PoC σε production χωρίς delivery ρίσκο.",
               solution: [
-                "Μετέφερα proofs of concept (ανάλυση βιογραφικών, δημιουργία αγγελιών) σε θωρακισμένα microservices.",
-                "Ανάπτυξη (deployment) μέσω AWS EKS, διαχειριζόμενος δεκάδες χιλιάδες αιτήματα ημερησίως σε ένα corpus 0.5 δισ. εγγραφών."
+                "Παρέδωσα πρώτο κύμα GenAI proofs of concept και παρουσίασα trade-offs σε επίπεδο εταιρείας για executive alignment.",
+                "Όρισα πρακτική διαδρομή από experimentation σε production features με ξεκάθαρες απαιτήσεις αξιολόγησης."
               ],
-              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
+              technologies: ["Product Discovery", "LLM Evaluation", "Stakeholder Alignment"]
+            },
+            {
+              company: "dikaio.ai",
+              challenge: "Να διαμορφωθεί legal-tech AI κατεύθυνση που ισορροπεί speed-to-demo και αξιοπιστία απαντήσεων.",
+              solution: [
+                "Σχεδίασα πρακτικό RAG blueprint για ελληνικό νομικό περιεχόμενο με σαφή grounding constraints.",
+                "Βοήθησα την ομάδα να παραδώσει λειτουργικό AI lawyer demo ως baseline για την επόμενη iteration."
+              ],
+              technologies: ["RAG Strategy", "OpenAI APIs", "Product Scoping"]
             }
           ],
-          engagementTitle: "Ξεκινήστε την Ανάπτυξη του Συστήματος",
-          engagementDescription: "Χρησιμοποιήστε ένα 30λεπτο call για να χαρτογραφήσουμε τα σημεία ενσωμάτωσης, τις απαιτήσεις κλίμακας και την τρέχουσα κατάσταση του prototype σας.",
-          engagementChecklistTitle: "Έχετε έτοιμα:",
+          engagementTitle: "Ξεκίνα με Strategy Diagnostic",
+          engagementDescription: "Χρησιμοποίησε ένα 30λεπτο discovery call για ευθυγράμμιση σε business goals, risk tolerance και τα επόμενα 90 ημέρες.",
+          engagementChecklistTitle: "Φέρτε στο call:",
           engagementChecklist: [
-            "Τον υπάρχων κώδικα (prototype) ή τα notebooks σας.",
-            "Την αναμενόμενη κλίμακα (QPS, όγκο δεδομένων) και τις απαιτήσεις υστέρησης (latency).",
-            "Λεπτομέρειες για την υπάρχουσα cloud υποδομή σας (AWS/GCP, K8s, κ.λπ.)."
+            "Το τρέχον product roadmap και τα βασικά business KPIs.",
+            "Υπάρχοντα AI use cases (live ή planned) και γνωστά blockers.",
+            "Σκληρούς περιορισμούς όπως latency, νομικές απαιτήσεις, budget ή staffing."
           ],
-          engagementCtaLabel: "Κλείσε το build call"
+          engagementCtaLabel: "Κλείσε discovery call"
         },
         {
-          title: "Deep-Tech και Compliance-First Υποδομές",
-          slug: "deep-tech-infrastructure",
-          intro: "Σχεδιασμός κατανεμημένων backend συστημάτων και compliance-first υποδομών για crypto, ML-monitoring και αυστηρά ρυθμιζόμενους κλάδους.",
-          businessProse: `Οι αυστηρά ρυθμιζόμενοι κλάδοι (FinTech, Crypto, Healthcare) απαιτούν συστήματα backend (backends) που βασίζονται σε ριζικά διαφορετικές αρχές. Η ασφάλεια, η ελεγξιμότητα (auditability) και η τεράστια διακίνηση δεδομένων (throughput) πρέπει να σχεδιάζονται από την πρώτη μέρα.
+          title: "AI Productionization Sprint",
+          slug: "ai-productionization-sprint",
+          intro: "Μετατροπή εύθραυστων prototypes σε production-ready AI workflows με guardrails, observability και σαφή ownership.",
+          businessProse: `Ένα notebook demo σπάνια αντέχει σε πραγματική κίνηση. Αυτό το sprint εστιάζει στην αξιοπιστία υπό παραγωγική πίεση.
 
-### Σχεδιασμός Υποδομής
-*   **Κατανεμημένα Συστήματα (Distributed Systems):** Αρχιτεκτονική event-driven ροών δεδομένων ικανών να δεχθούν και να αναλύσουν terabytes δεδομένων.
-*   **Με γνώμονα τη Συμμόρφωση (Compliance-First):** Ενσωμάτωση κανονιστικών περιορισμών (π.χ. GDPR, χρηματοοικονομικοί κανονισμοί) απευθείας στην αρχιτεκτονική της βάσης δεδομένων και στα μοτίβα πρόσβασης.
-*   **Μηχανική Ανθεκτικότητας (Resilience Engineering):** Σχεδιασμός συστημάτων που υποβαθμίζονται ομαλά (degrade gracefully) υπό συνθήκες ακραίου φορτίου ή στοχευμένων επιθέσεων.
+### Τι κάνω
+*   **Workflow Hardening:** Μετατροπή prototypes σε production services με deterministic orchestration paths.
+*   **Guardrails & Fallbacks:** Προσθήκη output validation, retry/fallback λογικής και safe degradation patterns.
+*   **Operational Readiness:** Ενσωμάτωση tracing, alerts και runbooks ώστε η ομάδα να λειτουργεί με αυτοπεποίθηση.
 
 ### Παραδοτέα
-*   Κλιμακώσιμες backend υπηρεσίες (Python, Go, ή Rust ανάλογα με τις απαιτήσεις).
-*   Pipelines δεδομένων για παραλαβή και επεξεργασία υψηλού όγκου (Kafka, Spark).
-*   Infrastructure as Code (Terraform) και αυτοματισμός ανάπτυξης (deployment).
+*   Production-ready service architecture και rollout plan.
+*   Observability setup για βασικά metrics υγείας των AI workflows.
+*   Operating runbooks για incident response και συντήρηση.
 
 ### Τυπικές Συνεργασίες
-*   Δημιουργία του επιπέδου δεδομένων (data plane) για πλατφόρμες παρατηρησιμότητας ML.
-*   Αρχιτεκτονική για πλατφόρμες tokenization και trading (συναλλαγών).`,
+*   Μεταβάσεις MVP-to-production για user-facing AI features.
+*   Ομάδες που χρειάζονται structured hardening πριν από ευρύτερο rollout.`,
           items: [
-            "Ιδανικό για deep-tech startups που διαχειρίζονται ευαίσθητα δεδομένα ή analytics υψηλού throughput.",
-            "Χρονοδιάγραμμα: Ελάχιστο 2–4 μήνες για βασική αρχιτεκτονική.",
-            "Παραδοτέα: Κατανεμημένες backend υπηρεσίες, data pipelines, IaC.",
-            "Επένδυση: Μηνιαία σταθερή αμοιβή (Retainer) ή project-based ξεκινώντας από €15K."
+            "Ιδανικό για ομάδες με AI prototype που ήδη δίνει μερική αξία.",
+            "Χρονοδιάγραμμα: 6-12 εβδομάδες ανάλογα με το βάθος ενσωμάτωσης.",
+            "Παραδοτέα: Productionization plan, hardened workflows, observability, runbooks.",
+            "Επένδυση: €8K-€25K."
           ],
           caseStudies: [
             {
-              company: "CNO (Hedera)",
-              challenge: "Αρχιτεκτονική της βασικής υποδομής για πλατφόρμα tokenization και trading.",
+              company: "Workable",
+              challenge: "Κλιμάκωση generative AI hiring features σε μεγάλο live προϊόν με αυστηρούς reliability περιορισμούς.",
               solution: [
-                "Σχεδίασα compliance-first υποδομή ειδικά προσαρμοσμένη για το δίκτυο Hedera.",
-                "Εξασφάλισα ασφαλή επεξεργασία συναλλαγών υψηλού throughput για το cno.zone."
+                "Μετέτρεψα PoCs (resume parsing, job post generation) σε hardened microservices.",
+                "Deployment σε AWS EKS για υποστήριξη δεκάδων χιλιάδων ημερήσιων αιτημάτων σε corpus 0.5 δισ. εγγραφών."
               ],
-              technologies: ["Distributed Systems", "Crypto Infrastructure", "Hedera"]
+              technologies: ["AWS EKS", "Kubernetes", "Generative AI", "Kafka/RabbitMQ"]
             },
             {
               company: "NannyML",
-              challenge: "Κατασκευή της βασικής υποδομής δεδομένων για ένα enterprise ML monitoring SaaS.",
+              challenge: "Operationalization ML monitoring workflows για enterprise πελάτες ενώ το προϊόν ωρίμαζε.",
               solution: [
-                "Υλοποίησα ML monitoring prototypes με την ιδρυτική ομάδα.",
-                "Παρέδωσα containerized Python microservices στο Amazon EKS, επιτρέποντας στην ομάδα να κλείσει τα πρώτα της B2B deals."
+                "Παρέδωσα containerized Python microservices σε Amazon EKS για αξιόπιστο production deployment.",
+                "Συνέβαλα σε delivery practices που υποστήριξαν τα πρώτα enterprise B2B wins."
               ],
               technologies: ["Python", "Amazon EKS", "MLOps", "Data Engineering"]
+            }
+          ],
+          engagementTitle: "Σχεδίασε το Productionization Sprint",
+          engagementDescription: "Χρησιμοποίησε discovery call για να χαρτογραφήσουμε integration points, reliability στόχους και rollout scope.",
+          engagementChecklistTitle: "Έχε έτοιμα:",
+          engagementChecklist: [
+            "Επισκόπηση της αρχιτεκτονικής του prototype (ή code/notebook).",
+            "Αναμενόμενη χρήση, στόχους latency και impact αποτυχιών.",
+            "Τρέχοντες περιορισμούς υποδομής και engineering ownership."
+          ],
+          engagementCtaLabel: "Κλείσε discovery call"
+        },
+        {
+          title: "AI Reliability & Scale",
+          slug: "ai-reliability-scale",
+          intro: "Χτίζω το λειτουργικό σύστημα γύρω από το AI σας: evaluation gates, monitoring και incident playbooks που προστατεύουν την παραγωγή.",
+          businessProse: `Το να παραδώσεις μία φορά δεν αρκεί. Τα αξιόπιστα AI προϊόντα χρειάζονται επαναλήψιμο σύστημα ελέγχου ποιότητας και incident response.
+
+### Τι κάνω
+*   **Evaluation Operations:** Σχεδιασμός συνεχών evaluation workflows συνδεδεμένων με business KPIs και risk thresholds.
+*   **Monitoring & Alerting:** Παρακολούθηση output quality, drift σημάτων και operational health σε ένα ενιαίο operating view.
+*   **Reliability Process:** Ορισμός incident response, rollback κριτηρίων και post-incident learning loops.
+
+### Παραδοτέα
+*   CI/CD evaluation gates με release criteria.
+*   Monitoring dashboards και alert rules για κρίσιμα AI paths.
+*   Reliability playbook για triage, escalation και recovery.
+
+### Τυπικές Συνεργασίες
+*   Ομάδες με AI ήδη σε production και επαναλαμβανόμενα quality incidents.
+*   Οργανισμοί που μεταβαίνουν από ad-hoc fixes σε repeatable operational discipline.`,
+          items: [
+            "Ιδανικό για ομάδες με production AI features και επαναλαμβανόμενα quality/reliability incidents.",
+            "Χρονοδιάγραμμα: Αρχικό setup σε 4-8 εβδομάδες και προαιρετική μηνιαία υποστήριξη.",
+            "Παραδοτέα: Eval gates, monitoring, incident playbooks, reliability KPIs.",
+            "Επένδυση: Project-based από €6K ή μηνιαίο retainer."
+          ],
+          caseStudies: [
+            {
+              company: "NannyML",
+              challenge: "Δημιουργία αξιόπιστης monitoring βάσης που να λειτουργεί συνεχώς από product και engineering.",
+              solution: [
+                "Πιλοτική υλοποίηση monitoring prototypes και μετάφραση ερευνητικών workflows σε λειτουργικές product ροές.",
+                "Παράδοση containerized υπηρεσιών και deployment patterns που βελτίωσαν την αξιοπιστία για enterprise onboarding."
+              ],
+              technologies: ["Python", "Amazon EKS", "Monitoring", "Reliability Engineering"]
             },
             {
               company: "Encode S.A.",
-              challenge: "Επεξεργασία terabytes δεδομένων δικτύου (logs) καθημερινά για ανίχνευση εισβολών σε σχεδόν πραγματικό χρόνο.",
+              challenge: "Διατήρηση αξιόπιστης επεξεργασίας υψηλού όγκου security δεδομένων σε καθημερινή λειτουργία.",
               solution: [
-                "Αρχιτεκτόνησα πλατφόρμα βασισμένη σε PySpark και Elasticsearch.",
-                "Βελτιστοποίησα το pipeline για να επεξεργάζεται σύνολα δεδομένων δικτύου 100.000 χρηστών μέσα σε μία εργάσιμη ημέρα."
+                "Αρχιτεκτόνησα PySpark + Elasticsearch πλατφόρμα για datasets δικτύου 100K χρηστών μέσα σε μία εργάσιμη ημέρα.",
+                "Βελτιστοποίησα throughput ingestion από 1K σε 10K χρήστες μειώνοντας επαναλαμβανόμενα bottlenecks."
               ],
-              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Analytics"]
+              technologies: ["PySpark", "Elasticsearch", "Kafka", "Data Engineering"]
             }
           ],
-          engagementTitle: "Συζητήστε τις Ανάγκες σας για Υποδομές",
-          engagementDescription: "Χρησιμοποιήστε μια συνεδρία 30 λεπτών για να συζητήσετε τις απαιτήσεις σας σε throughput, compliance, και deployment.",
+          engagementTitle: "Ενίσχυσε Reliability & Scale",
+          engagementDescription: "Χρησιμοποίησε discovery call για να εντοπίσουμε recurring failures και να σχεδιάσουμε το επόμενο reliability σύστημα της ομάδας σου.",
           engagementChecklistTitle: "Φέρτε στο call:",
           engagementChecklist: [
-            "Εκτιμήσεις για τον όγκο και την ταχύτητα των δεδομένων.",
-            "Συγκεκριμένα ρυθμιστικά πλαίσια με τα οποία πρέπει να συμμορφωθείτε.",
-            "Τρέχοντα σημεία συμφόρησης (bottlenecks) στην υπάρχουσα αρχιτεκτονική σας (αν εφαρμόζεται)."
+            "Πρόσφατα incidents ή επαναλαμβανόμενα failure patterns.",
+            "Τρέχοντα metrics και dashboards (αν υπάρχουν).",
+            "Στόχους service levels, response expectations και team ownership."
           ],
-          engagementCtaLabel: "Κλείσε το infrastructure call"
+          engagementCtaLabel: "Κλείσε discovery call"
         }
       ],
     },
@@ -1168,7 +1156,7 @@ Hosting / infrastructure:
       linkedin: "LinkedIn",
       github: "GitHub",
       scheduleTitle: "Θες να προγραμματίσουμε κατευθείαν ένα call;",
-      scheduleDescription: "Κλείσε ένα 30λεπτο discovery call για να ευθυγραμμίσουμε στόχους, scope και χρονοδιάγραμμα. Θα λάβεις σημειώσεις και επόμενα βήματα μέσα σε 48 ώρες.",
+      scheduleDescription: "Κλείσε ένα 30λεπτο discovery call για να ευθυγραμμίσουμε στόχους, scope και χρονοδιάγραμμα. Θα λάβεις σημειώσεις και επόμενα βήματα μέσα σε 1-2 εργάσιμες ημέρες.",
       scheduleButton: "Κλείσε discovery call",
       scheduleFallback: "Δεν βλέπεις διαθέσιμα slots στο calendar widget; Στείλε μου email και θα ανοίξω προτεραιοποιημένα slots.",
       priorityEmailLabel: "Email για priority scheduling",

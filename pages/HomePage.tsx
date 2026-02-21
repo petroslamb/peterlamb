@@ -22,8 +22,8 @@ const HomePage: React.FC = () => {
     const rootedLayersLogoSrc = `${import.meta.env.BASE_URL}images/branding/rooted-layers-logo.jpg`;
 
     const metaDescription = language === 'en'
-        ? `Petros Lambropoulos helps teams harden AI prototypes into production systems through evaluation pipelines, agent architecture, and compliance-first infrastructure.`
-        : `Ο Πέτρος Λαμπρόπουλος βοηθά ομάδες να μετατρέψουν AI prototypes σε παραγωγικά συστήματα μέσω evaluation pipelines, agent αρχιτεκτονικής και compliance-first υποδομών.`;
+        ? `Petros Lambropoulos helps B2B teams turn AI prototypes into reliable production systems through strategy diagnostics, productionization sprints, and reliability operations.`
+        : `Ο Πέτρος Λαμπρόπουλος βοηθά B2B ομάδες να μετατρέψουν AI prototypes σε αξιόπιστα παραγωγικά συστήματα μέσω strategy diagnostics, productionization sprints και reliability λειτουργιών.`;
 
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -33,9 +33,9 @@ const HomePage: React.FC = () => {
     ];
 
     const iconMap: Record<string, React.ReactNode> = {
-        'ai-systems-evaluation': baseIcons[0],
-        'production-agentic-architectures': baseIcons[1],
-        'deep-tech-infrastructure': baseIcons[2],
+        'ai-strategy-risk-diagnostic': baseIcons[0],
+        'ai-productionization-sprint': baseIcons[1],
+        'ai-reliability-scale': baseIcons[2],
     };
 
     return (

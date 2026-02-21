@@ -30,8 +30,8 @@ const TrustPage: React.FC = () => {
                 </p>
                 <p className="text-text-secondary dark:text-slate-300 max-w-3xl mx-auto">
                     {language === 'en'
-                        ? 'I can provide consulting references upon request from dikaio.ai, Rythmhoppers, and Brain Metrics Initiative (BMI). If useful, book a free intro call to meet and review fit.'
-                        : 'Μπορώ να δώσω consulting references κατόπιν αιτήματος από dikaio.ai, Rythmhoppers και Brain Metrics Initiative (BMI). Αν βοηθά, κλείσε ένα δωρεάν intro call για να γνωριστούμε και να ελέγξουμε fit.'}
+                        ? 'I can provide consulting references upon request from dikaio.ai, Rythm Hoppers, and Brain Metrics Initiative (BMI). If useful, book a discovery call to meet and review fit.'
+                        : 'Μπορώ να δώσω consulting references κατόπιν αιτήματος από dikaio.ai, Rythm Hoppers και Brain Metrics Initiative (BMI). Αν βοηθά, κλείσε discovery call για να γνωριστούμε και να ελέγξουμε fit.'}
                 </p>
                 <div className="pt-1">
                     <a
@@ -40,9 +40,9 @@ const TrustPage: React.FC = () => {
                         rel="noopener noreferrer"
                         aria-label={actions.scheduleAriaLabel}
                         className="inline-flex items-center justify-center rounded-lg bg-primary py-3 px-6 font-semibold text-white hover:bg-primary-hover transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary dark:focus-visible:ring-offset-slate-900"
-                        onClick={() => trackEvent('cta_click', { area: 'trust_page_intro', action: 'schedule_free_intro_call' })}
+                        onClick={() => trackEvent('cta_click', { area: 'trust_page_intro', action: 'book_discovery_call' })}
                     >
-                        {language === 'en' ? 'Schedule a free intro call' : 'Κλείσε δωρεάν intro call'}
+                        {language === 'en' ? 'Book a discovery call' : 'Κλείσε discovery call'}
                     </a>
                 </div>
             </section>

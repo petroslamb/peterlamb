@@ -9,8 +9,8 @@ const ServicesPage: React.FC = () => {
     const { services, actions } = translations;
 
     const metaDescription = language === 'en'
-      ? `Explore consulting services by Petros Lambropoulos for AI systems evaluation, production agent architecture, and compliance-first infrastructure with clear deliverables and pricing.`
-      : `Εξερευνήστε τις συμβουλευτικές υπηρεσίες του Πέτρου Λαμπρόπουλου για αξιολόγηση AI συστημάτων, production agent αρχιτεκτονικές και compliance-first υποδομές με ξεκάθαρα παραδοτέα και κόστος.`;
+      ? `Explore consulting services by Petros Lambropoulos for AI strategy diagnostics, productionization sprints, and reliability systems with clear deliverables and pricing.`
+      : `Εξερευνήστε τις συμβουλευτικές υπηρεσίες του Πέτρου Λαμπρόπουλου για AI strategy diagnostics, productionization sprints και reliability συστήματα με ξεκάθαρα παραδοτέα και κόστος.`;
     
     const baseIcons = [
         <svg key="arrow-path" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" /></svg>,
@@ -20,10 +20,9 @@ const ServicesPage: React.FC = () => {
     ];
 
     const iconMap: Record<string, React.ReactNode> = {
-        'ai-discovery': baseIcons[0],
-        'ai-mvp': baseIcons[1],
-        'ai-feature-add-on': baseIcons[2],
-        'grant-funded-sprint': baseIcons[3],
+        'ai-strategy-risk-diagnostic': baseIcons[0],
+        'ai-productionization-sprint': baseIcons[1],
+        'ai-reliability-scale': baseIcons[2],
     };
 
     return (
