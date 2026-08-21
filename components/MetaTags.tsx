@@ -78,6 +78,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
         sameAs: [
           'https://github.com/petroslamb',
           'https://www.linkedin.com/in/petroslamb/',
+          'https://petroslamb.github.io/content/',
           'https://lambpetros.substack.com/',
         ],
         jobTitle: 'Independent Systems Consultant',

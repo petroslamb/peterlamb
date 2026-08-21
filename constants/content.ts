@@ -41,10 +41,10 @@ export const content: Record<'en' | 'gr', Content> = {
           url: "https://github.com/petroslamb"
         },
         {
-          title: "Substack archive",
-          description: "Timestamped essays and technical post-mortems with a public publication trail.",
-          ctaLabel: "Browse Substack",
-          url: "https://lambpetros.substack.com"
+          title: "Rooted Layers",
+          description: "A curated technical portfolio with selected essays, engineering evidence, and access to the complete historical archive.",
+          ctaLabel: "Explore selected work",
+          url: "https://petroslamb.github.io/content/"
         },
         {
           title: "Public analytics dashboard",
@@ -670,10 +670,10 @@ Hosting / infrastructure:
           url: "https://github.com/petroslamb"
         },
         {
-          title: "Αρχείο Substack",
-          description: "Χρονοσφραγισμένα essays και τεχνικά post-mortems με δημόσιο publication trail.",
-          ctaLabel: "Περιήγηση στο Substack",
-          url: "https://lambpetros.substack.com"
+          title: "Rooted Layers",
+          description: "Ένα επιμελημένο τεχνικό portfolio με επιλεγμένα essays, τεκμήρια μηχανικής και πρόσβαση σε ολόκληρο το ιστορικό αρχείο.",
+          ctaLabel: "Δείτε την επιλεγμένη δουλειά",
+          url: "https://petroslamb.github.io/content/"
         },
         {
           title: "Δημόσιο analytics dashboard",
